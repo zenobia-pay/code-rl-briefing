@@ -19,7 +19,8 @@
   <body>
     <main class="wrap">
       <h1>What is the latest in code RL environments and human data?</h1>
-      <p class="muted">Primary-source driven dataset for Feb 19–25, 2026. Includes account links, post links, and paper links where available.</p>
+      <p class="muted">Primary-source driven dataset for Feb 19–25, 2026. Includes raw text blocks, account links, thread links, and paper links. No summary-only rows.</p>
+      <p class="muted"><a href="/data/raw-notes.md" target="_blank">Open raw ingest notes (verbatim)</a></p>
 
       <section class="card">
         <h2>Start with these accounts (high-signal seeds)</h2>
@@ -67,7 +68,8 @@
           <article style="padding:10px 0;border-bottom:1px solid var(--line)">
             <div><strong>${t.topic}</strong> · ${t.date}</div>
             <div class="muted"><a href="${t.author_url}" target="_blank">${t.author}</a>${t.post_url ? ` · <a href="${t.post_url}" target="_blank">post link</a>` : ''}${t.paper_link ? ` · <a href="${t.paper_link}" target="_blank">paper</a>` : ''}</div>
-            ${(t.quotes||[]).slice(0,3).map(q=>`<div class="quote">${q}</div>`).join('')}
+            ${(t.full_text_blocks||t.quotes||[]).map(q=>`<div class="quote">${q}</div>`).join('')}
+            ${(t.links||[]).length ? `<div class="muted">${t.links.map(l=>`<a href="${l}" target="_blank">${l}</a>`).join(' · ')}</div>` : ''}
           </article>
         `).join('');
       });
