@@ -1,86 +1,76 @@
 <!doctype html>
-<html>
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Code RL Briefing</title>
-  <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif; background:#faf8f5; color:#1f1f1f; margin:0; }
-    .wrap { max-width: 900px; margin: 0 auto; padding: 28px; }
-    h1,h2 { margin: 0 0 12px; }
-    h1 { font-size: 34px; line-height:1.15; }
-    .sub { color:#666; margin-bottom: 20px; }
-    .card { background:#fff; border:1px solid #ece7e0; border-radius:10px; padding:16px; margin:14px 0; }
-    ul { margin:8px 0 0 18px; }
-    li { margin:6px 0; }
-    code { background:#f2efe9; padding:2px 6px; border-radius:6px; }
-    .muted { color:#777; font-size: 13px; }
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <h1>What is the latest in code RL environments and human data?</h1>
-    <p class="sub">Signals briefing • Feb 19–25, 2026</p>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code RL Briefing</title>
+    <style>
+      :root { --bg:#faf8f5; --card:#fff; --text:#1d1d1f; --muted:#66606f; --line:#e7e2db; }
+      body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,sans-serif}
+      .wrap{max-width:1100px;margin:0 auto;padding:28px 18px 56px}
+      .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:12px 0}
+      h1{margin:0 0 8px;font-size:2rem} h2{margin:0 0 10px;font-size:1.1rem}
+      p,li{line-height:1.45} a{color:#2c5cc5;text-decoration:none} a:hover{text-decoration:underline}
+      table{width:100%;border-collapse:collapse} th,td{border-bottom:1px solid var(--line);padding:8px;vertical-align:top;text-align:left}
+      .muted{color:var(--muted);font-size:.92rem}.quote{border-left:3px solid #ddd;padding-left:10px;color:#333;margin:8px 0}
+      .pill{display:inline-block;border:1px solid var(--line);background:#f5f2ed;border-radius:999px;padding:3px 10px;margin:3px 6px 3px 0}
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <h1>What is the latest in code RL environments and human data?</h1>
+      <p class="muted">Primary-source driven dataset for Feb 19–25, 2026. Includes account links, post links, and paper links where available.</p>
 
-    <div class="card">
-      <h2>Topline</h2>
-      <ul id="topline"></ul>
-    </div>
+      <section class="card">
+        <h2>Start with these accounts (high-signal seeds)</h2>
+        <div id="seedAccounts"></div>
+      </section>
 
-    <div class="card">
-      <h2>Key Trends in Code RL Environments</h2>
-      <ul id="trends"></ul>
-    </div>
+      <section class="card">
+        <h2>Papers</h2>
+        <table id="papers"></table>
+      </section>
 
-    <div class="card">
-      <h2>Advancements in Human Data & Feedback</h2>
-      <ul id="human"></ul>
-    </div>
+      <section class="card">
+        <h2>Signals / Trend Synthesis</h2>
+        <div id="signals"></div>
+      </section>
 
-    <div class="card">
-      <h2>Recent Papers (Feb 19 - Feb 25, 2026)</h2>
-      <ul id="papers"></ul>
-    </div>
+      <section class="card">
+        <h2>Primary social sources (tweets/threads)</h2>
+        <div id="tweets"></div>
+      </section>
+    </main>
 
-    <div class="card">
-      <h2>High-Signal Accounts</h2>
-      <p>Start with <code>@karpathy</code>, <code>@natolambert</code>, and <code>@willccbb</code>.</p>
-      <p class="muted">You’ll get ~80% of this cycle’s signal immediately.</p>
-    </div>
+    <script>
+      Promise.all([
+        fetch('/data/accounts.json').then(r=>r.json()),
+        fetch('/data/papers.json').then(r=>r.json()),
+        fetch('/data/signals.json').then(r=>r.json()),
+        fetch('/data/tweets.json').then(r=>r.json())
+      ]).then(([accounts,papers,signals,tweets])=>{
+        document.getElementById('seedAccounts').innerHTML = accounts
+          .filter(a=>a.priority==='seed')
+          .map(a=>`<span class="pill"><a href="${a.url}" target="_blank">${a.handle}</a></span>`)
+          .join('');
 
-    <div class="card">
-      <h2>Notable Posts / Threads</h2>
-      <ul id="posts"></ul>
-    </div>
+        document.getElementById('papers').innerHTML = `
+          <thead><tr><th>Paper</th><th>Date</th><th>Key contribution</th><th>Links</th></tr></thead>
+          <tbody>${papers.map(p=>`<tr><td>${p.title}</td><td>${p.date}</td><td>${p.key_contribution}</td><td>${(p.source_links||[]).map(l=>`<a href="${l.url}" target="_blank">${l.label}</a>`).join(' · ') || '<span class="muted">Add source URL</span>'}</td></tr>`).join('')}</tbody>`;
 
-    <div class="muted">Data endpoints: <code>/signals.json</code>, <code>/dataset.json</code>, <code>/api/signals</code>, <code>/api/dataset</code></div>
-  </div>
+        document.getElementById('signals').innerHTML = signals.map(s=>`
+          <h3>${s.section}</h3>
+          <ul>${s.points.map(p=>`<li>${p}</li>`).join('')}</ul>
+        `).join('');
 
-<script>
-async function load() {
-  const s = await (await fetch('/signals.json')).json();
-  const d = await (await fetch('/dataset.json')).json();
-
-  d.sections.find(x => x.heading === 'Topline').points.forEach(p => {
-    const li = document.createElement('li'); li.textContent = p; document.getElementById('topline').appendChild(li);
-  });
-
-  s.keyTrends.forEach(p => { const li = document.createElement('li'); li.textContent = p; document.getElementById('trends').appendChild(li); });
-  s.humanDataTrends.forEach(p => { const li = document.createElement('li'); li.textContent = p; document.getElementById('human').appendChild(li); });
-
-  s.recentPapers.forEach(p => {
-    const li = document.createElement('li');
-    li.textContent = `${p.title} (${p.date}) — ${p.contribution}`;
-    document.getElementById('papers').appendChild(li);
-  });
-
-  s.notablePosts.forEach(p => {
-    const li = document.createElement('li');
-    li.textContent = `${p.author} (${p.date}): ${p.summary}` + (p.tweetId ? ` [ID: ${p.tweetId}]` : '');
-    document.getElementById('posts').appendChild(li);
-  });
-}
-load();
-</script>
-</body>
+        document.getElementById('tweets').innerHTML = tweets.map(t=>`
+          <article style="padding:10px 0;border-bottom:1px solid var(--line)">
+            <div><strong>${t.topic}</strong> · ${t.date}</div>
+            <div class="muted"><a href="${t.author_url}" target="_blank">${t.author}</a>${t.post_url ? ` · <a href="${t.post_url}" target="_blank">post link</a>` : ''}${t.paper_link ? ` · <a href="${t.paper_link}" target="_blank">paper</a>` : ''}</div>
+            ${(t.quotes||[]).slice(0,3).map(q=>`<div class="quote">${q}</div>`).join('')}
+          </article>
+        `).join('');
+      });
+    </script>
+  </body>
 </html>

@@ -1,28 +1,21 @@
 [
   {
-    "theme": "Code RL environments",
-    "signals": [
-      "Terminal capability scaling: command-line interaction as a first-class RL environment.",
-      "Hardware-aware optimization: CUDA kernel generation framed as search with intrinsic world models.",
-      "Formal verifiable research agents: proof systems as reward environments.",
-      "Reward foundries: automatic verifiers (tests/simulators) to reduce per-step human labeling cost."
+    "section": "Key Trends in Code RL Environments",
+    "points": [
+      "Shift from static code generation to interactive agent loops (execute commands, observe errors, iterate).",
+      "Terminal Capability Scaling: command-line interfaces treated as structured RL environments for filesystem and system-level tasks.",
+      "GPU Kernel Optimization: K-Search frames CUDA kernel generation as search using a co-evolving intrinsic world model to reduce expensive hardware rollouts.",
+      "Mathematical Research Agents: formal proof systems provide verifiable rewards for autonomous research agents."
     ]
   },
   {
-    "theme": "Human data and feedback",
-    "signals": [
-      "Shift from classic RLHF preference labeling to HITL orchestration and long-horizon trajectory collection.",
-      "Trajectory-splitting SFT as a cold-start bridge for sparse long-horizon human data.",
-      "Progressive RL with longer timeout stages to preserve learning signal over thousands of steps.",
-      "Synthetic trajectory distillation from frontier models to bootstrap scarce domains."
-    ]
-  },
-  {
-    "theme": "Ecosystem debate",
-    "signals": [
-      "RLVR vs RLHF remains active: verifiability improves robustness, but open-ended task verification remains difficult.",
-      "Rubric-based RL is resurfacing with stronger historical continuity to safety-alignment methods.",
-      "Infrastructure moat uncertainty: tasks/rubrics/verifiers vs full harness + TVR stacks."
+    "section": "Advancements in Human Data & Feedback",
+    "points": [
+      "Shift from pure preference labeling (RLHF) to HITL orchestration plus long-horizon trajectory collection.",
+      "KLong proposes trajectory-splitting SFT to cold-start long trajectories while preserving early context and progressively truncating later context with overlap.",
+      "Progressive RL extends timeout horizons stage-by-stage to preserve learning signal over long trajectories.",
+      "Research-Factory distills synthetic long-horizon trajectories to address scarcity of costly human trajectory data.",
+      "Verifiable reward foundries reduce per-step human labeling by using tests/simulators/formal checks."
     ]
   }
 ]

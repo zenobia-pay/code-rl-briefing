@@ -1,28 +1,39 @@
 [
   {
     "title": "On Data Engineering for Scaling LLM Terminal Capabilities",
-    "contribution": "Training strategies for terminal/shell mastery as a structured agent RL environment.",
-    "date": "2026-02-24"
+    "date": "2026-02-24",
+    "key_contribution": "Data engineering and training strategies for agents to master terminal/shell interaction as a structured RL environment.",
+    "topic": "terminal-capabilities",
+    "source_links": []
   },
   {
     "title": "KLong: Training LLM Agent for Extremely Long-horizon Tasks",
-    "contribution": "Trajectory-splitting SFT + progressive RL for long-horizon data bottlenecks.",
     "date": "2026-02-19",
-    "arxiv": "https://arxiv.org/abs/2602.17547"
+    "key_contribution": "Trajectory-splitting SFT + progressive RL + Research-Factory distillation to address long-horizon human-data scarcity.",
+    "topic": "long-horizon",
+    "source_links": [
+      {"label":"arXiv","url":"https://arxiv.org/abs/2602.17547"}
+    ]
   },
   {
     "title": "K-Search: LLM Kernel Generation via Co-Evolving Intrinsic World Model",
-    "contribution": "GPU kernel optimization via RL search with a learned intrinsic world model.",
-    "date": "2026-02-22"
+    "date": "2026-02-22",
+    "key_contribution": "Treats CUDA kernel generation as search, using an intrinsic world model for performance prediction during RL optimization.",
+    "topic": "gpu-kernel-optimization",
+    "source_links": []
   },
   {
     "title": "Agents of Chaos",
-    "contribution": "Live-environment red-teaming data in persistent human-interaction tool setups.",
-    "date": "2026-02-23"
+    "date": "2026-02-23",
+    "key_contribution": "Large-scale live-environment red-teaming with persistent tools (email/Discord/files), generating edge-case human-interaction data.",
+    "topic": "human-interaction-data",
+    "source_links": []
   },
   {
     "title": "Aletheia tackles FirstProof autonomously",
-    "contribution": "Autonomous math proof research in verifiable formal environments.",
-    "date": "2026-02-24"
+    "date": "2026-02-24",
+    "key_contribution": "Autonomous mathematical research in formal proof environments with verifiable rewards.",
+    "topic": "verifiable-reward-environments",
+    "source_links": []
   }
 ]

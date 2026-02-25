@@ -1,19 +1,21 @@
 # code-rl-briefing
 
-Briefing site + cleaned dataset for:
+Primary-source-driven briefing site for:
 
 **“What is the latest in code RL environments and human data?”**
 
-## What’s included
+## Dataset files
 
-- `public/index.html` — briefing page with headline trend summary and papers table
-- `public/data/papers.json` — normalized paper list (Feb 19–25, 2026)
-- `public/data/signals.json` — trend-level synthesis
-- `public/data/posts.json` — curated social posts and summaries
-- `public/data/people-seeds.json` — priority accounts to monitor first
-- `src/index.ts` — Cloudflare Worker entry
+- `public/data/accounts.json` — seed + secondary account links
+- `public/data/papers.json` — paper list + source links
+- `public/data/tweets.json` — thread/post records with post/account links and quoted excerpts
+- `public/data/signals.json` — structured trend synthesis from supplied notes
 
-## Run locally
+## Site
+
+- `public/index.html` renders all dataset files directly (link-driven view)
+
+## Run
 
 ```bash
 pnpm install
@@ -23,5 +25,5 @@ pnpm dev
 ## Deploy
 
 ```bash
-pnpm deploy
+pnpm run deploy
 ```

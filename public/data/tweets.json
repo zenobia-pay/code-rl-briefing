@@ -1,0 +1,126 @@
+[
+  {
+    "date": "2026-02-25",
+    "author": "@NousResearch",
+    "author_url": "https://x.com/NousResearch",
+    "post_id": "2026758996107898954",
+    "post_url": "https://x.com/NousResearch/status/2026758996107898954",
+    "topic": "Hermes Agent launch",
+    "engagement": {"likes": 579, "views": "224k+"},
+    "quotes": [
+      "Meet Hermes Agent, the open source agent that grows with you.",
+      "Hermes Agent remembers what it learns and gets more capable over time, with a multi-level memory system and persistent dedicated machine access.",
+      "Hermes Agent runs in your CLI and through messaging platforms like Telegram, WhatsApp, Slack, and Discord.",
+      "It also powers our agentic RL pipeline... and supports mass-scale data generation out of the box."
+    ],
+    "external_links": [
+      "https://nousresearch.com/hermes-agent/"
+    ]
+  },
+  {
+    "date": "2026-02-25",
+    "author": "@Teknium",
+    "author_url": "https://x.com/Teknium",
+    "topic": "Hermes launch follow-up",
+    "quotes": ["Hope everyone enjoys! Join our discord to discuss..."]
+  },
+  {
+    "date": "2026-02-25",
+    "author": "@willccbb",
+    "author_url": "https://x.com/willccbb",
+    "post_id": "2026743565699936376",
+    "post_url": "https://x.com/willccbb/status/2026743565699936376",
+    "topic": "Prime Intellect RL residents breakthrough",
+    "engagement": {"likes": 160, "views": "6k"},
+    "quotes": [
+      "a major bottleneck in continual learning is that we don’t have a general way to compare and evaluate methods across task domains",
+      "@carnot_cyclist may have solved this"
+    ]
+  },
+  {
+    "date": "2026-02-24",
+    "author": "@cwolferesearch",
+    "author_url": "https://x.com/cwolferesearch",
+    "post_id": "2026151598523625626",
+    "post_url": "https://x.com/cwolferesearch/status/2026151598523625626",
+    "topic": "Rubric-based RL",
+    "engagement": {"likes": 76, "views": "3.6k"},
+    "quotes": [
+      "Rubric-based RL is a really popular topic right now, but it’s not new.",
+      "RLHF works really well for broad subjective properties, but relying upon preference data has limitations.",
+      "Detailed rubrics provide a reliable reward signal and granular control, even on open-ended tasks."
+    ]
+  },
+  {
+    "date": "2026-02-25",
+    "author": "@saen_dev",
+    "author_url": "https://x.com/saen_dev",
+    "topic": "RLVR vs RLHF",
+    "quotes": [
+      "RLVR over RLHF is a genuine paradigm shift... challenge is defining what 'verifiable' means for open-ended tasks."
+    ]
+  },
+  {
+    "date": "2026-02-23",
+    "author": "@Shekswess",
+    "author_url": "https://x.com/Shekswess",
+    "topic": "RLVR hyperparameter findings",
+    "quotes": ["alpha changed behavior more than any other hyperparameter; rollout diversity matters"]
+  },
+  {
+    "date": "2026-02-25",
+    "author": "@fourierproject",
+    "author_url": "https://x.com/fourierproject",
+    "topic": "RLVR caution",
+    "quotes": ["Current RLVR is not diverse + extremely short time scales. Be careful with RL on smarter models."]
+  },
+  {
+    "date": "2026-02-24",
+    "author": "@agitbackprop",
+    "author_url": "https://x.com/agitbackprop",
+    "topic": "RLVR failure mode",
+    "quotes": ["RLVR can let agents bypass HHH circuits from prior RLHF (e.g., coding agents sabotaging unit tests)."]
+  },
+  {
+    "date": "2026-02-25",
+    "author": "@sachpatro97",
+    "author_url": "https://x.com/sachpatro97",
+    "post_id": "2026773868233343072",
+    "post_url": "https://x.com/sachpatro97/status/2026773868233343072",
+    "topic": "RL environments and moats",
+    "quotes": [
+      "Everybody wants high quality tasks, rubrics and verifiers... but product requirements fragment across harness layers."
+    ]
+  },
+  {
+    "date": "2026-02-20",
+    "author": "@dair_ai",
+    "author_url": "https://x.com/dair_ai",
+    "topic": "KLong detailed summary",
+    "engagement": {"likes": 158, "views": "8.6k+"},
+    "quotes": [
+      "KLong tackles long-horizon training with trajectory-splitting SFT + progressive RL.",
+      "Research-Factory generates thousands of long-horizon trajectories from Claude 4.5 Sonnet.",
+      "106B KLong outperforms Kimi K2 Thinking (1T) by 11.28% on PaperBench, generalizing to SWE-bench Verified and MLE-bench."
+    ],
+    "paper_link": "https://arxiv.org/abs/2602.17547"
+  },
+  {
+    "date": "2026-02-20",
+    "author": "@guifav",
+    "author_url": "https://x.com/guifav",
+    "topic": "KLong parameter-efficiency",
+    "quotes": [
+      "How you train matters far more than raw scale for long-horizon agentic tasks."
+    ],
+    "paper_link": "https://arxiv.org/abs/2602.17547"
+  },
+  {
+    "date": "2026-02-21",
+    "author": "@SciFi",
+    "author_url": "https://x.com/SciFi",
+    "topic": "KLong arXiv bot mention",
+    "quotes": ["KLong: Training LLM Agent for Extremely Long-horizon Tasks"],
+    "paper_link": "https://arxiv.org/abs/2602.17547"
+  }
+]
