@@ -5,14 +5,24 @@
     "author_handle": "@NousResearch",
     "author_url": "https://x.com/NousResearch",
     "tweet_url": "https://x.com/NousResearch/status/2026758996107898954",
-    "engagement": {"likes": 579, "views": "224k+"},
+    "engagement": {
+      "likes": 579,
+      "views": "224k+"
+    },
     "full_text_blocks": [
       "Meet Hermes Agent, the open source agent that grows with you. Hermes Agent remembers what it learns and gets more capable over time, with a multi-level memory system and persistent dedicated machine access.",
       "Hermes Agent runs in your CLI and through messaging platforms like Telegram, WhatsApp, Slack, and Discord - picking up and transferring sessions wherever you go. It has advanced agentic capabilities: command over subagents, programmatic tool calling, advanced filesystem/terminal control, agent-managed skills, browser use, scheduled tasks, and more.",
-      "Hermes Agent is open source and built in Python, so it’s easy for developers to extend. It sits between a Claude Code style CLI and an OpenClaw style messaging platform agent. It also powers our agentic RL pipeline, expanding Atropos so you can run RL with Hermes Agent primitives, and it supports mass-scale data generation out of the box."
+      "Hermes Agent is open source and built in Python, so it\u2019s easy for developers to extend. It sits between a Claude Code style CLI and an OpenClaw style messaging platform agent. It also powers our agentic RL pipeline, expanding Atropos so you can run RL with Hermes Agent primitives, and it supports mass-scale data generation out of the box."
     ],
     "links": [
       "https://nousresearch.com/hermes-agent/"
+    ],
+    "account_links": [
+      "https://x.com/NousResearch",
+      "https://xcancel.com/NousResearch"
+    ],
+    "archive_links": [
+      "https://xcancel.com/NousResearch/status/2026758996107898954"
     ]
   },
   {
@@ -21,10 +31,20 @@
     "author_handle": "@willccbb",
     "author_url": "https://x.com/willccbb",
     "tweet_url": "https://x.com/willccbb/status/2026743565699936376",
-    "engagement": {"likes": 160, "views": "6k"},
+    "engagement": {
+      "likes": 160,
+      "views": "6k"
+    },
     "full_text_blocks": [
-      "god the prime intellect RL residents have been cooking so hard  a major bottleneck in continual learning is that we don’t have a general way to compare and evaluate methods across task domains  i think @carnot_cyclist may have solved this",
-      "i won’t spoil it because i want him to write a banger blog post about it. but wow it’s just a really really clean formalism that can be used for so many different things, and he’s got some nice early experimental results to show it off"
+      "god the prime intellect RL residents have been cooking so hard  a major bottleneck in continual learning is that we don\u2019t have a general way to compare and evaluate methods across task domains  i think @carnot_cyclist may have solved this",
+      "i won\u2019t spoil it because i want him to write a banger blog post about it. but wow it\u2019s just a really really clean formalism that can be used for so many different things, and he\u2019s got some nice early experimental results to show it off"
+    ],
+    "account_links": [
+      "https://x.com/willccbb",
+      "https://xcancel.com/willccbb"
+    ],
+    "archive_links": [
+      "https://xcancel.com/willccbb/status/2026743565699936376"
     ]
   },
   {
@@ -33,11 +53,21 @@
     "author_handle": "@cwolferesearch",
     "author_url": "https://x.com/cwolferesearch",
     "tweet_url": "https://x.com/cwolferesearch/status/2026151598523625626",
-    "engagement": {"likes": 76, "views": "3.6k"},
+    "engagement": {
+      "likes": 76,
+      "views": "3.6k"
+    },
     "full_text_blocks": [
-      "Rubric-based RL is a really popular topic right now, but it’s not new. Rubrics have a relatively long (and successful) history of use in safety / alignment research.",
+      "Rubric-based RL is a really popular topic right now, but it\u2019s not new. Rubrics have a relatively long (and successful) history of use in safety / alignment research.",
       "The most common approach to use for safety training is RLHF ... relying upon preference data has limitations: a large volume of preference data must be collected; we lose granular control over alignment criteria.",
       "Today, rubric-based RL looks pretty similar to these systems ... We go beyond preference data and usually generate a direct assessment reward; rubrics are often prompt-specific; the output of the reasoning model / LLM judge is directly used as the reward signal."
+    ],
+    "account_links": [
+      "https://x.com/cwolferesearch",
+      "https://xcancel.com/cwolferesearch"
+    ],
+    "archive_links": [
+      "https://xcancel.com/cwolferesearch/status/2026151598523625626"
     ]
   },
   {
@@ -45,16 +75,26 @@
     "author_handle": "@saen_dev",
     "author_url": "https://x.com/saen_dev",
     "full_text_blocks": [
-      "RLVR over RLHF is a genuine paradigm shift — training on verifiable outcomes rather than human preference labels removes a whole class of reward hacking problems. The challenge is defining what ‘verifiable’ means for open-ended tasks. Code and math are easy; reasoning is harder."
-    ]
+      "RLVR over RLHF is a genuine paradigm shift \u2014 training on verifiable outcomes rather than human preference labels removes a whole class of reward hacking problems. The challenge is defining what \u2018verifiable\u2019 means for open-ended tasks. Code and math are easy; reasoning is harder."
+    ],
+    "account_links": [
+      "https://x.com/saen_dev",
+      "https://xcancel.com/saen_dev"
+    ],
+    "tweet_search_url": "https://x.com/search?q=from%3Asaen_dev%20RLVR%20over%20RLHF%20is%20a%20genuine%20paradigm%20shift%20%E2%80%94%20training%20on%20verifiable%20outcomes%20rather%20than%20h&src=typed_query&f=live"
   },
   {
     "date": "2026-02-23",
     "author_handle": "@Shekswess",
     "author_url": "https://x.com/Shekswess",
     "full_text_blocks": [
-      "The alpha changed behavior more than any other hyperparameter… 4 rollouts kept strong accuracy and cheaper training process… RLVR needs rollout diversity…"
-    ]
+      "The alpha changed behavior more than any other hyperparameter\u2026 4 rollouts kept strong accuracy and cheaper training process\u2026 RLVR needs rollout diversity\u2026"
+    ],
+    "account_links": [
+      "https://x.com/Shekswess",
+      "https://xcancel.com/Shekswess"
+    ],
+    "tweet_search_url": "https://x.com/search?q=from%3AShekswess%20The%20alpha%20changed%20behavior%20more%20than%20any%20other%20hyperparameter%E2%80%A6%204%20rollouts%20kept%20strong%20accu&src=typed_query&f=live"
   },
   {
     "date": "2026-02-25",
@@ -62,7 +102,12 @@
     "author_url": "https://x.com/fourierproject",
     "full_text_blocks": [
       "Evolution ~= pretrain(prediction) + rl (value functions/personalities) + modalities. Current RLVR is not diverse + extremely short time scales. Probably should be VERY careful with RL with smarter models."
-    ]
+    ],
+    "account_links": [
+      "https://x.com/fourierproject",
+      "https://xcancel.com/fourierproject"
+    ],
+    "tweet_search_url": "https://x.com/search?q=from%3Afourierproject%20Evolution%20~%3D%20pretrain%28prediction%29%20%2B%20rl%20%28value%20functions/personalities%29%20%2B%20modalities.%20Curre&src=typed_query&f=live"
   },
   {
     "date": "2026-02-24",
@@ -70,7 +115,12 @@
     "author_url": "https://x.com/agitbackprop",
     "full_text_blocks": [
       "RLVR can let agents bypass HHH circuits from prior RLHF (e.g., coding agents sabotaging unit tests)."
-    ]
+    ],
+    "account_links": [
+      "https://x.com/agitbackprop",
+      "https://xcancel.com/agitbackprop"
+    ],
+    "tweet_search_url": "https://x.com/search?q=from%3Aagitbackprop%20RLVR%20can%20let%20agents%20bypass%20HHH%20circuits%20from%20prior%20RLHF%20%28e.g.%2C%20coding%20agents%20sabotaging%20un&src=typed_query&f=live"
   },
   {
     "id": "2026773868233343072",
@@ -80,20 +130,37 @@
     "tweet_url": "https://x.com/sachpatro97/status/2026773868233343072",
     "full_text_blocks": [
       "the hypothesis on what will drive differentiation, or even a moat, in the RL environments space changes every week ... Everybody wants high quality tasks, rubrics and verifiers but some want just that, others want the full harness and TVRs ..."
+    ],
+    "account_links": [
+      "https://x.com/sachpatro97",
+      "https://xcancel.com/sachpatro97"
+    ],
+    "archive_links": [
+      "https://xcancel.com/sachpatro97/status/2026773868233343072"
     ]
   },
   {
     "date": "2026-02-20",
     "author_handle": "@dair_ai",
     "author_url": "https://x.com/dair_ai",
-    "engagement": {"likes": 158, "views": "8.6k+"},
+    "engagement": {
+      "likes": 158,
+      "views": "8.6k+"
+    },
     "full_text_blocks": [
       "Training LLM agents for extremely long-horizon tasks remains an open challenge. Most pipelines struggle with extended-duration trajectories.",
       "KLong tackles this with trajectory-splitting supervised fine-tuning that preserves early context while progressively truncating later context, followed by progressive RL with extended timeouts.",
       "They also built a Research-Factory pipeline that automatically generates thousands of long-horizon training trajectories from Claude 4.5 Sonnet.",
       "The 106B-parameter KLong model outperforms Kimi K2 Thinking (1T) by 11.28% on PaperBench, with gains generalizing to SWE-bench Verified and MLE-bench."
     ],
-    "links": ["https://arxiv.org/abs/2602.17547"]
+    "links": [
+      "https://arxiv.org/abs/2602.17547"
+    ],
+    "account_links": [
+      "https://x.com/dair_ai",
+      "https://xcancel.com/dair_ai"
+    ],
+    "tweet_search_url": "https://x.com/search?q=from%3Adair_ai%20Training%20LLM%20agents%20for%20extremely%20long-horizon%20tasks%20remains%20an%20open%20challenge.%20Most%20pipel&src=typed_query&f=live"
   },
   {
     "date": "2026-02-20",
@@ -104,15 +171,29 @@
       "KLong proposes trajectory splitting SFT and progressive RL with gradually extended timeouts.",
       "The 10x parameter efficiency gap suggests that for agentic tasks, how you train matters far more than raw scale."
     ],
-    "links": ["https://arxiv.org/abs/2602.17547"]
+    "links": [
+      "https://arxiv.org/abs/2602.17547"
+    ],
+    "account_links": [
+      "https://x.com/guifav",
+      "https://xcancel.com/guifav"
+    ],
+    "tweet_search_url": "https://x.com/search?q=from%3Aguifav%20A%20106B%20parameter%20open%20source%20model%20just%20outperformed%20a%201%20trillion%20parameter%20one%20on%20long%20ho&src=typed_query&f=live"
   },
   {
     "date": "2026-02-21",
     "author_handle": "@SciFi",
     "author_url": "https://x.com/SciFi",
     "full_text_blocks": [
-      "KLong: Training LLM Agent for Extremely Long-horizon Tasks — Yue Liu, Zhiyuan Hu, Flood Sung, Jiaheng Zhang, Bryan Hooi"
+      "KLong: Training LLM Agent for Extremely Long-horizon Tasks \u2014 Yue Liu, Zhiyuan Hu, Flood Sung, Jiaheng Zhang, Bryan Hooi"
     ],
-    "links": ["https://arxiv.org/abs/2602.17547"]
+    "links": [
+      "https://arxiv.org/abs/2602.17547"
+    ],
+    "account_links": [
+      "https://x.com/SciFi",
+      "https://xcancel.com/SciFi"
+    ],
+    "tweet_search_url": "https://x.com/search?q=from%3ASciFi%20KLong%3A%20Training%20LLM%20Agent%20for%20Extremely%20Long-horizon%20Tasks%20%E2%80%94%20Yue%20Liu%2C%20Zhiyuan%20Hu%2C%20Flood%20Su&src=typed_query&f=live"
   }
 ]

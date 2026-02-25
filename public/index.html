@@ -23,6 +23,11 @@
       <p class="muted"><a href="/data/raw-notes.md" target="_blank">Open raw ingest notes (verbatim)</a></p>
 
       <section class="card">
+        <h2>Brief</h2>
+        <div id="brief" style="white-space:pre-wrap"></div>
+      </section>
+
+      <section class="card">
         <h2>Start with these accounts (high-signal seeds)</h2>
         <div id="seedAccounts"></div>
       </section>
@@ -45,11 +50,15 @@
 
     <script>
       Promise.all([
+        fetch('/data/brief.md').then(r=>r.text()),
         fetch('/data/accounts.json').then(r=>r.json()),
         fetch('/data/papers.json').then(r=>r.json()),
         fetch('/data/signals.json').then(r=>r.json()),
         fetch('/data/tweets.json').then(r=>r.json())
-      ]).then(([accounts,papers,signals,tweets])=>{
+      ]).then(([brief,accounts,papers,signals,tweets])=>{
+        const linkifiedBrief = brief.replace(/(https?:\/\/[^\s\n]+)/g, '<a href="$1" target="_blank">$1</a>');
+        document.getElementById('brief').innerHTML = linkifiedBrief;
+
         document.getElementById('seedAccounts').innerHTML = accounts
           .filter(a=>a.priority==='seed')
           .map(a=>`<span class="pill"><a href="${a.url}" target="_blank">${a.handle}</a></span>`)
@@ -67,7 +76,7 @@
         document.getElementById('tweets').innerHTML = tweets.map(t=>`
           <article style="padding:10px 0;border-bottom:1px solid var(--line)">
             <div><strong>${t.topic}</strong> · ${t.date}</div>
-            <div class="muted"><a href="${t.author_url}" target="_blank">${t.author}</a>${t.post_url ? ` · <a href="${t.post_url}" target="_blank">post link</a>` : ''}${t.paper_link ? ` · <a href="${t.paper_link}" target="_blank">paper</a>` : ''}</div>
+            <div class="muted"><a href="${t.author_url || (t.account_links&&t.account_links[0])}" target="_blank">${t.author || t.author_handle}</a>${t.tweet_url ? ` · <a href="${t.tweet_url}" target="_blank">post link</a>` : ''}${t.tweet_search_url ? ` · <a href="${t.tweet_search_url}" target="_blank">search link</a>` : ''}${t.archive_links ? ` · ${t.archive_links.map(a=>`<a href="${a}" target="_blank">archive</a>`).join(' · ')}` : ''}${t.paper_link ? ` · <a href="${t.paper_link}" target="_blank">paper</a>` : ''}</div>
             ${(t.full_text_blocks||t.quotes||[]).map(q=>`<div class="quote">${q}</div>`).join('')}
             ${(t.links||[]).length ? `<div class="muted">${t.links.map(l=>`<a href="${l}" target="_blank">${l}</a>`).join(' · ')}</div>` : ''}
           </article>
