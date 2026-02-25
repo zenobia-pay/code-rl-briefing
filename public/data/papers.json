@@ -1,0 +1,28 @@
+[
+  {
+    "title": "On Data Engineering for Scaling LLM Terminal Capabilities",
+    "contribution": "Training strategies for terminal/shell mastery as a structured agent RL environment.",
+    "date": "2026-02-24"
+  },
+  {
+    "title": "KLong: Training LLM Agent for Extremely Long-horizon Tasks",
+    "contribution": "Trajectory-splitting SFT + progressive RL for long-horizon data bottlenecks.",
+    "date": "2026-02-19",
+    "arxiv": "https://arxiv.org/abs/2602.17547"
+  },
+  {
+    "title": "K-Search: LLM Kernel Generation via Co-Evolving Intrinsic World Model",
+    "contribution": "GPU kernel optimization via RL search with a learned intrinsic world model.",
+    "date": "2026-02-22"
+  },
+  {
+    "title": "Agents of Chaos",
+    "contribution": "Live-environment red-teaming data in persistent human-interaction tool setups.",
+    "date": "2026-02-23"
+  },
+  {
+    "title": "Aletheia tackles FirstProof autonomously",
+    "contribution": "Autonomous math proof research in verifiable formal environments.",
+    "date": "2026-02-24"
+  }
+]

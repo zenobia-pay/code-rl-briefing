@@ -1,0 +1,7 @@
+name = "code-rl-briefing"
+main = "src/index.ts"
+compatibility_date = "2026-02-25"
+account_id = "0e1651bc459f3017e816ba2263e0807a"
+
+[assets]
+directory = "./public"

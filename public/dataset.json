@@ -1,0 +1,30 @@
+{
+  "briefingTitle": "What is the latest in code RL environments and human data?",
+  "generatedFor": "Ryan Prendergast",
+  "sections": [
+    {
+      "heading": "Topline",
+      "points": [
+        "The frontier is moving from code completion to environment-grounded agent training.",
+        "Terminal-native data pipelines and verifiable reward systems are becoming core infra.",
+        "Human feedback is being re-scoped to long-horizon orchestration, red-team edge cases, and targeted rubric design."
+      ]
+    },
+    {
+      "heading": "Where to watch first",
+      "points": [
+        "@karpathy",
+        "@natolambert",
+        "@willccbb",
+        "@NousResearch",
+        "@cwolferesearch"
+      ]
+    },
+    {
+      "heading": "This week’s strongest signal",
+      "points": [
+        "Nous Research Hermes Agent launch: persistent memory, multi-surface agent operations, explicit RL data-generation orientation."
+      ]
+    }
+  ]
+}

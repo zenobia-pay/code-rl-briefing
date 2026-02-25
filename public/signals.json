@@ -1,0 +1,75 @@
+{
+  "topic": "What is the latest in code RL environments and human data?",
+  "timeWindow": "2026-02-19 to 2026-02-25",
+  "priorityAccounts": ["@karpathy", "@natolambert", "@willccbb"],
+  "keyTrends": [
+    "Code RL environments are shifting from static code generation to terminal-interaction loops with command execution, observation, and iteration.",
+    "Terminal capability scaling is becoming a dedicated data-engineering discipline for CLI-native agents.",
+    "Hardware-aware RL for code optimization is accelerating (e.g., world-model-guided CUDA kernel search).",
+    "Formal proof environments are emerging as high-signal verifiable-reward settings for autonomous research agents."
+  ],
+  "humanDataTrends": [
+    "Shift from simple RLHF preference labels toward HITL orchestration and long-horizon trajectory collection.",
+    "Trajectory-splitting and progressive RL are key for bootstrapping extremely long-horizon tasks.",
+    "Large red-team/live-lab studies are creating new persistent-environment human-interaction datasets.",
+    "Verifiable reward foundries (tests/simulators/proofs) are reducing dependence on expensive per-step human labels."
+  ],
+  "recentPapers": [
+    {
+      "title": "On Data Engineering for Scaling LLM Terminal Capabilities",
+      "date": "2026-02-24",
+      "contribution": "Training and data strategies for terminal/shell mastery."
+    },
+    {
+      "title": "KLong: Training LLM Agent for Extremely Long-horizon Tasks",
+      "date": "2026-02-19",
+      "contribution": "Long-horizon cold-start via trajectory splitting + progressive RL."
+    },
+    {
+      "title": "K-Search: LLM Kernel Generation via Co-Evolving Intrinsic World Model",
+      "date": "2026-02-22",
+      "contribution": "World-model-guided RL search for GPU kernel optimization."
+    },
+    {
+      "title": "Agents of Chaos",
+      "date": "2026-02-23",
+      "contribution": "Persistent live-environment agent red-teaming and behavior profiling."
+    },
+    {
+      "title": "Aletheia tackles FirstProof autonomously",
+      "date": "2026-02-24",
+      "contribution": "Autonomous theorem/proof-agent progress in verifiable math environments."
+    }
+  ],
+  "notablePosts": [
+    {
+      "author": "@NousResearch",
+      "date": "2026-02-25",
+      "summary": "Hermes Agent launch; persistent memory, CLI+messaging interface, subagents/tooling, RL pipeline tie-in.",
+      "tweetId": "2026758996107898954"
+    },
+    {
+      "author": "@willccbb",
+      "date": "2026-02-25",
+      "summary": "Prime Intellect RL residents: proposed clean cross-domain continual-learning evaluation formalism.",
+      "tweetId": "2026743565699936376"
+    },
+    {
+      "author": "@cwolferesearch",
+      "date": "2026-02-24",
+      "summary": "Rubric-based RL thread connecting constitutional/rules-based approaches with modern rubric-judged rewards.",
+      "tweetId": "2026151598523625626"
+    },
+    {
+      "author": "@saen_dev",
+      "date": "2026-02-25",
+      "summary": "RLVR vs RLHF framing: verifiable outcomes reduce preference-label bottlenecks but verification remains hard for open-ended reasoning."
+    },
+    {
+      "author": "@sachpatro97",
+      "date": "2026-02-25",
+      "summary": "RL environment product moat debate: tasks/rubrics/verifiers vs harness/TVRs fragmentation.",
+      "tweetId": "2026773868233343072"
+    }
+  ]
+}

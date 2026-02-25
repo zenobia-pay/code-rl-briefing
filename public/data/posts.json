@@ -1,0 +1,51 @@
+[
+  {
+    "date": "2026-02-25",
+    "author": "@NousResearch",
+    "post_id": "2026758996107898954",
+    "topic": "Hermes Agent launch",
+    "summary": "Open-source persistent agent with CLI + messaging continuity, memory hierarchy, subagents, terminal/filesystem/browser control, and explicit linkage to an agentic RL data-generation pipeline.",
+    "engagement": { "likes": 579, "views": "224k+" }
+  },
+  {
+    "date": "2026-02-25",
+    "author": "@willccbb",
+    "post_id": "2026743565699936376",
+    "topic": "Prime Intellect RL residents formalism",
+    "summary": "Claims a general cross-domain continual-learning evaluation formalism with promising early experiments.",
+    "engagement": { "likes": 160, "views": "6k" }
+  },
+  {
+    "date": "2026-02-24",
+    "author": "@cwolferesearch",
+    "post_id": "2026151598523625626",
+    "topic": "Rubric-based RL",
+    "summary": "Historical + practical framing: direct assessment rewards and prompt-specific rubrics for granular control over alignment criteria; continuity with Constitutional AI / RLAIF style methods.",
+    "engagement": { "likes": 76, "views": "3.6k" }
+  },
+  {
+    "date": "2026-02-25",
+    "author": "@saen_dev",
+    "topic": "RLVR vs RLHF",
+    "summary": "Verifiable outcomes reduce preference-label failure modes, but verifying open-ended reasoning remains a central bottleneck."
+  },
+  {
+    "date": "2026-02-25",
+    "author": "@sachpatro97",
+    "post_id": "2026773868233343072",
+    "topic": "RL environment moats",
+    "summary": "Market differentiation remains unclear: high-quality tasks/rubrics/verifiers alone vs full harness and tooling stack."
+  },
+  {
+    "date": "2026-02-20",
+    "author": "@dair_ai",
+    "topic": "KLong technical summary",
+    "summary": "Clear summary of trajectory-splitting SFT + progressive RL + Research-Factory distillation; highlights the long-horizon agent training bottleneck and reported 106B vs 1T efficiency gap."
+  },
+  {
+    "date": "2026-02-20",
+    "author": "@guifav",
+    "topic": "KLong parameter-efficiency take",
+    "summary": "Training recipe quality can dominate raw parameter count for long-horizon agent performance."
+  }
+]

@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Code RL Briefing</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif; background:#faf8f5; color:#1f1f1f; margin:0; }
+    .wrap { max-width: 900px; margin: 0 auto; padding: 28px; }
+    h1,h2 { margin: 0 0 12px; }
+    h1 { font-size: 34px; line-height:1.15; }
+    .sub { color:#666; margin-bottom: 20px; }
+    .card { background:#fff; border:1px solid #ece7e0; border-radius:10px; padding:16px; margin:14px 0; }
+    ul { margin:8px 0 0 18px; }
+    li { margin:6px 0; }
+    code { background:#f2efe9; padding:2px 6px; border-radius:6px; }
+    .muted { color:#777; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>What is the latest in code RL environments and human data?</h1>
+    <p class="sub">Signals briefing • Feb 19–25, 2026</p>
+
+    <div class="card">
+      <h2>Topline</h2>
+      <ul id="topline"></ul>
+    </div>
+
+    <div class="card">
+      <h2>Key Trends in Code RL Environments</h2>
+      <ul id="trends"></ul>
+    </div>
+
+    <div class="card">
+      <h2>Advancements in Human Data & Feedback</h2>
+      <ul id="human"></ul>
+    </div>
+
+    <div class="card">
+      <h2>Recent Papers (Feb 19 - Feb 25, 2026)</h2>
+      <ul id="papers"></ul>
+    </div>
+
+    <div class="card">
+      <h2>High-Signal Accounts</h2>
+      <p>Start with <code>@karpathy</code>, <code>@natolambert</code>, and <code>@willccbb</code>.</p>
+      <p class="muted">You’ll get ~80% of this cycle’s signal immediately.</p>
+    </div>
+
+    <div class="card">
+      <h2>Notable Posts / Threads</h2>
+      <ul id="posts"></ul>
+    </div>
+
+    <div class="muted">Data endpoints: <code>/signals.json</code>, <code>/dataset.json</code>, <code>/api/signals</code>, <code>/api/dataset</code></div>
+  </div>
+
+<script>
+async function load() {
+  const s = await (await fetch('/signals.json')).json();
+  const d = await (await fetch('/dataset.json')).json();
+
+  d.sections.find(x => x.heading === 'Topline').points.forEach(p => {
+    const li = document.createElement('li'); li.textContent = p; document.getElementById('topline').appendChild(li);
+  });
+
+  s.keyTrends.forEach(p => { const li = document.createElement('li'); li.textContent = p; document.getElementById('trends').appendChild(li); });
+  s.humanDataTrends.forEach(p => { const li = document.createElement('li'); li.textContent = p; document.getElementById('human').appendChild(li); });
+
+  s.recentPapers.forEach(p => {
+    const li = document.createElement('li');
+    li.textContent = `${p.title} (${p.date}) — ${p.contribution}`;
+    document.getElementById('papers').appendChild(li);
+  });
+
+  s.notablePosts.forEach(p => {
+    const li = document.createElement('li');
+    li.textContent = `${p.author} (${p.date}): ${p.summary}` + (p.tweetId ? ` [ID: ${p.tweetId}]` : '');
+    document.getElementById('posts').appendChild(li);
+  });
+}
+load();
+</script>
+</body>
+</html>
