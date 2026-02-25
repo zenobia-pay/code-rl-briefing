@@ -1,16 +1,17 @@
-Code RL is decisively shifting from “predict code” to “operate systems”: the winners are models trained in executable environments with verifiable feedback, not chat-only reward loops. My take: the next moat is not model size but the quality of environment design (terminal depth, verifier quality, long-horizon curriculum) plus operational data flywheels from persistent agents.
+The center of gravity has moved: code RL is no longer about prettier completions, it’s about agents surviving real environments with verifiable feedback. My take is blunt — teams still obsessing over preference-only tuning are going to get outcompeted by teams building better environments, verifiers, and long-horizon data loops.
 
-The most important signal this week is convergence: terminal-capability training (Nemotron-Terminal), long-horizon curriculum design (KLong), hardware-level search (K-Search), formal-verification research agents (Aletheia), and live red-team evidence (Agents of Chaos) all point to the same bottleneck—good outcomes require structured environments and better reward instrumentation, not just more preference labels. Hermes Agent matters because it operationalizes that loop in production-style settings, while RLVR debates show the field still lacks robust verification for open-ended reasoning.
+Tweets (primary-source first):
+- https://x.com/NousResearch/status/2026758996107898954 — “Meet Hermes Agent, the open source agent that grows with you.”
+- https://x.com/NousResearch/status/2026758996107898954 — “Hermes Agent remembers what it learns and gets more capable over time, with a multi-level memory system and persistent dedicated machine access.”
+- https://x.com/willccbb/status/2026743565699936376 — “a major bottleneck in continual learning is that we don’t have a general way to compare and evaluate methods across task domains.”
+- https://x.com/cwolferesearch/status/2026151598523625626 — “Rubric-based RL is a really popular topic right now, but it’s not new.”
+- https://x.com/sachpatro97/status/2026773868233343072 — “Everybody wants high quality tasks, rubrics and verifiers but some want just that, others want the full harness and TVRs.”
+- https://x.com/saen_dev — “RLVR over RLHF is a genuine paradigm shift — training on verifiable outcomes rather than human preference labels removes a whole class of reward hacking problems.”
 
-Links:
-- On Data Engineering for Scaling LLM Terminal Capabilities — https://arxiv.org/abs/2602.21193
-- KLong: Training LLM Agent for Extremely Long-horizon Tasks — https://arxiv.org/abs/2602.17547
-- K-Search: LLM Kernel Generation via Co-Evolving Intrinsic World Model — https://arxiv.org/abs/2602.19128
-- Agents of Chaos — https://arxiv.org/abs/2602.20021
-- Aletheia tackles FirstProof autonomously — https://arxiv.org/abs/2602.21201
-- Aletheia project repo — https://github.com/google-deepmind/superhuman/tree/main/aletheia
-- Hermes Agent launch page — https://nousresearch.com/hermes-agent/
-- @NousResearch thread — https://x.com/NousResearch/status/2026758996107898954
-- @willccbb thread — https://x.com/willccbb/status/2026743565699936376
-- @cwolferesearch thread — https://x.com/cwolferesearch/status/2026151598523625626
-- @sachpatro97 thread — https://x.com/sachpatro97/status/2026773868233343072
+Papers (one sentence extracted):
+- https://arxiv.org/abs/2602.21193 — “Despite rapid recent progress in the terminal capabilities of large language models, the training data strategies behind state-of-the-art terminal agents remain largely undisclosed.”
+- https://arxiv.org/abs/2602.17547 — “KLong tackles this with a two-phase approach: trajectory-splitting supervised fine-tuning that preserves early context while progressively truncating later context, followed by progressive RL that schedules training into stages with extended timeouts.”
+- https://arxiv.org/abs/2602.19128 — “Optimizing GPU kernels is critical for efficient modern machine learning systems yet remains challenging due to the complex interplay of design factors and rapid hardware evolution.”
+- https://arxiv.org/abs/2602.20021 — “We report an exploratory red-teaming study of autonomous language-model-powered agents deployed in a live laboratory environment with persistent memory, email accounts, Discord access, file systems, and shell execution.”
+- https://arxiv.org/abs/2602.21201 — “Within the allowed timeframe of the challenge, Aletheia autonomously solved 6 problems out of 10 according to majority expert assessments.”
+- https://github.com/google-deepmind/superhuman/tree/main/aletheia — “Raw prompts and outputs are available at https://github.com/google-deepmind/superhuman/tree/main/aletheia.”
