@@ -36,11 +36,7 @@
       </div>
       <div id="view-v2" class="view hidden">
         <div class="card"><h3>Original prompt (one sentence)</h3><div class="quote">What is the latest in code RL environments and human data?</div></div>
-        <div class="card"><h3>One-sentence take</h3><p id="v2Take"></p><p><strong>SuperGrok on X used:</strong> <span id="v2Used"></span></p><p class="meta" id="v2Proof"></p></div>
-        <div class="card"><h3>Accounts</h3><div id="v2Accounts"></div></div>
-        <div class="card"><h3>Tweets (verbatim text)</h3><div id="v2Tweets"></div></div>
-        <div class="card"><h3>Papers (alphaXiv/arXiv + abstract snippet + people discussing)</h3><div id="v2Papers"></div></div>
-        <div class="card"><h3>Signals (people only)</h3><div id="v2Signals"></div></div>
+        <div class="card"><h3>Briefing v2 (exact email text)</h3><div id="briefV2" style="white-space:pre-wrap"></div></div>
       </div>
     </section>
   </div>
@@ -50,15 +46,11 @@ function setActive(id){document.querySelectorAll('.view').forEach(v=>v.classList
 Promise.all([
   fetch('/data/briefings.json').then(r=>r.json()),
   fetch('/data/brief.md').then(r=>r.text()),
-  fetch('/data/v2.json').then(r=>r.json())
+  fetch('/data/brief-v2-email.md').then(r=>r.text())
 ]).then(([runs,v1,v2])=>{
   nav.innerHTML=runs.map((r,i)=>`<button class="btn ${i===0?'active':''}" data-id="${r.id}" onclick="setActive('${r.id}')">${r.label}<div class="meta">${r.date} • ${r.source}</div></button>`).join('');
   briefV1.innerHTML=v1.replace(/(https?:\/\/[^\s\n]+)/g,'<a href="$1" target="_blank">$1</a>');
-  v2Take.textContent=v2.oneSentenceTake||'';v2Used.textContent=v2.usedSuperGrokOnX?'Yes':'No';v2Proof.textContent=v2.superGrokProof||'';
-  v2Accounts.innerHTML=(v2.accounts||[]).map(a=>`<span class="pill"><a target="_blank" href="${a.exampleTweetUrl}">${a.handle}</a></span>`).join('');
-  v2Tweets.innerHTML=(v2.tweets||[]).map(t=>`<div class="card"><div><a target="_blank" href="${t.url}"><strong>${t.author}</strong></a></div><div class="quote">${(t.text||'').replace(/</g,'&lt;')}</div></div>`).join('');
-  v2Papers.innerHTML=(v2.papers||[]).map(p=>`<div class="card"><div><strong><a target="_blank" href="${p.alphaXivUrl||p.arxivUrl}">${p.title}</a></strong>${p.arxivUrl?` · <a target="_blank" href="${p.arxivUrl}">arXiv</a>`:''}</div><div class="quote">${(p.abstractSnippet||'').replace(/</g,'&lt;')}</div><div class="meta">People discussing: ${(p.peopleDiscussing||[]).map(x=>`<a target="_blank" href="${x.tweetUrl}">${x.handle}</a>`).join(' · ')||'none found'}</div></div>`).join('');
-  v2Signals.innerHTML=(v2.signals||[]).map(s=>`<div class="pill"><a target="_blank" href="${s.link}">${s.name}</a></div>`).join('');
+  briefV2.innerHTML=v2.replace(/(https?:\/\/[^\s\n]+)/g,'<a href="$1" target="_blank">$1</a>');
 });
 </script>
 </body>
