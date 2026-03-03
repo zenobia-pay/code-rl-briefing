@@ -54,7 +54,13 @@ function setActive(id){
   document.querySelectorAll('.btn').forEach(b=>b.classList.remove('active'));
   document.querySelector(`[data-id="${id}"]`)?.classList.add('active');
 }
-function linkify(txt){ return txt.replace(/(https?:\/\/[^\s\n]+)/g,'<a href="$1" target="_blank">$1</a>'); }
+function linkify(txt){
+  // 1) markdown links [label](url)
+  let out = txt.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
+  // 2) bare urls (avoid trailing punctuation/parens)
+  out = out.replace(/(^|\s)(https?:\/\/[^\s)]+)(?=$|\s|[.,!?;:])/g, '$1<a href="$2" target="_blank">$2</a>');
+  return out;
+}
 Promise.all([
   fetch('/data/brief.md').then(r=>r.text()),
   fetch('/data/brief-v2-email.md').then(r=>r.text()),
