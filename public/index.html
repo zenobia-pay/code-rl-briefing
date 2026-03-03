@@ -30,14 +30,15 @@
       <div id="nav"></div>
     </aside>
     <section class="panel">
-      <div id="view-v1" class="view">
+      <div id="view-v1" class="view hidden">
         <div class="card"><h3>Original prompt (one sentence)</h3><div class="quote">What is the latest in code RL environments and human data?</div></div>
-        <div class="card"><h3>Briefing v1</h3><div id="briefV1" style="white-space:pre-wrap"></div></div>
+        <div class="card"><h3>Briefing (2026-02-25)</h3><div id="briefV1" style="white-space:pre-wrap"></div></div>
       </div>
-      <div id="view-v2" class="view hidden">
+      <div id="view-v2" class="view">
         <div class="card"><h3>Original prompt (one sentence)</h3><div class="quote">What is the latest in code RL environments and human data?</div></div>
-        <div class="card"><h3>Briefing v2 (exact email text)</h3><div id="briefV2" style="white-space:pre-wrap"></div></div>
+        <div class="card"><h3>Briefing (2026-03-02)</h3><div id="briefV2" style="white-space:pre-wrap"></div></div>
       </div>
+      <div class="card"><h3>Signals</h3><div id="signals"></div></div>
     </section>
   </div>
 </main>
@@ -46,11 +47,14 @@ function setActive(id){document.querySelectorAll('.view').forEach(v=>v.classList
 Promise.all([
   fetch('/data/briefings.json').then(r=>r.json()),
   fetch('/data/brief.md').then(r=>r.text()),
-  fetch('/data/brief-v2-email.md').then(r=>r.text())
-]).then(([runs,v1,v2])=>{
-  nav.innerHTML=runs.map((r,i)=>`<button class="btn ${i===0?'active':''}" data-id="${r.id}" onclick="setActive('${r.id}')">${r.label}<div class="meta">${r.date} • ${r.source}</div></button>`).join('');
+  fetch('/data/brief-v2-email.md').then(r=>r.text()),
+  fetch('/data/signals.json').then(r=>r.json())
+]).then(([runs,v1,v2,signalsData])=>{
+  nav.innerHTML=runs.map((r,i)=>`<button class="btn ${i===0?'active':''}" data-id="${r.id}" onclick="setActive('${r.id}')">${r.label}<div class="meta">${r.source}</div></button>`).join('');
+  setActive('v2');
   briefV1.innerHTML=v1.replace(/(https?:\/\/[^\s\n]+)/g,'<a href="$1" target="_blank">$1</a>');
   briefV2.innerHTML=v2.replace(/(https?:\/\/[^\s\n]+)/g,'<a href="$1" target="_blank">$1</a>');
+  signals.innerHTML = signalsData.map(s => `<div class="card"><strong>${s.name}</strong><div class="meta">${s.role}</div><div>${(s.links||[]).map(l=>`<a target="_blank" href="${l.url}">${l.label}</a>`).join(' · ')}</div></div>`).join('');
 });
 </script>
 </body>

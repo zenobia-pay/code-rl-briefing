@@ -1,14 +1,14 @@
 [
   {
-    "id": "v1",
-    "label": "Briefing v1",
-    "date": "2026-02-25",
-    "source": "Original synthesis"
-  },
-  {
     "id": "v2",
-    "label": "Briefing v2",
+    "label": "2026-03-02",
     "date": "2026-03-02",
     "source": "Browser Use + SuperGrok"
+  },
+  {
+    "id": "v1",
+    "label": "2026-02-25",
+    "date": "2026-02-25",
+    "source": "Original synthesis"
   }
 ]
