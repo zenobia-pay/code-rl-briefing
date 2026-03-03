@@ -27,6 +27,14 @@
   <h1>Code RL Briefings</h1>
   <p class="meta"><a href="https://briefing-hub.founders-0e1.workers.dev" target="_blank">← All briefings (hub)</a></p>
   <p class="meta">Most recent briefing first. Signals are a separate top-level view.</p>
+  <div class="card" style="margin-bottom:12px;display:flex;gap:10px;align-items:center;">
+    <button id="runBtn" class="btn" style="max-width:220px;margin:0;">Run again today</button>
+    <details>
+      <summary style="cursor:pointer">ℹ prompt</summary>
+      <pre id="runPromptView" style="white-space:pre-wrap;font-size:.82rem;max-width:780px;"></pre>
+    </details>
+    <span id="runStatus" class="meta"></span>
+  </div>
   <div class="layout">
     <aside class="panel">
       <h3>Views</h3>
@@ -61,6 +69,20 @@ function linkify(txt){
   out = out.replace(/(^|\s)(https?:\/\/[^\s)]+)(?=$|\s|[.,!?;:])/g, '$1<a href="$2" target="_blank">$2</a>');
   return out;
 }
+const RUN_PROMPT = `You are producing a daily intelligence briefing for me.
+Topic: What is the latest in code RL environments and human data?
+Date: ${new Date().toISOString().slice(0,10)}
+Use Browser Use + SuperGrok on X and alphaXiv/arXiv.
+Produce email-format output with one-sentence take, then Tweets (1 sentence + labeled link), then Papers (1 sentence + labeled link).
+Update the code-rl-briefing site with today's date as newest entry and refresh global Signals.`;
+runPromptView.textContent = RUN_PROMPT;
+runBtn.onclick = async () => {
+  runStatus.textContent = 'sending...';
+  const r = await fetch('/api/run', { method:'POST', headers:{'content-type':'application/json'}, body: JSON.stringify({ prompt: RUN_PROMPT })});
+  const j = await r.json().catch(()=>({}));
+  runStatus.textContent = j.ok ? 'sent to Slack trigger' : `failed (${j.error||r.status})`;
+};
+
 Promise.all([
   fetch('/data/brief.md').then(r=>r.text()),
   fetch('/data/brief-v2-email.md').then(r=>r.text()),
