@@ -10,51 +10,63 @@
     .wrap{max-width:1180px;margin:0 auto;padding:24px 18px 56px}
     .layout{display:grid;grid-template-columns:300px 1fr;gap:14px}
     .panel,.card{background:var(--paper);border:1px solid var(--line);border-radius:14px}
-    .panel{padding:12px}.card{padding:14px;margin-bottom:10px}
+    .panel{padding:12px}.card{padding:16px;margin-bottom:10px}
     .btn{display:block;width:100%;text-align:left;border:1px solid var(--line);border-radius:10px;padding:10px;background:#fff;cursor:pointer;margin-bottom:8px}
     .btn.active{border-color:var(--accent);box-shadow: inset 0 0 0 1px var(--accent)}
     .meta{color:var(--muted);font-size:.9rem}
-    .pill{display:inline-block;border:1px solid var(--line);background:#f8f4ee;border-radius:999px;padding:5px 10px;margin:0 8px 8px 0}
+    .hidden{display:none}
+    .email{font-family:Georgia, 'Times New Roman', serif; line-height:1.6; white-space:pre-wrap}
     .quote{border-left:3px solid #d7ccbc;padding-left:10px;margin:8px 0;white-space:pre-wrap}
-    .hidden{display:none} a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+    a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+    .signal{border:1px solid var(--line);border-radius:10px;padding:10px;margin:0 0 8px}
     @media(max-width:900px){.layout{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
 <main class="wrap">
   <h1>Code RL Briefings</h1>
-  <p class="meta">Toggle between runs. Includes original prompt + primary text.</p>
+  <p class="meta">Most recent briefing first. Signals are a separate top-level view.</p>
   <div class="layout">
     <aside class="panel">
-      <h3>Runs</h3>
+      <h3>Views</h3>
       <div id="nav"></div>
     </aside>
     <section class="panel">
-      <div id="view-v1" class="view hidden">
-        <div class="card"><h3>Original prompt (one sentence)</h3><div class="quote">What is the latest in code RL environments and human data?</div></div>
-        <div class="card"><h3>Briefing (2026-02-25)</h3><div id="briefV1" style="white-space:pre-wrap"></div></div>
-      </div>
       <div id="view-v2" class="view">
         <div class="card"><h3>Original prompt (one sentence)</h3><div class="quote">What is the latest in code RL environments and human data?</div></div>
-        <div class="card"><h3>Briefing (2026-03-02)</h3><div id="briefV2" style="white-space:pre-wrap"></div></div>
+        <div class="card"><h3>Briefing (2026-03-02) — exact email text</h3><div id="briefV2" class="email"></div></div>
       </div>
-      <div class="card"><h3>Signals</h3><div id="signals"></div></div>
+      <div id="view-v1" class="view hidden">
+        <div class="card"><h3>Original prompt (one sentence)</h3><div class="quote">What is the latest in code RL environments and human data?</div></div>
+        <div class="card"><h3>Briefing (2026-02-25)</h3><div id="briefV1" class="email"></div></div>
+      </div>
+      <div id="view-signals" class="view hidden">
+        <div class="card"><h3>Signals</h3><p class="meta">People only: accounts and paper researchers/authors, each with all known links.</p><div id="signals"></div></div>
+      </div>
     </section>
   </div>
 </main>
 <script>
-function setActive(id){document.querySelectorAll('.view').forEach(v=>v.classList.add('hidden'));document.getElementById(`view-${id}`).classList.remove('hidden');document.querySelectorAll('.btn').forEach(b=>b.classList.remove('active'));document.querySelector(`[data-id="${id}"]`)?.classList.add('active');}
+function setActive(id){
+  document.querySelectorAll('.view').forEach(v=>v.classList.add('hidden'));
+  document.getElementById(`view-${id}`).classList.remove('hidden');
+  document.querySelectorAll('.btn').forEach(b=>b.classList.remove('active'));
+  document.querySelector(`[data-id="${id}"]`)?.classList.add('active');
+}
+function linkify(txt){ return txt.replace(/(https?:\/\/[^\s\n]+)/g,'<a href="$1" target="_blank">$1</a>'); }
 Promise.all([
-  fetch('/data/briefings.json').then(r=>r.json()),
   fetch('/data/brief.md').then(r=>r.text()),
   fetch('/data/brief-v2-email.md').then(r=>r.text()),
   fetch('/data/signals.json').then(r=>r.json())
-]).then(([runs,v1,v2,signalsData])=>{
-  nav.innerHTML=runs.map((r,i)=>`<button class="btn ${i===0?'active':''}" data-id="${r.id}" onclick="setActive('${r.id}')">${r.label}<div class="meta">${r.source}</div></button>`).join('');
+]).then(([v1,v2,signalsData])=>{
+  nav.innerHTML = `
+    <button class="btn active" data-id="v2" onclick="setActive('v2')">2026-03-02<div class="meta">Browser Use + SuperGrok</div></button>
+    <button class="btn" data-id="v1" onclick="setActive('v1')">2026-02-25<div class="meta">Original synthesis</div></button>
+    <button class="btn" data-id="signals" onclick="setActive('signals')">Signals<div class="meta">Global people index</div></button>`;
+  briefV1.innerHTML = linkify(v1);
+  briefV2.innerHTML = linkify(v2);
+  signals.innerHTML = signalsData.map(s => `<div class="signal"><strong>${s.name}</strong><div class="meta">${s.role||s.type||''}</div><div>${(s.links||[]).map(l=>`<a target="_blank" href="${l.url}">${l.label}</a>`).join(' · ')}</div></div>`).join('');
   setActive('v2');
-  briefV1.innerHTML=v1.replace(/(https?:\/\/[^\s\n]+)/g,'<a href="$1" target="_blank">$1</a>');
-  briefV2.innerHTML=v2.replace(/(https?:\/\/[^\s\n]+)/g,'<a href="$1" target="_blank">$1</a>');
-  signals.innerHTML = signalsData.map(s => `<div class="card"><strong>${s.name}</strong><div class="meta">${s.role}</div><div>${(s.links||[]).map(l=>`<a target="_blank" href="${l.url}">${l.label}</a>`).join(' · ')}</div></div>`).join('');
 });
 </script>
 </body>

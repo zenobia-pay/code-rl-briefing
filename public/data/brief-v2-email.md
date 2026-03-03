@@ -1,17 +1,17 @@
-**One-sentence take:**
+One-sentence take:
 The latest trend in code RL environments is shifting from human-written data toward synthetic/verifier-driven RL environments, with open-source infra for agentic tasksets scaling fast.
 
-**SuperGrok on X used?**
+SuperGrok on X used?
 Yes.
 
-**Accounts (from this run):**
+Accounts (from this run):
 - @willccbb — https://x.com/willccbb/status/2027183031950458961
 - @natolambert — https://x.com/natolambert/status/2027451823981031550
 - @karpathy — https://x.com/karpathy/status/2027521323275325622
 - @jsuarez — https://x.com/natolambert/status/2027451823981031550
 - @r0ck3t23 — https://x.com/r0ck3t23/status/2027498827243016298
 
-**Tweets (last few days, direct status URLs):**
+Tweets (last few days, verbatim):
 1. https://x.com/willccbb/status/2027183031950458961
 2. https://x.com/willccbb/status/2027251231878697316
 3. https://x.com/natolambert/status/2027451823981031550
@@ -23,12 +23,9 @@ Yes.
 9. https://x.com/willccbb/status/2027627415401599290
 10. https://x.com/karpathy/status/2027521323275325622
 
-Done — I ran the alphaXiv pass too.
-
-Here are the direct alphaXiv links for the core RL set:
-
-• On Data Engineering for Scaling LLM Terminal Capabilities: https://www.alphaxiv.org/abs/2602.21193
-• KLong: https://www.alphaxiv.org/abs/2602.17547
-• K-Search: https://www.alphaxiv.org/abs/2602.19128
-• Agents of Chaos: https://www.alphaxiv.org/abs/2602.20021
-• Aletheia tackles FirstProof autonomously: https://www.alphaxiv.org/abs/2602.21201
+alphaXiv links for the core RL set:
+- On Data Engineering for Scaling LLM Terminal Capabilities: https://www.alphaxiv.org/abs/2602.21193
+- KLong: Training LLM Agent for Extremely Long-horizon Tasks: https://www.alphaxiv.org/abs/2602.17547
+- K-Search: LLM Kernel Generation via Co-Evolving Intrinsic World Model: https://www.alphaxiv.org/abs/2602.19128
+- Agents of Chaos: https://www.alphaxiv.org/abs/2602.20021
+- Aletheia tackles FirstProof autonomously: https://www.alphaxiv.org/abs/2602.21201
