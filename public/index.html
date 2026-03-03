@@ -3,111 +3,141 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Code RL Briefing</title>
+    <title>Code RL Briefings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-      :root { --bg:#faf8f5; --card:#fff; --text:#1d1d1f; --muted:#66606f; --line:#e7e2db; }
-      body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,sans-serif}
-      .wrap{max-width:1100px;margin:0 auto;padding:28px 18px 56px}
-      .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:12px 0}
-      h1{margin:0 0 8px;font-size:2rem} h2{margin:0 0 10px;font-size:1.1rem}
-      p,li{line-height:1.45} a{color:#2c5cc5;text-decoration:none} a:hover{text-decoration:underline}
-      table{width:100%;border-collapse:collapse} th,td{border-bottom:1px solid var(--line);padding:8px;vertical-align:top;text-align:left}
-      .muted{color:var(--muted);font-size:.92rem}.quote{border-left:3px solid #ddd;padding-left:10px;color:#333;margin:8px 0}
-      .pill{display:inline-block;border:1px solid var(--line);background:#f5f2ed;border-radius:999px;padding:3px 10px;margin:3px 6px 3px 0}
+      :root {
+        --bg: #f8f5ef;
+        --paper: #fffdf8;
+        --ink: #1d1b1a;
+        --muted: #6b6258;
+        --line: #e5ddd2;
+        --accent: #1640d6;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: radial-gradient(circle at 15% 10%, #fff 0%, var(--bg) 38%, #f1ece3 100%);
+        color: var(--ink);
+        font-family: Manrope, -apple-system, sans-serif;
+      }
+      .wrap { max-width: 1200px; margin: 0 auto; padding: 28px 20px 56px; }
+      h1 { font-family: Fraunces, serif; font-size: 2.25rem; line-height: 1.12; margin: 0; }
+      .sub { color: var(--muted); margin: 10px 0 24px; }
+      .layout { display: grid; grid-template-columns: 320px 1fr; gap: 18px; }
+      .panel {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 14px;
+      }
+      .brief-btn {
+        width: 100%; text-align: left; border: 1px solid var(--line); background: #fff;
+        border-radius: 12px; padding: 12px; margin: 0 0 10px; cursor: pointer;
+        transition: .16s ease; color: var(--ink);
+      }
+      .brief-btn:hover { transform: translateY(-1px); border-color: #c8bcad; }
+      .brief-btn.active { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); background: #f7faff; }
+      .brief-btn .meta { display: block; font-size: .84rem; color: var(--muted); margin-top: 4px; }
+      .card { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 14px; margin: 0 0 12px; }
+      .quote { border-left: 3px solid #d8cdbd; padding-left: 10px; margin: 10px 0; color: #2c2721; }
+      .pill { display: inline-block; border: 1px solid var(--line); background: #f8f4ee; border-radius: 999px; padding: 5px 10px; margin: 0 8px 8px 0; }
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      ol, ul { margin: 10px 0 0 20px; }
+      li { margin: 8px 0; }
+      .hidden { display: none; }
+      .section-title { margin: 0 0 8px; font-family: Fraunces, serif; font-size: 1.2rem; }
+      @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } }
     </style>
   </head>
   <body>
     <main class="wrap">
-      <h1>What is the latest in code RL environments and human data?</h1>
-      <p class="muted">Primary-source driven dataset for Feb 19–25, 2026. Includes raw text blocks, account links, thread links, and paper links. No summary-only rows.</p>
-      <p class="muted"><a href="/data/raw-notes.md" target="_blank">Open raw ingest notes (verbatim)</a></p>
+      <h1>Code RL Briefings</h1>
+      <p class="sub">Daily-ready interface: click a briefing on the left to switch context instantly.</p>
 
-      <section class="card">
-        <h2>Brief v1 (original)</h2>
-        <div id="brief" style="white-space:pre-wrap"></div>
-      </section>
+      <div class="layout">
+        <aside class="panel">
+          <h2 class="section-title">Briefing Runs</h2>
+          <div id="briefingNav"></div>
+        </aside>
 
-      <section class="card">
-        <h2>Brief v2 (Browser Use + SuperGrok run)</h2>
-        <p id="v2Take"></p>
-        <p class="muted">SuperGrok on X used: <strong id="v2Used"></strong></p>
-        <p class="muted" id="v2Proof"></p>
-        <h3>Accounts (v2)</h3>
-        <div id="v2Accounts"></div>
-        <h3>Tweets (last few days)</h3>
-        <ol id="v2Tweets"></ol>
-        <h3>alphaXiv source set</h3>
-        <ul id="v2Alpha"></ul>
-      </section>
+        <section class="panel">
+          <div id="view-v1" class="view">
+            <div class="card">
+              <h3 class="section-title">Briefing v1 (original)</h3>
+              <div id="briefV1" style="white-space: pre-wrap;"></div>
+            </div>
+          </div>
 
-      <section class="card">
-        <h2>Start with these accounts (high-signal seeds)</h2>
-        <div id="seedAccounts"></div>
-      </section>
+          <div id="view-v2" class="view hidden">
+            <div class="card">
+              <h3 class="section-title">Briefing v2 (Browser Use + SuperGrok)</h3>
+              <p id="v2Take"></p>
+              <p><strong>SuperGrok on X used:</strong> <span id="v2Used"></span></p>
+              <p style="color:var(--muted)"><em id="v2Proof"></em></p>
+            </div>
 
-      <section class="card">
-        <h2>Papers</h2>
-        <table id="papers"></table>
-      </section>
+            <div class="card">
+              <h3 class="section-title">Accounts</h3>
+              <div id="v2Accounts"></div>
+            </div>
 
-      <section class="card">
-        <h2>Signals / Trend Synthesis</h2>
-        <div id="signals"></div>
-      </section>
+            <div class="card">
+              <h3 class="section-title">Tweets (last few days)</h3>
+              <ol id="v2Tweets"></ol>
+            </div>
 
-      <section class="card">
-        <h2>Primary social sources (tweets/threads)</h2>
-        <div id="tweets"></div>
-      </section>
+            <div class="card">
+              <h3 class="section-title">alphaXiv source set</h3>
+              <ul id="v2Alpha"></ul>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
 
     <script>
+      function setActive(id) {
+        document.querySelectorAll('.view').forEach(v => v.classList.add('hidden'));
+        document.getElementById(`view-${id}`).classList.remove('hidden');
+        document.querySelectorAll('.brief-btn').forEach(b => b.classList.remove('active'));
+        document.querySelector(`[data-id="${id}"]`)?.classList.add('active');
+      }
+
       Promise.all([
-        fetch('/data/brief.md').then(r=>r.text()),
-        fetch('/data/accounts.json').then(r=>r.json()),
-        fetch('/data/papers.json').then(r=>r.json()),
-        fetch('/data/signals.json').then(r=>r.json()),
-        fetch('/data/tweets.json').then(r=>r.json()),
-        fetch('/data/v2.json').then(r=>r.json())
-      ]).then(([brief,accounts,papers,signals,tweets,v2])=>{
-        const linkifiedBrief = brief.replace(/(https?:\/\/[^\s\n]+)/g, '<a href="$1" target="_blank">$1</a>');
-        document.getElementById('brief').innerHTML = linkifiedBrief;
+        fetch('/data/briefings.json').then(r => r.json()),
+        fetch('/data/brief.md').then(r => r.text()),
+        fetch('/data/v2.json').then(r => r.json())
+      ]).then(([briefings, briefV1, v2]) => {
+        const nav = document.getElementById('briefingNav');
+        nav.innerHTML = briefings.map((b, i) => `
+          <button class="brief-btn ${i===0 ? 'active' : ''}" data-id="${b.id}" onclick="setActive('${b.id}')">
+            ${b.label}
+            <span class="meta">${b.date} • ${b.source}</span>
+          </button>
+        `).join('');
+
+        const linkified = briefV1.replace(/(https?:\/\/[^\s\n]+)/g, '<a href="$1" target="_blank">$1</a>');
+        document.getElementById('briefV1').innerHTML = linkified;
 
         document.getElementById('v2Take').textContent = v2.oneSentenceTake || '';
         document.getElementById('v2Used').textContent = v2.usedSuperGrokOnX ? 'Yes' : 'No';
         document.getElementById('v2Proof').textContent = v2.superGrokProof || '';
+
         document.getElementById('v2Accounts').innerHTML = (v2.accounts || [])
           .map(a => `<span class="pill"><a href="${a.exampleTweetUrl}" target="_blank">${a.handle}</a></span>`)
           .join('');
+
         document.getElementById('v2Tweets').innerHTML = (v2.tweets || [])
           .map(t => `<li><a href="${t.url}" target="_blank">${t.author}</a> — ${t.whyItMatters}</li>`)
           .join('');
+
         document.getElementById('v2Alpha').innerHTML = (v2.alphaXiv || [])
           .map(p => `<li><a href="${p.url}" target="_blank">${p.title}</a></li>`)
           .join('');
-
-        document.getElementById('seedAccounts').innerHTML = accounts
-          .filter(a=>a.priority==='seed')
-          .map(a=>`<span class="pill"><a href="${a.url}" target="_blank">${a.handle}</a></span>`)
-          .join('');
-
-        document.getElementById('papers').innerHTML = `
-          <thead><tr><th>Paper</th><th>Date</th><th>Key contribution</th><th>Links</th></tr></thead>
-          <tbody>${papers.map(p=>`<tr><td>${p.title}</td><td>${p.date}</td><td>${p.key_contribution}</td><td>${(p.source_links||[]).map(l=>`<a href="${l.url}" target="_blank">${l.label}</a>`).join(' · ') || '<span class="muted">Add source URL</span>'}</td></tr>`).join('')}</tbody>`;
-
-        document.getElementById('signals').innerHTML = signals.map(s=>`
-          <h3>${s.section}</h3>
-          <ul>${s.points.map(p=>`<li>${p}</li>`).join('')}</ul>
-        `).join('');
-
-        document.getElementById('tweets').innerHTML = tweets.map(t=>`
-          <article style="padding:10px 0;border-bottom:1px solid var(--line)">
-            <div><strong>${t.topic}</strong> · ${t.date}</div>
-            <div class="muted"><a href="${t.author_url || (t.account_links&&t.account_links[0])}" target="_blank">${t.author || t.author_handle}</a>${t.tweet_url ? ` · <a href="${t.tweet_url}" target="_blank">post link</a>` : ''}${t.tweet_search_url ? ` · <a href="${t.tweet_search_url}" target="_blank">search link</a>` : ''}${t.archive_links ? ` · ${t.archive_links.map(a=>`<a href="${a}" target="_blank">archive</a>`).join(' · ')}` : ''}${t.paper_link ? ` · <a href="${t.paper_link}" target="_blank">paper</a>` : ''}</div>
-            ${(t.full_text_blocks||t.quotes||[]).map(q=>`<div class="quote">${q}</div>`).join('')}
-            ${(t.links||[]).length ? `<div class="muted">${t.links.map(l=>`<a href="${l}" target="_blank">${l}</a>`).join(' · ')}</div>` : ''}
-          </article>
-        `).join('');
       });
     </script>
   </body>
