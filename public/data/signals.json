@@ -1,81 +1,199 @@
 [
   {
-    "name": "willccbb",
-    "role": "twitter",
-    "links": [
-      {"label":"X","url":"https://x.com/willccbb"},
-      {"label":"Tweet","url":"https://x.com/willccbb/status/2027183031950458961"}
+    "kind": "twitter",
+    "name": "@willccbb",
+    "topLink": "https://x.com/willccbb",
+    "items": [
+      {
+        "label": "Tweet",
+        "url": "https://x.com/willccbb/status/2027183031950458961",
+        "excerpt": "RL environment build workflow and taskset execution signal."
+      },
+      {
+        "label": "Tweet",
+        "url": "https://x.com/willccbb/status/2027251231878697316",
+        "excerpt": "Verifiers-as-environment framing for terminal agents."
+      },
+      {
+        "label": "Tweet",
+        "url": "https://x.com/willccbb/status/2027912957175468357",
+        "excerpt": "Async RL scaling momentum."
+      },
+      {
+        "label": "Tweet",
+        "url": "https://x.com/willccbb/status/2027621849723768933",
+        "excerpt": "Reward design and practical RL tradeoffs."
+      },
+      {
+        "label": "Tweet",
+        "url": "https://x.com/willccbb/status/2027627415401599290",
+        "excerpt": "Collaborative RL runs and shared environments."
+      }
     ]
   },
   {
-    "name": "natolambert",
-    "role": "twitter",
-    "links": [
-      {"label":"X","url":"https://x.com/natolambert"},
-      {"label":"Tweet","url":"https://x.com/natolambert/status/2027451823981031550"}
+    "kind": "twitter",
+    "name": "@natolambert",
+    "topLink": "https://x.com/natolambert",
+    "items": [
+      {
+        "label": "Tweet",
+        "url": "https://x.com/natolambert/status/2027451823981031550",
+        "excerpt": "Open RL scaling collaboration signal."
+      }
     ]
   },
   {
-    "name": "karpathy",
-    "role": "twitter",
-    "links": [
-      {"label":"X","url":"https://x.com/karpathy"},
-      {"label":"Tweet","url":"https://x.com/karpathy/status/2027521323275325622"}
+    "kind": "twitter",
+    "name": "@r0ck3t23",
+    "topLink": "https://x.com/r0ck3t23",
+    "items": [
+      {
+        "label": "Tweet",
+        "url": "https://x.com/r0ck3t23/status/2027498827243016298",
+        "excerpt": "Shift from human data to environment-driven training loops."
+      }
     ]
   },
   {
-    "name": "jsuarez",
-    "role": "twitter",
-    "links": [
-      {"label":"X","url":"https://x.com/jsuarez"}
+    "kind": "twitter",
+    "name": "@elliotarledge",
+    "topLink": "https://x.com/elliotarledge",
+    "items": [
+      {
+        "label": "Tweet",
+        "url": "https://x.com/elliotarledge/status/2028260383103008911",
+        "excerpt": "Code verification tied to RL environment quality."
+      }
     ]
   },
   {
-    "name": "r0ck3t23",
-    "role": "twitter",
-    "links": [
-      {"label":"X","url":"https://x.com/r0ck3t23"},
-      {"label":"Tweet","url":"https://x.com/r0ck3t23/status/2027498827243016298"}
+    "kind": "twitter",
+    "name": "@mhatta",
+    "topLink": "https://x.com/mhatta",
+    "items": [
+      {
+        "label": "Tweet",
+        "url": "https://x.com/mhatta/status/2028155809994023289",
+        "excerpt": "Automatic code optimization environment signal."
+      }
     ]
   },
   {
-    "name": "On Data Engineering for Scaling LLM Terminal Capabilities (authors)",
-    "role": "paper-author-set",
-    "links": [
-      {"label":"alphaXiv","url":"https://www.alphaxiv.org/abs/2602.21193"},
-      {"label":"arXiv","url":"https://arxiv.org/abs/2602.21193"}
+    "kind": "twitter",
+    "name": "@karpathy",
+    "topLink": "https://x.com/karpathy",
+    "items": [
+      {
+        "label": "Tweet",
+        "url": "https://x.com/karpathy/status/2027521323275325622",
+        "excerpt": "Agentic multi-agent research direction relevance."
+      }
     ]
   },
   {
-    "name": "KLong (authors)",
-    "role": "paper-author-set",
-    "links": [
-      {"label":"alphaXiv","url":"https://www.alphaxiv.org/abs/2602.17547"},
-      {"label":"arXiv","url":"https://arxiv.org/abs/2602.17547"}
+    "kind": "paper",
+    "name": "On Data Engineering for Scaling LLM Terminal Capabilities",
+    "topLink": "https://www.alphaxiv.org/abs/2602.21193",
+    "items": [
+      {
+        "label": "Abstract excerpt",
+        "url": "https://www.alphaxiv.org/abs/2602.21193",
+        "excerpt": "Despite rapid recent progress in the terminal capabilities of large language models, the training data strategies behind state-of-the-art terminal agents remain largely undisclosed. We address this gap through a systematic study of data engineering practices f"
+      }
     ]
   },
   {
-    "name": "K-Search (authors)",
-    "role": "paper-author-set",
-    "links": [
-      {"label":"alphaXiv","url":"https://www.alphaxiv.org/abs/2602.19128"},
-      {"label":"arXiv","url":"https://arxiv.org/abs/2602.19128"}
+    "kind": "paper",
+    "name": "KLong: Training LLM Agent for Extremely Long-horizon Tasks",
+    "topLink": "https://www.alphaxiv.org/abs/2602.17547",
+    "items": [
+      {
+        "label": "Abstract excerpt",
+        "url": "https://www.alphaxiv.org/abs/2602.17547",
+        "excerpt": "This paper introduces KLong, an open-source LLM agent trained to solve extremely long-horizon tasks. The principle is to first cold-start the model via trajectory-splitting SFT, then scale it via progressive RL training. Specifically, we first activate basic a"
+      },
+      {
+        "label": "@musiol_martin",
+        "url": "https://x.com/musiol_martin/status/2025489894068367856",
+        "excerpt": "@musiol_martin discussing this paper"
+      }
     ]
   },
   {
-    "name": "Agents of Chaos (authors)",
-    "role": "paper-author-set",
-    "links": [
-      {"label":"alphaXiv","url":"https://www.alphaxiv.org/abs/2602.20021"},
-      {"label":"arXiv","url":"https://arxiv.org/abs/2602.20021"}
+    "kind": "paper",
+    "name": "K-Search: LLM Kernel Generation via Co-Evolving Intrinsic World Model",
+    "topLink": "https://www.alphaxiv.org/abs/2602.19128",
+    "items": [
+      {
+        "label": "Abstract excerpt",
+        "url": "https://www.alphaxiv.org/abs/2602.19128",
+        "excerpt": "Optimizing GPU kernels is critical for efficient modern machine learning systems yet remains challenging due to the complex interplay of design factors and rapid hardware evolution. Existing automated approaches typically treat Large Language Models (LLMs) mer"
+      }
     ]
   },
   {
-    "name": "Aletheia tackles FirstProof autonomously (authors)",
-    "role": "paper-author-set",
-    "links": [
-      {"label":"alphaXiv","url":"https://www.alphaxiv.org/abs/2602.21201"},
-      {"label":"arXiv","url":"https://arxiv.org/abs/2602.21201"}
+    "kind": "paper",
+    "name": "Agents of Chaos",
+    "topLink": "https://www.alphaxiv.org/abs/2602.20021",
+    "items": [
+      {
+        "label": "Abstract excerpt",
+        "url": "https://www.alphaxiv.org/abs/2602.20021",
+        "excerpt": "We report an exploratory red-teaming study of autonomous language-model-powered agents deployed in a live laboratory environment with persistent memory, email accounts, Discord access, file systems, and shell execution. Over a two-week period, twenty AI resear"
+      },
+      {
+        "label": "@deadbee0",
+        "url": "https://x.com/deadbee0/status/2028479228354888094",
+        "excerpt": "@deadbee0 discussing this paper"
+      },
+      {
+        "label": "@pstAsiatech",
+        "url": "https://x.com/pstAsiatech/status/2028478208505422114",
+        "excerpt": "@pstAsiatech discussing this paper"
+      },
+      {
+        "label": "@AIGuideHQ",
+        "url": "https://x.com/AIGuideHQ/status/2028144953285648420",
+        "excerpt": "@AIGuideHQ discussing this paper"
+      },
+      {
+        "label": "@fly51fly",
+        "url": "https://x.com/fly51fly/status/2027854928203682215",
+        "excerpt": "@fly51fly discussing this paper"
+      },
+      {
+        "label": "@FredericGe55197",
+        "url": "https://x.com/FredericGe55197/status/2027819829139222821",
+        "excerpt": "@FredericGe55197 discussing this paper"
+      }
+    ]
+  },
+  {
+    "kind": "paper",
+    "name": "Aletheia tackles FirstProof autonomously",
+    "topLink": "https://www.alphaxiv.org/abs/2602.21201",
+    "items": [
+      {
+        "label": "Abstract excerpt",
+        "url": "https://www.alphaxiv.org/abs/2602.21201",
+        "excerpt": "We report the performance of Aletheia (Feng et al., 2026b), a mathematics research agent powered by Gemini 3 Deep Think, on the inaugural FirstProof challenge. Within the allowed timeframe of the challenge, Aletheia autonomously solved 6 problems (2, 5, 7, 8, "
+      },
+      {
+        "label": "@AryanMokhtari",
+        "url": "https://x.com/AryanMokhtari/status/2026755577796235346",
+        "excerpt": "@AryanMokhtari discussing this paper"
+      },
+      {
+        "label": "@generatica_red",
+        "url": "https://x.com/generatica_red/status/2026749073500549435",
+        "excerpt": "@generatica_red discussing this paper"
+      },
+      {
+        "label": "@AdelJavanmard",
+        "url": "https://x.com/AdelJavanmard/status/2026713802461638949",
+        "excerpt": "@AdelJavanmard discussing this paper"
+      }
     ]
   }
 ]
