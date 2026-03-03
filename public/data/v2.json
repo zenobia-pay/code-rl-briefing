@@ -1,0 +1,32 @@
+{
+  "oneSentenceTake": "The latest trend in code RL environments is shifting from human-written data toward synthetic/verifier-driven RL environments, with open-source infra for agentic tasksets scaling fast.",
+  "usedSuperGrokOnX": true,
+  "superGrokProof": "Used Browser Use with the saved X profile, opened SuperGrok on X.com, ran the code-RL query constrained to the last few days, and returned direct status URLs only for accounts and tweets.",
+  "window": "last few days",
+  "accounts": [
+    {"handle":"@willccbb","exampleTweetUrl":"https://x.com/willccbb/status/2027183031950458961"},
+    {"handle":"@natolambert","exampleTweetUrl":"https://x.com/natolambert/status/2027451823981031550"},
+    {"handle":"@karpathy","exampleTweetUrl":"https://x.com/karpathy/status/2027521323275325622"},
+    {"handle":"@jsuarez","exampleTweetUrl":"https://x.com/natolambert/status/2027451823981031550"},
+    {"handle":"@r0ck3t23","exampleTweetUrl":"https://x.com/r0ck3t23/status/2027498827243016298"}
+  ],
+  "tweets": [
+    {"url":"https://x.com/willccbb/status/2027183031950458961","author":"@willccbb","whyItMatters":"RL environment build workflow and taskset execution signal."},
+    {"url":"https://x.com/willccbb/status/2027251231878697316","author":"@willccbb","whyItMatters":"Verifiers-as-environment framing for terminal agents."},
+    {"url":"https://x.com/natolambert/status/2027451823981031550","author":"@natolambert","whyItMatters":"Open RL scaling collaboration signal."},
+    {"url":"https://x.com/willccbb/status/2027912957175468357","author":"@willccbb","whyItMatters":"Async RL scaling momentum."},
+    {"url":"https://x.com/willccbb/status/2027621849723768933","author":"@willccbb","whyItMatters":"Reward design and practical RL tradeoffs."},
+    {"url":"https://x.com/r0ck3t23/status/2027498827243016298","author":"@r0ck3t23","whyItMatters":"Shift from human data to environment-driven training loops."},
+    {"url":"https://x.com/elliotarledge/status/2028260383103008911","author":"@elliotarledge","whyItMatters":"Code verification tied to RL environment quality."},
+    {"url":"https://x.com/mhatta/status/2028155809994023289","author":"@mhatta","whyItMatters":"Automatic code optimization environment signal."},
+    {"url":"https://x.com/willccbb/status/2027627415401599290","author":"@willccbb","whyItMatters":"Collaborative RL runs and shared environments."},
+    {"url":"https://x.com/karpathy/status/2027521323275325622","author":"@karpathy","whyItMatters":"Agentic multi-agent research direction relevance."}
+  ],
+  "alphaXiv": [
+    {"title":"On Data Engineering for Scaling LLM Terminal Capabilities","url":"https://www.alphaxiv.org/abs/2602.21193"},
+    {"title":"KLong: Training LLM Agent for Extremely Long-horizon Tasks","url":"https://www.alphaxiv.org/abs/2602.17547"},
+    {"title":"K-Search: LLM Kernel Generation via Co-Evolving Intrinsic World Model","url":"https://www.alphaxiv.org/abs/2602.19128"},
+    {"title":"Agents of Chaos","url":"https://www.alphaxiv.org/abs/2602.20021"},
+    {"title":"Aletheia tackles FirstProof autonomously","url":"https://www.alphaxiv.org/abs/2602.21201"}
+  ]
+}

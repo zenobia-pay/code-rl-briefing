@@ -23,8 +23,21 @@
       <p class="muted"><a href="/data/raw-notes.md" target="_blank">Open raw ingest notes (verbatim)</a></p>
 
       <section class="card">
-        <h2>Brief</h2>
+        <h2>Brief v1 (original)</h2>
         <div id="brief" style="white-space:pre-wrap"></div>
+      </section>
+
+      <section class="card">
+        <h2>Brief v2 (Browser Use + SuperGrok run)</h2>
+        <p id="v2Take"></p>
+        <p class="muted">SuperGrok on X used: <strong id="v2Used"></strong></p>
+        <p class="muted" id="v2Proof"></p>
+        <h3>Accounts (v2)</h3>
+        <div id="v2Accounts"></div>
+        <h3>Tweets (last few days)</h3>
+        <ol id="v2Tweets"></ol>
+        <h3>alphaXiv source set</h3>
+        <ul id="v2Alpha"></ul>
       </section>
 
       <section class="card">
@@ -54,10 +67,24 @@
         fetch('/data/accounts.json').then(r=>r.json()),
         fetch('/data/papers.json').then(r=>r.json()),
         fetch('/data/signals.json').then(r=>r.json()),
-        fetch('/data/tweets.json').then(r=>r.json())
-      ]).then(([brief,accounts,papers,signals,tweets])=>{
+        fetch('/data/tweets.json').then(r=>r.json()),
+        fetch('/data/v2.json').then(r=>r.json())
+      ]).then(([brief,accounts,papers,signals,tweets,v2])=>{
         const linkifiedBrief = brief.replace(/(https?:\/\/[^\s\n]+)/g, '<a href="$1" target="_blank">$1</a>');
         document.getElementById('brief').innerHTML = linkifiedBrief;
+
+        document.getElementById('v2Take').textContent = v2.oneSentenceTake || '';
+        document.getElementById('v2Used').textContent = v2.usedSuperGrokOnX ? 'Yes' : 'No';
+        document.getElementById('v2Proof').textContent = v2.superGrokProof || '';
+        document.getElementById('v2Accounts').innerHTML = (v2.accounts || [])
+          .map(a => `<span class="pill"><a href="${a.exampleTweetUrl}" target="_blank">${a.handle}</a></span>`)
+          .join('');
+        document.getElementById('v2Tweets').innerHTML = (v2.tweets || [])
+          .map(t => `<li><a href="${t.url}" target="_blank">${t.author}</a> — ${t.whyItMatters}</li>`)
+          .join('');
+        document.getElementById('v2Alpha').innerHTML = (v2.alphaXiv || [])
+          .map(p => `<li><a href="${p.url}" target="_blank">${p.title}</a></li>`)
+          .join('');
 
         document.getElementById('seedAccounts').innerHTML = accounts
           .filter(a=>a.priority==='seed')
