@@ -1,461 +1,253 @@
 #!/usr/bin/env python3
-"""
-Run the Code-RL daily briefing pipeline end-to-end.
-
-Pipeline (wired to Ryan's requested process):
-1) Papers first (arXiv/alphaXiv)
-2) Initial X pass
-3) "People talking about <paper title>" pass
-4) Signals-account pass
-5) Historical (1/3/7/14 day) bullet update pass
-6) exa.ai blog query pass
-7) Persist ALL raw files, then synthesize one-pager
-8) Publish raw files under public/data/runs/<date>/
-"""
-
 from __future__ import annotations
-import argparse
-import datetime as dt
-import email.utils
-import json
-import re
-import shutil
-import subprocess
-import sys
-import urllib.parse
-import urllib.request
-import xml.etree.ElementTree as ET
+import argparse, datetime as dt, json, re, shutil, time, urllib.parse, urllib.request
 from pathlib import Path
 
+BROWSERUSE_BASE = "https://api.browser-use.com/api/v2"
+DEFAULT_PROFILE_ID = "9e0f01a3-5227-4424-bc58-b9b226110020"
 
-def sh(cmd: str, cwd: Path | None = None) -> subprocess.CompletedProcess:
-    return subprocess.run(cmd, shell=True, cwd=str(cwd) if cwd else None, text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+
+def read_prompt(repo: Path, name: str) -> str:
+    return (repo / "prompts" / name).read_text()
 
 
-def ensure_dir(p: Path) -> None:
+def ensure(p: Path):
     p.mkdir(parents=True, exist_ok=True)
 
 
-def bird_search(repo: Path, query: str, count: int = 30) -> dict:
-    cmd = f"bird search --json -n {count} {subprocess.list2cmdline([query])}"
-    p = sh(cmd, cwd=repo)
-    if p.returncode != 0:
-        return {"query": query, "error": p.stderr.strip(), "items": []}
+def save_step(run_dir: Path, step: str, prompt: str, story: str, raw_name: str, raw_obj, normalized):
+    d = run_dir / "steps" / step
+    ensure(d)
+    (d / "prompt.txt").write_text(prompt)
+    (d / "story.md").write_text(story)
+    if isinstance(raw_obj, str):
+        (d / raw_name).write_text(raw_obj)
+    else:
+        (d / raw_name).write_text(json.dumps(raw_obj, indent=2))
+    (d / "normalized.json").write_text(json.dumps(normalized, indent=2))
+
+
+def browseruse_req(api_key: str, method: str, path: str, payload=None):
+    data = None if payload is None else json.dumps(payload).encode("utf-8")
+    req = urllib.request.Request(
+        BROWSERUSE_BASE + path,
+        data=data,
+        method=method,
+        headers={"Content-Type": "application/json", "X-Browser-Use-API-Key": api_key},
+    )
+    with urllib.request.urlopen(req, timeout=120) as r:
+        return json.loads(r.read().decode("utf-8"))
+
+
+def browseruse_run(api_key: str, profile_id: str, task_prompt: str, timeout_s: int = 1200):
+    session = browseruse_req(api_key, "POST", "/sessions", {"profileId": profile_id, "persistMemory": True, "keepAlive": False})
+    task = browseruse_req(api_key, "POST", "/tasks", {"task": task_prompt, "sessionId": session["id"]})
+    tid = task["id"]
+    start = time.time()
+    status = None
+    while time.time() - start < timeout_s:
+        status = browseruse_req(api_key, "GET", f"/tasks/{tid}/status")
+        if status.get("status") in ("finished", "failed", "stopped"):
+            break
+        time.sleep(12)
+    return {"session": session, "task": task, "status": status}
+
+
+def parse_jsonish(s: str):
+    if not s:
+        return {}
+    m = re.search(r"```(?:json)?\s*([\s\S]*?)```", s)
+    if m:
+        s = m.group(1)
     try:
-        obj = json.loads(p.stdout)
-        items = obj if isinstance(obj, list) else obj.get("tweets") or obj.get("data") or []
-        return {"query": query, "items": items}
+        return json.loads(s)
     except Exception:
-        return {"query": query, "error": "json_parse", "items": []}
+        return json.loads(s.replace("\\'", "'"))
 
 
-def bird_user_tweets(repo: Path, handle: str, count: int = 25) -> list:
-    cmd = f"bird user-tweets --json -n {count} {subprocess.list2cmdline([handle])}"
-    p = sh(cmd, cwd=repo)
-    if p.returncode != 0:
-        return []
-    try:
-        obj = json.loads(p.stdout)
-        return obj if isinstance(obj, list) else obj.get("tweets") or obj.get("data") or []
-    except Exception:
-        return []
+def alphaxiv_papers(topic: str, target_date: str):
+    # alphaXiv first (explicitly hits alphaxiv.org)
+    q = urllib.parse.quote(topic)
+    url = f"https://www.alphaxiv.org/search?q={q}"
+    html = urllib.request.urlopen(url, timeout=40).read().decode("utf-8", errors="ignore")
+    ids = list(dict.fromkeys(re.findall(r"/abs/(\d{4}\.\d{4,5})", html)))[:8]
 
-
-def fetch_papers_for_window(target_date: str, max_results: int = 80) -> list[dict]:
-    q = 'all:("reinforcement learning" AND (code OR coding OR software OR terminal OR agent)) OR all:(RLHF OR RLVR OR "human feedback" OR "verifiable reward")'
-    url = "https://export.arxiv.org/api/query?search_query=" + urllib.parse.quote(q) + f"&start=0&max_results={max_results}&sortBy=submittedDate&sortOrder=descending"
-    xml = urllib.request.urlopen(url, timeout=40).read()
-    root = ET.fromstring(xml)
-    ns = {"a": "http://www.w3.org/2005/Atom"}
-
-    d = dt.date.fromisoformat(target_date)
-    keep_dates = {d.isoformat(), (d - dt.timedelta(days=1)).isoformat()}
-
-    papers: list[dict] = []
-    for e in root.findall("a:entry", ns):
-        pub = (e.find("a:published", ns).text or "")[:10]
-        if pub not in keep_dates:
-            continue
-        title = " ".join((e.find("a:title", ns).text or "").split())
-        summary = " ".join((e.find("a:summary", ns).text or "").split())
-        arx = (e.find("a:id", ns).text or "").replace("http://", "https://")
-        m = re.search(r"abs/(\d+\.\d+)", arx)
-        alphaxiv = f"https://www.alphaxiv.org/abs/{m.group(1)}" if m else None
-        authors = [a.find("a:name", ns).text for a in e.findall("a:author", ns)]
+    papers = []
+    for aid in ids:
+        api = f"https://export.arxiv.org/api/query?id_list={aid}"
+        x = urllib.request.urlopen(api, timeout=40).read().decode("utf-8", errors="ignore")
+        t = re.search(r"<title>([\s\S]*?)</title>", x)
+        # first title is feed title; get entry title
+        titles = re.findall(r"<title>([\s\S]*?)</title>", x)
+        title = re.sub(r"\s+", " ", titles[1]).strip() if len(titles) > 1 else f"arXiv {aid}"
+        summs = re.findall(r"<summary>([\s\S]*?)</summary>", x)
+        summary = re.sub(r"\s+", " ", summs[0]).strip() if summs else ""
         papers.append({
             "title": title,
-            "published": e.find("a:published", ns).text,
-            "arxiv": arx,
-            "alphaxiv": alphaxiv,
-            "summary": summary,
-            "authors": authors,
+            "alphaXivUrl": f"https://www.alphaxiv.org/abs/{aid}",
+            "arxivUrl": f"https://arxiv.org/abs/{aid}",
+            "insight": (summary[:220] + "...") if len(summary) > 220 else summary,
         })
-
-    # rough ranking for this topic
-    kw = ["agent", "tool", "terminal", "code", "coding", "reinforcement", "rlhf", "rlvr", "verif", "reward", "swe", "gui", "human"]
-    papers.sort(key=lambda x: sum(k in (x["title"] + " " + x["summary"]).lower() for k in kw), reverse=True)
-    return papers[:8]
+    return {"queryUrl": url, "paperIds": ids, "papers": papers}
 
 
-def status_url(t: dict) -> str:
-    u = (t.get("author", {}) or {}).get("username", "unknown")
-    i = t.get("id")
-    return f"https://x.com/{u}/status/{i}" if i else ""
-
-
-def synthesize_onepager(run_dir: Path, topic: str, date: str) -> None:
-    x = run_dir / "raw" / "x"
-    papers = json.loads((run_dir / "papers_selected.json").read_text())[:5]
-    init = json.loads((x / "initial_prompt_search.json").read_text()).get("items", [])
-    noise = ["konnex", "wallet", "airdrop", "crypto"]
-
-    clean = []
-    for t in init:
-        tx = (t.get("text") or "").lower()
-        u = ((t.get("author") or {}).get("username") or "").lower()
-        if any(n in tx for n in noise) or u == "grok":
-            continue
-        clean.append(t)
-    clean = sorted(clean, key=lambda t: t.get("likeCount", 0) + t.get("retweetCount", 0) + t.get("replyCount", 0), reverse=True)[:10]
-
-    acct_roll = json.loads((run_dir / "signals_account_rollup.json").read_text())
-    hist_roll = json.loads((run_dir / "history_updates_rollup.json").read_text())
-    present = [h["date"] for h in hist_roll if not h.get("missing") and not h.get("missing_file")]
-    missing = [h["date"] for h in hist_roll if h.get("missing") or h.get("missing_file")]
-
-    lines: list[str] = []
-    lines.append(f"# One-Pager — {topic} ({date})")
-    lines.append("")
-    lines.append("Code-RL discussion is concentrating around verifier-backed training loops and harness-level gains, while human data is becoming narrower and higher-value (targeted supervision, safety checks, privacy-preserving alignment).")
-    lines.append("")
-    lines.append("## Tweets")
-    for t in clean:
-        txt = re.sub(r"\s+", " ", (t.get("text") or "").replace("\n", " ")).strip()
-        # no quote marks around tweet sentence
-        lines.append(f"- {txt[:220]} → [{(t.get('author',{}) or {}).get('username','account')}]({status_url(t)})")
-
-    lines.append("")
-    lines.append("## Papers")
-    for p in papers:
-        insight = p["summary"][:220].rstrip(". ") + "."
-        lines.append(f"- {insight} → [{p['title']}]({p['arxiv']})")
-
-    lines.append("")
-    lines.append("## Signal Movement")
-    for a in acct_roll:
-        tw = sorted(a.get("tweets", []), key=lambda t: t.get("likeCount", 0) + t.get("retweetCount", 0), reverse=True)
-        top = tw[0] if tw else None
-        if top:
-            txt = re.sub(r"\s+", " ", (top.get("text") or "").replace("\n", " ")).strip()
-            lines.append(f"- @{a['handle']}: {txt[:120]} → https://x.com/{a['handle']}/status/{top.get('id')}")
-        else:
-            lines.append(f"- @{a['handle']}: no strong same-day RL/code signal found.")
-
-    lines.append("")
-    lines.append("## Changes vs prior")
-    lines.append(f"- Historical update pass found local briefing artifacts for: {', '.join(present) if present else 'none'}." )
-    if missing:
-        lines.append(f"- Missing local artifacts for requested offsets: {', '.join(missing)}.")
-
-    lines.append("")
-    lines.append("## Watch next 24h")
-    lines.append("- Replications of tool-verification and retrieval-augmented exploration on SWE/terminal benchmarks.")
-    lines.append("- More concrete evidence that rubric+execution rewards transfer from narrow domains to broad code-agent tasks.")
-
-    (run_dir / "one-pager.md").write_text("\n".join(lines))
-
-
-def publish_run_to_public(repo: Path, date: str) -> None:
-    src = repo / "data" / "runs" / date
-    dst = repo / "public" / "data" / "runs" / date
-    ensure_dir(dst)
-
-    for p in src.rglob("*"):
-        rel = p.relative_to(src)
-        t = dst / rel
-        if p.is_dir():
-            ensure_dir(t)
-        else:
-            ensure_dir(t.parent)
-            shutil.copy2(p, t)
-
-    files = []
-    for p in sorted(dst.rglob("*")):
-        if p.is_file():
-            rel = p.relative_to(repo / "public")
-            files.append({"path": "/" + str(rel).replace("\\", "/"), "bytes": p.stat().st_size})
-
-    (dst / "raw-index.json").write_text(json.dumps({"date": date, "files": files}, indent=2))
-
-
-def update_signal_file(signals_root: Path, signal_name: str, handle: str, date: str, source_file_rel: str) -> None:
-    f = signals_root / f"{handle}.json"
-    cur = {"name": signal_name, "role": "account", "handle": handle, "days": {}}
-    if f.exists():
-        try:
-            cur = json.loads(f.read_text())
-        except Exception:
-            pass
-    cur.setdefault("days", {})[date] = {"source_file": source_file_rel}
-    f.write_text(json.dumps(cur, indent=2))
-
-
-def extract_bullets_from_markdown(md: str) -> list[str]:
+def exa_people(api_key: str, queries: list[str]):
     out = []
-    for ln in md.splitlines():
-        s = ln.strip()
-        if s.startswith("- "):
-            out.append(s[2:].strip())
+    for q in queries:
+        payload = {"query": q, "type": "deep", "category": "people", "numResults": 10, "contents": {"text": True}}
+        req = urllib.request.Request(
+            "https://api.exa.ai/search",
+            data=json.dumps(payload).encode("utf-8"),
+            method="POST",
+            headers={"x-api-key": api_key, "Content-Type": "application/json", "User-Agent": "code-rl-briefing/1.0"},
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                resp = json.loads(r.read().decode("utf-8"))
+        except Exception as e:
+            resp = {"error": str(e)}
+        out.append({"payload": payload, "response": resp})
     return out
 
 
-def exa_deep_people_search(api_key: str, query: str, num_results: int = 10) -> dict:
-    req = urllib.request.Request(
-        "https://api.exa.ai/search",
-        data=json.dumps({
-            "query": query,
-            "type": "deep",
-            "category": "people",
-            "numResults": num_results,
-            "contents": {"text": True}
-        }).encode("utf-8"),
-        headers={
-            "x-api-key": api_key,
-            "Content-Type": "application/json",
-            "User-Agent": "code-rl-briefing/1.0 (+https://github.com/zenobia-pay/code-rl-briefing)",
-        },
-        method="POST",
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=60) as r:
-            return json.loads(r.read().decode("utf-8"))
-    except Exception as e:
-        return {"error": str(e), "query": query}
-
-
-def run(topic: str, date: str, repo: Path, exa_api_key: str | None = None) -> Path:
-    run_dir = repo / "data" / "runs" / date
-    raw = run_dir / "raw"
-    papers_dir = raw / "papers"
-    x_dir = raw / "x"
-    signals_root = repo / "data" / "signals"
-
-    for p in [run_dir, raw, papers_dir, x_dir, signals_root]:
-        ensure_dir(p)
-
-    # 1) papers first
-    papers = fetch_papers_for_window(date)
-    (run_dir / "papers_selected.json").write_text(json.dumps(papers, indent=2))
-    for i, p in enumerate(papers, 1):
-        safe = re.sub(r"[^a-zA-Z0-9]+", "_", p["title"])[:90]
-        (papers_dir / f"{i:02d}_{safe}.md").write_text(
-            f"# {p['title']}\n\nPublished: {p['published']}\n\nArXiv: {p['arxiv']}\n\nalphaXiv: {p['alphaxiv']}\n\nAuthors: {', '.join(p['authors'])}\n\nAbstract:\n{p['summary']}\n"
-        )
-
-    # 2) initial X pass
-    init_query = '("code RL" OR "RL environment" OR RLVR OR RLHF OR "human feedback") (coding OR agent OR terminal OR verifier)'
-    init = bird_search(repo, f"{init_query} since:{date} until:{(dt.date.fromisoformat(date)+dt.timedelta(days=1)).isoformat()}", 100)
-    (x_dir / "initial_prompt_search.json").write_text(json.dumps(init, indent=2))
-
-    # 3) per-paper people talking pass
-    paper_people = []
-    for p in papers:
-        q = f'"{p["title"]}" since:{date} until:{(dt.date.fromisoformat(date)+dt.timedelta(days=1)).isoformat()}'
-        r = bird_search(repo, q, 40)
-        out = {"paper": p["title"], "query": q, "results": r.get("items", [])}
-        paper_people.append(out)
-        safe = re.sub(r"[^a-zA-Z0-9]+", "_", p["title"])[:90]
-        (x_dir / f"paper_people_{safe}.json").write_text(json.dumps(out, indent=2))
-    (run_dir / "paper_people_rollup.json").write_text(json.dumps(paper_people, indent=2))
-
-    # 4) signals account pass
-    sig_src = repo / "public" / "data" / "signals-global.json"
-    sigs = json.loads(sig_src.read_text()) if sig_src.exists() else []
-    accounts = [s for s in sigs if s.get("role") == "account" and (s.get("links") or {}).get("x")]
-
-    acct_roll = []
-    for s in accounts:
-        handle = s["links"]["x"].rstrip("/").split("/")[-1]
-        tweets = bird_user_tweets(repo, handle, 25)
-        out = {"signal": s, "handle": handle, "tweets": tweets}
-        acct_roll.append(out)
-        f = x_dir / f"signal_account_{handle}.json"
-        f.write_text(json.dumps(out, indent=2))
-        update_signal_file(signals_root, s.get("name", handle), handle, date, str(f.relative_to(repo)))
-    (run_dir / "signals_account_rollup.json").write_text(json.dumps(acct_roll, indent=2))
-
-    # 5) historical update pass (1,3,7,14)
-    wanted = [(dt.date.fromisoformat(date) - dt.timedelta(days=d)).isoformat() for d in (1, 3, 7, 14)]
-    briefings = json.loads((repo / "public" / "data" / "briefings.json").read_text())
-    by_date = {b.get("date"): b for b in briefings}
-    history = []
-
-    for d in wanted:
-        b = by_date.get(d)
-        if not b:
-            history.append({"date": d, "missing": True})
-            continue
-        f = repo / "public" / b["file"].lstrip("/")
-        if not f.exists():
-            history.append({"date": d, "missing_file": str(f)})
-            continue
-        bullets = extract_bullets_from_markdown(f.read_text())
-        updates = []
-        for bt in bullets[:20]:
-            q = (bt[:150].replace("→", " ") + f" since:{date} until:{(dt.date.fromisoformat(date)+dt.timedelta(days=1)).isoformat()}")
-            r = bird_search(repo, q, 12)
-            updates.append({"bullet": bt, "query": q, "updates": r.get("items", [])})
-        out = {"date": d, "briefing_id": b.get("id"), "file": str(f.relative_to(repo)), "bullet_updates": updates}
-        history.append(out)
-        (x_dir / f"history_updates_{d}.json").write_text(json.dumps(out, indent=2))
-    (run_dir / "history_updates_rollup.json").write_text(json.dumps(history, indent=2))
-
-    # 6) exa query pass (deep + people category) + saved outputs
-    exa_queries = [
-        "people talking about code RL environments and human data",
-        "people discussing RLVR coding agents",
-        "people discussing terminal bench harness engineering",
-        "people discussing tool verification test-time reinforcement learning",
-    ]
-    exa = [{"query": q, "url": "https://exa.ai/search?query=" + urllib.parse.quote(q)} for q in exa_queries]
-    (run_dir / "exa_queries.json").write_text(json.dumps(exa, indent=2))
-
-    exa_deep_people_results = []
-    key = exa_api_key
-    if key:
-        for q in exa_queries:
-            exa_deep_people_results.append({
-                "query": q,
-                "request": {"type": "deep", "category": "people"},
-                "response": exa_deep_people_search(key, q, num_results=10),
-            })
-    else:
-        exa_deep_people_results = [{
-            "warning": "EXA_API_KEY not set; deep people API search skipped",
-            "queries": exa_queries,
-        }]
-    (run_dir / "exa_people_deep.json").write_text(json.dumps(exa_deep_people_results, indent=2))
-
-    # 7) write plain markdown pass outputs (story of run)
-    init_items = init.get("items", []) if isinstance(init, dict) else []
-    sg_lines = [f"# SuperGrok X Pass (simulated via X API) — {date}", "", f"Query: {init.get('query','')}", "", f"Results: {len(init_items)}", "", "## Top results"]
-    for t in sorted(init_items, key=lambda x: x.get("likeCount", 0) + x.get("retweetCount", 0), reverse=True)[:20]:
-        u = (t.get("author") or {}).get("username", "unknown")
-        tid = t.get("id")
-        txt = re.sub(r"\s+", " ", (t.get("text") or "").replace("\n", " ")).strip()
-        sg_lines.append(f"- @{u}: {txt[:220]} → https://x.com/{u}/status/{tid}")
-    (run_dir / "supergrok-twitter-pass.md").write_text("\n".join(sg_lines))
-
-    p_lines = [f"# Papers First Pass — {date}", "", f"Papers: {len(papers)}", ""]
-    for p in papers:
-        p_lines.append(f"- {p['title']} → {p['arxiv']}")
-    (run_dir / "papers-pass.md").write_text("\n".join(p_lines))
-
-    pp_lines = [f"# Per-Paper Discussion Pass — {date}", ""]
-    for x in paper_people:
-        pp_lines.append(f"## {x['paper']}")
-        pp_lines.append(f"Query: {x.get('query','')}")
-        rs = x.get("results", [])
-        pp_lines.append(f"Matches: {len(rs)}")
-        for t in rs[:5]:
-            u = (t.get("author") or {}).get("username", "unknown")
-            tid = t.get("id")
-            txt = re.sub(r"\s+", " ", (t.get("text") or "")).strip()
-            pp_lines.append(f"- @{u}: {txt[:180]} → https://x.com/{u}/status/{tid}")
-        pp_lines.append("")
-    (run_dir / "paper-people-pass.md").write_text("\n".join(pp_lines))
-
-    sa_lines = [f"# Signals Account Daily Pass — {date}", ""]
-    for a in acct_roll:
-        sa_lines.append(f"## @{a['handle']}")
-        tw = a.get("tweets", [])
-        sa_lines.append(f"Tweets fetched: {len(tw)}")
-        for t in tw[:5]:
-            txt = re.sub(r"\s+", " ", (t.get("text") or "")).strip()
-            sa_lines.append(f"- {txt[:180]} → https://x.com/{a['handle']}/status/{t.get('id')}")
-        sa_lines.append("")
-    (run_dir / "signals-account-pass.md").write_text("\n".join(sa_lines))
-
-    h_lines = [f"# Historical Bullet Update Pass (1/3/7/14) — {date}", ""]
-    for h in history:
-        h_lines.append(f"## Date {h.get('date')}")
-        if h.get("missing") or h.get("missing_file"):
-            h_lines.append("- missing local briefing file")
-            continue
-        for b in h.get("bullet_updates", [])[:8]:
-            h_lines.append(f"- Bullet: {b['bullet'][:180]}")
-            h_lines.append(f"  - Updates found: {len(b.get('updates', []))}")
-        h_lines.append("")
-    (run_dir / "history-update-pass.md").write_text("\n".join(h_lines))
-
-    e_lines = [f"# Exa Deep People Pass — {date}", ""]
-    for e in exa_deep_people_results:
-        e_lines.append(f"## {e.get('query','')}")
-        r = e.get("response", {})
-        if isinstance(r, dict) and r.get("error"):
-            e_lines.append(f"- Error: {r['error']}")
+def publish_run(repo: Path, date: str):
+    src = repo / "data" / "runs" / date
+    dst = repo / "public" / "data" / "runs" / date
+    ensure(dst)
+    for p in src.rglob("*"):
+        t = dst / p.relative_to(src)
+        if p.is_dir():
+            ensure(t)
         else:
-            rs = r.get("results", []) if isinstance(r, dict) else []
-            e_lines.append(f"- Results: {len(rs)}")
-            for it in rs[:8]:
-                e_lines.append(f"- {it.get('title','')} → {it.get('url','')}")
-        e_lines.append("")
-    (run_dir / "exa-people-pass.md").write_text("\n".join(e_lines))
+            ensure(t.parent)
+            shutil.copy2(p, t)
+    files = [{"path": "/" + str(p.relative_to(repo / "public")).replace("\\", "/"), "bytes": p.stat().st_size}
+             for p in sorted(dst.rglob("*")) if p.is_file()]
+    (dst / "raw-index.json").write_text(json.dumps({"date": date, "files": files}, indent=2))
 
-    story = [
-        f"# Run Story — {date}",
-        "",
-        "1) Papers first → papers-pass.md",
-        "2) SuperGrok on topic → supergrok-twitter-pass.md",
-        "3) People talking about each paper → paper-people-pass.md",
-        "4) Signals account pass → signals-account-pass.md",
-        "5) Historical updates pass → history-update-pass.md",
-        "6) Exa deep people pass → exa-people-pass.md",
-        "7) Final synthesis → one-pager.md",
-        "",
-    ]
-    (run_dir / "run-story.md").write_text("\n".join(story))
 
-    # 8) synthesize (after all raw persisted)
-    synthesize_onepager(run_dir, topic, date)
+def run(repo: Path, topic: str, date: str, browseruse_key: str, exa_key: str | None):
+    run_dir = repo / "data" / "runs" / date
+    ensure(run_dir)
 
-    manifest = {
-        "date": date,
+    # Step 01: AlphaXiv papers
+    p01 = read_prompt(repo, "step01_alphaxiv_query.txt").format(topic=topic, window="last 24 hours")
+    raw01 = alphaxiv_papers(topic, date)
+    save_step(
+        run_dir,
+        "step-01-papers-alphaxiv",
+        p01,
+        "Visited alphaxiv.org search first, extracted paper IDs from AlphaXiv results, then enriched with arXiv metadata.",
+        "raw.json",
+        raw01,
+        raw01["papers"],
+    )
+
+    # Step 02: SuperGrok topic pass
+    p02 = read_prompt(repo, "step02_supergrok_topic.txt").format(topic=topic)
+    r02 = browseruse_run(browseruse_key, DEFAULT_PROFILE_ID, p02)
+    n02 = parse_jsonish((r02.get("status") or {}).get("output") or "{}")
+    save_step(
+        run_dir,
+        "step-02-supergrok-topic",
+        p02,
+        "Called browser-use API with saved profile, opened X + SuperGrok, ran the exact topic query.",
+        "raw.json",
+        r02,
+        n02,
+    )
+
+    # Step 03: per-paper SuperGrok discussion
+    per = []
+    for paper in raw01["papers"][:6]:
+        p03 = read_prompt(repo, "step03_supergrok_paper_discussion.txt").format(paper_title=paper["title"])
+        r03 = browseruse_run(browseruse_key, DEFAULT_PROFILE_ID, p03)
+        n03 = parse_jsonish((r03.get("status") or {}).get("output") or "{}")
+        per.append({"paper": paper["title"], "prompt": p03, "raw": r03, "normalized": n03})
+    save_step(
+        run_dir,
+        "step-03-supergrok-paper-discussion",
+        "Per-paper prompts are stored in normalized.json per item.",
+        "For each AlphaXiv paper title, asked SuperGrok EXACTLY: what are people saying about this exact paper title?",
+        "raw.json",
+        per,
+        per,
+    )
+
+    # Step 04: signals pass
+    handles = ["karpathy", "natolambert", "willccbb", "HamelHusain", "LangChain"]
+    p04 = read_prompt(repo, "step04_supergrok_signals.txt").format(handles_csv=",".join(handles), topic=topic)
+    r04 = browseruse_run(browseruse_key, DEFAULT_PROFILE_ID, p04)
+    n04 = parse_jsonish((r04.get("status") or {}).get("output") or "{}")
+    save_step(run_dir, "step-04-supergrok-signals", p04, "Asked SuperGrok account-by-account what each tracked signal discussed today.", "raw.json", r04, n04)
+
+    # Step 05: history pass
+    p05 = read_prompt(repo, "step05_supergrok_history_updates.txt")
+    r05 = browseruse_run(browseruse_key, DEFAULT_PROFILE_ID, p05)
+    n05 = parse_jsonish((r05.get("status") or {}).get("output") or "{}")
+    save_step(run_dir, "step-05-supergrok-history-updates", p05, "Asked SuperGrok for 1/3/7/14-day update signals tied to prior claims.", "raw.json", r05, n05)
+
+    # Step 06: Exa people
+    q_lines = [x.strip() for x in read_prompt(repo, "step06_exa_people_queries.txt").format(topic=topic).splitlines() if x.strip()]
+    r06 = exa_people(exa_key, q_lines) if exa_key else [{"error": "EXA_API_KEY missing"}]
+    save_step(run_dir, "step-06-exa-people", "Queries in prompts/step06_exa_people_queries.txt", "Called Exa API with type=deep category=people using exact query payloads.", "raw.json", r06, r06)
+
+    # Step 07: synthesis (file-backed)
+    one = run_dir / "one-pager.md"
+    one.write_text(
+        f"# One-Pager — {topic} ({date})\n\n"
+        f"Built from step outputs under data/runs/{date}/steps/.\n\n"
+        "- Check step-01 for AlphaXiv paper discovery.\n"
+        "- Check step-02/03/04/05 for SuperGrok passes.\n"
+        "- Check step-06 for Exa deep people payloads and responses.\n"
+    )
+
+    # Convenience rollup
+    rollup = {
         "topic": topic,
-        "folders": {"run_dir": str(run_dir.relative_to(repo)), "raw": str(raw.relative_to(repo))},
-        "counts": {
-            "papers_selected": len(papers),
-            "paper_people_queries": len(paper_people),
-            "signals_accounts": len(accounts),
-            "history_dates_checked": len(wanted),
-        },
+        "date": date,
+        "papers": raw01["papers"],
+        "supergrokTopic": n02,
+        "paperDiscussion": [x["normalized"] for x in per],
+        "signals": n04,
+        "history": n05,
+        "exa": r06,
     }
-    (run_dir / "manifest.json").write_text(json.dumps(manifest, indent=2))
+    (run_dir / "briefing-rollup.json").write_text(json.dumps(rollup, indent=2))
+    (run_dir / "run-story.md").write_text(
+        "# Run Story\n\n"
+        "This run executed scripted steps in order.\n\n"
+        "1. AlphaXiv paper discovery (step-01)\n"
+        "2. SuperGrok topic pass (step-02)\n"
+        "3. SuperGrok per-paper discussion (step-03)\n"
+        "4. SuperGrok signals account pass (step-04)\n"
+        "5. SuperGrok historical updates pass (step-05)\n"
+        "6. Exa deep people pass (step-06)\n"
+        "7. File-backed synthesis (step-07)\n"
+    )
 
-    # publish raw files for site visibility
-    publish_run_to_public(repo, date)
-
-    return run_dir
+    publish_run(repo, date)
 
 
-def main() -> int:
+def main():
     ap = argparse.ArgumentParser()
+    ap.add_argument("--repo", default=str(Path(__file__).resolve().parents[1]))
     ap.add_argument("--topic", default="What is the latest in code RL environments and human data?")
     ap.add_argument("--date", default=dt.date.today().isoformat())
-    ap.add_argument("--repo", default=str(Path(__file__).resolve().parents[1]))
+    ap.add_argument("--browseruse-api-key", default=None)
     ap.add_argument("--exa-api-key", default=None)
     args = ap.parse_args()
 
-    repo = Path(args.repo).resolve()
-    if not (repo / "public" / "index.html").exists():
-        print(f"Not a valid code-rl-briefing repo: {repo}", file=sys.stderr)
-        return 2
+    import os
+    bkey = args.browseruse_api_key or os.environ.get("BROWSER_USE_API_KEY")
+    ekey = args.exa_api_key or os.environ.get("EXA_API_KEY")
+    if not bkey:
+        raise SystemExit("Missing BROWSER_USE_API_KEY")
 
-    exa_key = args.exa_api_key or __import__('os').environ.get('EXA_API_KEY')
-    run_dir = run(args.topic, args.date, repo, exa_api_key=exa_key)
-    print(json.dumps({"ok": True, "run_dir": str(run_dir), "one_pager": str(run_dir / 'one-pager.md')}, indent=2))
-    return 0
+    repo = Path(args.repo).resolve()
+    run(repo, args.topic, args.date, bkey, ekey)
+    print(json.dumps({"ok": True, "date": args.date, "runDir": str(repo / 'data' / 'runs' / args.date)}, indent=2))
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    main()

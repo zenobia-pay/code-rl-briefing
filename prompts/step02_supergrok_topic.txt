@@ -1,0 +1,4 @@
+Open https://x.com then open SuperGrok.
+Ask SuperGrok EXACTLY THIS:
+"What is the latest in {topic} in the last 24 hours? Return only high-signal X posts with direct status URLs and exact tweet text."
+Return strict JSON with tweet URLs and verbatim text only.

@@ -32,15 +32,18 @@ npm run run:briefing
 ./scripts/run-briefing.sh 2026-03-04 "What is the latest in code RL environments and human data?"
 ```
 
-This pipeline now does, in order:
-1. papers-first (arXiv + alphaXiv links)
-2. initial X research pass
-3. per-paper "people talking about <title>" pass
-4. signals-account daily pass
-5. historical bullet updates (1/3/7/14 days, when present)
-6. exa.ai blog query pass
-7. persist all raw files, then synthesize one-pager
-8. publish raw files for site browsing under `public/data/runs/YYYY-MM-DD/`
+This pipeline now does, in order (scripted step prompts):
+1. step-01-papers-alphaxiv (AlphaXiv-first paper discovery)
+2. step-02-supergrok-topic
+3. step-03-supergrok-paper-discussion (exact query: "what are people saying about this exact paper title?")
+4. step-04-supergrok-signals
+5. step-05-supergrok-history-updates
+6. step-06-exa-people (deep, category=people)
+7. step-07-synthesis
+
+Definition of "run briefing" is stored in `briefing-process.md`.
+Per-step prompts are stored in `prompts/`.
+Per-run artifacts are stored in `data/runs/YYYY-MM-DD/steps/step-XX-*` with prompt + story + raw + normalized outputs.
 
 ## Deploy
 

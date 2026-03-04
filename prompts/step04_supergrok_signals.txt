@@ -1,0 +1,5 @@
+Open X SuperGrok.
+For each handle in: {handles_csv}
+Ask:
+"What is @{handle} talking about today related to {topic}? Return direct status URLs and exact tweet text only."
+Return strict JSON.
