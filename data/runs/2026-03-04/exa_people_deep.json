@@ -1,0 +1,46 @@
+[
+  {
+    "query": "people talking about code RL environments and human data",
+    "request": {
+      "type": "deep",
+      "category": "people"
+    },
+    "response": {
+      "error": "HTTP Error 403: Forbidden",
+      "query": "people talking about code RL environments and human data"
+    }
+  },
+  {
+    "query": "people discussing RLVR coding agents",
+    "request": {
+      "type": "deep",
+      "category": "people"
+    },
+    "response": {
+      "error": "HTTP Error 403: Forbidden",
+      "query": "people discussing RLVR coding agents"
+    }
+  },
+  {
+    "query": "people discussing terminal bench harness engineering",
+    "request": {
+      "type": "deep",
+      "category": "people"
+    },
+    "response": {
+      "error": "HTTP Error 403: Forbidden",
+      "query": "people discussing terminal bench harness engineering"
+    }
+  },
+  {
+    "query": "people discussing tool verification test-time reinforcement learning",
+    "request": {
+      "type": "deep",
+      "category": "people"
+    },
+    "response": {
+      "error": "HTTP Error 403: Forbidden",
+      "query": "people discussing tool verification test-time reinforcement learning"
+    }
+  }
+]

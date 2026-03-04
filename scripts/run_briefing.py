@@ -209,7 +209,30 @@ def extract_bullets_from_markdown(md: str) -> list[str]:
     return out
 
 
-def run(topic: str, date: str, repo: Path) -> Path:
+def exa_deep_people_search(api_key: str, query: str, num_results: int = 10) -> dict:
+    req = urllib.request.Request(
+        "https://api.exa.ai/search",
+        data=json.dumps({
+            "query": query,
+            "type": "deep",
+            "category": "people",
+            "numResults": num_results,
+            "contents": {"text": True}
+        }).encode("utf-8"),
+        headers={
+            "x-api-key": api_key,
+            "Content-Type": "application/json",
+        },
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            return json.loads(r.read().decode("utf-8"))
+    except Exception as e:
+        return {"error": str(e), "query": query}
+
+
+def run(topic: str, date: str, repo: Path, exa_api_key: str | None = None) -> Path:
     run_dir = repo / "data" / "runs" / date
     raw = run_dir / "raw"
     papers_dir = raw / "papers"
@@ -286,15 +309,31 @@ def run(topic: str, date: str, repo: Path) -> Path:
         (x_dir / f"history_updates_{d}.json").write_text(json.dumps(out, indent=2))
     (run_dir / "history_updates_rollup.json").write_text(json.dumps(history, indent=2))
 
-    # 6) exa query pass (public URLs + query log)
+    # 6) exa query pass (deep + people category) + saved outputs
     exa_queries = [
-        "code RL environments human data blog",
-        "RLVR coding agents blog",
-        "terminal bench harness engineering blog",
-        "tool verification test-time reinforcement learning blog",
+        "people talking about code RL environments and human data",
+        "people discussing RLVR coding agents",
+        "people discussing terminal bench harness engineering",
+        "people discussing tool verification test-time reinforcement learning",
     ]
     exa = [{"query": q, "url": "https://exa.ai/search?query=" + urllib.parse.quote(q)} for q in exa_queries]
     (run_dir / "exa_queries.json").write_text(json.dumps(exa, indent=2))
+
+    exa_deep_people_results = []
+    key = exa_api_key
+    if key:
+        for q in exa_queries:
+            exa_deep_people_results.append({
+                "query": q,
+                "request": {"type": "deep", "category": "people"},
+                "response": exa_deep_people_search(key, q, num_results=10),
+            })
+    else:
+        exa_deep_people_results = [{
+            "warning": "EXA_API_KEY not set; deep people API search skipped",
+            "queries": exa_queries,
+        }]
+    (run_dir / "exa_people_deep.json").write_text(json.dumps(exa_deep_people_results, indent=2))
 
     # 7) synthesize (after all raw persisted)
     synthesize_onepager(run_dir, topic, date)
@@ -323,6 +362,7 @@ def main() -> int:
     ap.add_argument("--topic", default="What is the latest in code RL environments and human data?")
     ap.add_argument("--date", default=dt.date.today().isoformat())
     ap.add_argument("--repo", default=str(Path(__file__).resolve().parents[1]))
+    ap.add_argument("--exa-api-key", default=None)
     args = ap.parse_args()
 
     repo = Path(args.repo).resolve()
@@ -330,7 +370,8 @@ def main() -> int:
         print(f"Not a valid code-rl-briefing repo: {repo}", file=sys.stderr)
         return 2
 
-    run_dir = run(args.topic, args.date, repo)
+    exa_key = args.exa_api_key or __import__('os').environ.get('EXA_API_KEY')
+    run_dir = run(args.topic, args.date, repo, exa_api_key=exa_key)
     print(json.dumps({"ok": True, "run_dir": str(run_dir), "one_pager": str(run_dir / 'one-pager.md')}, indent=2))
     return 0
 
