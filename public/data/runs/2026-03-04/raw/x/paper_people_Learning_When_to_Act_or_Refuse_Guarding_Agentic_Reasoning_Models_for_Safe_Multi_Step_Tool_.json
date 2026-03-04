@@ -1,0 +1,29 @@
+{
+  "paper": "Learning When to Act or Refuse: Guarding Agentic Reasoning Models for Safe Multi-Step Tool Use",
+  "query": "\"Learning When to Act or Refuse: Guarding Agentic Reasoning Models for Safe Multi-Step Tool Use\" since:2026-03-03 until:2026-03-05",
+  "results": [
+    {
+      "id": "2029088402784633080",
+      "text": "Learning When to Act or Refuse: Guarding Agentic Reasoning Models for Safe Multi-Step Tool Use\n\nAradhye Agarwal, Gurdit Siyan, Yash Pandya, Joykirat Singh, Akshay Nambi, Ahmed Awadallah\nhttps://t.co/tyReZWWfZ6 [\ud835\ude8c\ud835\ude9c.\ud835\ude72\ud835\ude7b] https://t.co/1kMHHgykDW",
+      "createdAt": "Wed Mar 04 06:55:48 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 0,
+      "likeCount": 0,
+      "conversationId": "2029088402784633080",
+      "author": {
+        "username": "HEI",
+        "name": "LLM Papers"
+      },
+      "authorId": "223641087",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HCjFJmTb0AAW9Gi.png",
+          "width": 1080,
+          "height": 1350,
+          "previewUrl": "https://pbs.twimg.com/media/HCjFJmTb0AAW9Gi.png:small"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "paper": "PrivMedChat: End-to-End Differentially Private RLHF for Medical Dialogue Systems",
+  "query": "\"PrivMedChat: End-to-End Differentially Private RLHF for Medical Dialogue Systems\" since:2026-03-03 until:2026-03-05",
+  "results": [
+    {
+      "id": "2029116832003563776",
+      "text": "PrivMedChat: End-to-End Differentially Private RLHF for Medical Dialogue Systems\n\nSudip Bhujel\nhttps://t.co/w9DnqueWcO [\ud835\ude8c\ud835\ude9c.\ud835\ude72\ud835\ude7b] https://t.co/1uMo0wNDRz",
+      "createdAt": "Wed Mar 04 08:48:46 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 0,
+      "likeCount": 0,
+      "conversationId": "2029116832003563776",
+      "author": {
+        "username": "HEI",
+        "name": "LLM Papers"
+      },
+      "authorId": "223641087",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HCjfAZTXkAA4mGh.png",
+          "width": 1080,
+          "height": 1350,
+          "previewUrl": "https://pbs.twimg.com/media/HCjfAZTXkAA4mGh.png:small"
+        }
+      ]
+    }
+  ]
+}

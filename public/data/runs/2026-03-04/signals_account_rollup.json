@@ -1,0 +1,1274 @@
+[
+  {
+    "signal": {
+      "name": "Hamel Husain",
+      "role": "account",
+      "links": {
+        "x": "https://x.com/HamelHusain"
+      }
+    },
+    "handle": "HamelHusain",
+    "tweets": [
+      {
+        "id": "2028987789782712618",
+        "text": "Interesting new paper by Donald Knuth re: Claude \n\n> this was definitely an impressive success story. I think Claude Shannon\u2019s spirit is probably proud to know that his name is now being associated with such advances. Hats o\ufb00 to Claude!\n\nLiterate programming is here, just maybe not in the form we thought it would take (e.g. meticulously crafted notebooks)\n\nhttps://t.co/LeHQfrB1ac",
+        "createdAt": "Wed Mar 04 00:16:00 +0000 2026",
+        "replyCount": 4,
+        "retweetCount": 6,
+        "likeCount": 115,
+        "conversationId": "2028987789782712618",
+        "author": {
+          "username": "HamelHusain",
+          "name": "Hamel Husain"
+        },
+        "authorId": "825766640"
+      },
+      {
+        "id": "2028973732883251364",
+        "text": "RT @ctatedev: New experimental flag:\n\nagent-browser --native\n\nSingle Rust binary. Direct CDP.\n\n\u2192 No abstraction ceiling\n\u2192 Self-contained da\u2026",
+        "createdAt": "Tue Mar 03 23:20:09 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 96,
+        "likeCount": 0,
+        "conversationId": "2028973732883251364",
+        "author": {
+          "username": "HamelHusain",
+          "name": "Hamel Husain"
+        },
+        "authorId": "825766640"
+      },
+      {
+        "id": "2028950189147656700",
+        "text": "RT @jakedahn: @HamelHusain ahhh, yes. much better. https://t.co/OqZbMUH0pX",
+        "createdAt": "Tue Mar 03 21:46:35 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 1,
+        "likeCount": 0,
+        "conversationId": "2028950189147656700",
+        "author": {
+          "username": "HamelHusain",
+          "name": "Hamel Husain"
+        },
+        "authorId": "825766640",
+        "media": [
+          {
+            "type": "photo",
+            "url": "https://pbs.twimg.com/media/HCg6ReCXAAEFYNY.jpg",
+            "width": 1152,
+            "height": 928,
+            "previewUrl": "https://pbs.twimg.com/media/HCg6ReCXAAEFYNY.jpg:small"
+          }
+        ]
+      },
+      {
+        "id": "2028911095403168179",
+        "text": "I was onboarding to @modemdev and it surfaced this interface which wanted me to click on every single discord channel to enable it.  Thankfully Claude just did it \n\nThe Chrome Extension is good now.  Highly recommend https://t.co/7vDPbjHppS",
+        "createdAt": "Tue Mar 03 19:11:15 +0000 2026",
+        "replyCount": 4,
+        "retweetCount": 0,
+        "likeCount": 13,
+        "conversationId": "2028911095403168179",
+        "author": {
+          "username": "HamelHusain",
+          "name": "Hamel Husain"
+        },
+        "authorId": "825766640",
+        "media": [
+          {
+            "type": "photo",
+            "url": "https://pbs.twimg.com/media/HCgjweVawAAyQoA.jpg",
+            "width": 1773,
+            "height": 2048,
+            "previewUrl": "https://pbs.twimg.com/media/HCgjweVawAAyQoA.jpg:small"
+          }
+        ]
+      },
+      {
+        "id": "2028904674359951538",
+        "text": "RT @marchattonhere: I took the evals course @HamelHusain and Shreya gave\n\nSuper excited to test these skills out\n\nWill report back",
+        "createdAt": "Tue Mar 03 18:45:44 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 2,
+        "likeCount": 0,
+        "conversationId": "2028904674359951538",
+        "author": {
+          "username": "HamelHusain",
+          "name": "Hamel Husain"
+        },
+        "authorId": "825766640"
+      },
+      {
+        "id": "2028894099483578872",
+        "text": "Evals Skills for Coding Agents",
+        "createdAt": "Tue Mar 03 18:03:43 +0000 2026",
+        "replyCount": 23,
+        "retweetCount": 154,
+        "likeCount": 1311,
+        "conversationId": "2028894099483578872",
+        "author": {
+          "username": "HamelHusain",
+          "name": "Hamel Husain"
+        },
+        "authorId": "825766640",
+        "article": {
+          "title": "Evals Skills for Coding Agents",
+          "previewText": "Today, I\u2019m publishing evals-skills, a set of skills for AI product evals [1]. They guard against common mistakes I've seen helping 50+ companies with Evals and teaching our course.\nWhy Skills for"
+        }
+      },
+      {
+        "id": "2028640115124494783",
+        "text": "Before admonishing AI coding by pointing to downtime of Claude\n\nRemember that GitHub was down all the time before AI coding \n\nYou can find any evidence to confirm whatever you want to believe",
+        "createdAt": "Tue Mar 03 01:14:28 +0000 2026",
+        "replyCount": 4,
+        "retweetCount": 0,
+        "likeCount": 43,
+        "conversationId": "2028640115124494783",
+        "author": {
+          "username": "HamelHusain",
+          "name": "Hamel Husain"
+        },
+        "authorId": "825766640"
+      },
+      {
+        "id": "2028634661803667667",
+        "text": "RT @flyosity: --dangerously-skip-permissions https://t.co/zk0FLxi4in",
+        "createdAt": "Tue Mar 03 00:52:48 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 1075,
+        "likeCount": 0,
+        "conversationId": "2028634661803667667",
+        "author": {
+          "username": "HamelHusain",
+          "name": "Hamel Husain"
+        },
+        "authorId": "825766640",
+        "media": [
+          {
+            "type": "photo",
+            "url": "https://pbs.twimg.com/media/HCcBLFSXQAAcqDc.jpg",
+            "width": 1152,
+            "height": 662,
+            "previewUrl": "https://pbs.twimg.com/media/HCcBLFSXQAAcqDc.jpg:small"
+          }
+        ]
+      },
+      {
+        "id": "2028561881519317423",
+        "text": "RT @Sohailmo: bookmarked this a while ago and finally came around to using it, definitely satisfied with the breadth and utility - super he\u2026",
+        "createdAt": "Mon Mar 02 20:03:36 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 1,
+        "likeCount": 0,
+        "conversationId": "2028561881519317423",
+        "author": {
+          "username": "HamelHusain",
+          "name": "Hamel Husain"
+        },
+        "authorId": "825766640"
+      },
+      {
+        "id": "2028225458891034906",
+        "text": "RT @badlogicgames: do you need MCP for dev workflows? no, for the most part. allows out of context data transforms, conserves context windo\u2026",
+        "createdAt": "Sun Mar 01 21:46:46 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 12,
+        "likeCount": 0,
+        "conversationId": "2028225458891034906",
+        "author": {
+          "username": "HamelHusain",
+          "name": "Hamel Husain"
+        },
+        "authorId": "825766640"
+      },
+      {
+        "id": "2028216367158345729",
+        "text": "RT @intellectronica: @HamelHusain I love it. I have this in my global AGENTS .md to maximise the use of the questions tool (works in Claude\u2026",
+        "createdAt": "Sun Mar 01 21:10:39 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 1,
+        "likeCount": 0,
+        "conversationId": "2028216367158345729",
+        "author": {
+          "username": "HamelHusain",
+          "name": "Hamel Husain"
+        },
+        "authorId": "825766640"
+      },
+      {
+        "id": "2028190367028523443",
+        "text": "RT @ctatedev: New agent-browser skill: Electron\n\nYou can now control desktop apps built with Electron, including Discord, Figma, Notion, Sp\u2026",
+        "createdAt": "Sun Mar 01 19:27:20 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 360,
+        "likeCount": 0,
+        "conversationId": "2028190367028523443",
+        "author": {
+          "username": "HamelHusain",
+          "name": "Hamel Husain"
+        },
+        "authorId": "825766640"
+      },
+      {
+        "id": "2027888413123477688",
+        "text": "Claude renovated my GitHub homepage for me by automatically setting up a CRON that pulls in my latest blog posts, and found images and other details to make things a bit nicer :) https://t.co/42GrcQ4w05",
+        "createdAt": "Sat Feb 28 23:27:28 +0000 2026",
+        "replyCount": 10,
+        "retweetCount": 2,
+        "likeCount": 155,
+        "conversationId": "2027888413123477688",
+        "author": {
+          "username": "HamelHusain",
+          "name": "Hamel Husain"
+        },
+        "authorId": "825766640",
+        "media": [
+          {
+            "type": "photo",
+            "url": "https://pbs.twimg.com/media/HCSBq-Sa4AALUH6.jpg",
+            "width": 1714,
+            "height": 1226,
+            "previewUrl": "https://pbs.twimg.com/media/HCSBq-Sa4AALUH6.jpg:small"
+          }
+        ]
+      },
+      {
+        "id": "2027886117580902530",
+        "text": "The thing in Claude where it dynamically presents you with a mini interface to choose between options is amazing\n\nJust did a calendar thing and it gave me a picker on the web\nIn claude code I got a picker for three different design options",
+        "createdAt": "Sat Feb 28 23:18:21 +0000 2026",
+        "replyCount": 20,
+        "retweetCount": 0,
+        "likeCount": 78,
+        "conversationId": "2027886117580902530",
+        "author": {
+          "username": "HamelHusain",
+          "name": "Hamel Husain"
+        },
+        "authorId": "825766640"
+      },
+      {
+        "id": "2027886222161678845",
+        "text": "It really does highlight how UIs are gonna be dynamic and personalized in the future.",
+        "createdAt": "Sat Feb 28 23:18:46 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 0,
+        "likeCount": 9,
+        "conversationId": "2027886117580902530",
+        "inReplyToStatusId": "2027886117580902530",
+        "author": {
+          "username": "HamelHusain",
+          "name": "Hamel Husain"
+        },
+        "authorId": "825766640"
+      },
+      {
+        "id": "2027840900458848348",
+        "text": "RT @dhh: My new favorite tmux dev layout features @opencode  (with Kimi K2.5 running on @FireworksAI_HQ) on top and Claude Code on the bott\u2026",
+        "createdAt": "Sat Feb 28 20:18:40 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 100,
+        "likeCount": 0,
+        "conversationId": "2027840900458848348",
+        "author": {
+          "username": "HamelHusain",
+          "name": "Hamel Husain"
+        },
+        "authorId": "825766640"
+      },
+      {
+        "id": "2027840056304799989",
+        "text": "RT @leerob: I asked Cursor to add Vim support to the Ladybird browser.\n\nIt automatically set up the environment to run the browser, made th\u2026",
+        "createdAt": "Sat Feb 28 20:15:19 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 12,
+        "likeCount": 0,
+        "conversationId": "2027840056304799989",
+        "author": {
+          "username": "HamelHusain",
+          "name": "Hamel Husain"
+        },
+        "authorId": "825766640"
+      },
+      {
+        "id": "2027832737814696117",
+        "text": "\ud83c\udf36\ufe0f I don\u2019t think people should hire others to do AI work unless they are using AI heavily in their own daily workflows\n\n\u201cI use ChatGPT once in a while\u201d doesn\u2019t count \n\nWithout this:\n- You\u2019ll make bad decisions and have too many blind spots \n- It\u2019s a sign you aren\u2019t really invested in AI and are trying to check a box \n\nI think it\u2019s totally fine to hire experts if you are in this position if you also upskill at the same time, but delegating AI work and continuing to stay at arms length from AI you are ngmi",
+        "createdAt": "Sat Feb 28 19:46:14 +0000 2026",
+        "replyCount": 10,
+        "retweetCount": 2,
+        "likeCount": 53,
+        "conversationId": "2027832737814696117",
+        "author": {
+          "username": "HamelHusain",
+          "name": "Hamel Husain"
+        },
+        "authorId": "825766640"
+      },
+      {
+        "id": "2027789504514560166",
+        "text": "RT @hwchase17: https://t.co/3P7AZBO2XR",
+        "createdAt": "Sat Feb 28 16:54:27 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 54,
+        "likeCount": 0,
+        "conversationId": "2027789504514560166",
+        "author": {
+          "username": "HamelHusain",
+          "name": "Hamel Husain"
+        },
+        "authorId": "825766640"
+      },
+      {
+        "id": "2027737414714986833",
+        "text": "RT @gregjoz: Xcode 26.3 with Claude Agent &amp; Codex hits the Mac App Store today! With advanced reasoning capabilities in Xcode, you can stre\u2026",
+        "createdAt": "Sat Feb 28 13:27:27 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 440,
+        "likeCount": 0,
+        "conversationId": "2027737414714986833",
+        "author": {
+          "username": "HamelHusain",
+          "name": "Hamel Husain"
+        },
+        "authorId": "825766640"
+      },
+      {
+        "id": "2027737007548731532",
+        "text": "RT @bcherny: Claude Code Remote is rolling out now for Pro users",
+        "createdAt": "Sat Feb 28 13:25:50 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 156,
+        "likeCount": 0,
+        "conversationId": "2027737007548731532",
+        "author": {
+          "username": "HamelHusain",
+          "name": "Hamel Husain"
+        },
+        "authorId": "825766640"
+      },
+      {
+        "id": "2027628267709337843",
+        "text": "RT @jxnlco: Codex has had multi agents and support is getting really good in the codex desktop app. \n\nhttps://t.co/u5XPAc1iMT",
+        "createdAt": "Sat Feb 28 06:13:45 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 13,
+        "likeCount": 0,
+        "conversationId": "2027628267709337843",
+        "author": {
+          "username": "HamelHusain",
+          "name": "Hamel Husain"
+        },
+        "authorId": "825766640"
+      },
+      {
+        "id": "2027483983693680732",
+        "text": "Codex Desktop app is the first interface that has taken me away from the terminal.  It's that good",
+        "createdAt": "Fri Feb 27 20:40:25 +0000 2026",
+        "replyCount": 50,
+        "retweetCount": 10,
+        "likeCount": 464,
+        "conversationId": "2027483983693680732",
+        "author": {
+          "username": "HamelHusain",
+          "name": "Hamel Husain"
+        },
+        "authorId": "825766640"
+      },
+      {
+        "id": "2027481743914373578",
+        "text": "RT @ryancarson: Here\u2019s how I use Agentation + queuing messages in Codex to crank through frontend work much faster https://t.co/JW6kZ0IP1m",
+        "createdAt": "Fri Feb 27 20:31:31 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 23,
+        "likeCount": 0,
+        "conversationId": "2027481743914373578",
+        "author": {
+          "username": "HamelHusain",
+          "name": "Hamel Husain"
+        },
+        "authorId": "825766640",
+        "media": [
+          {
+            "type": "video",
+            "url": "https://pbs.twimg.com/amplify_video_thumb/2027480963840937985/img/MZ_5EuAaou0UXJDg.jpg",
+            "width": 1080,
+            "height": 1920,
+            "previewUrl": "https://pbs.twimg.com/amplify_video_thumb/2027480963840937985/img/MZ_5EuAaou0UXJDg.jpg:small",
+            "videoUrl": "https://video.twimg.com/amplify_video/2027480963840937985/vid/avc1/1080x1920/6q1fTYTxQaxC1dyb.mp4?tag=21",
+            "durationMs": 79820
+          }
+        ]
+      },
+      {
+        "id": "2027454810816188439",
+        "text": "RT @sh_reya: We are designing an interface for interpretable, steerable LLM-powered document ranking and clustering! Help us by taking part\u2026",
+        "createdAt": "Fri Feb 27 18:44:29 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 4,
+        "likeCount": 0,
+        "conversationId": "2027454810816188439",
+        "author": {
+          "username": "HamelHusain",
+          "name": "Hamel Husain"
+        },
+        "authorId": "825766640"
+      }
+    ]
+  },
+  {
+    "signal": {
+      "name": "LangChain",
+      "role": "account",
+      "links": {
+        "x": "https://x.com/LangChain"
+      }
+    },
+    "handle": "LangChain",
+    "tweets": [
+      {
+        "id": "2028968896250953931",
+        "text": "We've released changes polishing up the run details page in LangSmith \ud83d\udc85\n\n- Snappier navigation between sections\n- Collapsable sections\n- Markdown formatting support https://t.co/NCXKU8llVw",
+        "createdAt": "Tue Mar 03 23:00:55 +0000 2026",
+        "replyCount": 4,
+        "retweetCount": 6,
+        "likeCount": 54,
+        "conversationId": "2028968896250953931",
+        "author": {
+          "username": "LangChain",
+          "name": "LangChain"
+        },
+        "authorId": "1589007443853340672",
+        "media": [
+          {
+            "type": "animated_gif",
+            "url": "https://pbs.twimg.com/tweet_video_thumb/HChYMiFasAALALf.jpg",
+            "width": 928,
+            "height": 720,
+            "previewUrl": "https://pbs.twimg.com/tweet_video_thumb/HChYMiFasAALALf.jpg:small",
+            "videoUrl": "https://video.twimg.com/tweet_video/HChYMiFasAALALf.mp4"
+          }
+        ]
+      },
+      {
+        "id": "2028902968888881624",
+        "text": "\ud83d\ude80 New LangChain Academy Course: Building Reliable Agents \ud83d\ude80\n\nShipping agents to production is hard. Traditional software is deterministic \u2013 when something breaks, you check the logs and fix the code. But agents rely on non-deterministic models.\n\nAdd multi-step reasoning, tool use, and real user traffic, and building reliable agents becomes far more complex than traditional system design.\n\nThe goal of this course is to teach you how to take an agent from first run to production-ready system through iterative cycles of improvement.\n\nYou\u2019ll learn how to do this with LangSmith, our agent engineering platform for observing, evaluating, and deploying agents.\n\nEnroll for free \u27a1\ufe0f https://t.co/fok9ahY6MG",
+        "createdAt": "Tue Mar 03 18:38:57 +0000 2026",
+        "replyCount": 15,
+        "retweetCount": 57,
+        "likeCount": 468,
+        "conversationId": "2028902968888881624",
+        "author": {
+          "username": "LangChain",
+          "name": "LangChain"
+        },
+        "authorId": "1589007443853340672",
+        "media": [
+          {
+            "type": "video",
+            "url": "https://pbs.twimg.com/amplify_video_thumb/2028902785002160138/img/O6jocTyHdn4wwrbf.jpg",
+            "width": 1920,
+            "height": 1080,
+            "previewUrl": "https://pbs.twimg.com/amplify_video_thumb/2028902785002160138/img/O6jocTyHdn4wwrbf.jpg:small",
+            "videoUrl": "https://video.twimg.com/amplify_video/2028902785002160138/vid/avc1/1920x1080/0_egp1BDawozXYw4.mp4?tag=21",
+            "durationMs": 122580
+          }
+        ]
+      },
+      {
+        "id": "2028886633118917112",
+        "text": "San Francisco Meetup: Deep Agents with Python OSS \ud83c\udf09\n\nJoin @sydneyrunkle, LangChain Python OSS Engineer, as she shares insights from the front lines of open-source development.\n\nModerated by @jakebroekhuizen, we\u2019ll dive deep into Deep Agents, the powerful way to build LLM-based agents and applications, with built-in task planning, contextual file systems, subagent spawning, and long-term memory.\n\n\u26a0\ufe0f Limited capacity! Sydney is only in town for one week\u2014don't miss out.\n\n\ud83d\uddd3\ufe0f March 4 | 6 PM | San Francisco\n\ud83c\udf9f\ufe0f RSVP here: https://t.co/Kt26bVwEnk",
+        "createdAt": "Tue Mar 03 17:34:02 +0000 2026",
+        "replyCount": 3,
+        "retweetCount": 4,
+        "likeCount": 45,
+        "conversationId": "2028886633118917112",
+        "author": {
+          "username": "LangChain",
+          "name": "LangChain"
+        },
+        "authorId": "1589007443853340672",
+        "media": [
+          {
+            "type": "photo",
+            "url": "https://pbs.twimg.com/media/HCgNo5LXoAENZ6V.jpg",
+            "width": 2048,
+            "height": 2048,
+            "previewUrl": "https://pbs.twimg.com/media/HCgNo5LXoAENZ6V.jpg:small"
+          }
+        ]
+      },
+      {
+        "id": "2028522092774199731",
+        "text": "What? LangChain is evolving!\n\nMeet our final form \u27a1\ufe0f https://t.co/f6eGVFchtB https://t.co/MWLFt7Awpd",
+        "createdAt": "Mon Mar 02 17:25:29 +0000 2026",
+        "replyCount": 63,
+        "retweetCount": 92,
+        "likeCount": 1550,
+        "conversationId": "2028522092774199731",
+        "author": {
+          "username": "LangChain",
+          "name": "LangChain"
+        },
+        "authorId": "1589007443853340672",
+        "media": [
+          {
+            "type": "photo",
+            "url": "https://pbs.twimg.com/media/HCbCF6GXwAAJFB9.jpg",
+            "width": 2048,
+            "height": 2048,
+            "previewUrl": "https://pbs.twimg.com/media/HCbCF6GXwAAJFB9.jpg:small"
+          }
+        ]
+      },
+      {
+        "id": "2028244685936824761",
+        "text": "\ud83d\udd0d Evaluating Deep Agents: Here's what we learned \ud83d\udd0d\n\nDeep agents can't be evaluated like simple LLM tasks. After building and testing 4 production agents over the past few months, we learned that evaluating deep agents requires:\n\n1. Bespoke test logic for each datapoint \u2014 each test case has its own success criteria\n2. Single-step evals to catch regressions at individual decision points\n3. Full turn evals to validate end-to-end agent behavior\n4. Multi-turn evals that simulate realistic user interactions\n5. Clean, reproducible test environments",
+        "createdAt": "Sun Mar 01 23:03:10 +0000 2026",
+        "replyCount": 14,
+        "retweetCount": 21,
+        "likeCount": 212,
+        "conversationId": "2028244685936824761",
+        "author": {
+          "username": "LangChain",
+          "name": "LangChain"
+        },
+        "authorId": "1589007443853340672",
+        "media": [
+          {
+            "type": "photo",
+            "url": "https://pbs.twimg.com/media/HCXFyxCWQAApgtY.jpg",
+            "width": 1280,
+            "height": 1143,
+            "previewUrl": "https://pbs.twimg.com/media/HCXFyxCWQAApgtY.jpg:small"
+          }
+        ]
+      },
+      {
+        "id": "2028244687186739405",
+        "text": "\ud83d\udc49 Read the full blog post on evaluation patterns for deep agents: https://t.co/1owf18nVcW",
+        "createdAt": "Sun Mar 01 23:03:11 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 4,
+        "likeCount": 22,
+        "conversationId": "2028244685936824761",
+        "inReplyToStatusId": "2028244685936824761",
+        "author": {
+          "username": "LangChain",
+          "name": "LangChain"
+        },
+        "authorId": "1589007443853340672"
+      },
+      {
+        "id": "2028244202950430814",
+        "text": "New Conceptual Guide: You don\u2019t know what your agent will do until it\u2019s in production \ud83d\udc40 \n\nWith traditional software, you ship with reasonable confidence. Test coverage handles most paths. Monitoring catches errors, latency, and query issues. When something breaks, you read the stack trace.\n\nAgents are different. Natural language input is unbounded. LLMs are sensitive to subtle prompt variations.\n\nProduction monitoring for agents needs a different playbook.\n\nIn our latest conceptual guide, we cover why agent observability is a different problem, what to actually monitor, and what we've learned from teams deploying agents at scale.",
+        "createdAt": "Sun Mar 01 23:01:15 +0000 2026",
+        "replyCount": 7,
+        "retweetCount": 15,
+        "likeCount": 125,
+        "conversationId": "2028244202950430814",
+        "author": {
+          "username": "LangChain",
+          "name": "LangChain"
+        },
+        "authorId": "1589007443853340672",
+        "media": [
+          {
+            "type": "photo",
+            "url": "https://pbs.twimg.com/media/HCXFTj8awAA3zD9.png",
+            "width": 2048,
+            "height": 1502,
+            "previewUrl": "https://pbs.twimg.com/media/HCXFTj8awAA3zD9.png:small"
+          }
+        ]
+      },
+      {
+        "id": "2028244205991239915",
+        "text": "Read the guide \u27a1\ufe0f https://t.co/clp5ko09Dj",
+        "createdAt": "Sun Mar 01 23:01:16 +0000 2026",
+        "replyCount": 1,
+        "retweetCount": 1,
+        "likeCount": 9,
+        "conversationId": "2028244202950430814",
+        "inReplyToStatusId": "2028244202950430814",
+        "author": {
+          "username": "LangChain",
+          "name": "LangChain"
+        },
+        "authorId": "1589007443853340672"
+      },
+      {
+        "id": "2028168399831130446",
+        "text": "RT @LangChain_OSS: LangChain Community Spotlight: Awesome LangGraph &amp; LangChain Ecosystem \ud83d\udcda\ud83d\uddfa\ufe0f\n\nNavigate the LangChain ecosystem: 100+ proje\u2026",
+        "createdAt": "Sun Mar 01 18:00:02 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 7,
+        "likeCount": 0,
+        "conversationId": "2028168399831130446",
+        "author": {
+          "username": "LangChain",
+          "name": "LangChain"
+        },
+        "authorId": "1589007443853340672"
+      },
+      {
+        "id": "2028153303826329926",
+        "text": "RT @LangChain_OSS: LangChain Community Spotlight: DATAGEN \ud83e\udd16\ud83d\udcca\n\nOrchestrates 8 AI agents via LangGraph for automated data analysis\u2014from hypot\u2026",
+        "createdAt": "Sun Mar 01 17:00:03 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 17,
+        "likeCount": 0,
+        "conversationId": "2028153303826329926",
+        "author": {
+          "username": "LangChain",
+          "name": "LangChain"
+        },
+        "authorId": "1589007443853340672"
+      },
+      {
+        "id": "2028138196694192442",
+        "text": "RT @LangChain_OSS: LangChain Community Spotlight: \ud83d\udda5\ufe0f Terminal Agent\n\nAn AI terminal assistant enabling safe shell execution through natural\u2026",
+        "createdAt": "Sun Mar 01 16:00:01 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 9,
+        "likeCount": 0,
+        "conversationId": "2028138196694192442",
+        "author": {
+          "username": "LangChain",
+          "name": "LangChain"
+        },
+        "authorId": "1589007443853340672"
+      },
+      {
+        "id": "2027806007334973710",
+        "text": "RT @LangChain_OSS: LangChain Community Spotlight: \ud83d\udcda\ud83e\udd16 Davia - Self-Maintaining Documentation Platform\n\nDavia auto-generates docs by monitori\u2026",
+        "createdAt": "Sat Feb 28 18:00:01 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 13,
+        "likeCount": 0,
+        "conversationId": "2027806007334973710",
+        "author": {
+          "username": "LangChain",
+          "name": "LangChain"
+        },
+        "authorId": "1589007443853340672"
+      },
+      {
+        "id": "2027790913913884998",
+        "text": "RT @LangChain_OSS: LangChain Community Spotlight: Model-Aware Context Management \ud83d\udd27\n\nStop hardcoding context limits across models. LangChain\u2026",
+        "createdAt": "Sat Feb 28 17:00:03 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 5,
+        "likeCount": 0,
+        "conversationId": "2027790913913884998",
+        "author": {
+          "username": "LangChain",
+          "name": "LangChain"
+        },
+        "authorId": "1589007443853340672"
+      },
+      {
+        "id": "2027775914478797023",
+        "text": "RT @LangChain_OSS: LangChain Community Spotlight: LangGraphics \ud83d\udd0d\n\nLangGraphics provides real-time visualization for LangGraph agents. Wrap\u2026",
+        "createdAt": "Sat Feb 28 16:00:26 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 10,
+        "likeCount": 0,
+        "conversationId": "2027775914478797023",
+        "author": {
+          "username": "LangChain",
+          "name": "LangChain"
+        },
+        "authorId": "1589007443853340672"
+      },
+      {
+        "id": "2027447233335918652",
+        "text": "RT @LangChain_OSS: \ud83c\udf09 San Francisco LangChain Meetup: Join us for a fireside chat on deep agents\n\nNext Wednesday, @sydneyrunkle, Python OSS\u2026",
+        "createdAt": "Fri Feb 27 18:14:23 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 3,
+        "likeCount": 0,
+        "conversationId": "2027447233335918652",
+        "author": {
+          "username": "LangChain",
+          "name": "LangChain"
+        },
+        "authorId": "1589007443853340672"
+      },
+      {
+        "id": "2027442891765731830",
+        "text": "Tools in the LangSmith Playground \ud83d\udedd \n\nDefine tools once, use them everywhere.\n- Save & reuse tool definitions alongside your prompts, across playground sessions\n- Share a tool library across your workspace\n- Manage tool definitions programmatically with the SDK\nLearn more: https://t.co/gpvMYa8AJy",
+        "createdAt": "Fri Feb 27 17:57:08 +0000 2026",
+        "replyCount": 4,
+        "retweetCount": 5,
+        "likeCount": 48,
+        "conversationId": "2027442891765731830",
+        "author": {
+          "username": "LangChain",
+          "name": "LangChain"
+        },
+        "authorId": "1589007443853340672",
+        "media": [
+          {
+            "type": "video",
+            "url": "https://pbs.twimg.com/ext_tw_video_thumb/2027442862418169857/pu/img/-wM1NtsgRbl1vqVc.jpg",
+            "width": 1920,
+            "height": 1182,
+            "previewUrl": "https://pbs.twimg.com/ext_tw_video_thumb/2027442862418169857/pu/img/-wM1NtsgRbl1vqVc.jpg:small",
+            "videoUrl": "https://video.twimg.com/ext_tw_video/2027442862418169857/pu/vid/avc1/1168x720/LlulXaeVOiWBDyY9.mp4?tag=12",
+            "durationMs": 17550
+          }
+        ]
+      },
+      {
+        "id": "2027094349360820340",
+        "text": "RT @hwchase17: https://t.co/3P7AZBO2XR",
+        "createdAt": "Thu Feb 26 18:52:09 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 54,
+        "likeCount": 0,
+        "conversationId": "2027094349360820340",
+        "author": {
+          "username": "LangChain",
+          "name": "LangChain"
+        },
+        "authorId": "1589007443853340672"
+      },
+      {
+        "id": "2027088985118683550",
+        "text": "LangSmith for Startups Spotlight: TierZero \n\nEngineering teams are shipping code faster than ever, but production operations remain heavily manual and concentrated in the hands of a few experienced engineers. The result: slower incident resolution, constant interruptions, and growing operational toil as systems scale.\n\nTierZero is the AI platform that helps engineering teams run production systems reliably at scale. Their agents automate incident response, surface reliability risks, and give engineers instant answers to production questions.\n\nHigh-scale teams like Discord, Drata, Framer, and WeightWatchers trust TierZero to accelerate incident resolution and reclaim engineering capacity. At Drata, TierZero reduced issue time-to-resolution by 42% and saved 7000+ engineering hours annually.\n\nLangSmith plays a central role in how the team builds agents.\n\nLearn more \ud83d\udc49 https://t.co/khrYgCGu7a\nReach out to the team for a free 30-day trial \ud83d\udc49 https://t.co/l3Zciaawut",
+        "createdAt": "Thu Feb 26 18:30:50 +0000 2026",
+        "replyCount": 2,
+        "retweetCount": 8,
+        "likeCount": 61,
+        "conversationId": "2027088985118683550",
+        "author": {
+          "username": "LangChain",
+          "name": "LangChain"
+        },
+        "authorId": "1589007443853340672",
+        "media": [
+          {
+            "type": "video",
+            "url": "https://pbs.twimg.com/amplify_video_thumb/2027073023707058176/img/MLKlPex3HOnsjuh-.jpg",
+            "width": 1920,
+            "height": 1080,
+            "previewUrl": "https://pbs.twimg.com/amplify_video_thumb/2027073023707058176/img/MLKlPex3HOnsjuh-.jpg:small",
+            "videoUrl": "https://video.twimg.com/amplify_video/2027073023707058176/vid/avc1/1920x1080/mCWAMHZe9vVgr9Hx.mp4?tag=21",
+            "durationMs": 20100
+          }
+        ]
+      },
+      {
+        "id": "2027088987442012580",
+        "text": "2/ According to the TierZero engineering team, LangSmith plays a central role in how they ship reliable agents:\n\n- \u201cLangSmith is the single most important tool in our agent development lifecycle - we use it to debug, evaluate, and continuously improve agent quality across our product lines.\u201d\n- \u201cBeyond tracing and evals, a few things have stood out...custom dashboards once caught a runaway process that would have 10x\u2019d our model provider bills before we were even alerted.\u201d\n- \u201cLangSmith\u2019s SDK is easy and flexible to build on top of - we recently used it to ship our TierZero <> LangSmith integration, which has cut our own investigation time on agent issues by over 50%.\u201d\n- \u201cDistributed tracing took 10 minutes to set up and gives great visibility into our MCP services.\u201d",
+        "createdAt": "Thu Feb 26 18:30:50 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 0,
+        "likeCount": 6,
+        "conversationId": "2027088985118683550",
+        "inReplyToStatusId": "2027088985118683550",
+        "author": {
+          "username": "LangChain",
+          "name": "LangChain"
+        },
+        "authorId": "1589007443853340672"
+      },
+      {
+        "id": "2027077451113771455",
+        "text": "\u23f3 Last chance to submit a talk for Interrupt (May 13-14, SF)\n\nCall for papers closes Friday 2/27. Share what you've learned building and scaling agents in production.\n\nSubmit your talk \ud83d\udc49 https://t.co/oKe0nOTH1O https://t.co/nsdwzjtCk9",
+        "createdAt": "Thu Feb 26 17:45:00 +0000 2026",
+        "replyCount": 2,
+        "retweetCount": 2,
+        "likeCount": 16,
+        "conversationId": "2027077451113771455",
+        "author": {
+          "username": "LangChain",
+          "name": "LangChain"
+        },
+        "authorId": "1589007443853340672",
+        "media": [
+          {
+            "type": "video",
+            "url": "https://pbs.twimg.com/amplify_video_thumb/2026784623469146116/img/sDjdjmCHnGudIDKx.jpg",
+            "width": 1080,
+            "height": 1080,
+            "previewUrl": "https://pbs.twimg.com/amplify_video_thumb/2026784623469146116/img/sDjdjmCHnGudIDKx.jpg:small",
+            "videoUrl": "https://video.twimg.com/amplify_video/2026784623469146116/vid/avc1/1080x1080/x4iqK50cYkfzau_8.mp4?tag=21",
+            "durationMs": 7033
+          }
+        ]
+      },
+      {
+        "id": "2026412963716907294",
+        "text": "\ud83c\udf09 San Francisco LangChain Meetup: Join us next Wednesday for a fireside chat on deep agents. \ud83d\ude80\n\nIn this deep dive moderated by @jakebroekhuizen, @sydneyrunkle, Python OSS Engineer at LangChain, will share insights from the front lines of OSS development. \ud83d\udee0\ufe0f \n\nDeep agents are a powerful way to build LLM-based agents and applications, with built-in task planning, contextual file systems, subagent spawning, and long-term memory. \ud83e\udde0\ud83e\udd16\n\n\ud83d\udc49 RSVP here: https://t.co/Kt26bVwEnk",
+        "createdAt": "Tue Feb 24 21:44:34 +0000 2026",
+        "replyCount": 6,
+        "retweetCount": 6,
+        "likeCount": 22,
+        "conversationId": "2026412963716907294",
+        "author": {
+          "username": "LangChain",
+          "name": "LangChain"
+        },
+        "authorId": "1589007443853340672",
+        "media": [
+          {
+            "type": "photo",
+            "url": "https://pbs.twimg.com/media/HB9Dva4WsAEqTsq.jpg",
+            "width": 2048,
+            "height": 2048,
+            "previewUrl": "https://pbs.twimg.com/media/HB9Dva4WsAEqTsq.jpg:small"
+          }
+        ]
+      },
+      {
+        "id": "2026409558424563875",
+        "text": "Calling all agent builders \ud83d\udce2 March 4th, 6pm!",
+        "createdAt": "Tue Feb 24 21:31:02 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 3,
+        "likeCount": 17,
+        "conversationId": "2026409558424563875",
+        "author": {
+          "username": "LangChain",
+          "name": "LangChain"
+        },
+        "authorId": "1589007443853340672",
+        "quotedTweet": {
+          "id": "2026408369108742643",
+          "text": "Building agents and hitting complexity walls?\n\nDeep Agents brings:\n\n- Planning \n- Filesystem context\n- Subagents \n- Memory \n- Sandbox integrations  \n\nSimilar architectures power Claude Code and Codex\n\nJoin us in SF for a fireside chat with @sydneyrunkle: https://t.co/haFvSeKk2i\n\nI'll be the moderator - would love to see you there!",
+          "createdAt": "Tue Feb 24 21:26:18 +0000 2026",
+          "replyCount": 3,
+          "retweetCount": 4,
+          "likeCount": 14,
+          "conversationId": "2026408369108742643",
+          "author": {
+            "username": "jakebroekhuizen",
+            "name": "Jake Broekhuizen"
+          },
+          "authorId": "885444920806223872",
+          "media": [
+            {
+              "type": "photo",
+              "url": "https://pbs.twimg.com/media/HB8_mtybIAAzrpa.jpg",
+              "width": 1786,
+              "height": 1786,
+              "previewUrl": "https://pbs.twimg.com/media/HB8_mtybIAAzrpa.jpg:small"
+            }
+          ]
+        }
+      },
+      {
+        "id": "2026408670884671574",
+        "text": "RT @jakebroekhuizen: Building agents and hitting complexity walls?\n\nDeep Agents brings:\n\n- Planning \n- Filesystem context\n- Subagents \n- Me\u2026",
+        "createdAt": "Tue Feb 24 21:27:30 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 4,
+        "likeCount": 0,
+        "conversationId": "2026408670884671574",
+        "author": {
+          "username": "LangChain",
+          "name": "LangChain"
+        },
+        "authorId": "1589007443853340672"
+      },
+      {
+        "id": "2026404939350815027",
+        "text": "RT @BraceSproul: \ud83e\udd16 Agent Builder now supports queuing messages \u23f0\n\nStarted a task in Agent Builder but forgot to include extra instructions?\u2026",
+        "createdAt": "Tue Feb 24 21:12:40 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 3,
+        "likeCount": 0,
+        "conversationId": "2026404939350815027",
+        "author": {
+          "username": "LangChain",
+          "name": "LangChain"
+        },
+        "authorId": "1589007443853340672"
+      },
+      {
+        "id": "2026371747356794906",
+        "text": "LangChain has been named to The Agentic List 2026 \u2014 recognizing the top trending agentic AI companies most admired by industry executives.\n\nSelected by enterprise leaders and supported by in\u2011depth research, we\u2019re honored to be recognized by the people actually building successful businesses with agentic AI. \n\n35% of the Fortune 500 are actively using LangChain products, and half of the Fortune 10 use LangSmith for observing, evaluating, and deploying production agents. We're excited to continue powering large enterprises like Workday, ServiceNow, Cisco, Cloudflare, and more.",
+        "createdAt": "Tue Feb 24 19:00:47 +0000 2026",
+        "replyCount": 3,
+        "retweetCount": 9,
+        "likeCount": 65,
+        "conversationId": "2026371747356794906",
+        "author": {
+          "username": "LangChain",
+          "name": "LangChain"
+        },
+        "authorId": "1589007443853340672",
+        "media": [
+          {
+            "type": "photo",
+            "url": "https://pbs.twimg.com/media/HB8eXWIWMAAXROQ.jpg",
+            "width": 1080,
+            "height": 1080,
+            "previewUrl": "https://pbs.twimg.com/media/HB8eXWIWMAAXROQ.jpg:small"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "signal": {
+      "name": "_reachsumit",
+      "role": "account",
+      "links": {
+        "x": "https://x.com/_reachsumit"
+      }
+    },
+    "handle": "_reachsumit",
+    "tweets": [
+      {
+        "id": "2029043665864409353",
+        "text": "SOLAR: SVD-Optimized Lifelong Attention for Recommendation\n\nKuaishou introduces a lossless low-rank attention mechanism that reduces complexity from O(N\u00b2d) to O(Ndr) while preserving softmax, enabling lifelong sequence modeling at ten-thousand scale.\n\n\ud83d\udcdd https://t.co/kvDmnRoWT9",
+        "createdAt": "Wed Mar 04 03:58:02 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 2,
+        "likeCount": 6,
+        "conversationId": "2029043665864409353",
+        "author": {
+          "username": "_reachsumit",
+          "name": "Sumit"
+        },
+        "authorId": "129969370"
+      },
+      {
+        "id": "2029043519118348297",
+        "text": "AlphaFree: Recommendation Free from Users, IDs, and GNNs\n\nProposes a lightweight recommendation method that eliminates user embeddings, item IDs, and GNNs by using language representations and contrastive learning.\n\n\ud83d\udcdd https://t.co/asOzxJZCoJ\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbb https://t.co/FCNpH7KhwE",
+        "createdAt": "Wed Mar 04 03:57:27 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 1,
+        "likeCount": 11,
+        "conversationId": "2029043519118348297",
+        "author": {
+          "username": "_reachsumit",
+          "name": "Sumit"
+        },
+        "authorId": "129969370"
+      },
+      {
+        "id": "2029042976249524294",
+        "text": "APAO: Adaptive Prefix-Aware Optimization for Generative Recommendation\n\nAddresses training-inference inconsistency in generative recommenders with prefix-level optimization that aligns training with beam search decoding.\n\n\ud83d\udcdd https://t.co/Fr1b4XrKtT\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbb https://t.co/FNTDYRyn58",
+        "createdAt": "Wed Mar 04 03:55:17 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 0,
+        "likeCount": 1,
+        "conversationId": "2029042976249524294",
+        "author": {
+          "username": "_reachsumit",
+          "name": "Sumit"
+        },
+        "authorId": "129969370"
+      },
+      {
+        "id": "2029042443828822339",
+        "text": "Model Editing for New Document Integration in Generative Information Retrieval\n\nIntroduces a model editing method that efficiently adapts generative retrieval models to new documents via hybrid-label adaptive training.\n\n\ud83d\udcdd https://t.co/JadP67vLsK\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbb https://t.co/oTsiADqpJG",
+        "createdAt": "Wed Mar 04 03:53:11 +0000 2026",
+        "replyCount": 1,
+        "retweetCount": 2,
+        "likeCount": 4,
+        "conversationId": "2029042443828822339",
+        "author": {
+          "username": "_reachsumit",
+          "name": "Sumit"
+        },
+        "authorId": "129969370"
+      },
+      {
+        "id": "2029041979380908510",
+        "text": "OneRanker: Unified Generation and Ranking with One Model in Industrial Advertising Recommendation\n\nTencent deeply integrates generation and ranking in ad recommendation through value-aware multi-task decoupling and coarse-to-fine target awareness.\n\n\ud83d\udcdd https://t.co/i4YNAOieWd",
+        "createdAt": "Wed Mar 04 03:51:20 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 0,
+        "likeCount": 0,
+        "conversationId": "2029041979380908510",
+        "author": {
+          "username": "_reachsumit",
+          "name": "Sumit"
+        },
+        "authorId": "129969370"
+      },
+      {
+        "id": "2029041582603944027",
+        "text": "Reproducing and Comparing Distillation Techniques for Cross-Encoders\n\n@_VictorMorand_ et al. provide a benchmark of cross-encoder training strategies across 9 encoder backbones.\n\n\ud83d\udcdd https://t.co/dkQ8LT44Qb\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbb https://t.co/20qeWVad7C",
+        "createdAt": "Wed Mar 04 03:49:45 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 3,
+        "likeCount": 7,
+        "conversationId": "2029041582603944027",
+        "author": {
+          "username": "_reachsumit",
+          "name": "Sumit"
+        },
+        "authorId": "129969370"
+      },
+      {
+        "id": "2029041106453987718",
+        "text": "RAPO: Expanding Exploration for LLM Agents via Retrieval-Augmented Policy Optimization\n\nIntroduces an Agentic RL framework that uses retrieval of off-policy step-level traces to expand exploration during training.\n\n\ud83d\udcdd https://t.co/PC55UKHRFd",
+        "createdAt": "Wed Mar 04 03:47:52 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 2,
+        "likeCount": 4,
+        "conversationId": "2029041106453987718",
+        "author": {
+          "username": "_reachsumit",
+          "name": "Sumit"
+        },
+        "authorId": "129969370"
+      },
+      {
+        "id": "2029040768602792328",
+        "text": "Proactive Guiding Strategy for Item-side Fairness in Interactive Recommendation\n\nProposes a hierarchical RL framework that progressively guides user preferences toward long-tail items to improve item-side fairness while maintaining user satisfaction.\n\n\ud83d\udcdd https://t.co/4EDQBuvpTV",
+        "createdAt": "Wed Mar 04 03:46:31 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 1,
+        "likeCount": 4,
+        "conversationId": "2029040768602792328",
+        "author": {
+          "username": "_reachsumit",
+          "name": "Sumit"
+        },
+        "authorId": "129969370"
+      },
+      {
+        "id": "2028735663605268529",
+        "text": "DeepResearch-9K: A Challenging Benchmark Dataset of Deep-Research Agent\n\nBaidu presents a 9K question benchmark across three difficulty levels for evaluating deep-research agents, along with an open-source RL training framework\n\n\ud83d\udcddhttps://t.co/2YZucyyKBg\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbbhttps://t.co/fy5uKNQPb1",
+        "createdAt": "Tue Mar 03 07:34:08 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 3,
+        "likeCount": 16,
+        "conversationId": "2028735663605268529",
+        "author": {
+          "username": "_reachsumit",
+          "name": "Sumit"
+        },
+        "authorId": "129969370"
+      },
+      {
+        "id": "2028735188713541771",
+        "text": "Beyond the Grid: Layout-Informed Multi-Vector Retrieval with Parsed Visual Document Representations\n\nAlibaba uses document parsing to create layout-informed multi-vector representations for visual document retrieval.\n\n\ud83d\udcddhttps://t.co/N9BBoh3kta\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbbhttps://t.co/xXrMeYGD8q",
+        "createdAt": "Tue Mar 03 07:32:15 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 3,
+        "likeCount": 23,
+        "conversationId": "2028735188713541771",
+        "author": {
+          "username": "_reachsumit",
+          "name": "Sumit"
+        },
+        "authorId": "129969370"
+      },
+      {
+        "id": "2028734935763480993",
+        "text": "GAM-RAG: Gain-Adaptive Memory for Evolving Retrieval in Retrieval-Augmented Generation\n\nIntroduces a training-free RAG framework that accumulates retrieval experience from recurring queries using gain-adaptive memory updates.\n\n\ud83d\udcdd https://t.co/dlP10LVKy1\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbb https://t.co/i6dXr5vPUd",
+        "createdAt": "Tue Mar 03 07:31:15 +0000 2026",
+        "replyCount": 1,
+        "retweetCount": 2,
+        "likeCount": 13,
+        "conversationId": "2028734935763480993",
+        "author": {
+          "username": "_reachsumit",
+          "name": "Sumit"
+        },
+        "authorId": "129969370"
+      },
+      {
+        "id": "2028734391569260873",
+        "text": "Super Research: Answering Highly Complex Questions with Large Language Models through Super Deep and Super Wide Research\n\nIntroduces benchmark of 300 expert-written questions requiring 100+ retrieval steps and 1,000+ web pages.\n\n\ud83d\udcddhttps://t.co/Iq5sgzbGkN\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbbhttps://t.co/Z7mr2kq9T0",
+        "createdAt": "Tue Mar 03 07:29:05 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 9,
+        "likeCount": 26,
+        "conversationId": "2028734391569260873",
+        "author": {
+          "username": "_reachsumit",
+          "name": "Sumit"
+        },
+        "authorId": "129969370"
+      },
+      {
+        "id": "2028734220244484541",
+        "text": "MC-SEARCH: Evaluating and Enhancing Multimodal Agentic Search with Structured Long Reasoning Chains\n\n@krystal_ning et al. introduce a benchmark for agentic multimodal RAG with long, step-wise annotated reasoning chains.\n\n\ud83d\udcdd https://t.co/8BsQnThrFI\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbb https://t.co/Q7dt35bUU2",
+        "createdAt": "Tue Mar 03 07:28:24 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 0,
+        "likeCount": 1,
+        "conversationId": "2028734220244484541",
+        "author": {
+          "username": "_reachsumit",
+          "name": "Sumit"
+        },
+        "authorId": "129969370"
+      },
+      {
+        "id": "2028733911757644218",
+        "text": "ActMem: Bridging the Gap Between Memory Retrieval and Reasoning in LLM Agents\n\nAlibaba transforms dialogue history into a causal and semantic knowledge graph, enabling LLM agents to reason over past interactions.\n\n\ud83d\udcdd https://t.co/fYEInnZgr7\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbb https://t.co/CP4bfoZ4oE",
+        "createdAt": "Tue Mar 03 07:27:11 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 0,
+        "likeCount": 4,
+        "conversationId": "2028733911757644218",
+        "author": {
+          "username": "_reachsumit",
+          "name": "Sumit"
+        },
+        "authorId": "129969370"
+      },
+      {
+        "id": "2028733306037240286",
+        "text": "MuonRec: Shifting the Optimizer Paradigm Beyond Adam in Scalable Generative Recommendation\n\nIntroduces the Muon optimizer to recommender system training, reducing converged training steps by 32% while improving ranking quality.\n\n\ud83d\udcddhttps://t.co/Nuzei7J7w4\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbbhttps://t.co/CNEcebdeqg",
+        "createdAt": "Tue Mar 03 07:24:46 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 1,
+        "likeCount": 6,
+        "conversationId": "2028733306037240286",
+        "author": {
+          "username": "_reachsumit",
+          "name": "Sumit"
+        },
+        "authorId": "129969370"
+      },
+      {
+        "id": "2028732997768556807",
+        "text": "Stop Treating Collisions Equally: Qualification-Aware Semantic ID Learning for Recommendation at Industrial Scale\n\nKuaishou learns collision-qualified Semantic IDs by selectively repelling harmful token collisions while preserving benign overlaps.\n\n\ud83d\udcdd https://t.co/P0GEYtzJsh",
+        "createdAt": "Tue Mar 03 07:23:33 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 0,
+        "likeCount": 8,
+        "conversationId": "2028732997768556807",
+        "author": {
+          "username": "_reachsumit",
+          "name": "Sumit"
+        },
+        "authorId": "129969370"
+      },
+      {
+        "id": "2028732842054951196",
+        "text": "SODA: Semantic-Oriented Distributional Alignment for Generative Recommendation\n\nUses probability distributions over codebooks as soft representations to enable fine-grained semantic alignment between the tokenizer &amp; recommender\n\n\ud83d\udcddhttps://t.co/fdKc2Ud0ea\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbbhttps://t.co/syNwi4SDa4",
+        "createdAt": "Tue Mar 03 07:22:56 +0000 2026",
+        "replyCount": 1,
+        "retweetCount": 1,
+        "likeCount": 3,
+        "conversationId": "2028732842054951196",
+        "author": {
+          "username": "_reachsumit",
+          "name": "Sumit"
+        },
+        "authorId": "129969370"
+      },
+      {
+        "id": "2028730811340706209",
+        "text": "Beyond the Flat Sequence: Hierarchical and Preference-Aware Generative Recommendations\n\nHuawei presents a generative recommendation framework that models session-based user behavior hierarchically and introduces preference-guided sparse attention.\n\n\ud83d\udcdd https://t.co/2aqI3XHaZy",
+        "createdAt": "Tue Mar 03 07:14:52 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 2,
+        "likeCount": 13,
+        "conversationId": "2028730811340706209",
+        "author": {
+          "username": "_reachsumit",
+          "name": "Sumit"
+        },
+        "authorId": "129969370"
+      },
+      {
+        "id": "2028730659460837863",
+        "text": "TARSE: Test-Time Adaptation via Retrieval of Skills and Experience for Reasoning Agents\n\nIntroduces a retrieval-augmented reasoning framework that separates clinical knowledge into reusable skills and verified experience traces.\n\n\ud83d\udcdd https://t.co/xoMyAz0ubn",
+        "createdAt": "Tue Mar 03 07:14:15 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 0,
+        "likeCount": 2,
+        "conversationId": "2028730659460837863",
+        "author": {
+          "username": "_reachsumit",
+          "name": "Sumit"
+        },
+        "authorId": "129969370"
+      },
+      {
+        "id": "2028730224565952872",
+        "text": "LaSER: Internalizing Explicit Reasoning into Latent Space for Dense Retrieval\n\nAlibaba proposes a self-distillation framework that compresses explicit Chain-of-Thought reasoning into latent tokens for dense retrieval.\n\n\ud83d\udcdd https://t.co/wdyyuh11sG\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbb https://t.co/KWXomiaUks",
+        "createdAt": "Tue Mar 03 07:12:32 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 4,
+        "likeCount": 20,
+        "conversationId": "2028730224565952872",
+        "author": {
+          "username": "_reachsumit",
+          "name": "Sumit"
+        },
+        "authorId": "129969370"
+      },
+      {
+        "id": "2028729806196724199",
+        "text": "CLEAR: Null-Space Projection for Cross-Modal De-Redundancy in Multimodal Recommendation\n\nProposes a plug-and-play null-space projection method that suppresses cross-modal redundancy between visual and textual features, improving multimodal recommenders.\n\n\ud83d\udcddhttps://t.co/xDATGBzvGK",
+        "createdAt": "Tue Mar 03 07:10:52 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 1,
+        "likeCount": 5,
+        "conversationId": "2028729806196724199",
+        "author": {
+          "username": "_reachsumit",
+          "name": "Sumit"
+        },
+        "authorId": "129969370"
+      },
+      {
+        "id": "2028729669181489345",
+        "text": "OmniRet: Efficient and High-Fidelity Omni Modality Retrieval\n\nIntroduces a retrieval model handling composed queries across text, vision, and audio using an attention-based resampler and Attention Sliced Wasserstein Pooling.\n\n\ud83d\udcdd https://t.co/TcR25zoJn8\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbb https://t.co/FwkLgXJqJk",
+        "createdAt": "Tue Mar 03 07:10:19 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 1,
+        "likeCount": 4,
+        "conversationId": "2028729669181489345",
+        "author": {
+          "username": "_reachsumit",
+          "name": "Sumit"
+        },
+        "authorId": "129969370"
+      },
+      {
+        "id": "2028729431767101720",
+        "text": "Scaling Retrieval Augmented Generation with RAG Fusion: Lessons from an Industry Deployment\n\nDell evaluates retrieval fusion techniques and finds that recall gains from multi-query retrieval &amp; RRF are largely neutralized after re-ranking and truncation.\n\n\ud83d\udcddhttps://t.co/wyu5Rs4BnO",
+        "createdAt": "Tue Mar 03 07:09:23 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 0,
+        "likeCount": 1,
+        "conversationId": "2028729431767101720",
+        "author": {
+          "username": "_reachsumit",
+          "name": "Sumit"
+        },
+        "authorId": "129969370"
+      },
+      {
+        "id": "2028317949933879441",
+        "text": "GPU-Native Approximate Nearest Neighbor Search with IVF-RaBitQ: Fast Index Build and Search\n\nPresents a GPU-native ANNS solution combining IVF with RaBitQ quantization, achieving 2.2x higher throughput with 7.7x faster indexing\n\n\ud83d\udcddhttps://t.co/pkLKKjIl4T\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbbhttps://t.co/0zaDkQBMfC",
+        "createdAt": "Mon Mar 02 03:54:18 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 7,
+        "likeCount": 20,
+        "conversationId": "2028317949933879441",
+        "author": {
+          "username": "_reachsumit",
+          "name": "Sumit"
+        },
+        "authorId": "129969370"
+      },
+      {
+        "id": "2028317656282275985",
+        "text": "Truncated Step-Level Sampling with Process Rewards for Retrieval-Augmented Reasoning\n\nCombines truncated step-level sampling with dense LLM-as-judge rewards for training search-augmented LLMs, achieving provably lower variance.\n\n\ud83d\udcddhttps://t.co/XyZYTeHbEy\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbbhttps://t.co/FbSK1txFxU",
+        "createdAt": "Mon Mar 02 03:53:08 +0000 2026",
+        "replyCount": 1,
+        "retweetCount": 5,
+        "likeCount": 21,
+        "conversationId": "2028317656282275985",
+        "author": {
+          "username": "_reachsumit",
+          "name": "Sumit"
+        },
+        "authorId": "129969370"
+      }
+    ]
+  }
+]

@@ -1,0 +1,414 @@
+{
+  "signal": {
+    "name": "Hamel Husain",
+    "role": "account",
+    "links": {
+      "x": "https://x.com/HamelHusain"
+    }
+  },
+  "handle": "HamelHusain",
+  "tweets": [
+    {
+      "id": "2028987789782712618",
+      "text": "Interesting new paper by Donald Knuth re: Claude \n\n> this was definitely an impressive success story. I think Claude Shannon\u2019s spirit is probably proud to know that his name is now being associated with such advances. Hats o\ufb00 to Claude!\n\nLiterate programming is here, just maybe not in the form we thought it would take (e.g. meticulously crafted notebooks)\n\nhttps://t.co/LeHQfrB1ac",
+      "createdAt": "Wed Mar 04 00:16:00 +0000 2026",
+      "replyCount": 4,
+      "retweetCount": 6,
+      "likeCount": 115,
+      "conversationId": "2028987789782712618",
+      "author": {
+        "username": "HamelHusain",
+        "name": "Hamel Husain"
+      },
+      "authorId": "825766640"
+    },
+    {
+      "id": "2028973732883251364",
+      "text": "RT @ctatedev: New experimental flag:\n\nagent-browser --native\n\nSingle Rust binary. Direct CDP.\n\n\u2192 No abstraction ceiling\n\u2192 Self-contained da\u2026",
+      "createdAt": "Tue Mar 03 23:20:09 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 96,
+      "likeCount": 0,
+      "conversationId": "2028973732883251364",
+      "author": {
+        "username": "HamelHusain",
+        "name": "Hamel Husain"
+      },
+      "authorId": "825766640"
+    },
+    {
+      "id": "2028950189147656700",
+      "text": "RT @jakedahn: @HamelHusain ahhh, yes. much better. https://t.co/OqZbMUH0pX",
+      "createdAt": "Tue Mar 03 21:46:35 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 1,
+      "likeCount": 0,
+      "conversationId": "2028950189147656700",
+      "author": {
+        "username": "HamelHusain",
+        "name": "Hamel Husain"
+      },
+      "authorId": "825766640",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HCg6ReCXAAEFYNY.jpg",
+          "width": 1152,
+          "height": 928,
+          "previewUrl": "https://pbs.twimg.com/media/HCg6ReCXAAEFYNY.jpg:small"
+        }
+      ]
+    },
+    {
+      "id": "2028911095403168179",
+      "text": "I was onboarding to @modemdev and it surfaced this interface which wanted me to click on every single discord channel to enable it.  Thankfully Claude just did it \n\nThe Chrome Extension is good now.  Highly recommend https://t.co/7vDPbjHppS",
+      "createdAt": "Tue Mar 03 19:11:15 +0000 2026",
+      "replyCount": 4,
+      "retweetCount": 0,
+      "likeCount": 13,
+      "conversationId": "2028911095403168179",
+      "author": {
+        "username": "HamelHusain",
+        "name": "Hamel Husain"
+      },
+      "authorId": "825766640",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HCgjweVawAAyQoA.jpg",
+          "width": 1773,
+          "height": 2048,
+          "previewUrl": "https://pbs.twimg.com/media/HCgjweVawAAyQoA.jpg:small"
+        }
+      ]
+    },
+    {
+      "id": "2028904674359951538",
+      "text": "RT @marchattonhere: I took the evals course @HamelHusain and Shreya gave\n\nSuper excited to test these skills out\n\nWill report back",
+      "createdAt": "Tue Mar 03 18:45:44 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 2,
+      "likeCount": 0,
+      "conversationId": "2028904674359951538",
+      "author": {
+        "username": "HamelHusain",
+        "name": "Hamel Husain"
+      },
+      "authorId": "825766640"
+    },
+    {
+      "id": "2028894099483578872",
+      "text": "Evals Skills for Coding Agents",
+      "createdAt": "Tue Mar 03 18:03:43 +0000 2026",
+      "replyCount": 23,
+      "retweetCount": 154,
+      "likeCount": 1311,
+      "conversationId": "2028894099483578872",
+      "author": {
+        "username": "HamelHusain",
+        "name": "Hamel Husain"
+      },
+      "authorId": "825766640",
+      "article": {
+        "title": "Evals Skills for Coding Agents",
+        "previewText": "Today, I\u2019m publishing evals-skills, a set of skills for AI product evals [1]. They guard against common mistakes I've seen helping 50+ companies with Evals and teaching our course.\nWhy Skills for"
+      }
+    },
+    {
+      "id": "2028640115124494783",
+      "text": "Before admonishing AI coding by pointing to downtime of Claude\n\nRemember that GitHub was down all the time before AI coding \n\nYou can find any evidence to confirm whatever you want to believe",
+      "createdAt": "Tue Mar 03 01:14:28 +0000 2026",
+      "replyCount": 4,
+      "retweetCount": 0,
+      "likeCount": 43,
+      "conversationId": "2028640115124494783",
+      "author": {
+        "username": "HamelHusain",
+        "name": "Hamel Husain"
+      },
+      "authorId": "825766640"
+    },
+    {
+      "id": "2028634661803667667",
+      "text": "RT @flyosity: --dangerously-skip-permissions https://t.co/zk0FLxi4in",
+      "createdAt": "Tue Mar 03 00:52:48 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 1075,
+      "likeCount": 0,
+      "conversationId": "2028634661803667667",
+      "author": {
+        "username": "HamelHusain",
+        "name": "Hamel Husain"
+      },
+      "authorId": "825766640",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HCcBLFSXQAAcqDc.jpg",
+          "width": 1152,
+          "height": 662,
+          "previewUrl": "https://pbs.twimg.com/media/HCcBLFSXQAAcqDc.jpg:small"
+        }
+      ]
+    },
+    {
+      "id": "2028561881519317423",
+      "text": "RT @Sohailmo: bookmarked this a while ago and finally came around to using it, definitely satisfied with the breadth and utility - super he\u2026",
+      "createdAt": "Mon Mar 02 20:03:36 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 1,
+      "likeCount": 0,
+      "conversationId": "2028561881519317423",
+      "author": {
+        "username": "HamelHusain",
+        "name": "Hamel Husain"
+      },
+      "authorId": "825766640"
+    },
+    {
+      "id": "2028225458891034906",
+      "text": "RT @badlogicgames: do you need MCP for dev workflows? no, for the most part. allows out of context data transforms, conserves context windo\u2026",
+      "createdAt": "Sun Mar 01 21:46:46 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 12,
+      "likeCount": 0,
+      "conversationId": "2028225458891034906",
+      "author": {
+        "username": "HamelHusain",
+        "name": "Hamel Husain"
+      },
+      "authorId": "825766640"
+    },
+    {
+      "id": "2028216367158345729",
+      "text": "RT @intellectronica: @HamelHusain I love it. I have this in my global AGENTS .md to maximise the use of the questions tool (works in Claude\u2026",
+      "createdAt": "Sun Mar 01 21:10:39 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 1,
+      "likeCount": 0,
+      "conversationId": "2028216367158345729",
+      "author": {
+        "username": "HamelHusain",
+        "name": "Hamel Husain"
+      },
+      "authorId": "825766640"
+    },
+    {
+      "id": "2028190367028523443",
+      "text": "RT @ctatedev: New agent-browser skill: Electron\n\nYou can now control desktop apps built with Electron, including Discord, Figma, Notion, Sp\u2026",
+      "createdAt": "Sun Mar 01 19:27:20 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 360,
+      "likeCount": 0,
+      "conversationId": "2028190367028523443",
+      "author": {
+        "username": "HamelHusain",
+        "name": "Hamel Husain"
+      },
+      "authorId": "825766640"
+    },
+    {
+      "id": "2027888413123477688",
+      "text": "Claude renovated my GitHub homepage for me by automatically setting up a CRON that pulls in my latest blog posts, and found images and other details to make things a bit nicer :) https://t.co/42GrcQ4w05",
+      "createdAt": "Sat Feb 28 23:27:28 +0000 2026",
+      "replyCount": 10,
+      "retweetCount": 2,
+      "likeCount": 155,
+      "conversationId": "2027888413123477688",
+      "author": {
+        "username": "HamelHusain",
+        "name": "Hamel Husain"
+      },
+      "authorId": "825766640",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HCSBq-Sa4AALUH6.jpg",
+          "width": 1714,
+          "height": 1226,
+          "previewUrl": "https://pbs.twimg.com/media/HCSBq-Sa4AALUH6.jpg:small"
+        }
+      ]
+    },
+    {
+      "id": "2027886117580902530",
+      "text": "The thing in Claude where it dynamically presents you with a mini interface to choose between options is amazing\n\nJust did a calendar thing and it gave me a picker on the web\nIn claude code I got a picker for three different design options",
+      "createdAt": "Sat Feb 28 23:18:21 +0000 2026",
+      "replyCount": 20,
+      "retweetCount": 0,
+      "likeCount": 78,
+      "conversationId": "2027886117580902530",
+      "author": {
+        "username": "HamelHusain",
+        "name": "Hamel Husain"
+      },
+      "authorId": "825766640"
+    },
+    {
+      "id": "2027886222161678845",
+      "text": "It really does highlight how UIs are gonna be dynamic and personalized in the future.",
+      "createdAt": "Sat Feb 28 23:18:46 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 0,
+      "likeCount": 9,
+      "conversationId": "2027886117580902530",
+      "inReplyToStatusId": "2027886117580902530",
+      "author": {
+        "username": "HamelHusain",
+        "name": "Hamel Husain"
+      },
+      "authorId": "825766640"
+    },
+    {
+      "id": "2027840900458848348",
+      "text": "RT @dhh: My new favorite tmux dev layout features @opencode  (with Kimi K2.5 running on @FireworksAI_HQ) on top and Claude Code on the bott\u2026",
+      "createdAt": "Sat Feb 28 20:18:40 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 100,
+      "likeCount": 0,
+      "conversationId": "2027840900458848348",
+      "author": {
+        "username": "HamelHusain",
+        "name": "Hamel Husain"
+      },
+      "authorId": "825766640"
+    },
+    {
+      "id": "2027840056304799989",
+      "text": "RT @leerob: I asked Cursor to add Vim support to the Ladybird browser.\n\nIt automatically set up the environment to run the browser, made th\u2026",
+      "createdAt": "Sat Feb 28 20:15:19 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 12,
+      "likeCount": 0,
+      "conversationId": "2027840056304799989",
+      "author": {
+        "username": "HamelHusain",
+        "name": "Hamel Husain"
+      },
+      "authorId": "825766640"
+    },
+    {
+      "id": "2027832737814696117",
+      "text": "\ud83c\udf36\ufe0f I don\u2019t think people should hire others to do AI work unless they are using AI heavily in their own daily workflows\n\n\u201cI use ChatGPT once in a while\u201d doesn\u2019t count \n\nWithout this:\n- You\u2019ll make bad decisions and have too many blind spots \n- It\u2019s a sign you aren\u2019t really invested in AI and are trying to check a box \n\nI think it\u2019s totally fine to hire experts if you are in this position if you also upskill at the same time, but delegating AI work and continuing to stay at arms length from AI you are ngmi",
+      "createdAt": "Sat Feb 28 19:46:14 +0000 2026",
+      "replyCount": 10,
+      "retweetCount": 2,
+      "likeCount": 53,
+      "conversationId": "2027832737814696117",
+      "author": {
+        "username": "HamelHusain",
+        "name": "Hamel Husain"
+      },
+      "authorId": "825766640"
+    },
+    {
+      "id": "2027789504514560166",
+      "text": "RT @hwchase17: https://t.co/3P7AZBO2XR",
+      "createdAt": "Sat Feb 28 16:54:27 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 54,
+      "likeCount": 0,
+      "conversationId": "2027789504514560166",
+      "author": {
+        "username": "HamelHusain",
+        "name": "Hamel Husain"
+      },
+      "authorId": "825766640"
+    },
+    {
+      "id": "2027737414714986833",
+      "text": "RT @gregjoz: Xcode 26.3 with Claude Agent &amp; Codex hits the Mac App Store today! With advanced reasoning capabilities in Xcode, you can stre\u2026",
+      "createdAt": "Sat Feb 28 13:27:27 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 440,
+      "likeCount": 0,
+      "conversationId": "2027737414714986833",
+      "author": {
+        "username": "HamelHusain",
+        "name": "Hamel Husain"
+      },
+      "authorId": "825766640"
+    },
+    {
+      "id": "2027737007548731532",
+      "text": "RT @bcherny: Claude Code Remote is rolling out now for Pro users",
+      "createdAt": "Sat Feb 28 13:25:50 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 156,
+      "likeCount": 0,
+      "conversationId": "2027737007548731532",
+      "author": {
+        "username": "HamelHusain",
+        "name": "Hamel Husain"
+      },
+      "authorId": "825766640"
+    },
+    {
+      "id": "2027628267709337843",
+      "text": "RT @jxnlco: Codex has had multi agents and support is getting really good in the codex desktop app. \n\nhttps://t.co/u5XPAc1iMT",
+      "createdAt": "Sat Feb 28 06:13:45 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 13,
+      "likeCount": 0,
+      "conversationId": "2027628267709337843",
+      "author": {
+        "username": "HamelHusain",
+        "name": "Hamel Husain"
+      },
+      "authorId": "825766640"
+    },
+    {
+      "id": "2027483983693680732",
+      "text": "Codex Desktop app is the first interface that has taken me away from the terminal.  It's that good",
+      "createdAt": "Fri Feb 27 20:40:25 +0000 2026",
+      "replyCount": 50,
+      "retweetCount": 10,
+      "likeCount": 464,
+      "conversationId": "2027483983693680732",
+      "author": {
+        "username": "HamelHusain",
+        "name": "Hamel Husain"
+      },
+      "authorId": "825766640"
+    },
+    {
+      "id": "2027481743914373578",
+      "text": "RT @ryancarson: Here\u2019s how I use Agentation + queuing messages in Codex to crank through frontend work much faster https://t.co/JW6kZ0IP1m",
+      "createdAt": "Fri Feb 27 20:31:31 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 23,
+      "likeCount": 0,
+      "conversationId": "2027481743914373578",
+      "author": {
+        "username": "HamelHusain",
+        "name": "Hamel Husain"
+      },
+      "authorId": "825766640",
+      "media": [
+        {
+          "type": "video",
+          "url": "https://pbs.twimg.com/amplify_video_thumb/2027480963840937985/img/MZ_5EuAaou0UXJDg.jpg",
+          "width": 1080,
+          "height": 1920,
+          "previewUrl": "https://pbs.twimg.com/amplify_video_thumb/2027480963840937985/img/MZ_5EuAaou0UXJDg.jpg:small",
+          "videoUrl": "https://video.twimg.com/amplify_video/2027480963840937985/vid/avc1/1080x1920/6q1fTYTxQaxC1dyb.mp4?tag=21",
+          "durationMs": 79820
+        }
+      ]
+    },
+    {
+      "id": "2027454810816188439",
+      "text": "RT @sh_reya: We are designing an interface for interpretable, steerable LLM-powered document ranking and clustering! Help us by taking part\u2026",
+      "createdAt": "Fri Feb 27 18:44:29 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 4,
+      "likeCount": 0,
+      "conversationId": "2027454810816188439",
+      "author": {
+        "username": "HamelHusain",
+        "name": "Hamel Husain"
+      },
+      "authorId": "825766640"
+    }
+  ]
+}

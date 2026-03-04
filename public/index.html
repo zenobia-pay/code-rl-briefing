@@ -36,6 +36,7 @@
       <h3>Dated runs</h3>
       <div id="runs"></div>
       <button class="btn" id="signalsBtn">Signals index</button>
+      <button class="btn" id="rawBtn">Raw data files</button>
     </aside>
     <section class="panel">
       <div id="runView">
@@ -49,6 +50,11 @@
       <div id="signalsView" style="display:none">
         <h3>Global Signals Index</h3>
         <div id="signals"></div>
+      </div>
+      <div id="rawView" style="display:none">
+        <h3>Raw Data Files</h3>
+        <p class="meta" id="rawMeta"></p>
+        <div id="rawList"></div>
       </div>
     </section>
   </div>
@@ -83,8 +89,21 @@ async function loadRun(r){
   runMeta.textContent = r.source;
   runPrompt.textContent = r.prompt;
   runBody.innerHTML = md(txt);
-  runView.style.display='block'; signalsView.style.display='none';
+  runView.style.display='block'; signalsView.style.display='none'; rawView.style.display='none';
   document.querySelectorAll('.run-btn').forEach(b=>b.classList.toggle('active', b.dataset.id===r.id));
+}
+
+async function loadRaw(r){
+  rawMeta.textContent = `Showing raw files for ${r.date}`;
+  rawList.innerHTML = 'Loading...';
+  const idxPath = `/data/runs/${r.date}/raw-index.json`;
+  const idx = await fetch(idxPath).then(x=>x.ok?x.json():null).catch(()=>null);
+  if (!idx || !idx.files || !idx.files.length){
+    rawList.innerHTML = '<p class="meta">No published raw files for this run yet.</p>';
+  } else {
+    rawList.innerHTML = idx.files.map(f=>`<div class="signal"><a target="_blank" href="${f.path}">${f.path}</a><div class="meta">${f.bytes} bytes</div></div>`).join('');
+  }
+  runView.style.display='none'; signalsView.style.display='none'; rawView.style.display='block';
 }
 Promise.all([
   fetch('/data/briefings.json').then(r=>r.json()),
@@ -94,14 +113,20 @@ Promise.all([
   runsEl.innerHTML = RUNS.map(r=>`<button class="btn run-btn" data-id="${r.id}">${r.date}<div class="meta">${r.source}</div></button>`).join('');
   document.querySelectorAll('.run-btn').forEach(b=>b.onclick=()=>loadRun(RUNS.find(r=>r.id===b.dataset.id)));
   signalsEl.innerHTML = signals.map(s=>`<div class="signal"><strong>${s.name}</strong> <span class="meta">${s.role}</span><div>${Object.entries(s.links).map(([k,v])=>`<a target="_blank" href="${v}">${k}</a>`).join(' · ')}</div></div>`).join('');
-  signalsBtn.onclick=()=>{runView.style.display='none';signalsView.style.display='block';};
+  signalsBtn.onclick=()=>{runView.style.display='none';signalsView.style.display='block';rawView.style.display='none';};
+  rawBtn.onclick=()=>{
+    const active=document.querySelector('.run-btn.active');
+    const r = active ? RUNS.find(x=>x.id===active.dataset.id) : RUNS[0];
+    if (r) loadRaw(r);
+  };
   await loadRun(RUNS[0]);
 });
 const runsEl=document.getElementById('runs'),signalsEl=document.getElementById('signals');
-const runView=document.getElementById('runView'),signalsView=document.getElementById('signalsView');
+const runView=document.getElementById('runView'),signalsView=document.getElementById('signalsView'),rawView=document.getElementById('rawView');
 const runTitle=document.getElementById('runTitle'),runMeta=document.getElementById('runMeta');
 const runPrompt=document.getElementById('runPrompt'),runBody=document.getElementById('runBody');
-const signalsBtn=document.getElementById('signalsBtn');
+const signalsBtn=document.getElementById('signalsBtn'),rawBtn=document.getElementById('rawBtn');
+const rawMeta=document.getElementById('rawMeta'),rawList=document.getElementById('rawList');
 </script>
 </body>
 </html>

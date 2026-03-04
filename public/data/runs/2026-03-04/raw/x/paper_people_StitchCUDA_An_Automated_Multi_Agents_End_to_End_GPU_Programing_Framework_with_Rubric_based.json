@@ -1,0 +1,29 @@
+{
+  "paper": "StitchCUDA: An Automated Multi-Agents End-to-End GPU Programing Framework with Rubric-based Agentic Reinforcement Learning",
+  "query": "\"StitchCUDA: An Automated Multi-Agents End-to-End GPU Programing Framework with Rubric-based Agentic Reinforcement Learning\" since:2026-03-03 until:2026-03-05",
+  "results": [
+    {
+      "id": "2029106444847522195",
+      "text": "StitchCUDA: An Automated Multi-Agents End-to-End GPU Programing Framework with Rubric-based Agentic Reinforcement Learning\n\nShiyang Li, Zijian Zhang, Winson Chen, Yuebo Luo, Mingyi Hong, Caiwen Ding\nhttps://t.co/Hq1LiqhZ5M [\ud835\ude8c\ud835\ude9c.\ud835\ude7c\ud835\ude70 \ud835\ude8c\ud835\ude9c.\ud835\ude72\ud835\ude7b \ud835\ude8c\ud835\ude9c.\ud835\ude7f\ud835\ude7b] https://t.co/vQBAsIAkKR",
+      "createdAt": "Wed Mar 04 08:07:30 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 0,
+      "likeCount": 0,
+      "conversationId": "2029106444847522195",
+      "author": {
+        "username": "PIN",
+        "name": "Multiagent Systems Papers"
+      },
+      "authorId": "209319262",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HCjVjyIWUAAez0g.png",
+          "width": 1080,
+          "height": 1350,
+          "previewUrl": "https://pbs.twimg.com/media/HCjVjyIWUAAez0g.png:small"
+        }
+      ]
+    }
+  ]
+}
