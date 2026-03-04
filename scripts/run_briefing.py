@@ -336,7 +336,87 @@ def run(topic: str, date: str, repo: Path, exa_api_key: str | None = None) -> Pa
         }]
     (run_dir / "exa_people_deep.json").write_text(json.dumps(exa_deep_people_results, indent=2))
 
-    # 7) synthesize (after all raw persisted)
+    # 7) write plain markdown pass outputs (story of run)
+    init_items = init.get("items", []) if isinstance(init, dict) else []
+    sg_lines = [f"# SuperGrok X Pass (simulated via X API) — {date}", "", f"Query: {init.get('query','')}", "", f"Results: {len(init_items)}", "", "## Top results"]
+    for t in sorted(init_items, key=lambda x: x.get("likeCount", 0) + x.get("retweetCount", 0), reverse=True)[:20]:
+        u = (t.get("author") or {}).get("username", "unknown")
+        tid = t.get("id")
+        txt = re.sub(r"\s+", " ", (t.get("text") or "").replace("\n", " ")).strip()
+        sg_lines.append(f"- @{u}: {txt[:220]} → https://x.com/{u}/status/{tid}")
+    (run_dir / "supergrok-twitter-pass.md").write_text("\n".join(sg_lines))
+
+    p_lines = [f"# Papers First Pass — {date}", "", f"Papers: {len(papers)}", ""]
+    for p in papers:
+        p_lines.append(f"- {p['title']} → {p['arxiv']}")
+    (run_dir / "papers-pass.md").write_text("\n".join(p_lines))
+
+    pp_lines = [f"# Per-Paper Discussion Pass — {date}", ""]
+    for x in paper_people:
+        pp_lines.append(f"## {x['paper']}")
+        pp_lines.append(f"Query: {x.get('query','')}")
+        rs = x.get("results", [])
+        pp_lines.append(f"Matches: {len(rs)}")
+        for t in rs[:5]:
+            u = (t.get("author") or {}).get("username", "unknown")
+            tid = t.get("id")
+            txt = re.sub(r"\s+", " ", (t.get("text") or "")).strip()
+            pp_lines.append(f"- @{u}: {txt[:180]} → https://x.com/{u}/status/{tid}")
+        pp_lines.append("")
+    (run_dir / "paper-people-pass.md").write_text("\n".join(pp_lines))
+
+    sa_lines = [f"# Signals Account Daily Pass — {date}", ""]
+    for a in acct_roll:
+        sa_lines.append(f"## @{a['handle']}")
+        tw = a.get("tweets", [])
+        sa_lines.append(f"Tweets fetched: {len(tw)}")
+        for t in tw[:5]:
+            txt = re.sub(r"\s+", " ", (t.get("text") or "")).strip()
+            sa_lines.append(f"- {txt[:180]} → https://x.com/{a['handle']}/status/{t.get('id')}")
+        sa_lines.append("")
+    (run_dir / "signals-account-pass.md").write_text("\n".join(sa_lines))
+
+    h_lines = [f"# Historical Bullet Update Pass (1/3/7/14) — {date}", ""]
+    for h in history:
+        h_lines.append(f"## Date {h.get('date')}")
+        if h.get("missing") or h.get("missing_file"):
+            h_lines.append("- missing local briefing file")
+            continue
+        for b in h.get("bullet_updates", [])[:8]:
+            h_lines.append(f"- Bullet: {b['bullet'][:180]}")
+            h_lines.append(f"  - Updates found: {len(b.get('updates', []))}")
+        h_lines.append("")
+    (run_dir / "history-update-pass.md").write_text("\n".join(h_lines))
+
+    e_lines = [f"# Exa Deep People Pass — {date}", ""]
+    for e in exa_deep_people_results:
+        e_lines.append(f"## {e.get('query','')}")
+        r = e.get("response", {})
+        if isinstance(r, dict) and r.get("error"):
+            e_lines.append(f"- Error: {r['error']}")
+        else:
+            rs = r.get("results", []) if isinstance(r, dict) else []
+            e_lines.append(f"- Results: {len(rs)}")
+            for it in rs[:8]:
+                e_lines.append(f"- {it.get('title','')} → {it.get('url','')}")
+        e_lines.append("")
+    (run_dir / "exa-people-pass.md").write_text("\n".join(e_lines))
+
+    story = [
+        f"# Run Story — {date}",
+        "",
+        "1) Papers first → papers-pass.md",
+        "2) SuperGrok on topic → supergrok-twitter-pass.md",
+        "3) People talking about each paper → paper-people-pass.md",
+        "4) Signals account pass → signals-account-pass.md",
+        "5) Historical updates pass → history-update-pass.md",
+        "6) Exa deep people pass → exa-people-pass.md",
+        "7) Final synthesis → one-pager.md",
+        "",
+    ]
+    (run_dir / "run-story.md").write_text("\n".join(story))
+
+    # 8) synthesize (after all raw persisted)
     synthesize_onepager(run_dir, topic, date)
 
     manifest = {
