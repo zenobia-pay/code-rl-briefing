@@ -1,14 +1,26 @@
 [
   {
-    "id": "v2",
-    "label": "2026-03-02",
-    "date": "2026-03-02",
-    "source": "Browser Use + SuperGrok"
+    "id": "2026-03-04",
+    "date": "2026-03-04",
+    "title": "Code RL environments + human data",
+    "source": "X + arXiv (last 24h)",
+    "prompt": "What is the latest in code RL environments and human data?",
+    "file": "/data/brief-2026-03-04.md"
   },
   {
-    "id": "v1",
-    "label": "2026-02-25",
+    "id": "2026-03-02",
+    "date": "2026-03-02",
+    "title": "Code RL environments + human data",
+    "source": "Browser Use + SuperGrok",
+    "prompt": "What is the latest in code RL environments and human data?",
+    "file": "/data/brief-v2-email.md"
+  },
+  {
+    "id": "2026-02-25",
     "date": "2026-02-25",
-    "source": "Original synthesis"
+    "title": "Code RL environments + human data",
+    "source": "Original synthesis",
+    "prompt": "What is the latest in code RL environments and human data?",
+    "file": "/data/brief.md"
   }
 ]

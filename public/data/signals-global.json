@@ -1,0 +1,59 @@
+[
+  {
+    "name": "Hamel Husain",
+    "role": "account",
+    "links": {
+      "x": "https://x.com/HamelHusain"
+    }
+  },
+  {
+    "name": "LangChain",
+    "role": "account",
+    "links": {
+      "x": "https://x.com/LangChain"
+    }
+  },
+  {
+    "name": "_reachsumit",
+    "role": "account",
+    "links": {
+      "x": "https://x.com/_reachsumit"
+    }
+  },
+  {
+    "name": "Ruotong Liao",
+    "role": "author",
+    "links": {
+      "paper": "https://arxiv.org/abs/2603.02203"
+    }
+  },
+  {
+    "name": "Siwei Zhang",
+    "role": "author",
+    "links": {
+      "paper": "https://arxiv.org/abs/2603.03078"
+    }
+  },
+  {
+    "name": "Zhenquan Yao",
+    "role": "author",
+    "links": {
+      "paper": "https://arxiv.org/abs/2603.02951"
+    }
+  },
+  {
+    "name": "Shiyang Li",
+    "role": "author",
+    "links": {
+      "paper": "https://arxiv.org/abs/2603.02637"
+    }
+  },
+  {
+    "name": "Sudip Bhujel",
+    "role": "author",
+    "links": {
+      "paper": "https://arxiv.org/abs/2603.03054",
+      "github": "https://github.com/sudip-bhujel/privmedchat"
+    }
+  }
+]

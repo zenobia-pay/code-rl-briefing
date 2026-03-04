@@ -5,104 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Code RL Briefings</title>
   <style>
-    :root{--bg:#f8f5ef;--paper:#fffdf8;--ink:#1d1b1a;--muted:#6b6258;--line:#e5ddd2;--accent:#1640d6}
-    body{margin:0;background:var(--bg);color:var(--ink);font-family:ui-sans-serif,system-ui}
-    .wrap{max-width:1180px;margin:0 auto;padding:24px 18px 56px}
-    .layout{display:grid;grid-template-columns:300px 1fr;gap:14px}
-    .panel,.card{background:var(--paper);border:1px solid var(--line);border-radius:14px}
-    .panel{padding:12px}.card{padding:16px;margin-bottom:10px}
-    .btn{display:block;width:100%;text-align:left;border:1px solid var(--line);border-radius:10px;padding:10px;background:#fff;cursor:pointer;margin-bottom:8px}
-    .btn.active{border-color:var(--accent);box-shadow: inset 0 0 0 1px var(--accent)}
-    .meta{color:var(--muted);font-size:.9rem}
-    .hidden{display:none}
-    .email{font-family:Georgia, 'Times New Roman', serif; line-height:1.6; white-space:pre-wrap}
-    .quote{border-left:3px solid #d7ccbc;padding-left:10px;margin:8px 0;white-space:pre-wrap}
-    a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
-    .signal{border:1px solid var(--line);border-radius:10px;padding:10px;margin:0 0 8px}
+    body{font-family:system-ui;margin:0;background:#f7f5f0;color:#1b1b1b}
+    .wrap{max-width:1100px;margin:0 auto;padding:20px}
+    .layout{display:grid;grid-template-columns:280px 1fr;gap:12px}
+    .panel{background:#fff;border:1px solid #e5dfd4;border-radius:12px;padding:12px}
+    .btn{display:block;width:100%;margin:0 0 8px;padding:10px;border:1px solid #ddd;border-radius:10px;background:#fff;text-align:left;cursor:pointer}
+    .btn.active{border-color:#1d4ed8}
+    .meta{color:#6b7280;font-size:12px}
+    .email{white-space:pre-wrap;line-height:1.6;font-family:Georgia,serif}
+    a{color:#1d4ed8;text-decoration:none}
+    .signal{border:1px solid #e5dfd4;border-radius:10px;padding:10px;margin:0 0 8px}
     @media(max-width:900px){.layout{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
 <main class="wrap">
   <h1>Code RL Briefings</h1>
-  <p class="meta"><a href="https://briefing-hub.founders-0e1.workers.dev" target="_blank">← All briefings (hub)</a></p>
-  <p class="meta">Most recent briefing first. Signals are a separate top-level view.</p>
-  <div class="card" style="margin-bottom:12px;display:flex;gap:10px;align-items:center;">
-    <button id="runBtn" class="btn" style="max-width:220px;margin:0;">Run again today</button>
-    <details>
-      <summary style="cursor:pointer">ℹ prompt</summary>
-      <pre id="runPromptView" style="white-space:pre-wrap;font-size:.82rem;max-width:780px;"></pre>
-    </details>
-    <span id="runStatus" class="meta"></span>
-  </div>
+  <p class="meta">View A: dated briefing runs · View B: global signals index.</p>
   <div class="layout">
     <aside class="panel">
-      <h3>Views</h3>
-      <div id="nav"></div>
+      <h3>Dated runs</h3>
+      <div id="runs"></div>
+      <button class="btn" id="signalsBtn">Signals index</button>
     </aside>
     <section class="panel">
-      <div id="view-v2" class="view">
-        <div class="card"><h3>Original prompt (one sentence)</h3><div class="quote">What is the latest in code RL environments and human data?</div></div>
-        <div class="card"><h3>Briefing (2026-03-02) — exact email text</h3><div id="briefV2" class="email"></div></div>
+      <div id="runView">
+        <h3 id="runTitle"></h3>
+        <p class="meta" id="runMeta"></p>
+        <h4>Original prompt</h4>
+        <div id="runPrompt"></div>
+        <h4>Briefing body</h4>
+        <div id="runBody" class="email"></div>
       </div>
-      <div id="view-v1" class="view hidden">
-        <div class="card"><h3>Original prompt (one sentence)</h3><div class="quote">What is the latest in code RL environments and human data?</div></div>
-        <div class="card"><h3>Briefing (2026-02-25)</h3><div id="briefV1" class="email"></div></div>
-      </div>
-      <div id="view-signals" class="view hidden">
-        <div class="card"><h3>Signals</h3><p class="meta">People only: accounts and paper researchers/authors, each with all known links.</p><div id="signals"></div></div>
+      <div id="signalsView" style="display:none">
+        <h3>Global Signals Index</h3>
+        <div id="signals"></div>
       </div>
     </section>
   </div>
 </main>
 <script>
-function setActive(id){
-  document.querySelectorAll('.view').forEach(v=>v.classList.add('hidden'));
-  document.getElementById(`view-${id}`).classList.remove('hidden');
-  document.querySelectorAll('.btn').forEach(b=>b.classList.remove('active'));
-  document.querySelector(`[data-id="${id}"]`)?.classList.add('active');
+const md = (t)=>t
+  .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,'<a target="_blank" href="$2">$1</a>')
+  .replace(/\n/g,'<br/>');
+let RUNS=[];
+async function loadRun(r){
+  const txt = await fetch(r.file).then(x=>x.text());
+  runTitle.textContent = r.date + ' — ' + r.title;
+  runMeta.textContent = r.source;
+  runPrompt.textContent = r.prompt;
+  runBody.innerHTML = md(txt);
+  runView.style.display='block'; signalsView.style.display='none';
+  document.querySelectorAll('.run-btn').forEach(b=>b.classList.toggle('active', b.dataset.id===r.id));
 }
-function linkify(txt){
-  // 1) markdown links [label](url)
-  let out = txt.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
-  // 2) bare urls (avoid trailing punctuation/parens)
-  out = out.replace(/(^|\s)(https?:\/\/[^\s)]+)(?=$|\s|[.,!?;:])/g, '$1<a href="$2" target="_blank">$2</a>');
-  return out;
-}
-function buildPrompt(topic, windowSel='last 24 hours') {
-  const d = new Date().toISOString().slice(0,10);
-  return `You are producing a daily intelligence briefing for me.\n\nObjective\n\nCreate today’s briefing for this topic:\n\n${topic}\n\nDate of briefing: ${d}\nTime window: ${windowSel}\n\nData Collection Workflow\n\n1) Browser Use + SuperGrok on X\n\nUse Browser Use with my saved profile/session and run SuperGrok research on X for the topic above.\n\nCollect:\n- High-signal tweets/posts with direct status URLs\n- People/accounts driving the conversation\n- Verbatim tweet text from each selected post\n\nOutput target:\n- 10 high-signal tweet links minimum\n- 5 high-signal people/accounts minimum\n\n2) alphaXiv / arXiv pass\n\nSearch alphaXiv and arXiv for relevant papers in the same topic window.\n\nCollect:\n- Paper title\n- 1 sentence abstract-level insight per paper\n- Direct alphaXiv and/or arXiv links\n- People discussing those papers on X (when available)\n\nOutput target:\n- 5 relevant papers minimum\n\n3) Signals extraction\n\nBuild a global Signals set where each signal is a person:\n- Twitter account(s)\n- Researcher/author(s)\n\nEach signal includes:\n- Name\n- Role/type (account, researcher, author)\n- Multiple links when available (X, website, scholar, lab page, paper links)\n\nBriefing Format (Email Style)\n\nWrite the briefing as if it is the final email body.\n\nStructure:\n1. One-sentence take\n- Exactly one strong summary sentence.\n\n2. Tweets\n- Each bullet is:\n- 1 sentence from the tweet (verbatim or tightly extracted from tweet text)\n- → [label](direct status URL)\n\n3. Papers\n- Each bullet is:\n- 1 sentence from paper abstract/summary\n- → [paper title](alphaXiv or arXiv URL)\n\nStyle:\n- Crisp, direct, high-signal\n- One sentence per source item (max two if truly needed)\n- Link labels should be human-readable\n\nPublishing + Site Rules\n\nUpdate the briefing site so it supports daily operation:\n1. Date-based runs\n- Use date labels (YYYY-MM-DD), not v1/v2 naming.\n- Newest run appears first.\n\n2. Global views\n- View A: dated briefing runs (email-format body)\n- View B: global Signals index (people with links)\n\n3. Original prompt section\n- Include the exact original one-sentence user prompt for that run.\n\n4. Deployment\n- Deploy to Cloudflare Worker\n- Commit and push changes\n- Return live URL + commit hash\n\nDeliverables\n\nReturn:\n1. Final email-formatted briefing text\n2. Signals list (structured)\n3. Deployed page URL\n4. Repo URL\n5. Commit hash`;
-}
-const RUN_PROMPT = buildPrompt('What is the latest in code RL environments and human data?','last 24 hours');
-runPromptView.textContent = RUN_PROMPT;
-runBtn.onclick = async () => {
-  runStatus.textContent = 'sending...';
-  const r = await fetch('/api/run', { method:'POST', headers:{'content-type':'application/json'}, body: JSON.stringify({ prompt: RUN_PROMPT })});
-  const j = await r.json().catch(()=>({}));
-  runStatus.textContent = j.ok ? 'sent to Slack trigger' : `failed (${j.error||r.status})`;
-};
-
 Promise.all([
-  fetch('/data/brief.md').then(r=>r.text()),
-  fetch('/data/brief-v2-email.md').then(r=>r.text()),
-  fetch('/data/signals.json').then(r=>r.json())
-]).then(([v1,v2,signalsData])=>{
-  nav.innerHTML = `
-    <button class="btn active" data-id="v2" onclick="setActive('v2')">2026-03-02<div class="meta">Browser Use + SuperGrok</div></button>
-    <button class="btn" data-id="v1" onclick="setActive('v1')">2026-02-25<div class="meta">Original synthesis</div></button>
-    <button class="btn" data-id="signals" onclick="setActive('signals')">Signals<div class="meta">Global people index</div></button>`;
-  briefV1.innerHTML = linkify(v1);
-  briefV2.innerHTML = linkify(v2);
-  signals.innerHTML = signalsData.map(s => `
-    <div class="signal">
-      <div><strong><a target="_blank" href="${s.topLink}">${s.name}</a></strong> <span class="meta">${s.kind}</span></div>
-      <ul>
-        ${(s.items||[]).map(it=>`<li>${it.excerpt || ''} → <a target="_blank" href="${it.tweetUrl || it.sourceUrl || s.topLink}">source</a> · <a target="_blank" href="${it.briefingUrl || '#view-v2'}">briefing</a></li>`).join('')}
-      </ul>
-    </div>
-  `).join('');
-  setActive('v2');
+  fetch('/data/briefings.json').then(r=>r.json()),
+  fetch('/data/signals-global.json').then(r=>r.json())
+]).then(async ([runs,signals])=>{
+  RUNS = runs.sort((a,b)=>b.date.localeCompare(a.date));
+  runsEl.innerHTML = RUNS.map(r=>`<button class="btn run-btn" data-id="${r.id}">${r.date}<div class="meta">${r.source}</div></button>`).join('');
+  document.querySelectorAll('.run-btn').forEach(b=>b.onclick=()=>loadRun(RUNS.find(r=>r.id===b.dataset.id)));
+  signalsEl.innerHTML = signals.map(s=>`<div class="signal"><strong>${s.name}</strong> <span class="meta">${s.role}</span><div>${Object.entries(s.links).map(([k,v])=>`<a target="_blank" href="${v}">${k}</a>`).join(' · ')}</div></div>`).join('');
+  signalsBtn.onclick=()=>{runView.style.display='none';signalsView.style.display='block';};
+  await loadRun(RUNS[0]);
 });
+const runsEl=document.getElementById('runs'),signalsEl=document.getElementById('signals');
+const runView=document.getElementById('runView'),signalsView=document.getElementById('signalsView');
+const runTitle=document.getElementById('runTitle'),runMeta=document.getElementById('runMeta');
+const runPrompt=document.getElementById('runPrompt'),runBody=document.getElementById('runBody');
+const signalsBtn=document.getElementById('signalsBtn');
 </script>
 </body>
 </html>
