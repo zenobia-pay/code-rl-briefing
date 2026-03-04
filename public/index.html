@@ -21,7 +21,16 @@
 <body>
 <main class="wrap">
   <h1>Code RL Briefings</h1>
+  <p class="meta"><a href="https://briefing-hub.founders-0e1.workers.dev" target="_blank">← All briefings (hub)</a></p>
   <p class="meta">View A: dated briefing runs · View B: global signals index.</p>
+  <div class="panel" style="margin-bottom:12px;display:flex;gap:10px;align-items:center;">
+    <button id="runBtn" class="btn" style="max-width:220px;margin:0;">Run again today</button>
+    <details>
+      <summary style="cursor:pointer">ℹ prompt</summary>
+      <pre id="runPromptView" style="white-space:pre-wrap;font-size:.82rem;max-width:780px;"></pre>
+    </details>
+    <span id="runStatus" class="meta"></span>
+  </div>
   <div class="layout">
     <aside class="panel">
       <h3>Dated runs</h3>
@@ -48,6 +57,25 @@
 const md = (t)=>t
   .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,'<a target="_blank" href="$2">$1</a>')
   .replace(/\n/g,'<br/>');
+
+function buildPrompt(topic, windowSel='last 24 hours') {
+  const d = new Date().toISOString().slice(0,10);
+  return `You are producing a daily intelligence briefing for me.\n\nObjective\n\nCreate today’s briefing for this topic:\n\n${topic}\n\nDate of briefing: ${d}\nTime window: ${windowSel}\n\nData Collection Workflow\n\n1) Browser Use + SuperGrok on X\n\nUse Browser Use with my saved profile/session and run SuperGrok research on X for the topic above.\n\nCollect:\n- High-signal tweets/posts with direct status URLs\n- People/accounts driving the conversation\n- Verbatim tweet text from each selected post\n\nOutput target:\n- 10 high-signal tweet links minimum\n- 5 high-signal people/accounts minimum\n\n2) alphaXiv / arXiv pass\n\nSearch alphaXiv and arXiv for relevant papers in the same topic window.\n\nCollect:\n- Paper title\n- 1 sentence abstract-level insight per paper\n- Direct alphaXiv and/or arXiv links\n- People discussing those papers on X (when available)\n\nOutput target:\n- 5 relevant papers minimum\n\n3) Signals extraction\n\nBuild a global Signals set where each signal is a person:\n- Twitter account(s)\n- Researcher/author(s)\n\nEach signal includes:\n- Name\n- Role/type (account, researcher, author)\n- Multiple links when available (X, website, scholar, lab page, paper links)\n\nBriefing Format (Email Style)\n\nWrite the briefing as if it is the final email body.\n\nStructure:\n1. One-sentence take\n- Exactly one strong summary sentence.\n\n2. Tweets\n- Each bullet is:\n- 1 sentence from the tweet (verbatim or tightly extracted from tweet text)\n- → [label](direct status URL)\n\n3. Papers\n- Each bullet is:\n- 1 sentence from paper abstract/summary\n- → [paper title](alphaXiv or arXiv URL)\n\nStyle:\n- Crisp, direct, high-signal\n- One sentence per source item (max two if truly needed)\n- Link labels should be human-readable\n- Tweet bullets must NOT wrap tweet text in quotation marks\n\nPublishing + Site Rules\n\nUpdate the briefing site so it supports daily operation:\n1. Date-based runs\n- Use date labels (YYYY-MM-DD), not v1/v2 naming.\n- Newest run appears first.\n\n2. Global views\n- View A: dated briefing runs (email-format body)\n- View B: global Signals index (people with links)\n\n3. Original prompt section\n- Include the exact original one-sentence user prompt for that run.\n\n4. Deployment\n- Deploy to Cloudflare Worker\n- Commit and push changes\n- Return live URL + commit hash\n\nDeliverables\n\nReturn:\n1. Final email-formatted briefing text\n2. Signals list (structured)\n3. Deployed page URL\n4. Repo URL\n5. Commit hash`;
+}
+
+const runBtn=document.getElementById('runBtn');
+const runPromptView=document.getElementById('runPromptView');
+const runStatus=document.getElementById('runStatus');
+
+const RUN_PROMPT = buildPrompt('What is the latest in code RL environments and human data?','last 24 hours');
+runPromptView.textContent = RUN_PROMPT;
+runBtn.onclick = async () => {
+  runStatus.textContent = 'sending...';
+  const r = await fetch('/api/run', { method:'POST', headers:{'content-type':'application/json'}, body: JSON.stringify({ prompt: RUN_PROMPT })});
+  const j = await r.json().catch(()=>({}));
+  runStatus.textContent = j.ok ? 'sent to Slack trigger' : `failed (${j.error||r.status})`;
+};
+
 let RUNS=[];
 async function loadRun(r){
   const txt = await fetch(r.file).then(x=>x.text());
