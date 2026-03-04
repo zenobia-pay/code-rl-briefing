@@ -15,6 +15,8 @@
     .email{white-space:pre-wrap;line-height:1.6;font-family:Georgia,serif}
     a{color:#1d4ed8;text-decoration:none}
     .signal{border:1px solid #e5dfd4;border-radius:10px;padding:10px;margin:0 0 8px}
+    .raw-file{border:1px solid #e5dfd4;border-radius:10px;padding:10px;margin:0 0 10px;background:#fff}
+    .raw-file pre{white-space:pre-wrap;word-break:break-word;max-height:420px;overflow:auto;background:#faf8f3;border:1px solid #eee;border-radius:8px;padding:10px}
     @media(max-width:900px){.layout{grid-template-columns:1fr}}
   </style>
 </head>
@@ -94,15 +96,37 @@ async function loadRun(r){
 }
 
 async function loadRaw(r){
-  rawMeta.textContent = `Showing raw files for ${r.date}`;
-  rawList.innerHTML = 'Loading...';
+  rawMeta.textContent = `Showing full raw data inline for ${r.date}`;
+  rawList.innerHTML = 'Loading raw files...';
   const idxPath = `/data/runs/${r.date}/raw-index.json`;
   const idx = await fetch(idxPath).then(x=>x.ok?x.json():null).catch(()=>null);
   if (!idx || !idx.files || !idx.files.length){
     rawList.innerHTML = '<p class="meta">No published raw files for this run yet.</p>';
-  } else {
-    rawList.innerHTML = idx.files.map(f=>`<div class="signal"><a target="_blank" href="${f.path}">${f.path}</a><div class="meta">${f.bytes} bytes</div></div>`).join('');
+    runView.style.display='none'; signalsView.style.display='none'; rawView.style.display='block';
+    return;
   }
+
+  const files = idx.files
+    .filter(f => !f.path.endsWith('/raw-index.json'))
+    .sort((a,b)=>a.path.localeCompare(b.path));
+
+  const chunks = [];
+  for (const f of files){
+    const text = await fetch(f.path).then(r=>r.ok?r.text():`[failed to load: ${r.status}]`).catch(e=>`[failed to load: ${e}]`);
+    const escaped = text
+      .replaceAll('&','&amp;')
+      .replaceAll('<','&lt;')
+      .replaceAll('>','&gt;');
+    chunks.push(`
+      <div class="raw-file">
+        <div><strong>${f.path}</strong></div>
+        <div class="meta">${f.bytes} bytes · <a target="_blank" href="${f.path}">open raw file</a></div>
+        <pre>${escaped}</pre>
+      </div>
+    `);
+  }
+
+  rawList.innerHTML = chunks.join('');
   runView.style.display='none'; signalsView.style.display='none'; rawView.style.display='block';
 }
 Promise.all([
