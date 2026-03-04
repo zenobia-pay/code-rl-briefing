@@ -1,0 +1,200 @@
+[
+  {
+    "paper": "Understanding LoRA as Knowledge Memory: An Empirical Analysis",
+    "prompt": "Open X SuperGrok.\nFor paper title: Understanding LoRA as Knowledge Memory: An Empirical Analysis\nTime window requirement: ONLY posts from the last 24 hours.\nAsk SuperGrok EXACTLY THIS:\n\"what are people saying about this exact paper title?\"\nThen constrain to last 24 hours and return direct status URLs with verbatim tweet text.\nReturn strict JSON only.",
+    "raw": {
+      "session": {
+        "id": "4d4965be-bd07-49db-9cfa-211dbf3f9852",
+        "status": "active",
+        "liveUrl": "https://live.browser-use.com?wss=https%3A%2F%2F4d4965be-bd07-49db-9cfa-211dbf3f9852.cdp0.browser-use.com",
+        "startedAt": "2026-03-04T21:33:56.564489Z",
+        "finishedAt": null,
+        "persistMemory": true,
+        "keepAlive": false,
+        "proxyUsedMb": "0",
+        "proxyCost": "0"
+      },
+      "task": {
+        "id": "a0017ee8-c6a6-4482-8cd6-e2485c88f875",
+        "sessionId": "4d4965be-bd07-49db-9cfa-211dbf3f9852"
+      },
+      "status": {
+        "id": "a0017ee8-c6a6-4482-8cd6-e2485c88f875",
+        "status": "finished",
+        "output": "[\n  {\n    \\\"url\\\": \\\"https://x.com/griffintaur/status/2029270705116979444\\\",\n    \\\"text\\\": \\\"\ud83d\ude80 Interestingresearch: Understanding LoRA as Knowledge Memory: An Empirical Analysis\\\\n\\\\nRead more: https://www.alphaxiv.org/abs/2603.01097\\\\n\\\\n#LLM #ReinforcementLearning #MLResearch\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/FMackenzie7/status/2029173583809827223\\\",\n    \\\"text\\\": \\\"Understanding LoRA as Knowledge Memory: An Empirical Analysis\\\\n\\\\n\ud83d\ude47\u200d\u2642\ufe0f\ud83d\ude47\u200d\u2642\ufe0f\ud83d\ude47\u200d\u2642\ufe0f\ud83d\ude47\u200d\u2642\ufe0f\ud83d\ude47\u200d\u2642\ufe0f\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/Memoirs/status/2029003391553228917\\\",\n    \\\"text\\\": \\\"Understanding LoRA as Knowledge Memory: An Empirical Analysis\\\\n\\\\nSeungju Back, Dongwoo Lee, Naun Kang, Taehee Lee, S. K. Hong, Youngjune Gwon, Sungjin Ahn\\\\nhttps://arxiv.org/abs/2603.01097 [\ud835\ude8c\ud835\ude9c.\ud835\ude7b\ud835\ude76]\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/Trtd6Trtd/status/2029150612236190174\\\",\n    \\\"text\\\": \\\"https://arxiv.org/abs/2603.01097\\\\nLoRA\u3092\u77e5\u8b58\u30e1\u30e2\u30ea\u3068\u3057\u3066\u4f7f\u3048\u306a\u3044\u304b\u3092\u691c\u8a3c\u3057\u305f\u624b\u6cd5\\\\n\\\\n\u30e9\u30f3\u30af\u3092\u5897\u3084\u3059\u3068\u8a18\u61b6\u5bb9\u91cf\u306f\u5897\u3048\u308b\u304c\u52b9\u7387\u306f\u4f4e\u30e9\u30f3\u30af\u3067\u30d4\u30fc\u30af\u304c\u304f\u308b\u3089\u3057\u3044\\\\n\\\\n\u30b3\u30f3\u30c6\u30ad\u30b9\u30c8\u30ad\u30e3\u30c3\u30b7\u30e5\u3058\u3083\u306a\u3044\u3051\u3069\u3001\u983b\u7e41\u306b\u53c2\u7167\u3057\u305f\u308a\u30fb\u4f4e\u5909\u66f4\u983b\u5ea6\u306e\u60c5\u5831\u3092LoRA\u3067\u713c\u304d\u8fbc\u3080\u8a2d\u8a08\u304c\u3067\u304d\u308b\u3068\u5b09\u3057\u305d\u3046\\\"\n  }\n]",
+        "finishedAt": "2026-03-04T21:34:55.966242Z",
+        "isSuccess": true,
+        "cost": "0.054"
+      }
+    },
+    "normalized": {
+      "parseError": true,
+      "rawOutput": "[\n  {\n    \\\"url\\\": \\\"https://x.com/griffintaur/status/2029270705116979444\\\",\n    \\\"text\\\": \\\"\ud83d\ude80 Interestingresearch: Understanding LoRA as Knowledge Memory: An Empirical Analysis\\\\n\\\\nRead more: https://www.alphaxiv.org/abs/2603.01097\\\\n\\\\n#LLM #ReinforcementLearning #MLResearch\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/FMackenzie7/status/2029173583809827223\\\",\n    \\\"text\\\": \\\"Understanding LoRA as Knowledge Memory: An Empirical Analysis\\\\n\\\\n\ud83d\ude47\u200d\u2642\ufe0f\ud83d\ude47\u200d\u2642\ufe0f\ud83d\ude47\u200d\u2642\ufe0f\ud83d\ude47\u200d\u2642\ufe0f\ud83d\ude47\u200d\u2642\ufe0f\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/Memoirs/status/2029003391553228917\\\",\n    \\\"text\\\": \\\"Understanding LoRA as Knowledge Memory: An Empirical Analysis\\\\n\\\\nSeungju Back, Dongwoo Lee, Naun Kang, Taehee Lee, S. K. Hong, Youngjune Gwon, Sungjin Ahn\\\\nhttps://arxiv.org/abs/2603.01097 [\ud835\ude8c\ud835\ude9c.\ud835\ude7b\ud835\ude76]\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/Trtd6Trtd/status/2029150612236190174\\\",\n    \\\"text\\\": \\\"https://arxiv.org/abs/2603.01097\\\\nLoRA\u3092\u77e5\u8b58\u30e1\u30e2\u30ea\u3068\u3057\u3066\u4f7f\u3048\u306a\u3044\u304b\u3092\u691c\u8a3c\u3057\u305f\u624b\u6cd5\\\\n\\\\n\u30e9\u30f3\u30af\u3092\u5897\u3084\u3059\u3068\u8a18\u61b6\u5bb9\u91cf\u306f\u5897\u3048\u308b\u304c\u52b9\u7387\u306f\u4f4e\u30e9\u30f3\u30af\u3067\u30d4\u30fc\u30af\u304c\u304f\u308b\u3089\u3057\u3044\\\\n\\\\n\u30b3\u30f3\u30c6\u30ad\u30b9\u30c8\u30ad\u30e3\u30c3\u30b7\u30e5\u3058\u3083\u306a\u3044\u3051\u3069\u3001\u983b\u7e41\u306b\u53c2\u7167\u3057\u305f\u308a\u30fb\u4f4e\u5909\u66f4\u983b\u5ea6\u306e\u60c5\u5831\u3092LoRA\u3067\u713c\u304d\u8fbc\u3080\u8a2d\u8a08\u304c\u3067\u304d\u308b\u3068\u5b09\u3057\u305d\u3046\\\"\n  }\n]"
+    }
+  },
+  {
+    "paper": "Beyond Language Modeling: An Exploration of Multimodal Pretraining",
+    "prompt": "Open X SuperGrok.\nFor paper title: Beyond Language Modeling: An Exploration of Multimodal Pretraining\nTime window requirement: ONLY posts from the last 24 hours.\nAsk SuperGrok EXACTLY THIS:\n\"what are people saying about this exact paper title?\"\nThen constrain to last 24 hours and return direct status URLs with verbatim tweet text.\nReturn strict JSON only.",
+    "raw": {
+      "session": {
+        "id": "f2c5365b-0b51-43fc-9dbf-64c22221301d",
+        "status": "active",
+        "liveUrl": "https://live.browser-use.com?wss=https%3A%2F%2Ff2c5365b-0b51-43fc-9dbf-64c22221301d.cdp0.browser-use.com",
+        "startedAt": "2026-03-04T21:35:01.395796Z",
+        "finishedAt": null,
+        "persistMemory": true,
+        "keepAlive": false,
+        "proxyUsedMb": "0",
+        "proxyCost": "0"
+      },
+      "task": {
+        "id": "2b02a4a3-2047-4660-a038-2093621600a1",
+        "sessionId": "f2c5365b-0b51-43fc-9dbf-64c22221301d"
+      },
+      "status": {
+        "id": "2b02a4a3-2047-4660-a038-2093621600a1",
+        "status": "finished",
+        "output": "[\n  {\n    \\\"status_url\\\": \\\"https://x.com/fly51fly/status/2029305902709494158\\\",\n    \\\"text\\\": \\\"[CV] Beyond Language Modeling: An Exploration of Multimodal Pretraining\\\\nS Tong, D Fan, J Nguyen, E Brown\u2026 [FAIR, Meta] (2026)\\\\nhttps://arxiv.org/abs/2603.03276\\\"\n  },\n  {\n    \\\"status_url\\\": \\\"https://x.com/modelpingai/status/2029270246461223229\\\",\n    \\\"text\\\": \\\"5/5 Production OSS: \ufe0f Beyond Language Modeling: An Exploration of Multimodal Pretraining \u2014 The visual world offers a critical axis for advancing foundation models beyond language.\\\\nSource: https://huggingface.co/papers/2603.03276\\\"\n  },\n  {\n    \\\"status_url\\\": \\\"https://x.com/mkovarski/status/2029270077434945774\\\",\n    \\\"text\\\": \\\"Beyond Language Modeling: An Exploration of Multimodal Pretraining\\\\n\\\\nhttps://arxiv.org/pdf/2603.03276\\\"\n  },\n  {\n    \\\"status_url\\\": \\\"https://x.com/_akhaliq/status/2029247757450449052\\\",\n    \\\"text\\\": \\\"Beyond Language Modeling\\\\n\\\\nAn Exploration of Multimodal Pretraining\\\\npaper: https://huggingface.co/papers/2603.03276\\\"\n  },\n  {\n    \\\"status_url\\\": \\\"https://x.com/HuggingPapers/status/2029229219092504734\\\",\n    \\\"text\\\": \\\"Beyond Language Modeling\\\\n\\\\nFAIR Meta and NYU present a deep dive into native multimodal pretraining. They show RAEs unify visual understanding/generation, vision/language data are complementary, world modeling emerges naturally, and MoE harmonizes vision's higher data hunger\u2014paving the way for truly unified models.\\\"\n  },\n  {\n    \\\"status_url\\\": \\\"https://x.com/javaeeeee1/status/2029150762228396284\\\",\n    \\\"text\\\": \\\"Beyond Language Modeling: An Exploration of Multimodal Pretraining\\\\n\\\\nhttps://huggingface.co/papers/2603.03276\\\"\n  }\n]",
+        "finishedAt": "2026-03-04T21:36:00.181530Z",
+        "isSuccess": true,
+        "cost": "0.054"
+      }
+    },
+    "normalized": {
+      "parseError": true,
+      "rawOutput": "[\n  {\n    \\\"status_url\\\": \\\"https://x.com/fly51fly/status/2029305902709494158\\\",\n    \\\"text\\\": \\\"[CV] Beyond Language Modeling: An Exploration of Multimodal Pretraining\\\\nS Tong, D Fan, J Nguyen, E Brown\u2026 [FAIR, Meta] (2026)\\\\nhttps://arxiv.org/abs/2603.03276\\\"\n  },\n  {\n    \\\"status_url\\\": \\\"https://x.com/modelpingai/status/2029270246461223229\\\",\n    \\\"text\\\": \\\"5/5 Production OSS: \ufe0f Beyond Language Modeling: An Exploration of Multimodal Pretraining \u2014 The visual world offers a critical axis for advancing foundation models beyond language.\\\\nSource: https://huggingface.co/papers/2603.03276\\\"\n  },\n  {\n    \\\"status_url\\\": \\\"https://x.com/mkovarski/status/2029270077434945774\\\",\n    \\\"text\\\": \\\"Beyond Language Modeling: An Exploration of Multimodal Pretraining\\\\n\\\\nhttps://arxiv.org/pdf/2603.03276\\\"\n  },\n  {\n    \\\"status_url\\\": \\\"https://x.com/_akhaliq/status/2029247757450449052\\\",\n    \\\"text\\\": \\\"Beyond Language Modeling\\\\n\\\\nAn Exploration of Multimodal Pretraining\\\\npaper: https://huggingface.co/papers/2603.03276\\\"\n  },\n  {\n    \\\"status_url\\\": \\\"https://x.com/HuggingPapers/status/2029229219092504734\\\",\n    \\\"text\\\": \\\"Beyond Language Modeling\\\\n\\\\nFAIR Meta and NYU present a deep dive into native multimodal pretraining. They show RAEs unify visual understanding/generation, vision/language data are complementary, world modeling emerges naturally, and MoE harmonizes vision's higher data hunger\u2014paving the way for truly unified models.\\\"\n  },\n  {\n    \\\"status_url\\\": \\\"https://x.com/javaeeeee1/status/2029150762228396284\\\",\n    \\\"text\\\": \\\"Beyond Language Modeling: An Exploration of Multimodal Pretraining\\\\n\\\\nhttps://huggingface.co/papers/2603.03276\\\"\n  }\n]"
+    }
+  },
+  {
+    "paper": "CUDA Agent: Large-Scale Agentic RL for High-Performance CUDA Kernel Generation",
+    "prompt": "Open X SuperGrok.\nFor paper title: CUDA Agent: Large-Scale Agentic RL for High-Performance CUDA Kernel Generation\nTime window requirement: ONLY posts from the last 24 hours.\nAsk SuperGrok EXACTLY THIS:\n\"what are people saying about this exact paper title?\"\nThen constrain to last 24 hours and return direct status URLs with verbatim tweet text.\nReturn strict JSON only.",
+    "raw": {
+      "session": {
+        "id": "8095df51-0482-4f0a-912d-c9cf7636cb7e",
+        "status": "active",
+        "liveUrl": "https://live.browser-use.com?wss=https%3A%2F%2F8095df51-0482-4f0a-912d-c9cf7636cb7e.cdp0.browser-use.com",
+        "startedAt": "2026-03-04T21:36:04.966814Z",
+        "finishedAt": null,
+        "persistMemory": true,
+        "keepAlive": false,
+        "proxyUsedMb": "0",
+        "proxyCost": "0"
+      },
+      "task": {
+        "id": "f4f1b19e-7a0c-4a52-a91b-a16884595d8e",
+        "sessionId": "8095df51-0482-4f0a-912d-c9cf7636cb7e"
+      },
+      "status": {
+        "id": "f4f1b19e-7a0c-4a52-a91b-a16884595d8e",
+        "status": "finished",
+        "output": "The following JSON contains posts from the last 24 hours mentioning the exact paper title 'CUDA Agent: Large-Scale Agentic RL for High-Performance CUDA Kernel Generation':\\n\\n```json\\n{\\n  \\\"posts\\\": [\\n    {\\n      \\\"status_url\\\": \\\"https://x.com/hgpu/status/2029289191973036193\\\",\\n      \\\"verbatim_text\\\": \\\"CUDA Agent: Large-Scale Agentic RL for High-Performance CUDA Kernel Generation\\\\n\\\\n#CUDA #CodeGenerarion #LLM #Package\\\\n\\\\nhttps://hgpu.org/?p=30628\\\"\\n    },\\n    {\\n      \\\"status_url\\\": \\\"https://x.com/hello_gensi/status/2029227468222284126\\\",\\n      \\\"verbatim_text\\\": \\\"(2/5) \ud83d\ude0eCUDA Agent: Large-Scale Agentic RL for High-Performance CUDA Kernel Generation\\\\n\ud83d\udd17 Project Page: https://cuda-agent.github.io/\\\\n\ud83d\udd17 Github Repo\uff1ahttps://github.com/BytedTsinghua-SIA/CUDA-Agent\\\"\\n    }\\n  ]\\n}\\n```",
+        "finishedAt": "2026-03-04T21:36:57.067746Z",
+        "isSuccess": true,
+        "cost": "0.048"
+      }
+    },
+    "normalized": {
+      "parseError": true,
+      "rawOutput": "\\n{\\n  \\\"posts\\\": [\\n    {\\n      \\\"status_url\\\": \\\"https://x.com/hgpu/status/2029289191973036193\\\",\\n      \\\"verbatim_text\\\": \\\"CUDA Agent: Large-Scale Agentic RL for High-Performance CUDA Kernel Generation\\\\n\\\\n#CUDA #CodeGenerarion #LLM #Package\\\\n\\\\nhttps://hgpu.org/?p=30628\\\"\\n    },\\n    {\\n      \\\"status_url\\\": \\\"https://x.com/hello_gensi/status/2029227468222284126\\\",\\n      \\\"verbatim_text\\\": \\\"(2/5) \ud83d\ude0eCUDA Agent: Large-Scale Agentic RL for High-Performance CUDA Kernel Generation\\\\n\ud83d\udd17 Project Page: https://cuda-agent.github.io/\\\\n\ud83d\udd17 Github Repo\uff1ahttps://github.com/BytedTsinghua-SIA/CUDA-Agent\\\"\\n    }\\n  ]\\n}\\n"
+    }
+  },
+  {
+    "paper": "Speculative Speculative Decoding",
+    "prompt": "Open X SuperGrok.\nFor paper title: Speculative Speculative Decoding\nTime window requirement: ONLY posts from the last 24 hours.\nAsk SuperGrok EXACTLY THIS:\n\"what are people saying about this exact paper title?\"\nThen constrain to last 24 hours and return direct status URLs with verbatim tweet text.\nReturn strict JSON only.",
+    "raw": {
+      "session": {
+        "id": "56f7bf26-f6db-44a4-94f8-c03b5958c199",
+        "status": "active",
+        "liveUrl": "https://live.browser-use.com?wss=https%3A%2F%2F56f7bf26-f6db-44a4-94f8-c03b5958c199.cdp0.browser-use.com",
+        "startedAt": "2026-03-04T21:37:08.577789Z",
+        "finishedAt": null,
+        "persistMemory": true,
+        "keepAlive": false,
+        "proxyUsedMb": "0",
+        "proxyCost": "0"
+      },
+      "task": {
+        "id": "c8f8fc59-7b05-489a-b141-fd99bb464f5a",
+        "sessionId": "56f7bf26-f6db-44a4-94f8-c03b5958c199"
+      },
+      "status": {
+        "id": "c8f8fc59-7b05-489a-b141-fd99bb464f5a",
+        "status": "finished",
+        "output": "```json\\n{\\n  \\\"results\\\": [],\\n  \\\"count\\\": 0,\\n  \\\"message\\\": \\\"No mentions of 'Speculative Speculative Decoding' found in the last 24 hours.\\\"\\n}\\n```",
+        "finishedAt": "2026-03-04T21:37:40.937992Z",
+        "isSuccess": true,
+        "cost": "0.024"
+      }
+    },
+    "normalized": {
+      "parseError": true,
+      "rawOutput": "\\n{\\n  \\\"results\\\": [],\\n  \\\"count\\\": 0,\\n  \\\"message\\\": \\\"No mentions of 'Speculative Speculative Decoding' found in the last 24 hours.\\\"\\n}\\n"
+    }
+  },
+  {
+    "paper": "Utonia: Toward One Encoder for All Point Clouds",
+    "prompt": "Open X SuperGrok.\nFor paper title: Utonia: Toward One Encoder for All Point Clouds\nTime window requirement: ONLY posts from the last 24 hours.\nAsk SuperGrok EXACTLY THIS:\n\"what are people saying about this exact paper title?\"\nThen constrain to last 24 hours and return direct status URLs with verbatim tweet text.\nReturn strict JSON only.",
+    "raw": {
+      "session": {
+        "id": "fd0d70c6-b9e0-4836-b122-ac2cc3eaed5d",
+        "status": "active",
+        "liveUrl": "https://live.browser-use.com?wss=https%3A%2F%2Ffd0d70c6-b9e0-4836-b122-ac2cc3eaed5d.cdp1.browser-use.com",
+        "startedAt": "2026-03-04T21:37:47.936920Z",
+        "finishedAt": null,
+        "persistMemory": true,
+        "keepAlive": false,
+        "proxyUsedMb": "0",
+        "proxyCost": "0"
+      },
+      "task": {
+        "id": "af97f20c-7603-42ef-929d-75944ffc6a27",
+        "sessionId": "fd0d70c6-b9e0-4836-b122-ac2cc3eaed5d"
+      },
+      "status": {
+        "id": "af97f20c-7603-42ef-929d-75944ffc6a27",
+        "status": "finished",
+        "output": "[\n  {\n    \\\"url\\\": \\\"https://x.com/modelpingai/status/2029270230741004450\\\",\n    \\\"text\\\": \\\"Automated by @dacrimeblock Replying to @modelpingai 1/5 Agents:  Utonia: Toward One Encoder for All Point Clouds \u2014 We dream of a future where point clouds from all domains can come together to shape a single model that benefits them all. Source: Paper page - Utonia: Toward One Encoder for All Point Clouds From huggingface.co\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/_akhaliq/status/2029241675927662834\\\",\n    \\\"text\\\": \\\"Utonia Toward One Encoder for All Point Clouds paper: https://huggingface.co/papers/2603.03283\u2026\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/XiaoyangWu_/status/2029273780099711082\\\",\n    \\\"text\\\": \\\"Replying to @_akhaliq Introducing Utonia \u2728 A question we have wanted to ask for years: Can one encoder emerge from all point clouds, and then benefit all point clouds? Indoor scans \ud83c\udfe0, outdoor LiDAR \ud83d\ude97, object CAD \ud83d\udce6, remote sensing \ud83d\udef0\ufe0f, even video-lifted 3D\ud83c\udfa5 - instead of treating them as separate Paper page - Utonia: Toward One Encoder for All Point Clouds From huggingface.co\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/XiaoyangWu_/status/2029262234988523749\\\",\n    \\\"text\\\": \\\"Introducing Utonia \u2728 A question we have wanted to ask for years: Can one encoder emerge from all point clouds, and then benefit all point clouds? Indoor scans \ud83c\udfe0, outdoor LiDAR \ud83d\ude97, object CAD \ud83d\udce6, remote sensing \ud83d\udef0\ufe0f, even video-lifted 3D\ud83c\udfa5 - instead of treating them as separate\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/CVShenghaoLi/status/2029241420603662424\\\",\n    \\\"text\\\": \\\"One encoder for all 3D \u2014 remote sensing LiDAR, indoor RGB-D, CAD models, AND video-lifted point clouds. Utonia learns unified representations across wildly different sensing geometries. Cross-domain training yields emergent behaviors + boosts robotic manipulation & VLM spatial arxiv.org Utonia: Toward One Encoder for All Point Clouds We dream of a future where point clouds from all domains can come together to shape a single model that benefits them all. Toward this goal, we present Utonia, a first step toward training a...\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/AiquestAcademy/status/2029155469034467664\\\",\n    \\\"text\\\": \\\"Utonia: what if all your 3D data, no matter its source, could speak teh same language to AI? It's a step toward that, training one AI to understand point clouds from diverse sources like LiDAR, indoor cameras, and even RGB videos simultaneously. This improves how AI perceives and\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/HuggingPapers/status/2029107690199195714\\\",\n    \\\"text\\\": \\\"Utonia: One Encoder for All Point Clouds A single self-supervised transformer learns unified 3D representations across remote sensing, LiDAR, indoor scans, CAD models & video-lifted data enabling cross-domain transfer and emergent behaviors.\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/inhumanscience/status/2029089951812378654\\\",\n    \\\"text\\\": \\\"Automated by @kazand1k One encoder to rule all point clouds. Utonia (Pointcept) unifies indoor, outdoor LiDAR, and object CAD pretraining \u2014 previous SOTA models fail badly across domains. Key fixes: granularity rescaling, modality dropout, and RoPE positional encoding. https://arxiv.org/abs/2603.03283\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/ArxivScreener/status/2029061599974309982\\\",\n    \\\"text\\\": \\\"Utonia: Toward One Encoder for All Point Clouds \u2014 Computer Vision & 3D Deep Learning\\\"\n  }\n]",
+        "finishedAt": "2026-03-04T21:39:19.388043Z",
+        "isSuccess": true,
+        "cost": "0.060"
+      }
+    },
+    "normalized": {
+      "parseError": true,
+      "rawOutput": "[\n  {\n    \\\"url\\\": \\\"https://x.com/modelpingai/status/2029270230741004450\\\",\n    \\\"text\\\": \\\"Automated by @dacrimeblock Replying to @modelpingai 1/5 Agents:  Utonia: Toward One Encoder for All Point Clouds \u2014 We dream of a future where point clouds from all domains can come together to shape a single model that benefits them all. Source: Paper page - Utonia: Toward One Encoder for All Point Clouds From huggingface.co\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/_akhaliq/status/2029241675927662834\\\",\n    \\\"text\\\": \\\"Utonia Toward One Encoder for All Point Clouds paper: https://huggingface.co/papers/2603.03283\u2026\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/XiaoyangWu_/status/2029273780099711082\\\",\n    \\\"text\\\": \\\"Replying to @_akhaliq Introducing Utonia \u2728 A question we have wanted to ask for years: Can one encoder emerge from all point clouds, and then benefit all point clouds? Indoor scans \ud83c\udfe0, outdoor LiDAR \ud83d\ude97, object CAD \ud83d\udce6, remote sensing \ud83d\udef0\ufe0f, even video-lifted 3D\ud83c\udfa5 - instead of treating them as separate Paper page - Utonia: Toward One Encoder for All Point Clouds From huggingface.co\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/XiaoyangWu_/status/2029262234988523749\\\",\n    \\\"text\\\": \\\"Introducing Utonia \u2728 A question we have wanted to ask for years: Can one encoder emerge from all point clouds, and then benefit all point clouds? Indoor scans \ud83c\udfe0, outdoor LiDAR \ud83d\ude97, object CAD \ud83d\udce6, remote sensing \ud83d\udef0\ufe0f, even video-lifted 3D\ud83c\udfa5 - instead of treating them as separate\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/CVShenghaoLi/status/2029241420603662424\\\",\n    \\\"text\\\": \\\"One encoder for all 3D \u2014 remote sensing LiDAR, indoor RGB-D, CAD models, AND video-lifted point clouds. Utonia learns unified representations across wildly different sensing geometries. Cross-domain training yields emergent behaviors + boosts robotic manipulation & VLM spatial arxiv.org Utonia: Toward One Encoder for All Point Clouds We dream of a future where point clouds from all domains can come together to shape a single model that benefits them all. Toward this goal, we present Utonia, a first step toward training a...\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/AiquestAcademy/status/2029155469034467664\\\",\n    \\\"text\\\": \\\"Utonia: what if all your 3D data, no matter its source, could speak teh same language to AI? It's a step toward that, training one AI to understand point clouds from diverse sources like LiDAR, indoor cameras, and even RGB videos simultaneously. This improves how AI perceives and\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/HuggingPapers/status/2029107690199195714\\\",\n    \\\"text\\\": \\\"Utonia: One Encoder for All Point Clouds A single self-supervised transformer learns unified 3D representations across remote sensing, LiDAR, indoor scans, CAD models & video-lifted data enabling cross-domain transfer and emergent behaviors.\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/inhumanscience/status/2029089951812378654\\\",\n    \\\"text\\\": \\\"Automated by @kazand1k One encoder to rule all point clouds. Utonia (Pointcept) unifies indoor, outdoor LiDAR, and object CAD pretraining \u2014 previous SOTA models fail badly across domains. Key fixes: granularity rescaling, modality dropout, and RoPE positional encoding. https://arxiv.org/abs/2603.03283\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/ArxivScreener/status/2029061599974309982\\\",\n    \\\"text\\\": \\\"Utonia: Toward One Encoder for All Point Clouds \u2014 Computer Vision & 3D Deep Learning\\\"\n  }\n]"
+    }
+  },
+  {
+    "paper": "RubricBench: Aligning Model-Generated Rubrics with Human Standards",
+    "prompt": "Open X SuperGrok.\nFor paper title: RubricBench: Aligning Model-Generated Rubrics with Human Standards\nTime window requirement: ONLY posts from the last 24 hours.\nAsk SuperGrok EXACTLY THIS:\n\"what are people saying about this exact paper title?\"\nThen constrain to last 24 hours and return direct status URLs with verbatim tweet text.\nReturn strict JSON only.",
+    "raw": {
+      "session": {
+        "id": "72b54db7-ae0d-4093-b5c8-cfd79ffc15b8",
+        "status": "active",
+        "liveUrl": "https://live.browser-use.com?wss=https%3A%2F%2F72b54db7-ae0d-4093-b5c8-cfd79ffc15b8.cdp0.browser-use.com",
+        "startedAt": "2026-03-04T21:39:28.589348Z",
+        "finishedAt": null,
+        "persistMemory": true,
+        "keepAlive": false,
+        "proxyUsedMb": "0",
+        "proxyCost": "0"
+      },
+      "task": {
+        "id": "a609a578-67f3-46a8-99f1-c35723d5a133",
+        "sessionId": "72b54db7-ae0d-4093-b5c8-cfd79ffc15b8"
+      },
+      "status": {
+        "id": "a609a578-67f3-46a8-99f1-c35723d5a133",
+        "status": "finished",
+        "output": "[\n  {\n    \\\"url\\\": \\\"https://x.com/SciFi/status/2028844374365237595\\\",\n    \\\"text\\\": \\\"RubricBench: Aligning Model-Generated Rubrics with Human Standards\\\\nQiyuan Zhang, Junyi Zhou, Yufei Wang, Fuyuan Lyu, Yidong Ming, Can Xu, Qingfeng Sun, Kai Zheng, Peng Kang, Xue Liu, Chen Ma\\\\nhttps://arxiv.org/abs/2603.01562\\\\n[\ud835\ude8c\ud835\ude9c.\ud835\ude70\ud835\ude78]\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/CatAccept/status/2029137126055657812\\\",\n    \\\"text\\\": \\\"\ud83d\udd25LLM judges aren't bad at reasoning \u2014 they're bad at knowing \ud835\ude04\ud835\uddf5\ud835\uddee\ud835\ude01 \ud835\ude01\ud835\uddfc \ud835\uddf2\ud835\ude03\ud835\uddee\ud835\uddf9\ud835\ude02\ud835\uddee\ud835\ude01\ud835\uddf2. Same model, human rubrics \u2192 \ud835\udff4\ud835\udff1% accuracy. Self-generated rubrics \u2192 \ud835\udff1\ud835\udff4%. That's a \ud835\udfee\ud835\udff3-\ud835\uddfd\ud835\uddfc\ud835\uddf6\ud835\uddfb\ud835\ude01 gap.\\\\nRubricBench (1,147 pairwise comparisons, 5 domains, expert-annotated atomic rubrics) finally puts a number on something we all suspected: the bottleneck in LLM-as-Judge isn't inference quality, it's rubric quality.\\\\n\u26a1THE PROBLEM\\\\nReward models keep getting fooled by surface signals. Longer response? Higher score. Better formatting? Higher score. Confident tone? Higher score. Whether the response actually solves the user's problem? Coin flip.\\\\nThe fix everyone's trying: rubric-guided evaluation. Extract checklist items from the instruction, verify each one. But those rubrics are also model-generated. Nobody had a benchmark to test whether models can even write good rubrics.\\\\n\ud83d\udca1KEY FINDINGS\\\\n\u2192 Traditional RMs and vanilla LLM judges score \ud835\udff0\ud835\udfec-\ud835\udff1\ud835\udfec% on RubricBench (basically random)\\\\n\u2192 Self-generated rubric methods reach \ud835\udff1\ud835\udff1-\ud835\udff2\ud835\udfec%\\\\n\u2192 Swap in human rubrics, same backbone \u2192 \ud835\udff4\ud835\udfee-\ud835\udff4\ud835\udff1%\\\\nThe Rubric Gap is consistent across GPT-5.1, Gemini-3-Pro, Qwen3.5-Plus \u2014 no model escapes it.\\\\nScaling doesn't help either. Going from 4 to 32 auto-generated rubric items? Accuracy barely moves. But human rubrics from 2\u21928 items? Steady improvement. Models aren't generating too few criteria \u2014 they're generating the \ud835\ude04\ud835\uddff\ud835\uddfc\ud835\uddfb\ud835\uddf4 ones.\\\\n\ud83d\udccaWHY MODELS FAIL AT RUBRIC GENERATION\\\\nStructural analysis: >\ud835\udff3\ud835\udfec% of model-generated rubric items are hallucinated (don't match any human criterion). Models love writing plausible-sounding checklist items that nobody actually cares about, while missing the constraints humans consider essential.\\\\nGreat case study: instruction says \\\\\\\"write Java to convert SQL\u2192MongoDB, handle all cases.\\\\\\\" Human annotators flag that \\\\\\\"all cases\\\\\\\" is impossible \u2014 their rubric checks whether the response acknowledges infeasibility. Model rubric demands specific libraries and design patterns. Completely inverted judgments.\\\\n\ud83e\udde0MY TAKE\\\\nThe core insight is clean: models can't write good exam questions, even if they can grade when given the answer key. This reframes the next frontier \u2014 it's not about better reasoning during evaluation, it's about \ud835\uddff\ud835\ude02\ud835\uddef\ud835\uddff\ud835\uddf6\ud835\uddf0 \ud835\uddee\ud835\uddf9\ud835\uddf6\ud835\uddf4\ud835\uddfb\ud835\uddfa\ud835\uddf2\ud835\uddfb\ud835\ude01.\\\\nEven with perfect rubrics, accuracy caps at ~85% due to execution failures (models secretly re-weight rubric items). Two independent capability gaps to close.\\\\nhttps://t.co/8EqHkjKTG3\\\\n\ud83d\udcbb\\\\nhttps://t.co/DPnoB5TdMF\\\\n#MachineLearning #AI #LLMEvaluation #RewardModeling\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/arxivsanitybot/status/2028883647395447136\\\",\n    \\\"text\\\": \\\"The authors introduce RubricBench: a curated benchmark of 1,147 pairwise comparisons with expert-annotated atomic rubrics for hard, bias-prone cases. Experiments show a large gap \u2014 models struggle to autonomously produce valid evaluation criteria versus humans.\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/HuggingPapers/status/2028868084107469028\\\",\n    \\\"text\\\": \\\"RubricBench\\\\nA benchmark exposing a 27% gap between AI and human evaluators. Turns out models can't figure out what matters\u2014obsessing over formatting while missing core constraints.\\\"\n  }\n]",
+        "finishedAt": "2026-03-04T21:40:16.022251Z",
+        "isSuccess": true,
+        "cost": "0.030"
+      }
+    },
+    "normalized": {
+      "parseError": true,
+      "rawOutput": "[\n  {\n    \\\"url\\\": \\\"https://x.com/SciFi/status/2028844374365237595\\\",\n    \\\"text\\\": \\\"RubricBench: Aligning Model-Generated Rubrics with Human Standards\\\\nQiyuan Zhang, Junyi Zhou, Yufei Wang, Fuyuan Lyu, Yidong Ming, Can Xu, Qingfeng Sun, Kai Zheng, Peng Kang, Xue Liu, Chen Ma\\\\nhttps://arxiv.org/abs/2603.01562\\\\n[\ud835\ude8c\ud835\ude9c.\ud835\ude70\ud835\ude78]\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/CatAccept/status/2029137126055657812\\\",\n    \\\"text\\\": \\\"\ud83d\udd25LLM judges aren't bad at reasoning \u2014 they're bad at knowing \ud835\ude04\ud835\uddf5\ud835\uddee\ud835\ude01 \ud835\ude01\ud835\uddfc \ud835\uddf2\ud835\ude03\ud835\uddee\ud835\uddf9\ud835\ude02\ud835\uddee\ud835\ude01\ud835\uddf2. Same model, human rubrics \u2192 \ud835\udff4\ud835\udff1% accuracy. Self-generated rubrics \u2192 \ud835\udff1\ud835\udff4%. That's a \ud835\udfee\ud835\udff3-\ud835\uddfd\ud835\uddfc\ud835\uddf6\ud835\uddfb\ud835\ude01 gap.\\\\nRubricBench (1,147 pairwise comparisons, 5 domains, expert-annotated atomic rubrics) finally puts a number on something we all suspected: the bottleneck in LLM-as-Judge isn't inference quality, it's rubric quality.\\\\n\u26a1THE PROBLEM\\\\nReward models keep getting fooled by surface signals. Longer response? Higher score. Better formatting? Higher score. Confident tone? Higher score. Whether the response actually solves the user's problem? Coin flip.\\\\nThe fix everyone's trying: rubric-guided evaluation. Extract checklist items from the instruction, verify each one. But those rubrics are also model-generated. Nobody had a benchmark to test whether models can even write good rubrics.\\\\n\ud83d\udca1KEY FINDINGS\\\\n\u2192 Traditional RMs and vanilla LLM judges score \ud835\udff0\ud835\udfec-\ud835\udff1\ud835\udfec% on RubricBench (basically random)\\\\n\u2192 Self-generated rubric methods reach \ud835\udff1\ud835\udff1-\ud835\udff2\ud835\udfec%\\\\n\u2192 Swap in human rubrics, same backbone \u2192 \ud835\udff4\ud835\udfee-\ud835\udff4\ud835\udff1%\\\\nThe Rubric Gap is consistent across GPT-5.1, Gemini-3-Pro, Qwen3.5-Plus \u2014 no model escapes it.\\\\nScaling doesn't help either. Going from 4 to 32 auto-generated rubric items? Accuracy barely moves. But human rubrics from 2\u21928 items? Steady improvement. Models aren't generating too few criteria \u2014 they're generating the \ud835\ude04\ud835\uddff\ud835\uddfc\ud835\uddfb\ud835\uddf4 ones.\\\\n\ud83d\udccaWHY MODELS FAIL AT RUBRIC GENERATION\\\\nStructural analysis: >\ud835\udff3\ud835\udfec% of model-generated rubric items are hallucinated (don't match any human criterion). Models love writing plausible-sounding checklist items that nobody actually cares about, while missing the constraints humans consider essential.\\\\nGreat case study: instruction says \\\\\\\"write Java to convert SQL\u2192MongoDB, handle all cases.\\\\\\\" Human annotators flag that \\\\\\\"all cases\\\\\\\" is impossible \u2014 their rubric checks whether the response acknowledges infeasibility. Model rubric demands specific libraries and design patterns. Completely inverted judgments.\\\\n\ud83e\udde0MY TAKE\\\\nThe core insight is clean: models can't write good exam questions, even if they can grade when given the answer key. This reframes the next frontier \u2014 it's not about better reasoning during evaluation, it's about \ud835\uddff\ud835\ude02\ud835\uddef\ud835\uddff\ud835\uddf6\ud835\uddf0 \ud835\uddee\ud835\uddf9\ud835\uddf6\ud835\uddf4\ud835\uddfb\ud835\uddfa\ud835\uddf2\ud835\uddfb\ud835\ude01.\\\\nEven with perfect rubrics, accuracy caps at ~85% due to execution failures (models secretly re-weight rubric items). Two independent capability gaps to close.\\\\nhttps://t.co/8EqHkjKTG3\\\\n\ud83d\udcbb\\\\nhttps://t.co/DPnoB5TdMF\\\\n#MachineLearning #AI #LLMEvaluation #RewardModeling\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/arxivsanitybot/status/2028883647395447136\\\",\n    \\\"text\\\": \\\"The authors introduce RubricBench: a curated benchmark of 1,147 pairwise comparisons with expert-annotated atomic rubrics for hard, bias-prone cases. Experiments show a large gap \u2014 models struggle to autonomously produce valid evaluation criteria versus humans.\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/HuggingPapers/status/2028868084107469028\\\",\n    \\\"text\\\": \\\"RubricBench\\\\nA benchmark exposing a 27% gap between AI and human evaluators. Turns out models can't figure out what matters\u2014obsessing over formatting while missing core constraints.\\\"\n  }\n]"
+    }
+  }
+]

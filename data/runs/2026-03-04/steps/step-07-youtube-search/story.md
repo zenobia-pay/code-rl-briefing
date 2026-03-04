@@ -1,0 +1,1 @@
+Generated 3-4 YouTube keywords via LLM from topic + today's scraped context, then queried YouTube Data API per keyword and fetched transcripts via youtube-transcript-api.

@@ -1,0 +1,124 @@
+{
+  "keywordPlan": {
+    "prompt": "You are selecting YouTube search keywords for a daily intelligence briefing.\nTopic: What is the latest in code RL environments and human data?\nUse this context and output strict JSON only.\n\nPaper titles: [\"Understanding LoRA as Knowledge Memory: An Empirical Analysis\", \"Beyond Language Modeling: An Exploration of Multimodal Pretraining\", \"CUDA Agent: Large-Scale Agentic RL for High-Performance CUDA Kernel Generation\", \"Speculative Speculative Decoding\", \"Utonia: Toward One Encoder for All Point Clouds\", \"RubricBench: Aligning Model-Generated Rubrics with Human Standards\", \"Chain of World: World Model Thinking in Latent Motion\", \"CuTe Layout Representation and Algebra\"]\nTweet snippets: []\nSignal accounts: []\n\nReturn JSON with exactly this schema and nothing else:\n{\"keywords\":[\"k1\",\"k2\",\"k3\",\"k4\"],\"rationale\":\"one short sentence\"}\nRules: keywords must be concise (2-6 words), specific, and relevant to likely new videos in last 24h.",
+    "raw": {
+      "session": {
+        "id": "5e10e00f-54a0-4b1d-9421-9fc594d8a9b8",
+        "status": "active",
+        "liveUrl": "https://live.browser-use.com?wss=https%3A%2F%2F5e10e00f-54a0-4b1d-9421-9fc594d8a9b8.cdp1.browser-use.com",
+        "startedAt": "2026-03-04T21:45:54.195138Z",
+        "finishedAt": null,
+        "persistMemory": true,
+        "keepAlive": false,
+        "proxyUsedMb": "0",
+        "proxyCost": "0"
+      },
+      "task": {
+        "id": "829c9844-3f95-4d34-b050-bf060ec368dc",
+        "sessionId": "5e10e00f-54a0-4b1d-9421-9fc594d8a9b8"
+      },
+      "status": {
+        "id": "829c9844-3f95-4d34-b050-bf060ec368dc",
+        "status": "finished",
+        "output": "{\\\"keywords\\\":[\\\"CUDA Agent RL kernel generation\\\",\\\"RubricBench human alignment LLM\\\",\\\"RL environments for code generation\\\",\\\"human data for model evaluation\\\"],\\\"rationale\\\":\\\"Keywords target the intersection of reinforcement learning for code optimization and human-aligned evaluation metrics found in the provided papers.\\\"}",
+        "finishedAt": "2026-03-04T21:46:00.160390Z",
+        "isSuccess": true,
+        "cost": "0.006"
+      }
+    },
+    "parsed": {
+      "parseError": true,
+      "rawOutput": "{\\\"keywords\\\":[\\\"CUDA Agent RL kernel generation\\\",\\\"RubricBench human alignment LLM\\\",\\\"RL environments for code generation\\\",\\\"human data for model evaluation\\\"],\\\"rationale\\\":\\\"Keywords target the intersection of reinforcement learning for code optimization and human-aligned evaluation metrics found in the provided papers.\\\"}"
+    },
+    "keywords": [
+      "What is the latest in code RL environments and human data?",
+      "SWE-rebench V2 RL coding agents",
+      "code RL environments human data",
+      "verifiable rewards coding agents"
+    ]
+  },
+  "searchQueries": [
+    "What is the latest in code RL environments and human data?",
+    "SWE-rebench V2 RL coding agents",
+    "code RL environments human data",
+    "verifiable rewards coding agents"
+  ],
+  "runs": [
+    {
+      "query": "What is the latest in code RL environments and human data?",
+      "result": {
+        "requestUrl": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=What+is+the+latest+in+code+RL+environments+and+human+data%3F&type=video&order=date&maxResults=15&publishedAfter=2026-03-04T00%3A00%3A00Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
+        "raw": {
+          "kind": "youtube#searchListResponse",
+          "etag": "v01Awlt9VYzVsPJBXE4ZuKvaH0I",
+          "regionCode": "US",
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 0
+          },
+          "items": []
+        },
+        "videos": [],
+        "transcriptLibrary": "youtube-transcript-api",
+        "transcriptLibraryError": "youtube-transcript-api unavailable: No module named 'youtube_transcript_api'"
+      }
+    },
+    {
+      "query": "SWE-rebench V2 RL coding agents",
+      "result": {
+        "requestUrl": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=SWE-rebench+V2+RL+coding+agents&type=video&order=date&maxResults=15&publishedAfter=2026-03-04T00%3A00%3A00Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
+        "raw": {
+          "kind": "youtube#searchListResponse",
+          "etag": "UBAOiXjvY0CZ7Ub9tJDO9bUtsU8",
+          "regionCode": "US",
+          "pageInfo": {
+            "totalResults": 0,
+            "resultsPerPage": 0
+          },
+          "items": []
+        },
+        "videos": [],
+        "transcriptLibrary": "youtube-transcript-api",
+        "transcriptLibraryError": "youtube-transcript-api unavailable: No module named 'youtube_transcript_api'"
+      }
+    },
+    {
+      "query": "code RL environments human data",
+      "result": {
+        "requestUrl": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=code+RL+environments+human+data&type=video&order=date&maxResults=15&publishedAfter=2026-03-04T00%3A00%3A00Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
+        "raw": {
+          "kind": "youtube#searchListResponse",
+          "etag": "v01Awlt9VYzVsPJBXE4ZuKvaH0I",
+          "regionCode": "US",
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 0
+          },
+          "items": []
+        },
+        "videos": [],
+        "transcriptLibrary": "youtube-transcript-api",
+        "transcriptLibraryError": "youtube-transcript-api unavailable: No module named 'youtube_transcript_api'"
+      }
+    },
+    {
+      "query": "verifiable rewards coding agents",
+      "result": {
+        "requestUrl": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=verifiable+rewards+coding+agents&type=video&order=date&maxResults=15&publishedAfter=2026-03-04T00%3A00%3A00Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
+        "raw": {
+          "kind": "youtube#searchListResponse",
+          "etag": "1X-Qc20Oh-68TXl5svY0X50O3Lg",
+          "regionCode": "US",
+          "pageInfo": {
+            "totalResults": 25,
+            "resultsPerPage": 0
+          },
+          "items": []
+        },
+        "videos": [],
+        "transcriptLibrary": "youtube-transcript-api",
+        "transcriptLibraryError": "youtube-transcript-api unavailable: No module named 'youtube_transcript_api'"
+      }
+    }
+  ]
+}

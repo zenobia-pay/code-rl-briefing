@@ -1,0 +1,25 @@
+{
+  "session": {
+    "id": "3f19cabd-e507-456f-ba2f-21da3081bc93",
+    "status": "active",
+    "liveUrl": "https://live.browser-use.com?wss=https%3A%2F%2F3f19cabd-e507-456f-ba2f-21da3081bc93.cdp0.browser-use.com",
+    "startedAt": "2026-03-04T21:40:19.850877Z",
+    "finishedAt": null,
+    "persistMemory": true,
+    "keepAlive": false,
+    "proxyUsedMb": "0",
+    "proxyCost": "0"
+  },
+  "task": {
+    "id": "ada2b108-3a2d-4e40-9b3b-9627b026c02c",
+    "sessionId": "3f19cabd-e507-456f-ba2f-21da3081bc93"
+  },
+  "status": {
+    "id": "ada2b108-3a2d-4e40-9b3b-9627b026c02c",
+    "status": "finished",
+    "output": "I have checked the X (Twitter) handles karpathy, natolambert, willccbb, HamelHusain, and LangChain for posts related to code RL environments and human data from the last 24 hours using Grok. \n\nBased on the queries, no relevant posts were found for any of these handles within the specified time window.\n\nResults:\n- @karpathy: {\\\"tweets\\\": []}\n- @natolambert: {\\\"tweets\\\": []}\n- @willccbb: {\\\"tweets\\\": []}\n- @HamelHusain: {\\\"tweets\\\": []}\n- @LangChain: {\\\"tweets\\\": []}",
+    "finishedAt": "2026-03-04T21:43:29.591952Z",
+    "isSuccess": true,
+    "cost": "0.114"
+  }
+}

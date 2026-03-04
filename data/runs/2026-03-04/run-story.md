@@ -1,9 +1,12 @@
-# Run Story — 2026-03-04
+# Run Story
 
-1) Papers first → papers-pass.md
-2) SuperGrok on topic → supergrok-twitter-pass.md
-3) People talking about each paper → paper-people-pass.md
-4) Signals account pass → signals-account-pass.md
-5) Historical updates pass → history-update-pass.md
-6) Exa deep people pass → exa-people-pass.md
-7) Final synthesis → one-pager.md
+This run executed scripted steps in order.
+
+1. AlphaXiv paper discovery (step-01)
+2. SuperGrok topic pass (step-02)
+3. SuperGrok per-paper discussion (step-03)
+4. SuperGrok signals account pass (step-04)
+5. SuperGrok historical updates pass (step-05)
+6. Exa deep people pass (step-06)
+7. YouTube search pass (step-07)
+8. File-backed synthesis (step-08)

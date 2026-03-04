@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import argparse, datetime as dt, json, re, shutil, time, urllib.parse, urllib.request
+import argparse, datetime as dt, json, re, shutil, time, urllib.parse, urllib.request, concurrent.futures, socket
 from pathlib import Path
 
 BROWSERUSE_BASE = "https://api.browser-use.com/api/v2"
@@ -35,8 +35,20 @@ def browseruse_req(api_key: str, method: str, path: str, payload=None):
         method=method,
         headers={"Content-Type": "application/json", "X-Browser-Use-API-Key": api_key},
     )
-    with urllib.request.urlopen(req, timeout=120) as r:
-        return json.loads(r.read().decode("utf-8"))
+    last_err = None
+    for attempt in range(6):
+        try:
+            with urllib.request.urlopen(req, timeout=120) as r:
+                return json.loads(r.read().decode("utf-8"))
+        except Exception as e:
+            last_err = e
+            code = getattr(e, 'code', None)
+            # retry transient failures
+            if code in (429, 500, 502, 503, 504) or 'timed out' in str(e).lower():
+                time.sleep(min(2 ** attempt, 20))
+                continue
+            raise
+    raise last_err
 
 
 def browseruse_run(api_key: str, profile_id: str, task_prompt: str, timeout_s: int = 1200):
@@ -151,13 +163,17 @@ def youtube_search(api_key: str, query: str, date: str):
         transcript_error = f"youtube-transcript-api unavailable: {e}"
 
     items = []
-    for it in raw.get("items", []) if isinstance(raw, dict) else []:
+    for idx, it in enumerate(raw.get("items", []) if isinstance(raw, dict) else []):
         vid = (((it.get("id") or {}).get("videoId")) or "")
         sn = it.get("snippet") or {}
         transcript = None
-        if vid and YouTubeTranscriptApi is not None:
+        if vid and YouTubeTranscriptApi is not None and idx < 8:
             try:
-                segs = YouTubeTranscriptApi.get_transcript(vid)
+                def _fetch_transcript(v):
+                    return YouTubeTranscriptApi.get_transcript(v)
+                with concurrent.futures.ThreadPoolExecutor(max_workers=1) as ex:
+                    fut = ex.submit(_fetch_transcript, vid)
+                    segs = fut.result(timeout=12)
                 transcript = " ".join((x.get("text", "") for x in segs))[:4000]
             except Exception as e:
                 transcript = f"[transcript unavailable: {e}]"

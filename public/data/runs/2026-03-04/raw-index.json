@@ -2,6 +2,10 @@
   "date": "2026-03-04",
   "files": [
     {
+      "path": "/data/runs/2026-03-04/briefing-rollup.json",
+      "bytes": 564851
+    },
+    {
       "path": "/data/runs/2026-03-04/exa-people-pass.md",
       "bytes": 4098
     },
@@ -27,7 +31,7 @@
     },
     {
       "path": "/data/runs/2026-03-04/one-pager.md",
-      "bytes": 3635
+      "bytes": 357
     },
     {
       "path": "/data/runs/2026-03-04/paper-people-pass.md",
@@ -179,11 +183,11 @@
     },
     {
       "path": "/data/runs/2026-03-04/raw-index.json",
-      "bytes": 6860
+      "bytes": 10276
     },
     {
       "path": "/data/runs/2026-03-04/run-story.md",
-      "bytes": 364
+      "bytes": 366
     },
     {
       "path": "/data/runs/2026-03-04/signals-account-pass.md",
@@ -195,7 +199,7 @@
     },
     {
       "path": "/data/runs/2026-03-04/steps/step-01-papers-alphaxiv/normalized.json",
-      "bytes": 3561
+      "bytes": 3491
     },
     {
       "path": "/data/runs/2026-03-04/steps/step-01-papers-alphaxiv/prompt.txt",
@@ -203,7 +207,7 @@
     },
     {
       "path": "/data/runs/2026-03-04/steps/step-01-papers-alphaxiv/raw.json",
-      "bytes": 3965
+      "bytes": 3895
     },
     {
       "path": "/data/runs/2026-03-04/steps/step-01-papers-alphaxiv/story.md",
@@ -211,7 +215,7 @@
     },
     {
       "path": "/data/runs/2026-03-04/steps/step-02-supergrok-topic/normalized.json",
-      "bytes": 2461
+      "bytes": 361
     },
     {
       "path": "/data/runs/2026-03-04/steps/step-02-supergrok-topic/prompt.txt",
@@ -219,11 +223,91 @@
     },
     {
       "path": "/data/runs/2026-03-04/steps/step-02-supergrok-topic/raw.json",
-      "bytes": 3133
+      "bytes": 1033
     },
     {
       "path": "/data/runs/2026-03-04/steps/step-02-supergrok-topic/story.md",
       "bytes": 91
+    },
+    {
+      "path": "/data/runs/2026-03-04/steps/step-03-supergrok-paper-discussion/normalized.json",
+      "bytes": 34145
+    },
+    {
+      "path": "/data/runs/2026-03-04/steps/step-03-supergrok-paper-discussion/prompt.txt",
+      "bytes": 57
+    },
+    {
+      "path": "/data/runs/2026-03-04/steps/step-03-supergrok-paper-discussion/raw.json",
+      "bytes": 34145
+    },
+    {
+      "path": "/data/runs/2026-03-04/steps/step-03-supergrok-paper-discussion/story.md",
+      "bytes": 108
+    },
+    {
+      "path": "/data/runs/2026-03-04/steps/step-04-supergrok-signals/normalized.json",
+      "bytes": 541
+    },
+    {
+      "path": "/data/runs/2026-03-04/steps/step-04-supergrok-signals/prompt.txt",
+      "bytes": 364
+    },
+    {
+      "path": "/data/runs/2026-03-04/steps/step-04-supergrok-signals/raw.json",
+      "bytes": 1213
+    },
+    {
+      "path": "/data/runs/2026-03-04/steps/step-04-supergrok-signals/story.md",
+      "bytes": 76
+    },
+    {
+      "path": "/data/runs/2026-03-04/steps/step-05-supergrok-history-updates/normalized.json",
+      "bytes": 686
+    },
+    {
+      "path": "/data/runs/2026-03-04/steps/step-05-supergrok-history-updates/prompt.txt",
+      "bytes": 288
+    },
+    {
+      "path": "/data/runs/2026-03-04/steps/step-05-supergrok-history-updates/raw.json",
+      "bytes": 1358
+    },
+    {
+      "path": "/data/runs/2026-03-04/steps/step-05-supergrok-history-updates/story.md",
+      "bytes": 69
+    },
+    {
+      "path": "/data/runs/2026-03-04/steps/step-06-exa-people/normalized.json",
+      "bytes": 531884
+    },
+    {
+      "path": "/data/runs/2026-03-04/steps/step-06-exa-people/prompt.txt",
+      "bytes": 48
+    },
+    {
+      "path": "/data/runs/2026-03-04/steps/step-06-exa-people/raw.json",
+      "bytes": 531884
+    },
+    {
+      "path": "/data/runs/2026-03-04/steps/step-06-exa-people/story.md",
+      "bytes": 73
+    },
+    {
+      "path": "/data/runs/2026-03-04/steps/step-07-youtube-search/normalized.json",
+      "bytes": 222
+    },
+    {
+      "path": "/data/runs/2026-03-04/steps/step-07-youtube-search/prompt.txt",
+      "bytes": 542
+    },
+    {
+      "path": "/data/runs/2026-03-04/steps/step-07-youtube-search/raw.json",
+      "bytes": 6472
+    },
+    {
+      "path": "/data/runs/2026-03-04/steps/step-07-youtube-search/story.md",
+      "bytes": 170
     },
     {
       "path": "/data/runs/2026-03-04/supergrok-briefing-rerun.json",
