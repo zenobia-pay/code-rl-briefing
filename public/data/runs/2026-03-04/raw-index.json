@@ -3,7 +3,7 @@
   "files": [
     {
       "path": "/data/runs/2026-03-04/briefing-rollup.json",
-      "bytes": 564851
+      "bytes": 589749
     },
     {
       "path": "/data/runs/2026-03-04/exa-people-pass.md",
@@ -183,7 +183,7 @@
     },
     {
       "path": "/data/runs/2026-03-04/raw-index.json",
-      "bytes": 10276
+      "bytes": 10277
     },
     {
       "path": "/data/runs/2026-03-04/run-story.md",
@@ -295,19 +295,19 @@
     },
     {
       "path": "/data/runs/2026-03-04/steps/step-07-youtube-search/normalized.json",
-      "bytes": 222
+      "bytes": 30396
     },
     {
       "path": "/data/runs/2026-03-04/steps/step-07-youtube-search/prompt.txt",
-      "bytes": 542
+      "bytes": 96
     },
     {
       "path": "/data/runs/2026-03-04/steps/step-07-youtube-search/raw.json",
-      "bytes": 6472
+      "bytes": 132351
     },
     {
       "path": "/data/runs/2026-03-04/steps/step-07-youtube-search/story.md",
-      "bytes": 170
+      "bytes": 143
     },
     {
       "path": "/data/runs/2026-03-04/supergrok-briefing-rerun.json",

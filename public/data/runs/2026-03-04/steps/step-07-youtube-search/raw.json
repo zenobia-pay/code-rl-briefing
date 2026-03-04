@@ -1,42 +1,4 @@
 {
-  "keywordPlan": {
-    "prompt": "You are selecting YouTube search keywords for a daily intelligence briefing.\nTopic: What is the latest in code RL environments and human data?\nUse this context and output strict JSON only.\n\nPaper titles: [\"Understanding LoRA as Knowledge Memory: An Empirical Analysis\", \"Beyond Language Modeling: An Exploration of Multimodal Pretraining\", \"CUDA Agent: Large-Scale Agentic RL for High-Performance CUDA Kernel Generation\", \"Speculative Speculative Decoding\", \"Utonia: Toward One Encoder for All Point Clouds\", \"RubricBench: Aligning Model-Generated Rubrics with Human Standards\", \"Chain of World: World Model Thinking in Latent Motion\", \"CuTe Layout Representation and Algebra\"]\nTweet snippets: []\nSignal accounts: []\n\nReturn JSON with exactly this schema and nothing else:\n{\"keywords\":[\"k1\",\"k2\",\"k3\",\"k4\"],\"rationale\":\"one short sentence\"}\nRules: keywords must be concise (2-6 words), specific, and relevant to likely new videos in last 24h.",
-    "raw": {
-      "session": {
-        "id": "5e10e00f-54a0-4b1d-9421-9fc594d8a9b8",
-        "status": "active",
-        "liveUrl": "https://live.browser-use.com?wss=https%3A%2F%2F5e10e00f-54a0-4b1d-9421-9fc594d8a9b8.cdp1.browser-use.com",
-        "startedAt": "2026-03-04T21:45:54.195138Z",
-        "finishedAt": null,
-        "persistMemory": true,
-        "keepAlive": false,
-        "proxyUsedMb": "0",
-        "proxyCost": "0"
-      },
-      "task": {
-        "id": "829c9844-3f95-4d34-b050-bf060ec368dc",
-        "sessionId": "5e10e00f-54a0-4b1d-9421-9fc594d8a9b8"
-      },
-      "status": {
-        "id": "829c9844-3f95-4d34-b050-bf060ec368dc",
-        "status": "finished",
-        "output": "{\\\"keywords\\\":[\\\"CUDA Agent RL kernel generation\\\",\\\"RubricBench human alignment LLM\\\",\\\"RL environments for code generation\\\",\\\"human data for model evaluation\\\"],\\\"rationale\\\":\\\"Keywords target the intersection of reinforcement learning for code optimization and human-aligned evaluation metrics found in the provided papers.\\\"}",
-        "finishedAt": "2026-03-04T21:46:00.160390Z",
-        "isSuccess": true,
-        "cost": "0.006"
-      }
-    },
-    "parsed": {
-      "parseError": true,
-      "rawOutput": "{\\\"keywords\\\":[\\\"CUDA Agent RL kernel generation\\\",\\\"RubricBench human alignment LLM\\\",\\\"RL environments for code generation\\\",\\\"human data for model evaluation\\\"],\\\"rationale\\\":\\\"Keywords target the intersection of reinforcement learning for code optimization and human-aligned evaluation metrics found in the provided papers.\\\"}"
-    },
-    "keywords": [
-      "What is the latest in code RL environments and human data?",
-      "SWE-rebench V2 RL coding agents",
-      "code RL environments human data",
-      "verifiable rewards coding agents"
-    ]
-  },
   "searchQueries": [
     "What is the latest in code RL environments and human data?",
     "SWE-rebench V2 RL coding agents",
@@ -46,8 +8,9 @@
   "runs": [
     {
       "query": "What is the latest in code RL environments and human data?",
+      "windowDays": 1,
       "result": {
-        "requestUrl": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=What+is+the+latest+in+code+RL+environments+and+human+data%3F&type=video&order=date&maxResults=15&publishedAfter=2026-03-04T00%3A00%3A00Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
+        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=What+is+the+latest+in+code+RL+environments+and+human+data%3F&type=video&order=date&maxResults=25&publishedAfter=2026-03-03T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
         "raw": {
           "kind": "youtube#searchListResponse",
           "etag": "v01Awlt9VYzVsPJBXE4ZuKvaH0I",
@@ -58,15 +21,14 @@
           },
           "items": []
         },
-        "videos": [],
-        "transcriptLibrary": "youtube-transcript-api",
-        "transcriptLibraryError": "youtube-transcript-api unavailable: No module named 'youtube_transcript_api'"
+        "videos": []
       }
     },
     {
       "query": "SWE-rebench V2 RL coding agents",
+      "windowDays": 1,
       "result": {
-        "requestUrl": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=SWE-rebench+V2+RL+coding+agents&type=video&order=date&maxResults=15&publishedAfter=2026-03-04T00%3A00%3A00Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
+        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=SWE-rebench+V2+RL+coding+agents&type=video&order=date&maxResults=25&publishedAfter=2026-03-03T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
         "raw": {
           "kind": "youtube#searchListResponse",
           "etag": "UBAOiXjvY0CZ7Ub9tJDO9bUtsU8",
@@ -77,15 +39,14 @@
           },
           "items": []
         },
-        "videos": [],
-        "transcriptLibrary": "youtube-transcript-api",
-        "transcriptLibraryError": "youtube-transcript-api unavailable: No module named 'youtube_transcript_api'"
+        "videos": []
       }
     },
     {
       "query": "code RL environments human data",
+      "windowDays": 1,
       "result": {
-        "requestUrl": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=code+RL+environments+human+data&type=video&order=date&maxResults=15&publishedAfter=2026-03-04T00%3A00%3A00Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
+        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=code+RL+environments+human+data&type=video&order=date&maxResults=25&publishedAfter=2026-03-03T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
         "raw": {
           "kind": "youtube#searchListResponse",
           "etag": "v01Awlt9VYzVsPJBXE4ZuKvaH0I",
@@ -96,15 +57,14 @@
           },
           "items": []
         },
-        "videos": [],
-        "transcriptLibrary": "youtube-transcript-api",
-        "transcriptLibraryError": "youtube-transcript-api unavailable: No module named 'youtube_transcript_api'"
+        "videos": []
       }
     },
     {
       "query": "verifiable rewards coding agents",
+      "windowDays": 1,
       "result": {
-        "requestUrl": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=verifiable+rewards+coding+agents&type=video&order=date&maxResults=15&publishedAfter=2026-03-04T00%3A00%3A00Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
+        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=verifiable+rewards+coding+agents&type=video&order=date&maxResults=25&publishedAfter=2026-03-03T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
         "raw": {
           "kind": "youtube#searchListResponse",
           "etag": "1X-Qc20Oh-68TXl5svY0X50O3Lg",
@@ -115,10 +75,2846 @@
           },
           "items": []
         },
-        "videos": [],
-        "transcriptLibrary": "youtube-transcript-api",
-        "transcriptLibraryError": "youtube-transcript-api unavailable: No module named 'youtube_transcript_api'"
+        "videos": []
+      }
+    },
+    {
+      "query": "What is the latest in code RL environments and human data?",
+      "windowDays": 7,
+      "result": {
+        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=What+is+the+latest+in+code+RL+environments+and+human+data%3F&type=video&order=date&maxResults=25&publishedAfter=2026-02-25T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
+        "raw": {
+          "kind": "youtube#searchListResponse",
+          "etag": "w5ll8htiJCxOdkz4FFqJi_P2vCg",
+          "regionCode": "US",
+          "pageInfo": {
+            "totalResults": 8,
+            "resultsPerPage": 0
+          },
+          "items": []
+        },
+        "videos": []
+      }
+    },
+    {
+      "query": "SWE-rebench V2 RL coding agents",
+      "windowDays": 7,
+      "result": {
+        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=SWE-rebench+V2+RL+coding+agents&type=video&order=date&maxResults=25&publishedAfter=2026-02-25T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
+        "raw": {
+          "kind": "youtube#searchListResponse",
+          "etag": "UBAOiXjvY0CZ7Ub9tJDO9bUtsU8",
+          "regionCode": "US",
+          "pageInfo": {
+            "totalResults": 0,
+            "resultsPerPage": 0
+          },
+          "items": []
+        },
+        "videos": []
+      }
+    },
+    {
+      "query": "code RL environments human data",
+      "windowDays": 7,
+      "result": {
+        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=code+RL+environments+human+data&type=video&order=date&maxResults=25&publishedAfter=2026-02-25T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
+        "raw": {
+          "kind": "youtube#searchListResponse",
+          "etag": "let0-rXGmZ5qRwO0kSnIR6hVw_M",
+          "regionCode": "US",
+          "pageInfo": {
+            "totalResults": 11,
+            "resultsPerPage": 0
+          },
+          "items": []
+        },
+        "videos": []
+      }
+    },
+    {
+      "query": "verifiable rewards coding agents",
+      "windowDays": 7,
+      "result": {
+        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=verifiable+rewards+coding+agents&type=video&order=date&maxResults=25&publishedAfter=2026-02-25T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
+        "raw": {
+          "kind": "youtube#searchListResponse",
+          "etag": "Lap3dr_fCDmO12YTbv-5Bu_G-F0",
+          "regionCode": "US",
+          "pageInfo": {
+            "totalResults": 124,
+            "resultsPerPage": 0
+          },
+          "items": []
+        },
+        "videos": []
+      }
+    },
+    {
+      "query": "coding agents RL",
+      "windowDays": 30,
+      "result": {
+        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=coding+agents+RL&type=video&order=date&maxResults=25&publishedAfter=2026-02-02T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
+        "raw": {
+          "kind": "youtube#searchListResponse",
+          "etag": "wzG3h-mJDtF4href9VUv5Kzwr84",
+          "regionCode": "US",
+          "pageInfo": {
+            "totalResults": 345,
+            "resultsPerPage": 18
+          },
+          "items": [
+            {
+              "kind": "youtube#searchResult",
+              "etag": "C-2DzP_GyxcQMAqiWRFgH6auG0A",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "76--lTR1IB8"
+              },
+              "snippet": {
+                "publishedAt": "2026-03-03T01:14:45Z",
+                "channelId": "UC2L4a04U75TJizr0MRhh9zQ",
+                "title": "RL Explained: 60-Second AI Guide #coding #ai",
+                "description": "Master Reinforcement Learning: train AI agents through rewards and punishments. Understand the core concepts in under a ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/76--lTR1IB8/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/76--lTR1IB8/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/76--lTR1IB8/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Synthetix Hub",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-03-03T01:14:45Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "GwTTTcENdgOK2HT8BOvZkNcCx4k",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "pMVQRqTUzkM"
+              },
+              "snippet": {
+                "publishedAt": "2026-03-01T18:31:09Z",
+                "channelId": "UCdbmeAOQqgYt5tPcjYC-pUw",
+                "title": "Will AI Take All Coding Jobs? The RL Blueprint That Changes Everything",
+                "description": "Will AI really replace software developers? In this deep dive, we explore why both sides of the debate are RIGHT \u2014 and what ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/pMVQRqTUzkM/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/pMVQRqTUzkM/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/pMVQRqTUzkM/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "AI Depth School",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-03-01T18:31:09Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "ImSKXjYM8-m8iDyhQ0ePuHl80ks",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "pcLacmjABZQ"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-24T14:30:06Z",
+                "channelId": "UCXsTWv-eSkKPT-KbaKIhj7A",
+                "title": "Build an Autonomous Research Agent with Self-Correction (RL, Tools &amp; Multi-Agent AI)",
+                "description": "Mark Attendance & Submit Assignment at One Place \u2192 https://luc.to/arafeb26d1 Join GenAI Discussion group to get daily ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/pcLacmjABZQ/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/pcLacmjABZQ/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/pcLacmjABZQ/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "LetsUpgrade",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-24T14:30:06Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "AfTZxpWcvlpxsqupz_VEV5xQApU",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "Hhs74H-8XUw"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-20T14:44:25Z",
+                "channelId": "UC9mfC57IPmYp_ji-4uVU2vg",
+                "title": "SKILLRL: Evolving LLM Agents via Recursive Skill-Augmented RL",
+                "description": "Explore SKILLRL by Peng Xia et al., a new framework that enables LLM agents to distill raw experiences into reusable skills.",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/Hhs74H-8XUw/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/Hhs74H-8XUw/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/Hhs74H-8XUw/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "PaperLens",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-20T14:44:25Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "GLoXJEMpxpCPDgTbed7tsbVNzIg",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "tvSvC44IRMY"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-18T14:28:52Z",
+                "channelId": "UCCGTBQS-xmBv1Ol4EVhKgrg",
+                "title": "GLM-5: from Vibe Coding to Agentic Engineering",
+                "description": "GLM-5: From Vibe Coding to Agentic Engineering The era of \u201cjust prompt it\u201d is over\u2026 Welcome to the age of autonomous AI ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/tvSvC44IRMY/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/tvSvC44IRMY/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/tvSvC44IRMY/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Praveen Govindaraj",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-18T14:28:52Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "vLY43BaRAgyzQK2sMd9FFVOfqjY",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "uKZBGj0A8Vs"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-17T15:46:37Z",
+                "channelId": "UC3NDbeN0Jq_InNAhiJtvHcQ",
+                "title": "Computer Use Agents: From SFT to Classic RL - \u041c\u0430\u043a\u0441\u0438\u043c \u0428\u0430\u043c\u0440\u0430\u0439",
+                "description": "\u0412\u0456\u0434\u0435\u043e \u0437 Fwdays+DevRain AI \u043a\u043e\u043d\u0444\u0435\u0440\u0435\u043d\u0446\u0456\u0457, \u044f\u043a\u0430 \u043f\u0440\u043e\u0439\u0448\u043b\u0430 5 \u043b\u0438\u043f\u043d\u044f 2025 \u0440\u043e\u043a\u0443 https://fwdays.com/event/fwdays-devrain-ai \u041e\u043f\u0438\u0441 ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/uKZBGj0A8Vs/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/uKZBGj0A8Vs/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/uKZBGj0A8Vs/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "fwdays",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-17T15:46:37Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "mGOrgtGNrS2FNlET6KT3SWDQC_A",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "YmzXmerS1kk"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-17T02:05:49Z",
+                "channelId": "UCG9xh_fS0vtveixhWHiHm3w",
+                "title": "Multi agent rl code optimizer",
+                "description": "",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/YmzXmerS1kk/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/YmzXmerS1kk/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/YmzXmerS1kk/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Rishit Maheshwari",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-17T02:05:49Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "SOwdqzoolzjqdU-ehXiwIS-mYkU",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "_h2EnRfxMQE"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-16T16:05:00Z",
+                "channelId": "UC4x3CR25WSlvMJUtSPPzwwg",
+                "title": "How I Built The PERFECT AI Agent In 1 Week (And Why I CANT Release It)",
+                "description": "Hi my name is Chris and I build productivity apps and this is EVERYTHING I learned building an AI agent using the Anthropic ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/_h2EnRfxMQE/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/_h2EnRfxMQE/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/_h2EnRfxMQE/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Chris Raroque",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-16T16:05:00Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "PKiHWyJksXIgmj8IquRrSDBAzxI",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "Jyuhgq-nFEI"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-16T07:10:47Z",
+                "channelId": "UCtegCTqDZHIoVfmLpWiPklQ",
+                "title": "The Learning Loop \u2014 How Agents Learn from Rewards | RL Course EP1",
+                "description": "What happens when you drop a robot into a maze with no map, no instructions, and no teacher? It learns. In this first episode of ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/Jyuhgq-nFEI/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/Jyuhgq-nFEI/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/Jyuhgq-nFEI/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "The AI Epileptic",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-16T07:10:47Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "9Na4UhNke-onvIUmwW3bHHvrjc8",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "PouPQpeYJ4g"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-14T22:15:01Z",
+                "channelId": "UCPUUoB9Tz6WqkeSsoLAyuOg",
+                "title": "AI Has Digital Amnesia \ud83e\udde0\u274c SkillRL Fixes It  #ai",
+                "description": "Most AI agents have digital amnesia. They move from task to task and start from scratch. This video breaks down a new research ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/PouPQpeYJ4g/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/PouPQpeYJ4g/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/PouPQpeYJ4g/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "AICKStudio",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-14T22:15:01Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "jeZ5c8PY3f9fwos51x2KGFqjn90",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "n1E9IZfvGMA"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-13T17:11:03Z",
+                "channelId": "UCXl4i9dYBrFOabk0xGmbkRA",
+                "title": "Dario Amodei \u2014 \u201cWe are near the end of the exponential\u201d",
+                "description": "Dario Amodei thinks we are just a few years away from \u201ca country of geniuses in a data center\u201d. In this episode, we discuss what to ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/n1E9IZfvGMA/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/n1E9IZfvGMA/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/n1E9IZfvGMA/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Dwarkesh Patel",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-13T17:11:03Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "xQU8bh4yTNF2_7yh0BzqDEjEghk",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "f1DzkFc9vxo"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-13T11:30:39Z",
+                "channelId": "UC55ODQSvARtgSyc8ThfiepQ",
+                "title": "Minimax M2.5 - What Makes This Different!",
+                "description": "In this video, I look at the latest release from Minimax, the M2.5 model. Site: https://www.minimax.io/news/minimax-m25 Open ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/f1DzkFc9vxo/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/f1DzkFc9vxo/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/f1DzkFc9vxo/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Sam Witteveen",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-13T11:30:39Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "eTSiZ8U_bUVVEIIhgoubFUWj0mk",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "QoQBzR1NIqI"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-12T17:14:59Z",
+                "channelId": "UCbo-KbSjJDG6JWQ_MTZ_rNA",
+                "title": "CLAUDE CODE FULL COURSE 4 HOURS: Build &amp; Sell (2026)",
+                "description": "Join Maker School & get customer #1 guaranteed: https://skool.com/makerschool/about All course files: ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/QoQBzR1NIqI/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/QoQBzR1NIqI/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/QoQBzR1NIqI/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Nick Saraev",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-12T17:14:59Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "cbCQ9dlDP82h3La1DuOaQ1xxZUI",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "SJc1y5z5wwM"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-10T13:00:54Z",
+                "channelId": "UCWrF0oN6unbXrWsTN7RctTw",
+                "title": "Building the GitHub for RL Environments: Prime Intellect&#39;s Will Brown &amp; Johannes Hagemann",
+                "description": "Will Brown and Johannes Hagemann of Prime Intellect discuss the shift from static prompting to \"environment-based\" AI ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/SJc1y5z5wwM/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/SJc1y5z5wwM/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/SJc1y5z5wwM/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Sequoia Capital",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-10T13:00:54Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "A_bGBk5xUHtmTh6RXMObwrFFlGY",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "Y6K3x8T_g4s"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-10T10:00:47Z",
+                "channelId": "UCviY8ejfPGxPQizSm5aQvNw",
+                "title": "AI Daily: Autonomous Agent Runtimes, Self-Distillation RL, Self-Improving Pretraining, LLM Insight",
+                "description": "This AI Daily compilation covers four cutting-edge research topics shaping the future of LLMs and AI systems. VibeTensor ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/Y6K3x8T_g4s/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/Y6K3x8T_g4s/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/Y6K3x8T_g4s/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "CosmoX",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-10T10:00:47Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "cwP-g1CWtZLRJTyXb1zWDDgH2AI",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "7J_Z7Oh8nbU"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-10T00:48:56Z",
+                "channelId": "UCPMpnkICproRUOvJcMmxTfw",
+                "title": "Feb 3, 2026 - Meta-RL Induces Exploration in Language Agents",
+                "description": "Author presentation by Yulun Jiang for BlueDot Evals Reading Group: https://evalsreadinggroup.com Paper is here: ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/7J_Z7Oh8nbU/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/7J_Z7Oh8nbU/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/7J_Z7Oh8nbU/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "BlueDot AI Safety Evals Reading Group",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-10T00:48:56Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "cMYwJdXA0Xit_USPGKKGU6ttoNc",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "qUg6AARGpwY"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-06T02:27:31Z",
+                "channelId": "UCgan40EwxkwM9ot1pV8lTFA",
+                "title": "RLAnything: Dynamic RL System for LLM Agents",
+                "description": "In this AI Research Roundup episode, Alex discusses the paper: 'RLAnything: Forge Environment, Policy, and Reward Model in ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/qUg6AARGpwY/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/qUg6AARGpwY/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/qUg6AARGpwY/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "AI Research Roundup",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-06T02:27:31Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "hwbO_8_IdJDVQsfXJngdgX3gMK8",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "u7lU7EPysXw"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-03T10:31:05Z",
+                "channelId": "UCviY8ejfPGxPQizSm5aQvNw",
+                "title": "AI Daily: Coding Agent Optimization, Claude App Integration, GPT-OSS RL, LLM Data Prep",
+                "description": "This AI Daily compilation covers four major trends in AI research, products, and engineering. SWE-Pruner for self-adaptive ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/u7lU7EPysXw/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/u7lU7EPysXw/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/u7lU7EPysXw/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "CosmoX",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-03T10:31:05Z"
+              }
+            }
+          ]
+        },
+        "videos": [
+          {
+            "videoId": "76--lTR1IB8",
+            "title": "RL Explained: 60-Second AI Guide #coding #ai",
+            "channelTitle": "Synthetix Hub",
+            "publishedAt": "2026-03-03T01:14:45Z",
+            "description": "Master Reinforcement Learning: train AI agents through rewards and punishments. Understand the core concepts in under a ...",
+            "url": "https://www.youtube.com/watch?v=76--lTR1IB8",
+            "query": "coding agents RL",
+            "windowDays": 30
+          },
+          {
+            "videoId": "pMVQRqTUzkM",
+            "title": "Will AI Take All Coding Jobs? The RL Blueprint That Changes Everything",
+            "channelTitle": "AI Depth School",
+            "publishedAt": "2026-03-01T18:31:09Z",
+            "description": "Will AI really replace software developers? In this deep dive, we explore why both sides of the debate are RIGHT \u2014 and what ...",
+            "url": "https://www.youtube.com/watch?v=pMVQRqTUzkM",
+            "query": "coding agents RL",
+            "windowDays": 30
+          },
+          {
+            "videoId": "pcLacmjABZQ",
+            "title": "Build an Autonomous Research Agent with Self-Correction (RL, Tools &amp; Multi-Agent AI)",
+            "channelTitle": "LetsUpgrade",
+            "publishedAt": "2026-02-24T14:30:06Z",
+            "description": "Mark Attendance & Submit Assignment at One Place \u2192 https://luc.to/arafeb26d1 Join GenAI Discussion group to get daily ...",
+            "url": "https://www.youtube.com/watch?v=pcLacmjABZQ",
+            "query": "coding agents RL",
+            "windowDays": 30
+          },
+          {
+            "videoId": "Hhs74H-8XUw",
+            "title": "SKILLRL: Evolving LLM Agents via Recursive Skill-Augmented RL",
+            "channelTitle": "PaperLens",
+            "publishedAt": "2026-02-20T14:44:25Z",
+            "description": "Explore SKILLRL by Peng Xia et al., a new framework that enables LLM agents to distill raw experiences into reusable skills.",
+            "url": "https://www.youtube.com/watch?v=Hhs74H-8XUw",
+            "query": "coding agents RL",
+            "windowDays": 30
+          },
+          {
+            "videoId": "tvSvC44IRMY",
+            "title": "GLM-5: from Vibe Coding to Agentic Engineering",
+            "channelTitle": "Praveen Govindaraj",
+            "publishedAt": "2026-02-18T14:28:52Z",
+            "description": "GLM-5: From Vibe Coding to Agentic Engineering The era of \u201cjust prompt it\u201d is over\u2026 Welcome to the age of autonomous AI ...",
+            "url": "https://www.youtube.com/watch?v=tvSvC44IRMY",
+            "query": "coding agents RL",
+            "windowDays": 30
+          },
+          {
+            "videoId": "uKZBGj0A8Vs",
+            "title": "Computer Use Agents: From SFT to Classic RL - \u041c\u0430\u043a\u0441\u0438\u043c \u0428\u0430\u043c\u0440\u0430\u0439",
+            "channelTitle": "fwdays",
+            "publishedAt": "2026-02-17T15:46:37Z",
+            "description": "\u0412\u0456\u0434\u0435\u043e \u0437 Fwdays+DevRain AI \u043a\u043e\u043d\u0444\u0435\u0440\u0435\u043d\u0446\u0456\u0457, \u044f\u043a\u0430 \u043f\u0440\u043e\u0439\u0448\u043b\u0430 5 \u043b\u0438\u043f\u043d\u044f 2025 \u0440\u043e\u043a\u0443 https://fwdays.com/event/fwdays-devrain-ai \u041e\u043f\u0438\u0441 ...",
+            "url": "https://www.youtube.com/watch?v=uKZBGj0A8Vs",
+            "query": "coding agents RL",
+            "windowDays": 30
+          },
+          {
+            "videoId": "YmzXmerS1kk",
+            "title": "Multi agent rl code optimizer",
+            "channelTitle": "Rishit Maheshwari",
+            "publishedAt": "2026-02-17T02:05:49Z",
+            "description": "",
+            "url": "https://www.youtube.com/watch?v=YmzXmerS1kk",
+            "query": "coding agents RL",
+            "windowDays": 30
+          },
+          {
+            "videoId": "_h2EnRfxMQE",
+            "title": "How I Built The PERFECT AI Agent In 1 Week (And Why I CANT Release It)",
+            "channelTitle": "Chris Raroque",
+            "publishedAt": "2026-02-16T16:05:00Z",
+            "description": "Hi my name is Chris and I build productivity apps and this is EVERYTHING I learned building an AI agent using the Anthropic ...",
+            "url": "https://www.youtube.com/watch?v=_h2EnRfxMQE",
+            "query": "coding agents RL",
+            "windowDays": 30
+          },
+          {
+            "videoId": "Jyuhgq-nFEI",
+            "title": "The Learning Loop \u2014 How Agents Learn from Rewards | RL Course EP1",
+            "channelTitle": "The AI Epileptic",
+            "publishedAt": "2026-02-16T07:10:47Z",
+            "description": "What happens when you drop a robot into a maze with no map, no instructions, and no teacher? It learns. In this first episode of ...",
+            "url": "https://www.youtube.com/watch?v=Jyuhgq-nFEI",
+            "query": "coding agents RL",
+            "windowDays": 30
+          },
+          {
+            "videoId": "PouPQpeYJ4g",
+            "title": "AI Has Digital Amnesia \ud83e\udde0\u274c SkillRL Fixes It  #ai",
+            "channelTitle": "AICKStudio",
+            "publishedAt": "2026-02-14T22:15:01Z",
+            "description": "Most AI agents have digital amnesia. They move from task to task and start from scratch. This video breaks down a new research ...",
+            "url": "https://www.youtube.com/watch?v=PouPQpeYJ4g",
+            "query": "coding agents RL",
+            "windowDays": 30
+          },
+          {
+            "videoId": "n1E9IZfvGMA",
+            "title": "Dario Amodei \u2014 \u201cWe are near the end of the exponential\u201d",
+            "channelTitle": "Dwarkesh Patel",
+            "publishedAt": "2026-02-13T17:11:03Z",
+            "description": "Dario Amodei thinks we are just a few years away from \u201ca country of geniuses in a data center\u201d. In this episode, we discuss what to ...",
+            "url": "https://www.youtube.com/watch?v=n1E9IZfvGMA",
+            "query": "coding agents RL",
+            "windowDays": 30
+          },
+          {
+            "videoId": "f1DzkFc9vxo",
+            "title": "Minimax M2.5 - What Makes This Different!",
+            "channelTitle": "Sam Witteveen",
+            "publishedAt": "2026-02-13T11:30:39Z",
+            "description": "In this video, I look at the latest release from Minimax, the M2.5 model. Site: https://www.minimax.io/news/minimax-m25 Open ...",
+            "url": "https://www.youtube.com/watch?v=f1DzkFc9vxo",
+            "query": "coding agents RL",
+            "windowDays": 30
+          },
+          {
+            "videoId": "QoQBzR1NIqI",
+            "title": "CLAUDE CODE FULL COURSE 4 HOURS: Build &amp; Sell (2026)",
+            "channelTitle": "Nick Saraev",
+            "publishedAt": "2026-02-12T17:14:59Z",
+            "description": "Join Maker School & get customer #1 guaranteed: https://skool.com/makerschool/about All course files: ...",
+            "url": "https://www.youtube.com/watch?v=QoQBzR1NIqI",
+            "query": "coding agents RL",
+            "windowDays": 30
+          },
+          {
+            "videoId": "SJc1y5z5wwM",
+            "title": "Building the GitHub for RL Environments: Prime Intellect&#39;s Will Brown &amp; Johannes Hagemann",
+            "channelTitle": "Sequoia Capital",
+            "publishedAt": "2026-02-10T13:00:54Z",
+            "description": "Will Brown and Johannes Hagemann of Prime Intellect discuss the shift from static prompting to \"environment-based\" AI ...",
+            "url": "https://www.youtube.com/watch?v=SJc1y5z5wwM",
+            "query": "coding agents RL",
+            "windowDays": 30
+          },
+          {
+            "videoId": "Y6K3x8T_g4s",
+            "title": "AI Daily: Autonomous Agent Runtimes, Self-Distillation RL, Self-Improving Pretraining, LLM Insight",
+            "channelTitle": "CosmoX",
+            "publishedAt": "2026-02-10T10:00:47Z",
+            "description": "This AI Daily compilation covers four cutting-edge research topics shaping the future of LLMs and AI systems. VibeTensor ...",
+            "url": "https://www.youtube.com/watch?v=Y6K3x8T_g4s",
+            "query": "coding agents RL",
+            "windowDays": 30
+          },
+          {
+            "videoId": "7J_Z7Oh8nbU",
+            "title": "Feb 3, 2026 - Meta-RL Induces Exploration in Language Agents",
+            "channelTitle": "BlueDot AI Safety Evals Reading Group",
+            "publishedAt": "2026-02-10T00:48:56Z",
+            "description": "Author presentation by Yulun Jiang for BlueDot Evals Reading Group: https://evalsreadinggroup.com Paper is here: ...",
+            "url": "https://www.youtube.com/watch?v=7J_Z7Oh8nbU",
+            "query": "coding agents RL",
+            "windowDays": 30
+          },
+          {
+            "videoId": "qUg6AARGpwY",
+            "title": "RLAnything: Dynamic RL System for LLM Agents",
+            "channelTitle": "AI Research Roundup",
+            "publishedAt": "2026-02-06T02:27:31Z",
+            "description": "In this AI Research Roundup episode, Alex discusses the paper: 'RLAnything: Forge Environment, Policy, and Reward Model in ...",
+            "url": "https://www.youtube.com/watch?v=qUg6AARGpwY",
+            "query": "coding agents RL",
+            "windowDays": 30
+          },
+          {
+            "videoId": "u7lU7EPysXw",
+            "title": "AI Daily: Coding Agent Optimization, Claude App Integration, GPT-OSS RL, LLM Data Prep",
+            "channelTitle": "CosmoX",
+            "publishedAt": "2026-02-03T10:31:05Z",
+            "description": "This AI Daily compilation covers four major trends in AI research, products, and engineering. SWE-Pruner for self-adaptive ...",
+            "url": "https://www.youtube.com/watch?v=u7lU7EPysXw",
+            "query": "coding agents RL",
+            "windowDays": 30
+          }
+        ]
+      }
+    },
+    {
+      "query": "SWE-bench agents",
+      "windowDays": 30,
+      "result": {
+        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=SWE-bench+agents&type=video&order=date&maxResults=25&publishedAfter=2026-02-02T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
+        "raw": {
+          "kind": "youtube#searchListResponse",
+          "etag": "vZCv-4CzSd8yvAIz3xGAHGZ5UwA",
+          "regionCode": "US",
+          "pageInfo": {
+            "totalResults": 644,
+            "resultsPerPage": 15
+          },
+          "items": [
+            {
+              "kind": "youtube#searchResult",
+              "etag": "lVk7m6THxrXa3xy7S-q6Bcsp9W0",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "miDg-3rSJlQ"
+              },
+              "snippet": {
+                "publishedAt": "2026-03-03T18:00:50Z",
+                "channelId": "UCXfLZFSEeYR40lgXl3OCvHA",
+                "title": "How to Make AGENTS.md Actually Work (Claude Code, Codex, Gemini, and more)",
+                "description": "LLM-generated AGENTS.md / CLAUDE.md files are hurting your coding agent. A brand-new study tested repo-level context files ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/miDg-3rSJlQ/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/miDg-3rSJlQ/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/miDg-3rSJlQ/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Not Replaced Yet",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-03-03T18:00:50Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "yOAkUA1YL-dc9TessLPiXr2AekM",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "pFM9eq67DmI"
+              },
+              "snippet": {
+                "publishedAt": "2026-03-03T05:34:45Z",
+                "channelId": "UC6qxkncDIHYgi8Z3A49ZIRg",
+                "title": "\ud83e\udd16\u81ea\u5df1\u6539\u5584\u578b\u30b3\u30fc\u30c7\u30a3\u30f3\u30b0\u30a8\u30fc\u30b8\u30a7\u30f3\u30c8 | \u2728\u3010ReelPaper\u3011 #shorts #\u8ad6\u6587\u89e3\u8aac #ai #\u30b3\u30fc\u30c7\u30a3\u30f3\u30b0 #llm #\u30a8\u30fc\u30b8\u30a7\u30f3\u30c8",
+                "description": "\u81ea\u5df1\u6539\u5584\u578b\u30b3\u30fc\u30c7\u30a3\u30f3\u30b0\u30a8\u30fc\u30b8\u30a7\u30f3\u30c8 | A Self-Improving Coding Agent\u2728\u3010ReelPaper\u3011 \u3010\u8457\u8005\u3011 Maxime Robeyns et al.",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/pFM9eq67DmI/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/pFM9eq67DmI/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/pFM9eq67DmI/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "ReelPaper | \u30ea\u30fc\u30eb\u30da\u30fc\u30d1\u30fc\u3000\u8ad6\u6587 in 1min",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-03-03T05:34:45Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "uo4woPYCZJVC_jskgImJYm4ts80",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "F19hJxKTUY0"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-28T07:50:45Z",
+                "channelId": "UCwoZG4C372vdEh_GRSxMpPw",
+                "title": "LLMs battle in RTS code &amp; Benchmarks: SWE-bench credibility crisis - AI News (Feb 25, 2026)",
+                "description": "Today's topics: LLMs battle in RTS code - LLM Skirmish pits models in 1v1 RTS matches using Screeps-style code, tracking ELO, ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/F19hJxKTUY0/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/F19hJxKTUY0/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/F19hJxKTUY0/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "The Automated Daily",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-28T07:50:45Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "sLG2IuJw3mf5SAAf0Wg_3Cmkkq8",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "_BJwkGJuXc4"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-24T14:44:30Z",
+                "channelId": "UCf-oQl77vUKD4yHsYv3zs9Q",
+                "title": "OpenAI will no longer evaluate against SWE-bench Verified | Next in AI | Astha La Vista",
+                "description": "Today's signal is clear: AI evaluation, safety, and infrastructure are becoming as important as raw model capability. OpenAI ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/_BJwkGJuXc4/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/_BJwkGJuXc4/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/_BJwkGJuXc4/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Next in AI: Astha La Vista",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-24T14:44:30Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "t75EHEAfmeAB-9YaaNU0uSvnC2U",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "QlGW4jabeek"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-23T22:21:28Z",
+                "channelId": "UCtSCw2_rVZKXb_8Uo9trStQ",
+                "title": "10 AI News | Feb 24, 2026 \u2014 Memorization \u2022 Anthropic vs China \u2022 SWE-bench \u2022 NVIDIA  &amp; More",
+                "description": "AI news roundup: LLMs memorizing novels (Ars Technica), Anthropic vs DeepSeek/MiniMax/Moonshot distillation attacks (The ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/QlGW4jabeek/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/QlGW4jabeek/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/QlGW4jabeek/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "nullmicgo",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-23T22:21:28Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "80Elk-gGoCgd6KwC1gOUp8bIaOM",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "1hmQLSgRnkE"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-23T22:00:02Z",
+                "channelId": "UCnEBbjQifOWda5KdN429IPg",
+                "title": "[\ud074\ub85c\ub4dc \ucf54\uc6cc\ud06c 2\ud3b8-3] \ud0c0\uc0ac\uc640 \ube44\uad50 \ubd88\uac00\ud55c \ud074\ub85c\ub4dc \ucf54\ub4dc\uc758 \ud798 #\ud074\ub85c\ub4dcOpus4.6 #\uc5d0\uc774\uc804\ud2f1AI #\uc790\uac00\uce58\uc720 #ClaudeOpus4.6 #AgenticAI",
+                "description": "\uad00\ub828 \ud50c\ub808\uc774\ub9ac\uc2a4\ud2b8 \ub371\uc2a4\ud130\uc640 \ud074\ub808\uc5b4\uc758 Story Radio Station \uc2dc\uc98c#1: ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/1hmQLSgRnkE/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/1hmQLSgRnkE/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/1hmQLSgRnkE/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Story Radio Station",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-23T22:00:02Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "9jMzyK7YRtvv1ngRBvjmykxn3F8",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "0HaUD_olwQU"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-23T18:33:04Z",
+                "channelId": "UCxBcwypKK-W3GHd_RZ9FZrQ",
+                "title": "The End of SWE-Bench Verified \u2014 Mia Glaese &amp; Olivia Watkins, OpenAI Frontier Evals",
+                "description": "Olivia Watkins (Frontier Evals team) and Mia Glaese (VP of Research at OpenAI, leading the Codex, human data, and alignment ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/0HaUD_olwQU/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/0HaUD_olwQU/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/0HaUD_olwQU/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Latent Space",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-23T18:33:04Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "HjRAEj2ZkeWPBv4aTVKtyDUFYiI",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "yM9XWUz1nTw"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-19T05:07:04Z",
+                "channelId": "UCtBN-GUOfwcvDXz26GhxvRw",
+                "title": "#20 AI Code Fixing  SWE Bench Gold Standard Tested!",
+                "description": "Listen to Full Audio at ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/yM9XWUz1nTw/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/yM9XWUz1nTw/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/yM9XWUz1nTw/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Etienne Noumen and AI Unraveled",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-19T05:07:04Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "8u35Z4h9iK7GbDA_CbLwGYMRVgM",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "wW9Y7zQi_j4"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-15T15:59:01Z",
+                "channelId": "UC5HDIVwuqoIuKKw-WbQ4CvA",
+                "title": "Les mod\u00e8les NOUS MENTENT TOUS : La v\u00e9rit\u00e9 sur les benchmarks SWE-Bench",
+                "description": "Ma formation IA : https://mlv.sh/Qy1FCuH \u25b7 TIMECODES 0:00 - Introduction 1:30 - Probl\u00e8mes des benchmarks actuels 2:15 ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/wW9Y7zQi_j4/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/wW9Y7zQi_j4/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/wW9Y7zQi_j4/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Melvynx",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-15T15:59:01Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "mI6rRmHUJ_NTnzRvmV5ZrvvA_mM",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "RARfr6ScIGI"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-07T18:00:06Z",
+                "channelId": "UCwaTGE53GLGC3fDClVl_7TA",
+                "title": "Vibe Coding With GPT 5.3 Codex",
+                "description": "In this video, I am putting the newly released GPT 5.3 Codex to the ultimate test in a new benchmark I am calling BridgeBench.",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/RARfr6ScIGI/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/RARfr6ScIGI/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/RARfr6ScIGI/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "BridgeMind",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-07T18:00:06Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "8I4AjsI_Fb3nWOU18o156n6Dp_k",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "AIMEe_hShfI"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-07T15:03:00Z",
+                "channelId": "UCGJAcveK9o1xObmuR_bFhrA",
+                "title": "A China Acaba De Tornar Os Programadores Humanos Obsoletos: Qwen3-Coder-Next",
+                "description": "O aviso de despejo para a engenharia de software tradicional acaba de ser emitido em Hangzhou. O Qwen3-Coder-Next n\u00e3o \u00e9 ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/AIMEe_hShfI/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/AIMEe_hShfI/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/AIMEe_hShfI/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Paula Bernardes",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-07T15:03:00Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "k5o8GtfWm_ewH0uk1Nbxa0NbnbQ",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "2Vw7ZVpgg80"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-07T14:30:05Z",
+                "channelId": "UCs39h9hY9QwJ7AlUX_kUJRQ",
+                "title": "This FREE AI Coding Agent Just Hit 70.6% on SWE-Bench (Runs Locally, Apache 2.0)",
+                "description": "Alibaba just released Qwen3-Coder-Next, and it's completely changing the game for local AI coding. This is an 80 billion ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/2Vw7ZVpgg80/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/2Vw7ZVpgg80/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/2Vw7ZVpgg80/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "AISoftScope",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-07T14:30:05Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "0X4RNyxW6HRjTG155iomohKBucI",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "OFwkQrsrNlE"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-07T02:19:21Z",
+                "channelId": "UCgan40EwxkwM9ot1pV8lTFA",
+                "title": "SWE-Universe: 800k+ Coding Agent Environments",
+                "description": "In this AI Research Roundup episode, Alex discusses the paper: 'SWE-Universe: Scale Real-World Verifiable Environments to ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/OFwkQrsrNlE/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/OFwkQrsrNlE/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/OFwkQrsrNlE/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "AI Research Roundup",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-07T02:19:21Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "RSWN2PzdmJhQyXj_QAUVBJMXxAM",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "HJj0uMLgBGo"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-06T05:00:31Z",
+                "channelId": "UCdd-Xj9HNn-rIURJGnnCBJg",
+                "title": "Alibaba Qwen3-Coder-Next 80B \ubaa8\ub378, SWE-Bench 70% \ub2ec\uc131\ud55c \ubb34\ub8cc \ucf54\ub529 AI",
+                "description": "1\uc778 \ucc3d\uc5c5\uac00\ub97c \uc704\ud55c \ud50c\ub7ab\ud3fc, \ud5e4\uc774\uc81c\uc784\uc2a4: https://heyjames.ai 1\uc778 \ucc3d\uc5c5\uac00\ub97c \uc704\ud55c \ucc3d\uc5c5 \uc544\uc774\ud15c \uac15\uc758: https://heyjames.ai/courses/7 ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/HJj0uMLgBGo/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/HJj0uMLgBGo/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/HJj0uMLgBGo/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "\ud5e4\uc774, \uc81c\uc784\uc2a4! - \ucf54\ub529, AI, \ucc3d\uc5c5",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-06T05:00:31Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "XWxR-oDC1DY8r9zFlM2AsbUHxmY",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "FZzaXkoWHMk"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-05T20:36:27Z",
+                "channelId": "UCA9Uddhvf9saGUUbqMopOKg",
+                "title": "\u78be\u538b SWE-Bench\uff01GPT-5.3-Codex \u53d1\u5e03 \u5982\u4f55\u91cd\u65b0\u5b9a\u4e49 AI \u7f16\u7a0b\u4e0e\u8c03\u8bd5\uff1f\u53f2\u4e0a\u6700\u5f3a Agent \u6765\u4e86\uff1fGPT-5.3-Codex \u5b9e\u6d4b",
+                "description": "",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/FZzaXkoWHMk/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/FZzaXkoWHMk/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/FZzaXkoWHMk/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "\u81ea\u7531\u6f2b\u8c08",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-05T20:36:27Z"
+              }
+            }
+          ]
+        },
+        "videos": [
+          {
+            "videoId": "miDg-3rSJlQ",
+            "title": "How to Make AGENTS.md Actually Work (Claude Code, Codex, Gemini, and more)",
+            "channelTitle": "Not Replaced Yet",
+            "publishedAt": "2026-03-03T18:00:50Z",
+            "description": "LLM-generated AGENTS.md / CLAUDE.md files are hurting your coding agent. A brand-new study tested repo-level context files ...",
+            "url": "https://www.youtube.com/watch?v=miDg-3rSJlQ",
+            "query": "SWE-bench agents",
+            "windowDays": 30
+          },
+          {
+            "videoId": "pFM9eq67DmI",
+            "title": "\ud83e\udd16\u81ea\u5df1\u6539\u5584\u578b\u30b3\u30fc\u30c7\u30a3\u30f3\u30b0\u30a8\u30fc\u30b8\u30a7\u30f3\u30c8 | \u2728\u3010ReelPaper\u3011 #shorts #\u8ad6\u6587\u89e3\u8aac #ai #\u30b3\u30fc\u30c7\u30a3\u30f3\u30b0 #llm #\u30a8\u30fc\u30b8\u30a7\u30f3\u30c8",
+            "channelTitle": "ReelPaper | \u30ea\u30fc\u30eb\u30da\u30fc\u30d1\u30fc\u3000\u8ad6\u6587 in 1min",
+            "publishedAt": "2026-03-03T05:34:45Z",
+            "description": "\u81ea\u5df1\u6539\u5584\u578b\u30b3\u30fc\u30c7\u30a3\u30f3\u30b0\u30a8\u30fc\u30b8\u30a7\u30f3\u30c8 | A Self-Improving Coding Agent\u2728\u3010ReelPaper\u3011 \u3010\u8457\u8005\u3011 Maxime Robeyns et al.",
+            "url": "https://www.youtube.com/watch?v=pFM9eq67DmI",
+            "query": "SWE-bench agents",
+            "windowDays": 30
+          },
+          {
+            "videoId": "F19hJxKTUY0",
+            "title": "LLMs battle in RTS code &amp; Benchmarks: SWE-bench credibility crisis - AI News (Feb 25, 2026)",
+            "channelTitle": "The Automated Daily",
+            "publishedAt": "2026-02-28T07:50:45Z",
+            "description": "Today's topics: LLMs battle in RTS code - LLM Skirmish pits models in 1v1 RTS matches using Screeps-style code, tracking ELO, ...",
+            "url": "https://www.youtube.com/watch?v=F19hJxKTUY0",
+            "query": "SWE-bench agents",
+            "windowDays": 30
+          },
+          {
+            "videoId": "_BJwkGJuXc4",
+            "title": "OpenAI will no longer evaluate against SWE-bench Verified | Next in AI | Astha La Vista",
+            "channelTitle": "Next in AI: Astha La Vista",
+            "publishedAt": "2026-02-24T14:44:30Z",
+            "description": "Today's signal is clear: AI evaluation, safety, and infrastructure are becoming as important as raw model capability. OpenAI ...",
+            "url": "https://www.youtube.com/watch?v=_BJwkGJuXc4",
+            "query": "SWE-bench agents",
+            "windowDays": 30
+          },
+          {
+            "videoId": "QlGW4jabeek",
+            "title": "10 AI News | Feb 24, 2026 \u2014 Memorization \u2022 Anthropic vs China \u2022 SWE-bench \u2022 NVIDIA  &amp; More",
+            "channelTitle": "nullmicgo",
+            "publishedAt": "2026-02-23T22:21:28Z",
+            "description": "AI news roundup: LLMs memorizing novels (Ars Technica), Anthropic vs DeepSeek/MiniMax/Moonshot distillation attacks (The ...",
+            "url": "https://www.youtube.com/watch?v=QlGW4jabeek",
+            "query": "SWE-bench agents",
+            "windowDays": 30
+          },
+          {
+            "videoId": "1hmQLSgRnkE",
+            "title": "[\ud074\ub85c\ub4dc \ucf54\uc6cc\ud06c 2\ud3b8-3] \ud0c0\uc0ac\uc640 \ube44\uad50 \ubd88\uac00\ud55c \ud074\ub85c\ub4dc \ucf54\ub4dc\uc758 \ud798 #\ud074\ub85c\ub4dcOpus4.6 #\uc5d0\uc774\uc804\ud2f1AI #\uc790\uac00\uce58\uc720 #ClaudeOpus4.6 #AgenticAI",
+            "channelTitle": "Story Radio Station",
+            "publishedAt": "2026-02-23T22:00:02Z",
+            "description": "\uad00\ub828 \ud50c\ub808\uc774\ub9ac\uc2a4\ud2b8 \ub371\uc2a4\ud130\uc640 \ud074\ub808\uc5b4\uc758 Story Radio Station \uc2dc\uc98c#1: ...",
+            "url": "https://www.youtube.com/watch?v=1hmQLSgRnkE",
+            "query": "SWE-bench agents",
+            "windowDays": 30
+          },
+          {
+            "videoId": "0HaUD_olwQU",
+            "title": "The End of SWE-Bench Verified \u2014 Mia Glaese &amp; Olivia Watkins, OpenAI Frontier Evals",
+            "channelTitle": "Latent Space",
+            "publishedAt": "2026-02-23T18:33:04Z",
+            "description": "Olivia Watkins (Frontier Evals team) and Mia Glaese (VP of Research at OpenAI, leading the Codex, human data, and alignment ...",
+            "url": "https://www.youtube.com/watch?v=0HaUD_olwQU",
+            "query": "SWE-bench agents",
+            "windowDays": 30
+          },
+          {
+            "videoId": "yM9XWUz1nTw",
+            "title": "#20 AI Code Fixing  SWE Bench Gold Standard Tested!",
+            "channelTitle": "Etienne Noumen and AI Unraveled",
+            "publishedAt": "2026-02-19T05:07:04Z",
+            "description": "Listen to Full Audio at ...",
+            "url": "https://www.youtube.com/watch?v=yM9XWUz1nTw",
+            "query": "SWE-bench agents",
+            "windowDays": 30
+          },
+          {
+            "videoId": "wW9Y7zQi_j4",
+            "title": "Les mod\u00e8les NOUS MENTENT TOUS : La v\u00e9rit\u00e9 sur les benchmarks SWE-Bench",
+            "channelTitle": "Melvynx",
+            "publishedAt": "2026-02-15T15:59:01Z",
+            "description": "Ma formation IA : https://mlv.sh/Qy1FCuH \u25b7 TIMECODES 0:00 - Introduction 1:30 - Probl\u00e8mes des benchmarks actuels 2:15 ...",
+            "url": "https://www.youtube.com/watch?v=wW9Y7zQi_j4",
+            "query": "SWE-bench agents",
+            "windowDays": 30
+          },
+          {
+            "videoId": "RARfr6ScIGI",
+            "title": "Vibe Coding With GPT 5.3 Codex",
+            "channelTitle": "BridgeMind",
+            "publishedAt": "2026-02-07T18:00:06Z",
+            "description": "In this video, I am putting the newly released GPT 5.3 Codex to the ultimate test in a new benchmark I am calling BridgeBench.",
+            "url": "https://www.youtube.com/watch?v=RARfr6ScIGI",
+            "query": "SWE-bench agents",
+            "windowDays": 30
+          },
+          {
+            "videoId": "AIMEe_hShfI",
+            "title": "A China Acaba De Tornar Os Programadores Humanos Obsoletos: Qwen3-Coder-Next",
+            "channelTitle": "Paula Bernardes",
+            "publishedAt": "2026-02-07T15:03:00Z",
+            "description": "O aviso de despejo para a engenharia de software tradicional acaba de ser emitido em Hangzhou. O Qwen3-Coder-Next n\u00e3o \u00e9 ...",
+            "url": "https://www.youtube.com/watch?v=AIMEe_hShfI",
+            "query": "SWE-bench agents",
+            "windowDays": 30
+          },
+          {
+            "videoId": "2Vw7ZVpgg80",
+            "title": "This FREE AI Coding Agent Just Hit 70.6% on SWE-Bench (Runs Locally, Apache 2.0)",
+            "channelTitle": "AISoftScope",
+            "publishedAt": "2026-02-07T14:30:05Z",
+            "description": "Alibaba just released Qwen3-Coder-Next, and it's completely changing the game for local AI coding. This is an 80 billion ...",
+            "url": "https://www.youtube.com/watch?v=2Vw7ZVpgg80",
+            "query": "SWE-bench agents",
+            "windowDays": 30
+          },
+          {
+            "videoId": "OFwkQrsrNlE",
+            "title": "SWE-Universe: 800k+ Coding Agent Environments",
+            "channelTitle": "AI Research Roundup",
+            "publishedAt": "2026-02-07T02:19:21Z",
+            "description": "In this AI Research Roundup episode, Alex discusses the paper: 'SWE-Universe: Scale Real-World Verifiable Environments to ...",
+            "url": "https://www.youtube.com/watch?v=OFwkQrsrNlE",
+            "query": "SWE-bench agents",
+            "windowDays": 30
+          },
+          {
+            "videoId": "HJj0uMLgBGo",
+            "title": "Alibaba Qwen3-Coder-Next 80B \ubaa8\ub378, SWE-Bench 70% \ub2ec\uc131\ud55c \ubb34\ub8cc \ucf54\ub529 AI",
+            "channelTitle": "\ud5e4\uc774, \uc81c\uc784\uc2a4! - \ucf54\ub529, AI, \ucc3d\uc5c5",
+            "publishedAt": "2026-02-06T05:00:31Z",
+            "description": "1\uc778 \ucc3d\uc5c5\uac00\ub97c \uc704\ud55c \ud50c\ub7ab\ud3fc, \ud5e4\uc774\uc81c\uc784\uc2a4: https://heyjames.ai 1\uc778 \ucc3d\uc5c5\uac00\ub97c \uc704\ud55c \ucc3d\uc5c5 \uc544\uc774\ud15c \uac15\uc758: https://heyjames.ai/courses/7 ...",
+            "url": "https://www.youtube.com/watch?v=HJj0uMLgBGo",
+            "query": "SWE-bench agents",
+            "windowDays": 30
+          },
+          {
+            "videoId": "FZzaXkoWHMk",
+            "title": "\u78be\u538b SWE-Bench\uff01GPT-5.3-Codex \u53d1\u5e03 \u5982\u4f55\u91cd\u65b0\u5b9a\u4e49 AI \u7f16\u7a0b\u4e0e\u8c03\u8bd5\uff1f\u53f2\u4e0a\u6700\u5f3a Agent \u6765\u4e86\uff1fGPT-5.3-Codex \u5b9e\u6d4b",
+            "channelTitle": "\u81ea\u7531\u6f2b\u8c08",
+            "publishedAt": "2026-02-05T20:36:27Z",
+            "description": "",
+            "url": "https://www.youtube.com/watch?v=FZzaXkoWHMk",
+            "query": "SWE-bench agents",
+            "windowDays": 30
+          }
+        ]
+      }
+    },
+    {
+      "query": "RLHF coding agents",
+      "windowDays": 30,
+      "result": {
+        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=RLHF+coding+agents&type=video&order=date&maxResults=25&publishedAfter=2026-02-02T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
+        "raw": {
+          "kind": "youtube#searchListResponse",
+          "etag": "GK18zYtKIu4kLOY2O38pADg1DC0",
+          "regionCode": "US",
+          "pageInfo": {
+            "totalResults": 171,
+            "resultsPerPage": 3
+          },
+          "items": [
+            {
+              "kind": "youtube#searchResult",
+              "etag": "CyC661NWX4i2R5YzB7Wa4pQHbuk",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "6GtYQpFEn2w"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-20T14:30:01Z",
+                "channelId": "UCayDWB7czrIqJV3JIHgtOBA",
+                "title": "Reinforcement Learning Masterclass: PPO, RLHF, &amp; GRPO Explained",
+                "description": "Ever wonder how AI agents learn to master video games, converse like humans, or solve complex math problems? The secret ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/6GtYQpFEn2w/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/6GtYQpFEn2w/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/6GtYQpFEn2w/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "AI4Dummies",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-20T14:30:01Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "putRBLMwcmU8dkz03ImfkBiUqDI",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "TMqbglG-27g"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-16T16:00:49Z",
+                "channelId": "UCXpUIUpoRcnP5Ruf_ZLoceA",
+                "title": "From LLMs to AI Agents",
+                "description": "This overview traces the evolution of artificial intelligence from its structural core to its functional application as a purposeful agent.",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/TMqbglG-27g/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/TMqbglG-27g/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/TMqbglG-27g/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Visualmatics (VSI)",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-16T16:00:49Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "68-lzPEplSsby6X6ZMrFMcyOt5U",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "nVnxG10D5W0"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-05T16:30:31Z",
+                "channelId": "UC5mEvNHnfRNuDivuXiCPiZA",
+                "title": "9 AI Concepts Explained in 7 minutes: AI Agents, RAGs, Tokenization, RLHF, Diffusion, LoRA...",
+                "description": "Enrollment for the AI Engineering Cohort is Now Open. Check it out here: https://go.bytebytego.com/yt-ai-desc Chapters 00:00:13 ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/nVnxG10D5W0/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/nVnxG10D5W0/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/nVnxG10D5W0/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "ByteByteAI",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-05T16:30:31Z"
+              }
+            }
+          ]
+        },
+        "videos": [
+          {
+            "videoId": "6GtYQpFEn2w",
+            "title": "Reinforcement Learning Masterclass: PPO, RLHF, &amp; GRPO Explained",
+            "channelTitle": "AI4Dummies",
+            "publishedAt": "2026-02-20T14:30:01Z",
+            "description": "Ever wonder how AI agents learn to master video games, converse like humans, or solve complex math problems? The secret ...",
+            "url": "https://www.youtube.com/watch?v=6GtYQpFEn2w",
+            "query": "RLHF coding agents",
+            "windowDays": 30
+          },
+          {
+            "videoId": "TMqbglG-27g",
+            "title": "From LLMs to AI Agents",
+            "channelTitle": "Visualmatics (VSI)",
+            "publishedAt": "2026-02-16T16:00:49Z",
+            "description": "This overview traces the evolution of artificial intelligence from its structural core to its functional application as a purposeful agent.",
+            "url": "https://www.youtube.com/watch?v=TMqbglG-27g",
+            "query": "RLHF coding agents",
+            "windowDays": 30
+          },
+          {
+            "videoId": "nVnxG10D5W0",
+            "title": "9 AI Concepts Explained in 7 minutes: AI Agents, RAGs, Tokenization, RLHF, Diffusion, LoRA...",
+            "channelTitle": "ByteByteAI",
+            "publishedAt": "2026-02-05T16:30:31Z",
+            "description": "Enrollment for the AI Engineering Cohort is Now Open. Check it out here: https://go.bytebytego.com/yt-ai-desc Chapters 00:00:13 ...",
+            "url": "https://www.youtube.com/watch?v=nVnxG10D5W0",
+            "query": "RLHF coding agents",
+            "windowDays": 30
+          }
+        ]
+      }
+    },
+    {
+      "query": "agentic coding benchmark",
+      "windowDays": 30,
+      "result": {
+        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=agentic+coding+benchmark&type=video&order=date&maxResults=25&publishedAfter=2026-02-02T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
+        "raw": {
+          "kind": "youtube#searchListResponse",
+          "etag": "HHqtDJu7RrFvxHWu0MQxUrkulQY",
+          "nextPageToken": "CBkQAA",
+          "regionCode": "US",
+          "pageInfo": {
+            "totalResults": 3242,
+            "resultsPerPage": 25
+          },
+          "items": [
+            {
+              "kind": "youtube#searchResult",
+              "etag": "uo4woPYCZJVC_jskgImJYm4ts80",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "F19hJxKTUY0"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-28T07:50:45Z",
+                "channelId": "UCwoZG4C372vdEh_GRSxMpPw",
+                "title": "LLMs battle in RTS code &amp; Benchmarks: SWE-bench credibility crisis - AI News (Feb 25, 2026)",
+                "description": "Today's topics: LLMs battle in RTS code - LLM Skirmish pits models in 1v1 RTS matches using Screeps-style code, tracking ELO, ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/F19hJxKTUY0/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/F19hJxKTUY0/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/F19hJxKTUY0/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "The Automated Daily",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-28T07:50:45Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "HT873vItizlEn_r2-X_ckTzPfLk",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "gdgfdF-ilVk"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-26T21:00:06Z",
+                "channelId": "UCGIiO6Uo8V8vkuLOcFvf3ZQ",
+                "title": "Gemini 3.1 Pro Backlash: Smarter Than GPT-5.2\u2026 But Does It Have a Soul?",
+                "description": "Link to our newsletter: https://bitbiased.ai/ Google just released Gemini 3.1 Pro \u2014 and the AI community is completely divided.",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/gdgfdF-ilVk/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/gdgfdF-ilVk/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/gdgfdF-ilVk/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "BitBiasedAI",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-26T21:00:06Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "B2fe2kGSEju__e_PiMYfoOxs75U",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "uWfHBVdi040"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-26T17:02:40Z",
+                "channelId": "UC_x5XG1OV2P6uZZ5FSM9Ttw",
+                "title": "3 things you should know about Gemini 3.1 Pro (as a dev)",
+                "description": "Meet Gemini 3.1 Pro, a significant leap forward in AI models offering unparalleled reasoning performance for complex software ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/uWfHBVdi040/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/uWfHBVdi040/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/uWfHBVdi040/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Google for Developers",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-26T17:02:40Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "aA86Q279eBwXpejWNjaigsVoHXU",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "7XFB2t3hiRg"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-25T15:04:10Z",
+                "channelId": "UCM2meIoM-vZNt2ZPZlu-H0Q",
+                "title": "Gemini 3.1 Pro Just Changed Everything? Deep Think, ARC-AGI &amp; Real Performance Test",
+                "description": "Gemini 3.1 Pro is here \u2014 and this isn't just a minor update. In this deep technical breakdown, we explore how Gemini 3.1 Pro ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/7XFB2t3hiRg/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/7XFB2t3hiRg/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/7XFB2t3hiRg/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Munawar Munir Coding Guru",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-25T15:04:10Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "vrNyqsVgjN3s69D3sbKFxD5psb4",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "jTlFi-C-Gj0"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-25T02:00:43Z",
+                "channelId": "UCc-FovAyBAQDw2Y7PQ_v0Zw",
+                "title": "GLM 5 + Kimi K2.5 + MiniMax M2.5 is INSANE!",
+                "description": "Want to make money and save time with AI? Get AI Coaching, Support & Courses https://juliangoldieai.com/07L1kg Get a ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/jTlFi-C-Gj0/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/jTlFi-C-Gj0/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/jTlFi-C-Gj0/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Julian Goldie Agency",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-25T02:00:43Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "wj7NvmTml4S4VZJUlE25cSaf1cA",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "n1KKVC_6p8w"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-24T19:50:56Z",
+                "channelId": "UCGIiO6Uo8V8vkuLOcFvf3ZQ",
+                "title": "Grok 4.20 vs Gemini 3.1 Pro (2026): Real Testing, Benchmarks, Best Use Cases",
+                "description": "Link to our newsletter: https://bitbiased.ai/ You've got two of the most powerful AI models right now \u2014 Grok 4.20 (xAI) and Gemini ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/n1KKVC_6p8w/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/n1KKVC_6p8w/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/n1KKVC_6p8w/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "BitBiasedAI",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-24T19:50:56Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "9kaJMvMlZPJy2QDHZLP8d8xujuQ",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "vSewcC33KEw"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-23T14:23:31Z",
+                "channelId": "UCeS_8gc9xD1NMdGw20k2PKA",
+                "title": "Gemini 3.1 Pro ULTIMATE Test: 64k Output, 3D Animations &amp; Agentic Coding",
+                "description": "Google just dropped Gemini 3.1 Pro, and it is a massive leap forward in reasoning. In this video, we go beyond the benchmarks to ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/vSewcC33KEw/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/vSewcC33KEw/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/vSewcC33KEw/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Anaam Rasool",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-23T14:23:31Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "kJN1LeNXAD5oqh0Lc9q8BSB0NMs",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "-UwuSp8dJcI"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-22T16:00:00Z",
+                "channelId": "UCfb8Rzk25eJ73VC0mJsNm5A",
+                "title": "Opus 4.6 schla\u0308gt GPT 5.2 Codex beim Coding!",
+                "description": "Opus 4.6 erzielt starke Ergebnisse bei agentic Coding-Benchmarks und zeigt sich besonders robust bei komplexem Code, ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/-UwuSp8dJcI/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/-UwuSp8dJcI/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/-UwuSp8dJcI/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Promptgefl\u00fcster",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-22T16:00:00Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "irndXCIc9r81U66XLMV5YLc-dKs",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "30YXUfNyTOc"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-21T20:12:03Z",
+                "channelId": "UCzyOaFoApoTHxvOewNppKyg",
+                "title": "Gemini 3.1 Pro Review (2026) | Benchmarks, Coding, Agentic AI Explained",
+                "description": "Gemini 3.1 Pro Explained: Why Google's New AI Is Beating Opus 4.6 (2026) Gemini 3.1 Pro vs Opus 4.6 \u2013 Did Google Just Win AI ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/30YXUfNyTOc/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/30YXUfNyTOc/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/30YXUfNyTOc/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Ai Videos",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-21T20:12:03Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "KQYIt2Kb6C_yYy348Zlf-1wADzU",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "ANRR-x1ZQQ4"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-20T18:30:13Z",
+                "channelId": "UCA9O3Yh6ncBZ7emd2SKYkpg",
+                "title": "Google launches Gemini 3.1 Pro model and cooks all the LLM out there! #ai #Gemini #google",
+                "description": "Google just dropped Gemini 3.1 Pro, and it's safe to say the AI wars are heating up again! This new model is putting up some wild ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/ANRR-x1ZQQ4/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/ANRR-x1ZQQ4/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/ANRR-x1ZQQ4/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Mayur Rathi",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-20T18:30:13Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "H5KijDZJaHhwyCS3U_09j9QnetE",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "Oc5Qt91T_RM"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-20T18:12:32Z",
+                "channelId": "UC-4aJ7k9RyW60OOxz9WGNDw",
+                "title": "Gemini 3.1 Pro Launched - ARC AGI-2  Benchmarks are insane! #gemini3pro",
+                "description": "Gemini 3.1 Pro Launched and sounds super promising for the agentic world as benchmarks are insane!",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/Oc5Qt91T_RM/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/Oc5Qt91T_RM/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/Oc5Qt91T_RM/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "AI Tool Discovery",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-20T18:12:32Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "g0VU-aM9PLAmEe_DTclDKzdphEg",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "2_DPnzoiHaY"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-20T17:01:21Z",
+                "channelId": "UCNJ1Ymd5yFuUPtn21xtRbbw",
+                "title": "Gemini 3.1 Pro and the Downfall of Benchmarks: Welcome to the Vibe Era of AI",
+                "description": "Do we have a new best AI model, or do we have the downfall of benchmarks in general, as a way of capturing machine ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/2_DPnzoiHaY/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/2_DPnzoiHaY/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/2_DPnzoiHaY/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "AI Explained",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-20T17:01:21Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "uV8nxPGAUU8LeiVPYyV7rzTnNVA",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "zrlI8oxdvDc"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-20T14:46:13Z",
+                "channelId": "UC1uUPM9iMH42jSKhMtL4Usg",
+                "title": "GLM-5 Deep Dive: From Vibe Coding to Agentic Engineering",
+                "description": "In this episode of *SciPulse,* we explore the technical breakthroughs of *GLM-5,* a next-generation foundation model from Zhipu ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/zrlI8oxdvDc/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/zrlI8oxdvDc/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/zrlI8oxdvDc/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "SciPulse",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-20T14:46:13Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "ohrIEKx-gnv7NaM6eJFTHb0CTT8",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "ugJnFpiXcrY"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-20T14:02:31Z",
+                "channelId": "UCN8h_2f_lnPRgpp0AkvGV2w",
+                "title": "The New King of AI: Gemini 3.1 Pro Benchmarks Revealed! \ud83d\udc51",
+                "description": "Google just released Gemini 3.1 Pro (Feb 19, 2026), and it's setting new records across the board. In this video, we dive into the ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/ugJnFpiXcrY/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/ugJnFpiXcrY/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/ugJnFpiXcrY/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "ai_lovers",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-20T14:02:31Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "KQPO4SMNdynQIVUjLXNyYUN_lXQ",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "R3GjTBSQjRk"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-20T10:00:31Z",
+                "channelId": "UC0m81bQuthaQZmFbXEY9QSw",
+                "title": "Gemini 3.1 Pro (Fully Tested): This MODEL is ACTUALLY BAD &amp; A MESS.",
+                "description": "In this video, I'll be telling you about Google's new Gemini 3.1 Pro and whether it's actually worth paying for. After running it ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/R3GjTBSQjRk/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/R3GjTBSQjRk/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/R3GjTBSQjRk/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "AICodeKing",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-20T10:00:31Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "CnToWkPj5hTHme9vxN3V4ccq4Dw",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "b1XSNjrCWVU"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-20T09:01:02Z",
+                "channelId": "UCGpsgNbzdF7BECCVbB1COHw",
+                "title": "GLM 5 + MiniMax M2.5 is INSANE! \ud83e\udd2f",
+                "description": "Want to make money and save time with AI? Get AI Coaching, Support & Courses ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/b1XSNjrCWVU/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/b1XSNjrCWVU/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/b1XSNjrCWVU/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Julian Goldie SEO",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-20T09:01:02Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "gk7ZPMaKXkUaTlbxxg0LfWKOApg",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "bE4Sxd20qdc"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-20T05:46:45Z",
+                "channelId": "UCF5BcVdbDqxq7WLI1yGRWig",
+                "title": "Gemini 3.1 Pro Review: How Google Doubled AI Reasoning Overnight Benchmarks vs  Reality",
+                "description": "Read the full article: https://binaryverseai.com/gemini-3-1-pro-review-arc-agi-2-and-customtools/ Gemini 3.1 Pro landed like a plot ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/bE4Sxd20qdc/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/bE4Sxd20qdc/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/bE4Sxd20qdc/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Binary Verse AI",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-20T05:46:45Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "kbiG1WmjYdv-QYashOC24Bn5_ic",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "ep_ZNQFuiOI"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-20T02:33:39Z",
+                "channelId": "UCnqE_udEblGagLs2Yg43gSw",
+                "title": "Gemini 3.1 Pro Benchmarks Are INSANE \ud83e\udd2f #AI #Shorts",
+                "description": "Google just dropped Gemini 3.1 Pro and the numbers are wild. ARC-AGI-2 abstract reasoning jumped from 31% to 77% \u2014 more ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/ep_ZNQFuiOI/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/ep_ZNQFuiOI/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/ep_ZNQFuiOI/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Neurodivergent Ninja",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-20T02:33:39Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "xr7X5Q1j2NRv33BEQxGWsn3Ym7w",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "siHbORocFNk"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-19T17:45:06Z",
+                "channelId": "UCDq7SjbgRKty5TgGafW8Clg",
+                "title": "Gemini 3.1 Pro: The model no one expected",
+                "description": "Google just dropped a massive upgrade with Gemini 3.1 Pro! In this video, we break down why this preview release is actually a ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/siHbORocFNk/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/siHbORocFNk/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/siHbORocFNk/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Prompt Engineering",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-19T17:45:06Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "1JZf-jtpe0PtphnvAPPXHbbOaxQ",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "g1LCwHvM0R0"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-18T14:13:25Z",
+                "channelId": "UCNH2x236pEyNWZHPQ_PYJ9Q",
+                "title": "Claude Sonnet 4.6 Explained: 1M Token Context, GPT-5.2 Rivalry &amp; Agentic AI Breakthrough",
+                "description": "Claude Sonnet 4.6 is officially here \u2014 and it might be Anthropic's biggest strategic AI upgrade yet. With a 1 million token context ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/g1LCwHvM0R0/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/g1LCwHvM0R0/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/g1LCwHvM0R0/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Ai Podcast ",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-18T14:13:25Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "bwPXosLec5At800f5YhE-rp9uyc",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "PuLzlo78NPs"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-17T22:53:28Z",
+                "channelId": "UCmBvGdWOth-FEYiGZW4PEYA",
+                "title": "Your new Agentic Team: Opus 4.6 !!!",
+                "description": "Anthropic just dropped Claude Opus 4.6 and it's an absolute unit. We're talking a 1 Million Token context window that actually ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/PuLzlo78NPs/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/PuLzlo78NPs/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/PuLzlo78NPs/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Notus-ops",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-17T22:53:28Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "MtpHWt7b7Jux4SYh0vAhtMrpeSE",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "6_tKuvI1VO8"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-17T22:30:59Z",
+                "channelId": "UCwaTGE53GLGC3fDClVl_7TA",
+                "title": "ZAI Launch Day: Production Grade Performance vs Speed Benchmarks",
+                "description": "ZAI just launched and they're claiming production-grade performance that rivals the biggest names like Claude 3.5 Opus and ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/6_tKuvI1VO8/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/6_tKuvI1VO8/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/6_tKuvI1VO8/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "BridgeMind",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-17T22:30:59Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "7q5GA2vRXE0k5_J8BAiBTLY5no0",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "EQ7nk9KgvrY"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-17T19:26:06Z",
+                "channelId": "UCoy6cTJ7Tg0dqS-DI-_REsA",
+                "title": "Claude Sonnet 4.6 Is Here (and Better Than Opus?)",
+                "description": "Build Your AI Agency & Land Your First Client \u26a1 https://www.skool.com/chase-ai FREE Skool community with 100+ Templates!",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/EQ7nk9KgvrY/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/EQ7nk9KgvrY/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/EQ7nk9KgvrY/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Chase AI",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-17T19:26:06Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "8iG-_7XRi4xCCvl0VOus9SbzyrA",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "VF-a3A3kWjk"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-17T00:00:38Z",
+                "channelId": "UCBFdTK3LwtFxUkGOpbhuV9A",
+                "title": "OpenAI just rolled out CODEX!",
+                "description": "OpenAI just rolled out CODEX, a new AI coding model that merges its best programming and reasoning capabilities into one ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/VF-a3A3kWjk/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/VF-a3A3kWjk/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/VF-a3A3kWjk/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "AI x Product Pulse",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-17T00:00:38Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "UqJiJiOfJZOMg1K8R5MdKSIH53U",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "4diDVyOAeKI"
+              },
+              "snippet": {
+                "publishedAt": "2026-02-14T08:00:06Z",
+                "channelId": "UCviY8ejfPGxPQizSm5aQvNw",
+                "title": "OpenAI Codex Harness: Agentic Coding AI Evaluation Framework and Automated Benchmarks",
+                "description": "Overview of Codex Harness introduced by OpenAI for evaluating agentic coding models How real-world software engineering ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/4diDVyOAeKI/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/4diDVyOAeKI/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/4diDVyOAeKI/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "CosmoX",
+                "liveBroadcastContent": "none",
+                "publishTime": "2026-02-14T08:00:06Z"
+              }
+            }
+          ]
+        },
+        "videos": [
+          {
+            "videoId": "F19hJxKTUY0",
+            "title": "LLMs battle in RTS code &amp; Benchmarks: SWE-bench credibility crisis - AI News (Feb 25, 2026)",
+            "channelTitle": "The Automated Daily",
+            "publishedAt": "2026-02-28T07:50:45Z",
+            "description": "Today's topics: LLMs battle in RTS code - LLM Skirmish pits models in 1v1 RTS matches using Screeps-style code, tracking ELO, ...",
+            "url": "https://www.youtube.com/watch?v=F19hJxKTUY0",
+            "query": "agentic coding benchmark",
+            "windowDays": 30
+          },
+          {
+            "videoId": "gdgfdF-ilVk",
+            "title": "Gemini 3.1 Pro Backlash: Smarter Than GPT-5.2\u2026 But Does It Have a Soul?",
+            "channelTitle": "BitBiasedAI",
+            "publishedAt": "2026-02-26T21:00:06Z",
+            "description": "Link to our newsletter: https://bitbiased.ai/ Google just released Gemini 3.1 Pro \u2014 and the AI community is completely divided.",
+            "url": "https://www.youtube.com/watch?v=gdgfdF-ilVk",
+            "query": "agentic coding benchmark",
+            "windowDays": 30
+          },
+          {
+            "videoId": "uWfHBVdi040",
+            "title": "3 things you should know about Gemini 3.1 Pro (as a dev)",
+            "channelTitle": "Google for Developers",
+            "publishedAt": "2026-02-26T17:02:40Z",
+            "description": "Meet Gemini 3.1 Pro, a significant leap forward in AI models offering unparalleled reasoning performance for complex software ...",
+            "url": "https://www.youtube.com/watch?v=uWfHBVdi040",
+            "query": "agentic coding benchmark",
+            "windowDays": 30
+          },
+          {
+            "videoId": "7XFB2t3hiRg",
+            "title": "Gemini 3.1 Pro Just Changed Everything? Deep Think, ARC-AGI &amp; Real Performance Test",
+            "channelTitle": "Munawar Munir Coding Guru",
+            "publishedAt": "2026-02-25T15:04:10Z",
+            "description": "Gemini 3.1 Pro is here \u2014 and this isn't just a minor update. In this deep technical breakdown, we explore how Gemini 3.1 Pro ...",
+            "url": "https://www.youtube.com/watch?v=7XFB2t3hiRg",
+            "query": "agentic coding benchmark",
+            "windowDays": 30
+          },
+          {
+            "videoId": "jTlFi-C-Gj0",
+            "title": "GLM 5 + Kimi K2.5 + MiniMax M2.5 is INSANE!",
+            "channelTitle": "Julian Goldie Agency",
+            "publishedAt": "2026-02-25T02:00:43Z",
+            "description": "Want to make money and save time with AI? Get AI Coaching, Support & Courses https://juliangoldieai.com/07L1kg Get a ...",
+            "url": "https://www.youtube.com/watch?v=jTlFi-C-Gj0",
+            "query": "agentic coding benchmark",
+            "windowDays": 30
+          },
+          {
+            "videoId": "n1KKVC_6p8w",
+            "title": "Grok 4.20 vs Gemini 3.1 Pro (2026): Real Testing, Benchmarks, Best Use Cases",
+            "channelTitle": "BitBiasedAI",
+            "publishedAt": "2026-02-24T19:50:56Z",
+            "description": "Link to our newsletter: https://bitbiased.ai/ You've got two of the most powerful AI models right now \u2014 Grok 4.20 (xAI) and Gemini ...",
+            "url": "https://www.youtube.com/watch?v=n1KKVC_6p8w",
+            "query": "agentic coding benchmark",
+            "windowDays": 30
+          },
+          {
+            "videoId": "vSewcC33KEw",
+            "title": "Gemini 3.1 Pro ULTIMATE Test: 64k Output, 3D Animations &amp; Agentic Coding",
+            "channelTitle": "Anaam Rasool",
+            "publishedAt": "2026-02-23T14:23:31Z",
+            "description": "Google just dropped Gemini 3.1 Pro, and it is a massive leap forward in reasoning. In this video, we go beyond the benchmarks to ...",
+            "url": "https://www.youtube.com/watch?v=vSewcC33KEw",
+            "query": "agentic coding benchmark",
+            "windowDays": 30
+          },
+          {
+            "videoId": "-UwuSp8dJcI",
+            "title": "Opus 4.6 schla\u0308gt GPT 5.2 Codex beim Coding!",
+            "channelTitle": "Promptgefl\u00fcster",
+            "publishedAt": "2026-02-22T16:00:00Z",
+            "description": "Opus 4.6 erzielt starke Ergebnisse bei agentic Coding-Benchmarks und zeigt sich besonders robust bei komplexem Code, ...",
+            "url": "https://www.youtube.com/watch?v=-UwuSp8dJcI",
+            "query": "agentic coding benchmark",
+            "windowDays": 30
+          },
+          {
+            "videoId": "30YXUfNyTOc",
+            "title": "Gemini 3.1 Pro Review (2026) | Benchmarks, Coding, Agentic AI Explained",
+            "channelTitle": "Ai Videos",
+            "publishedAt": "2026-02-21T20:12:03Z",
+            "description": "Gemini 3.1 Pro Explained: Why Google's New AI Is Beating Opus 4.6 (2026) Gemini 3.1 Pro vs Opus 4.6 \u2013 Did Google Just Win AI ...",
+            "url": "https://www.youtube.com/watch?v=30YXUfNyTOc",
+            "query": "agentic coding benchmark",
+            "windowDays": 30
+          },
+          {
+            "videoId": "ANRR-x1ZQQ4",
+            "title": "Google launches Gemini 3.1 Pro model and cooks all the LLM out there! #ai #Gemini #google",
+            "channelTitle": "Mayur Rathi",
+            "publishedAt": "2026-02-20T18:30:13Z",
+            "description": "Google just dropped Gemini 3.1 Pro, and it's safe to say the AI wars are heating up again! This new model is putting up some wild ...",
+            "url": "https://www.youtube.com/watch?v=ANRR-x1ZQQ4",
+            "query": "agentic coding benchmark",
+            "windowDays": 30
+          },
+          {
+            "videoId": "Oc5Qt91T_RM",
+            "title": "Gemini 3.1 Pro Launched - ARC AGI-2  Benchmarks are insane! #gemini3pro",
+            "channelTitle": "AI Tool Discovery",
+            "publishedAt": "2026-02-20T18:12:32Z",
+            "description": "Gemini 3.1 Pro Launched and sounds super promising for the agentic world as benchmarks are insane!",
+            "url": "https://www.youtube.com/watch?v=Oc5Qt91T_RM",
+            "query": "agentic coding benchmark",
+            "windowDays": 30
+          },
+          {
+            "videoId": "2_DPnzoiHaY",
+            "title": "Gemini 3.1 Pro and the Downfall of Benchmarks: Welcome to the Vibe Era of AI",
+            "channelTitle": "AI Explained",
+            "publishedAt": "2026-02-20T17:01:21Z",
+            "description": "Do we have a new best AI model, or do we have the downfall of benchmarks in general, as a way of capturing machine ...",
+            "url": "https://www.youtube.com/watch?v=2_DPnzoiHaY",
+            "query": "agentic coding benchmark",
+            "windowDays": 30
+          },
+          {
+            "videoId": "zrlI8oxdvDc",
+            "title": "GLM-5 Deep Dive: From Vibe Coding to Agentic Engineering",
+            "channelTitle": "SciPulse",
+            "publishedAt": "2026-02-20T14:46:13Z",
+            "description": "In this episode of *SciPulse,* we explore the technical breakthroughs of *GLM-5,* a next-generation foundation model from Zhipu ...",
+            "url": "https://www.youtube.com/watch?v=zrlI8oxdvDc",
+            "query": "agentic coding benchmark",
+            "windowDays": 30
+          },
+          {
+            "videoId": "ugJnFpiXcrY",
+            "title": "The New King of AI: Gemini 3.1 Pro Benchmarks Revealed! \ud83d\udc51",
+            "channelTitle": "ai_lovers",
+            "publishedAt": "2026-02-20T14:02:31Z",
+            "description": "Google just released Gemini 3.1 Pro (Feb 19, 2026), and it's setting new records across the board. In this video, we dive into the ...",
+            "url": "https://www.youtube.com/watch?v=ugJnFpiXcrY",
+            "query": "agentic coding benchmark",
+            "windowDays": 30
+          },
+          {
+            "videoId": "R3GjTBSQjRk",
+            "title": "Gemini 3.1 Pro (Fully Tested): This MODEL is ACTUALLY BAD &amp; A MESS.",
+            "channelTitle": "AICodeKing",
+            "publishedAt": "2026-02-20T10:00:31Z",
+            "description": "In this video, I'll be telling you about Google's new Gemini 3.1 Pro and whether it's actually worth paying for. After running it ...",
+            "url": "https://www.youtube.com/watch?v=R3GjTBSQjRk",
+            "query": "agentic coding benchmark",
+            "windowDays": 30
+          },
+          {
+            "videoId": "b1XSNjrCWVU",
+            "title": "GLM 5 + MiniMax M2.5 is INSANE! \ud83e\udd2f",
+            "channelTitle": "Julian Goldie SEO",
+            "publishedAt": "2026-02-20T09:01:02Z",
+            "description": "Want to make money and save time with AI? Get AI Coaching, Support & Courses ...",
+            "url": "https://www.youtube.com/watch?v=b1XSNjrCWVU",
+            "query": "agentic coding benchmark",
+            "windowDays": 30
+          },
+          {
+            "videoId": "bE4Sxd20qdc",
+            "title": "Gemini 3.1 Pro Review: How Google Doubled AI Reasoning Overnight Benchmarks vs  Reality",
+            "channelTitle": "Binary Verse AI",
+            "publishedAt": "2026-02-20T05:46:45Z",
+            "description": "Read the full article: https://binaryverseai.com/gemini-3-1-pro-review-arc-agi-2-and-customtools/ Gemini 3.1 Pro landed like a plot ...",
+            "url": "https://www.youtube.com/watch?v=bE4Sxd20qdc",
+            "query": "agentic coding benchmark",
+            "windowDays": 30
+          },
+          {
+            "videoId": "ep_ZNQFuiOI",
+            "title": "Gemini 3.1 Pro Benchmarks Are INSANE \ud83e\udd2f #AI #Shorts",
+            "channelTitle": "Neurodivergent Ninja",
+            "publishedAt": "2026-02-20T02:33:39Z",
+            "description": "Google just dropped Gemini 3.1 Pro and the numbers are wild. ARC-AGI-2 abstract reasoning jumped from 31% to 77% \u2014 more ...",
+            "url": "https://www.youtube.com/watch?v=ep_ZNQFuiOI",
+            "query": "agentic coding benchmark",
+            "windowDays": 30
+          },
+          {
+            "videoId": "siHbORocFNk",
+            "title": "Gemini 3.1 Pro: The model no one expected",
+            "channelTitle": "Prompt Engineering",
+            "publishedAt": "2026-02-19T17:45:06Z",
+            "description": "Google just dropped a massive upgrade with Gemini 3.1 Pro! In this video, we break down why this preview release is actually a ...",
+            "url": "https://www.youtube.com/watch?v=siHbORocFNk",
+            "query": "agentic coding benchmark",
+            "windowDays": 30
+          },
+          {
+            "videoId": "g1LCwHvM0R0",
+            "title": "Claude Sonnet 4.6 Explained: 1M Token Context, GPT-5.2 Rivalry &amp; Agentic AI Breakthrough",
+            "channelTitle": "Ai Podcast ",
+            "publishedAt": "2026-02-18T14:13:25Z",
+            "description": "Claude Sonnet 4.6 is officially here \u2014 and it might be Anthropic's biggest strategic AI upgrade yet. With a 1 million token context ...",
+            "url": "https://www.youtube.com/watch?v=g1LCwHvM0R0",
+            "query": "agentic coding benchmark",
+            "windowDays": 30
+          },
+          {
+            "videoId": "PuLzlo78NPs",
+            "title": "Your new Agentic Team: Opus 4.6 !!!",
+            "channelTitle": "Notus-ops",
+            "publishedAt": "2026-02-17T22:53:28Z",
+            "description": "Anthropic just dropped Claude Opus 4.6 and it's an absolute unit. We're talking a 1 Million Token context window that actually ...",
+            "url": "https://www.youtube.com/watch?v=PuLzlo78NPs",
+            "query": "agentic coding benchmark",
+            "windowDays": 30
+          },
+          {
+            "videoId": "6_tKuvI1VO8",
+            "title": "ZAI Launch Day: Production Grade Performance vs Speed Benchmarks",
+            "channelTitle": "BridgeMind",
+            "publishedAt": "2026-02-17T22:30:59Z",
+            "description": "ZAI just launched and they're claiming production-grade performance that rivals the biggest names like Claude 3.5 Opus and ...",
+            "url": "https://www.youtube.com/watch?v=6_tKuvI1VO8",
+            "query": "agentic coding benchmark",
+            "windowDays": 30
+          },
+          {
+            "videoId": "EQ7nk9KgvrY",
+            "title": "Claude Sonnet 4.6 Is Here (and Better Than Opus?)",
+            "channelTitle": "Chase AI",
+            "publishedAt": "2026-02-17T19:26:06Z",
+            "description": "Build Your AI Agency & Land Your First Client \u26a1 https://www.skool.com/chase-ai FREE Skool community with 100+ Templates!",
+            "url": "https://www.youtube.com/watch?v=EQ7nk9KgvrY",
+            "query": "agentic coding benchmark",
+            "windowDays": 30
+          },
+          {
+            "videoId": "VF-a3A3kWjk",
+            "title": "OpenAI just rolled out CODEX!",
+            "channelTitle": "AI x Product Pulse",
+            "publishedAt": "2026-02-17T00:00:38Z",
+            "description": "OpenAI just rolled out CODEX, a new AI coding model that merges its best programming and reasoning capabilities into one ...",
+            "url": "https://www.youtube.com/watch?v=VF-a3A3kWjk",
+            "query": "agentic coding benchmark",
+            "windowDays": 30
+          },
+          {
+            "videoId": "4diDVyOAeKI",
+            "title": "OpenAI Codex Harness: Agentic Coding AI Evaluation Framework and Automated Benchmarks",
+            "channelTitle": "CosmoX",
+            "publishedAt": "2026-02-14T08:00:06Z",
+            "description": "Overview of Codex Harness introduced by OpenAI for evaluating agentic coding models How real-world software engineering ...",
+            "url": "https://www.youtube.com/watch?v=4diDVyOAeKI",
+            "query": "agentic coding benchmark",
+            "windowDays": 30
+          }
+        ]
       }
     }
-  ]
+  ],
+  "fallbackApplied": true
 }

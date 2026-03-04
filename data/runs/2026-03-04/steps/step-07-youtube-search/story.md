@@ -1,1 +1,1 @@
-Generated 3-4 YouTube keywords via LLM from topic + today's scraped context, then queried YouTube Data API per keyword and fetched transcripts via youtube-transcript-api.
+Called YouTube Data API per keyword for last 24h; if zero, retried 7d; if still zero, retried 30d broader queries. This avoids empty artifacts.
