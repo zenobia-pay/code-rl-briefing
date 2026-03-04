@@ -102,6 +102,26 @@
       "bytes": 1537
     },
     {
+      "path": "/data/runs/2026-03-04/raw/supergrok/browseruse-session.json",
+      "bytes": 350
+    },
+    {
+      "path": "/data/runs/2026-03-04/raw/supergrok/browseruse-task-output-rerun.txt",
+      "bytes": 4774
+    },
+    {
+      "path": "/data/runs/2026-03-04/raw/supergrok/browseruse-task-output.txt",
+      "bytes": 4844
+    },
+    {
+      "path": "/data/runs/2026-03-04/raw/supergrok/browseruse-task-status-rerun.json",
+      "bytes": 5173
+    },
+    {
+      "path": "/data/runs/2026-03-04/raw/supergrok/browseruse-task-status.json",
+      "bytes": 5371
+    },
+    {
       "path": "/data/runs/2026-03-04/raw/x/history_updates_2026-02-25.json",
       "bytes": 4794
     },
@@ -172,6 +192,14 @@
     {
       "path": "/data/runs/2026-03-04/signals_account_rollup.json",
       "bytes": 57317
+    },
+    {
+      "path": "/data/runs/2026-03-04/supergrok-briefing-rerun.json",
+      "bytes": 5465
+    },
+    {
+      "path": "/data/runs/2026-03-04/supergrok-briefing.json",
+      "bytes": 5305
     },
     {
       "path": "/data/runs/2026-03-04/supergrok-twitter-pass.md",

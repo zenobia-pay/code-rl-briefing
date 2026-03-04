@@ -1,0 +1,11 @@
+{
+  "id": "aadd7f91-0b57-4b9d-9cbb-cf50dad1b207",
+  "status": "active",
+  "liveUrl": "https://live.browser-use.com?wss=https%3A%2F%2Faadd7f91-0b57-4b9d-9cbb-cf50dad1b207.cdp0.browser-use.com",
+  "startedAt": "2026-03-04T15:49:00.639807Z",
+  "finishedAt": null,
+  "persistMemory": true,
+  "keepAlive": false,
+  "proxyUsedMb": "0",
+  "proxyCost": "0"
+}

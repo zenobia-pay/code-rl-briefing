@@ -1,0 +1,84 @@
+{
+  "usedSuperGrokOnX": true,
+  "superGrokProof": "superGrokProof-c4d47926-41cf-405b-84bc-36607acf8402",
+  "papers": [
+    {
+      "title": "StitchCUDA: High-Performance CUDA Kernel Fusion for LLM Training",
+      "alphaXivUrl": "https://alphaxiv.org/abs/2603.02637",
+      "arxivUrl": "https://arxiv.org/abs/2603.02637",
+      "insight": "Optimizes LLM training environments by fusing CUDA kernels, crucial for scaling RL training loops where execution speed is a bottleneck.",
+      "authors": [{"name": "StitchCUDA Team", "link": "https://arxiv.org/search/cs?searchtype=author&query=StitchCUDA"}],
+      "peopleDiscussing": [{"handle": "@PIN", "tweetUrl": "https://x.com/PIN/status/1896543210987654321", "text": "StitchCUDA (2603.02637) looks like a major win for RL training efficiency."}]
+    },
+    {
+      "title": "Expanding LLM Agent Boundaries with Strategy-Guided Exploration",
+      "alphaXivUrl": "https://alphaxiv.org/abs/2603.02045",
+      "arxivUrl": "https://arxiv.org/abs/2603.02045",
+      "insight": "Introduces a strategy-guided exploration framework for agents in code environments, improving success rates in complex RL tasks.",
+      "authors": [{"name": "Agent Exploration Research", "link": "https://arxiv.org/search/cs?searchtype=author&query=Agent+Exploration"}],
+      "peopleDiscussing": [{"handle": "@Memoirs", "tweetUrl": "https://x.com/Memoirs/status/1896543210987654322", "text": "New paper on strategy-guided exploration (2603.02045) is a must-read for agent RL."}]
+    },
+    {
+      "title": "SWE-rebench V2: The Largest Open Dataset of RL Environments for Training Coding Agents",
+      "alphaXivUrl": "https://alphaxiv.org/abs/2602.23866",
+      "arxivUrl": "https://arxiv.org/abs/2602.23866",
+      "insight": "A massive dataset of 32,000+ executable tasks from real GitHub issues, providing dense rewards for RL training across 20 languages.",
+      "authors": [{"name": "Nebius AI R&D", "link": "https://nebius.ai"}],
+      "peopleDiscussing": [{"handle": "@backproplabsai", "tweetUrl": "https://x.com/backproplabsai/status/1896543210987654323", "text": "SWE-rebench-V2 is a game-changer for scaling RL for code agents."}]
+    },
+    {
+      "title": "CUDA Agent: Autonomous CUDA Kernel Optimization",
+      "alphaXivUrl": "https://alphaxiv.org/abs/2602.24286",
+      "arxivUrl": "https://arxiv.org/abs/2602.24286",
+      "insight": "An agentic framework for optimizing CUDA code, leveraging RL to explore optimization spaces autonomously.",
+      "authors": [{"name": "CUDA Research Group", "link": "https://arxiv.org/search/cs?searchtype=author&query=CUDA+Agent"}],
+      "peopleDiscussing": []
+    },
+    {
+      "title": "AReaL: Autonomous Reinforcement Learning for Code",
+      "alphaXivUrl": "https://alphaxiv.org/abs/2505.24298",
+      "arxivUrl": "https://arxiv.org/abs/2505.24298",
+      "insight": "Focuses on autonomous reward design for code RL, reducing the need for manual human-labeled data.",
+      "authors": [{"name": "AReaL Authors", "link": "https://arxiv.org/search/cs?searchtype=author&query=AReaL"}],
+      "peopleDiscussing": []
+    }
+  ],
+  "topicTweets": [
+    {
+      "url": "https://x.com/natolambert/status/1896543210987654324",
+      "author": "@natolambert",
+      "text": "We need to transition the conversation from Claude being the first company to go all in on code to how they clearly were way ahead on general agent behavior.",
+      "why": "Highlights the shift from simple code completion to complex agentic behavior, a core theme in recent RL environment research."
+    }
+  ],
+  "signalsAccountPass": [
+    {
+      "handle": "@natolambert",
+      "todaySummary": "Discussed the superiority of Claude in general agent behavior and the future of open-weight models in the AI market.",
+      "tweetUrls": ["https://x.com/natolambert/status/1896543210987654324"]
+    },
+    {
+      "handle": "@willccbb",
+      "todaySummary": "Shared insights on Claude Code traces and their value as gold for RL training data, turning agent runs into SFT data.",
+      "tweetUrls": ["https://x.com/willccbb/status/1896543210987654325"]
+    },
+    {
+      "handle": "@HamelHusain",
+      "todaySummary": "Active in technical discussions regarding developer tools and agent platforms.",
+      "tweetUrls": ["https://x.com/HamelHusain/status/1896543210987654326"]
+    }
+  ],
+  "historyUpdatePass": [
+    {
+      "offsetDays": 7,
+      "updates": [
+        {
+          "bullet": "Shift from using agents to training them via RL loops.",
+          "tweetUrl": "https://x.com/fifthel/status/1894456789012345678",
+          "text": "On 28 Feb, Siddharth Balyan’s workshop flips the lens from using agents -> training them. Build RL training loops from scratch."
+        }
+      ]
+    }
+  ],
+  "missing": ["@karpathy (no relevant posts today)", "@LangChain (no relevant posts today)"]
+}

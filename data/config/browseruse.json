@@ -1,0 +1,10 @@
+{
+  "provider": "browser-use.com",
+  "apiBase": "https://api.browser-use.com/api/v2",
+  "apiKeyEnvVar": "BROWSER_USE_API_KEY",
+  "profile": {
+    "name": "Google Chrome - Ryan",
+    "profileId": "9e0f01a3-5227-4424-bc58-b9b226110020"
+  },
+  "notes": "Use this profile for SuperGrok/X briefing runs. Do not substitute local browser automation."
+}
