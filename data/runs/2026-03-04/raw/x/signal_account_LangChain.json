@@ -36,9 +36,9 @@
       "id": "2028902968888881624",
       "text": "\ud83d\ude80 New LangChain Academy Course: Building Reliable Agents \ud83d\ude80\n\nShipping agents to production is hard. Traditional software is deterministic \u2013 when something breaks, you check the logs and fix the code. But agents rely on non-deterministic models.\n\nAdd multi-step reasoning, tool use, and real user traffic, and building reliable agents becomes far more complex than traditional system design.\n\nThe goal of this course is to teach you how to take an agent from first run to production-ready system through iterative cycles of improvement.\n\nYou\u2019ll learn how to do this with LangSmith, our agent engineering platform for observing, evaluating, and deploying agents.\n\nEnroll for free \u27a1\ufe0f https://t.co/fok9ahY6MG",
       "createdAt": "Tue Mar 03 18:38:57 +0000 2026",
-      "replyCount": 15,
+      "replyCount": 16,
       "retweetCount": 57,
-      "likeCount": 468,
+      "likeCount": 469,
       "conversationId": "2028902968888881624",
       "author": {
         "username": "LangChain",
@@ -85,7 +85,7 @@
       "text": "What? LangChain is evolving!\n\nMeet our final form \u27a1\ufe0f https://t.co/f6eGVFchtB https://t.co/MWLFt7Awpd",
       "createdAt": "Mon Mar 02 17:25:29 +0000 2026",
       "replyCount": 63,
-      "retweetCount": 92,
+      "retweetCount": 93,
       "likeCount": 1551,
       "conversationId": "2028522092774199731",
       "author": {

@@ -222,6 +222,7 @@ def exa_deep_people_search(api_key: str, query: str, num_results: int = 10) -> d
         headers={
             "x-api-key": api_key,
             "Content-Type": "application/json",
+            "User-Agent": "code-rl-briefing/1.0 (+https://github.com/zenobia-pay/code-rl-briefing)",
         },
         method="POST",
     )
