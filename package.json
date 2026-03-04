@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "wrangler dev",
-    "deploy": "wrangler deploy"
+    "deploy": "wrangler deploy",
+    "run:briefing": "python3 scripts/run_briefing.py"
   },
   "devDependencies": {
     "wrangler": "^4.65.0"

@@ -15,15 +15,15 @@
     },
     {
       "path": "/data/runs/2026-03-04/one-pager.md",
-      "bytes": 4667
+      "bytes": 3635
     },
     {
       "path": "/data/runs/2026-03-04/paper_people_rollup.json",
-      "bytes": 9286
+      "bytes": 9298
     },
     {
       "path": "/data/runs/2026-03-04/papers_selected.json",
-      "bytes": 15508
+      "bytes": 15322
     },
     {
       "path": "/data/runs/2026-03-04/raw/papers/01_StitchCUDA_An_Automated_Multi_Agents_End_to_End_GPU_Programing_Framework_with_Rubric_based.md",
@@ -38,6 +38,14 @@
       "bytes": 1792
     },
     {
+      "path": "/data/runs/2026-03-04/raw/papers/03_PrivMedChat_End_to_End_Differentially_Private_RLHF_for_Medical_Dialogue_Systems.md",
+      "bytes": 1937
+    },
+    {
+      "path": "/data/runs/2026-03-04/raw/papers/04_Learning_When_to_Act_or_Refuse_Guarding_Agentic_Reasoning_Models_for_Safe_Multi_Step_Tool_.md",
+      "bytes": 1792
+    },
+    {
       "path": "/data/runs/2026-03-04/raw/papers/04_Specificity_aware_reinforcement_learning_for_fine_grained_open_world_classification.md",
       "bytes": 1743
     },
@@ -46,16 +54,32 @@
       "bytes": 2180
     },
     {
+      "path": "/data/runs/2026-03-04/raw/papers/05_Specificity_aware_reinforcement_learning_for_fine_grained_open_world_classification.md",
+      "bytes": 1743
+    },
+    {
       "path": "/data/runs/2026-03-04/raw/papers/06_PrivMedChat_End_to_End_Differentially_Private_RLHF_for_Medical_Dialogue_Systems.md",
       "bytes": 1937
+    },
+    {
+      "path": "/data/runs/2026-03-04/raw/papers/06_RAPO_Expanding_Exploration_for_LLM_Agents_via_Retrieval_Augmented_Policy_Optimization.md",
+      "bytes": 2180
     },
     {
       "path": "/data/runs/2026-03-04/raw/papers/07_QFlowNet_Fast_Diverse_and_Efficient_Unitary_Synthesis_with_Generative_Flow_Networks.md",
       "bytes": 1537
     },
     {
+      "path": "/data/runs/2026-03-04/raw/papers/07_TikZilla_Scaling_Text_to_TikZ_with_High_Quality_Data_and_Reinforcement_Learning.md",
+      "bytes": 1789
+    },
+    {
       "path": "/data/runs/2026-03-04/raw/papers/08_CGL_Advancing_Continual_GUI_Learning_via_Reinforcement_Fine_Tuning.md",
       "bytes": 1924
+    },
+    {
+      "path": "/data/runs/2026-03-04/raw/papers/08_QFlowNet_Fast_Diverse_and_Efficient_Unitary_Synthesis_with_Generative_Flow_Networks.md",
+      "bytes": 1537
     },
     {
       "path": "/data/runs/2026-03-04/raw/x/history_updates_2026-02-25.json",
@@ -63,7 +87,7 @@
     },
     {
       "path": "/data/runs/2026-03-04/raw/x/initial_prompt_search.json",
-      "bytes": 8558
+      "bytes": 1738
     },
     {
       "path": "/data/runs/2026-03-04/raw/x/paper_people_CGL_Advancing_Continual_GUI_Learning_via_Reinforcement_Fine_Tuning.json",
@@ -98,6 +122,10 @@
       "bytes": 1370
     },
     {
+      "path": "/data/runs/2026-03-04/raw/x/paper_people_TikZilla_Scaling_Text_to_TikZ_with_High_Quality_Data_and_Reinforcement_Learning.json",
+      "bytes": 1195
+    },
+    {
       "path": "/data/runs/2026-03-04/raw/x/signal_account_HamelHusain.json",
       "bytes": 15186
     },
@@ -108,6 +136,10 @@
     {
       "path": "/data/runs/2026-03-04/raw/x/signal_account__reachsumit.json",
       "bytes": 16812
+    },
+    {
+      "path": "/data/runs/2026-03-04/raw-index.json",
+      "bytes": 4047
     },
     {
       "path": "/data/runs/2026-03-04/signals_account_rollup.json",

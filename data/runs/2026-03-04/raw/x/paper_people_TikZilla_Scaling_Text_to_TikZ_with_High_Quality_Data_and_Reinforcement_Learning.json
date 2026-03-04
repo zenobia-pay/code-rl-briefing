@@ -1,0 +1,29 @@
+{
+  "paper": "TikZilla: Scaling Text-to-TikZ with High-Quality Data and Reinforcement Learning",
+  "query": "\"TikZilla: Scaling Text-to-TikZ with High-Quality Data and Reinforcement Learning\" since:2026-03-04 until:2026-03-05",
+  "results": [
+    {
+      "id": "2029147768640438631",
+      "text": "TikZilla: Scaling Text-to-TikZ with High-Quality Data and Reinforcement Learning\n\nChristian Greisinger, Steffen Eger\nhttps://t.co/nET7lemyHy [\ud835\ude8c\ud835\ude9c.\ud835\ude70\ud835\ude78 \ud835\ude8c\ud835\ude9c.\ud835\ude72\ud835\ude7b \ud835\ude8c\ud835\ude9c.\ud835\ude72\ud835\ude85] https://t.co/FCc1QxzEhM",
+      "createdAt": "Wed Mar 04 10:51:42 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 0,
+      "likeCount": 0,
+      "conversationId": "2029147768640438631",
+      "author": {
+        "username": "SciFi",
+        "name": "AI Papers arXiv"
+      },
+      "authorId": "39671474",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HCj7JKlWoAAsPkY.png",
+          "width": 1080,
+          "height": 1350,
+          "previewUrl": "https://pbs.twimg.com/media/HCj7JKlWoAAsPkY.png:small"
+        }
+      ]
+    }
+  ]
+}

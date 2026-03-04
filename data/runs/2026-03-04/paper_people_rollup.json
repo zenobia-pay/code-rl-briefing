@@ -1,7 +1,7 @@
 [
   {
     "paper": "StitchCUDA: An Automated Multi-Agents End-to-End GPU Programing Framework with Rubric-based Agentic Reinforcement Learning",
-    "query": "\"StitchCUDA: An Automated Multi-Agents End-to-End GPU Programing Framework with Rubric-based Agentic Reinforcement Learning\" since:2026-03-03 until:2026-03-05",
+    "query": "\"StitchCUDA: An Automated Multi-Agents End-to-End GPU Programing Framework with Rubric-based Agentic Reinforcement Learning\" since:2026-03-04 until:2026-03-05",
     "results": [
       {
         "id": "2029106444847522195",
@@ -30,12 +30,41 @@
   },
   {
     "paper": "Geometry-Guided Reinforcement Learning for Multi-view Consistent 3D Scene Editing",
-    "query": "\"Geometry-Guided Reinforcement Learning for Multi-view Consistent 3D Scene Editing\" since:2026-03-03 until:2026-03-05",
+    "query": "\"Geometry-Guided Reinforcement Learning for Multi-view Consistent 3D Scene Editing\" since:2026-03-04 until:2026-03-05",
     "results": []
   },
   {
+    "paper": "PrivMedChat: End-to-End Differentially Private RLHF for Medical Dialogue Systems",
+    "query": "\"PrivMedChat: End-to-End Differentially Private RLHF for Medical Dialogue Systems\" since:2026-03-04 until:2026-03-05",
+    "results": [
+      {
+        "id": "2029116832003563776",
+        "text": "PrivMedChat: End-to-End Differentially Private RLHF for Medical Dialogue Systems\n\nSudip Bhujel\nhttps://t.co/w9DnqueWcO [\ud835\ude8c\ud835\ude9c.\ud835\ude72\ud835\ude7b] https://t.co/1uMo0wNDRz",
+        "createdAt": "Wed Mar 04 08:48:46 +0000 2026",
+        "replyCount": 0,
+        "retweetCount": 0,
+        "likeCount": 0,
+        "conversationId": "2029116832003563776",
+        "author": {
+          "username": "HEI",
+          "name": "LLM Papers"
+        },
+        "authorId": "223641087",
+        "media": [
+          {
+            "type": "photo",
+            "url": "https://pbs.twimg.com/media/HCjfAZTXkAA4mGh.png",
+            "width": 1080,
+            "height": 1350,
+            "previewUrl": "https://pbs.twimg.com/media/HCjfAZTXkAA4mGh.png:small"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "paper": "Learning When to Act or Refuse: Guarding Agentic Reasoning Models for Safe Multi-Step Tool Use",
-    "query": "\"Learning When to Act or Refuse: Guarding Agentic Reasoning Models for Safe Multi-Step Tool Use\" since:2026-03-03 until:2026-03-05",
+    "query": "\"Learning When to Act or Refuse: Guarding Agentic Reasoning Models for Safe Multi-Step Tool Use\" since:2026-03-04 until:2026-03-05",
     "results": [
       {
         "id": "2029088402784633080",
@@ -64,12 +93,12 @@
   },
   {
     "paper": "Specificity-aware reinforcement learning for fine-grained open-world classification",
-    "query": "\"Specificity-aware reinforcement learning for fine-grained open-world classification\" since:2026-03-03 until:2026-03-05",
+    "query": "\"Specificity-aware reinforcement learning for fine-grained open-world classification\" since:2026-03-04 until:2026-03-05",
     "results": []
   },
   {
     "paper": "RAPO: Expanding Exploration for LLM Agents via Retrieval-Augmented Policy Optimization",
-    "query": "\"RAPO: Expanding Exploration for LLM Agents via Retrieval-Augmented Policy Optimization\" since:2026-03-03 until:2026-03-05",
+    "query": "\"RAPO: Expanding Exploration for LLM Agents via Retrieval-Augmented Policy Optimization\" since:2026-03-04 until:2026-03-05",
     "results": [
       {
         "id": "2029143818411389433",
@@ -111,29 +140,29 @@
     ]
   },
   {
-    "paper": "PrivMedChat: End-to-End Differentially Private RLHF for Medical Dialogue Systems",
-    "query": "\"PrivMedChat: End-to-End Differentially Private RLHF for Medical Dialogue Systems\" since:2026-03-03 until:2026-03-05",
+    "paper": "TikZilla: Scaling Text-to-TikZ with High-Quality Data and Reinforcement Learning",
+    "query": "\"TikZilla: Scaling Text-to-TikZ with High-Quality Data and Reinforcement Learning\" since:2026-03-04 until:2026-03-05",
     "results": [
       {
-        "id": "2029116832003563776",
-        "text": "PrivMedChat: End-to-End Differentially Private RLHF for Medical Dialogue Systems\n\nSudip Bhujel\nhttps://t.co/w9DnqueWcO [\ud835\ude8c\ud835\ude9c.\ud835\ude72\ud835\ude7b] https://t.co/1uMo0wNDRz",
-        "createdAt": "Wed Mar 04 08:48:46 +0000 2026",
+        "id": "2029147768640438631",
+        "text": "TikZilla: Scaling Text-to-TikZ with High-Quality Data and Reinforcement Learning\n\nChristian Greisinger, Steffen Eger\nhttps://t.co/nET7lemyHy [\ud835\ude8c\ud835\ude9c.\ud835\ude70\ud835\ude78 \ud835\ude8c\ud835\ude9c.\ud835\ude72\ud835\ude7b \ud835\ude8c\ud835\ude9c.\ud835\ude72\ud835\ude85] https://t.co/FCc1QxzEhM",
+        "createdAt": "Wed Mar 04 10:51:42 +0000 2026",
         "replyCount": 0,
         "retweetCount": 0,
         "likeCount": 0,
-        "conversationId": "2029116832003563776",
+        "conversationId": "2029147768640438631",
         "author": {
-          "username": "HEI",
-          "name": "LLM Papers"
+          "username": "SciFi",
+          "name": "AI Papers arXiv"
         },
-        "authorId": "223641087",
+        "authorId": "39671474",
         "media": [
           {
             "type": "photo",
-            "url": "https://pbs.twimg.com/media/HCjfAZTXkAA4mGh.png",
+            "url": "https://pbs.twimg.com/media/HCj7JKlWoAAsPkY.png",
             "width": 1080,
             "height": 1350,
-            "previewUrl": "https://pbs.twimg.com/media/HCjfAZTXkAA4mGh.png:small"
+            "previewUrl": "https://pbs.twimg.com/media/HCj7JKlWoAAsPkY.png:small"
           }
         ]
       }
@@ -141,7 +170,7 @@
   },
   {
     "paper": "QFlowNet: Fast, Diverse, and Efficient Unitary Synthesis with Generative Flow Networks",
-    "query": "\"QFlowNet: Fast, Diverse, and Efficient Unitary Synthesis with Generative Flow Networks\" since:2026-03-03 until:2026-03-05",
+    "query": "\"QFlowNet: Fast, Diverse, and Efficient Unitary Synthesis with Generative Flow Networks\" since:2026-03-04 until:2026-03-05",
     "results": [
       {
         "id": "2029130451600748905",
@@ -179,35 +208,6 @@
           "name": "arXiv bot (quant-ph)"
         },
         "authorId": "1828899519272263680"
-      }
-    ]
-  },
-  {
-    "paper": "CGL: Advancing Continual GUI Learning via Reinforcement Fine-Tuning",
-    "query": "\"CGL: Advancing Continual GUI Learning via Reinforcement Fine-Tuning\" since:2026-03-03 until:2026-03-05",
-    "results": [
-      {
-        "id": "2029150007303995786",
-        "text": "CGL: Advancing Continual GUI Learning via Reinforcement Fine-Tuning\n\nZhenquan Yao, Zitong Huang, Yihan Zeng, Jianhua Han, Hang Xu, Chun-Mei Feng, Jianwei Ma, Wangmeng Zuo\nhttps://t.co/8m5EPpgXEQ [\ud835\ude8c\ud835\ude9c.\ud835\ude7b\ud835\ude76 \ud835\ude8c\ud835\ude9c.\ud835\ude72\ud835\ude85] https://t.co/TV8qWRXH2m",
-        "createdAt": "Wed Mar 04 11:00:36 +0000 2026",
-        "replyCount": 0,
-        "retweetCount": 0,
-        "likeCount": 0,
-        "conversationId": "2029150007303995786",
-        "author": {
-          "username": "Memoirs",
-          "name": "Machine Learning arXiv"
-        },
-        "authorId": "565118338",
-        "media": [
-          {
-            "type": "photo",
-            "url": "https://pbs.twimg.com/media/HCj9LbWawAcxB4z.png",
-            "width": 1080,
-            "height": 1350,
-            "previewUrl": "https://pbs.twimg.com/media/HCj9LbWawAcxB4z.png:small"
-          }
-        ]
       }
     ]
   }
