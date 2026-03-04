@@ -1,0 +1,14 @@
+{
+  "date": "2026-03-04",
+  "topic": "What is the latest in code RL environments and human data?",
+  "folders": {
+    "run_dir": "data/runs/2026-03-04",
+    "raw": "data/runs/2026-03-04/raw"
+  },
+  "counts": {
+    "papers_selected": 8,
+    "paper_people_queries": 8,
+    "signals_accounts": 3,
+    "history_dates_checked": 4
+  }
+}

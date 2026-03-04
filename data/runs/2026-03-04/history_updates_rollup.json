@@ -1,0 +1,71 @@
+[
+  {
+    "date": "2026-03-03",
+    "missing": true
+  },
+  {
+    "date": "2026-03-01",
+    "missing": true
+  },
+  {
+    "date": "2026-02-25",
+    "briefing_id": "2026-02-25",
+    "file": "public/data/brief.md",
+    "bullet_updates": [
+      {
+        "bullet": "Hermes Agent remembers what it learns and gets more capable over time, with a multi-level memory system and persistent dedicated machine access. \u2192 [Nous thread](https://x.com/NousResearch/status/2026758996107898954)",
+        "query": "Hermes Agent remembers what it learns and gets more capable over time, with a multi-level memory system and persistent dedicated machine access.   [No since:2026-03-03 until:2026-03-05",
+        "updates": []
+      },
+      {
+        "bullet": "A major bottleneck in continual learning is that we don\u2019t have a general way to compare and evaluate methods across task domains. \u2192 [willccbb thread](https://x.com/willccbb/status/2026743565699936376)",
+        "query": "A major bottleneck in continual learning is that we don\u2019t have a general way to compare and evaluate methods across task domains.   [willccbb thread]( since:2026-03-03 until:2026-03-05",
+        "updates": []
+      },
+      {
+        "bullet": "Detailed rubrics provide a reliable reward signal for RL and granular control over the training process, even on very open-ended tasks. \u2192 [cwolferesearch thread](https://x.com/cwolferesearch/status/2026151598523625626)",
+        "query": "Detailed rubrics provide a reliable reward signal for RL and granular control over the training process, even on very open-ended tasks.   [cwolferesea since:2026-03-03 until:2026-03-05",
+        "updates": []
+      },
+      {
+        "bullet": "Everybody wants high quality tasks, rubrics and verifiers, but some want just that while others want the full harness and TVRs. \u2192 [sachpatro97 thread](https://x.com/sachpatro97/status/2026773868233343072)",
+        "query": "Everybody wants high quality tasks, rubrics and verifiers, but some want just that while others want the full harness and TVRs.   [sachpatro97 thread] since:2026-03-03 until:2026-03-05",
+        "updates": []
+      },
+      {
+        "bullet": "RLVR over RLHF is a genuine paradigm shift, but the challenge is defining what verifiable means for open-ended tasks. \u2192 [saen_dev account](https://x.com/saen_dev)",
+        "query": "RLVR over RLHF is a genuine paradigm shift, but the challenge is defining what verifiable means for open-ended tasks.   [saen_dev account](https://x.c since:2026-03-03 until:2026-03-05",
+        "updates": []
+      },
+      {
+        "bullet": "Despite rapid recent progress in terminal capabilities, the training data strategies behind state-of-the-art terminal agents remain largely undisclosed. \u2192 [On Data Engineering for Scaling LLM Terminal Capabilities](https://arxiv.org/abs/2602.21193)",
+        "query": "Despite rapid recent progress in terminal capabilities, the training data strategies behind state-of-the-art terminal agents remain largely undisclose since:2026-03-03 until:2026-03-05",
+        "updates": []
+      },
+      {
+        "bullet": "KLong uses trajectory-splitting supervised fine-tuning followed by progressive RL stages with extended timeouts. \u2192 [KLong](https://arxiv.org/abs/2602.17547)",
+        "query": "KLong uses trajectory-splitting supervised fine-tuning followed by progressive RL stages with extended timeouts.   [KLong](https://arxiv.org/abs/2602. since:2026-03-03 until:2026-03-05",
+        "updates": []
+      },
+      {
+        "bullet": "K-Search decouples high-level algorithmic planning from low-level program instantiation to navigate non-monotonic optimization paths. \u2192 [K-Search](https://arxiv.org/abs/2602.19128)",
+        "query": "K-Search decouples high-level algorithmic planning from low-level program instantiation to navigate non-monotonic optimization paths.   [K-Search](htt since:2026-03-03 until:2026-03-05",
+        "updates": []
+      },
+      {
+        "bullet": "We report an exploratory red-teaming study of autonomous language-model-powered agents deployed in a live laboratory environment with persistent memory, email, Discord, file systems, and shell execution. \u2192 [Agents of Chaos](https://arxiv.org/abs/2602.20021)",
+        "query": "We report an exploratory red-teaming study of autonomous language-model-powered agents deployed in a live laboratory environment with persistent memor since:2026-03-03 until:2026-03-05",
+        "updates": []
+      },
+      {
+        "bullet": "Within the allowed timeframe of the challenge, Aletheia autonomously solved 6 problems out of 10 according to majority expert assessments. \u2192 [Aletheia tackles FirstProof autonomously](https://arxiv.org/abs/2602.21201)",
+        "query": "Within the allowed timeframe of the challenge, Aletheia autonomously solved 6 problems out of 10 according to majority expert assessments.   [Aletheia since:2026-03-03 until:2026-03-05",
+        "updates": []
+      }
+    ]
+  },
+  {
+    "date": "2026-02-18",
+    "missing": true
+  }
+]

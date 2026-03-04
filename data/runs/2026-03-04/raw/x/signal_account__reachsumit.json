@@ -1,0 +1,362 @@
+{
+  "signal": {
+    "name": "_reachsumit",
+    "role": "account",
+    "links": {
+      "x": "https://x.com/_reachsumit"
+    }
+  },
+  "handle": "_reachsumit",
+  "tweets": [
+    {
+      "id": "2029043665864409353",
+      "text": "SOLAR: SVD-Optimized Lifelong Attention for Recommendation\n\nKuaishou introduces a lossless low-rank attention mechanism that reduces complexity from O(N\u00b2d) to O(Ndr) while preserving softmax, enabling lifelong sequence modeling at ten-thousand scale.\n\n\ud83d\udcdd https://t.co/kvDmnRoWT9",
+      "createdAt": "Wed Mar 04 03:58:02 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 2,
+      "likeCount": 6,
+      "conversationId": "2029043665864409353",
+      "author": {
+        "username": "_reachsumit",
+        "name": "Sumit"
+      },
+      "authorId": "129969370"
+    },
+    {
+      "id": "2029043519118348297",
+      "text": "AlphaFree: Recommendation Free from Users, IDs, and GNNs\n\nProposes a lightweight recommendation method that eliminates user embeddings, item IDs, and GNNs by using language representations and contrastive learning.\n\n\ud83d\udcdd https://t.co/asOzxJZCoJ\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbb https://t.co/FCNpH7KhwE",
+      "createdAt": "Wed Mar 04 03:57:27 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 1,
+      "likeCount": 11,
+      "conversationId": "2029043519118348297",
+      "author": {
+        "username": "_reachsumit",
+        "name": "Sumit"
+      },
+      "authorId": "129969370"
+    },
+    {
+      "id": "2029042976249524294",
+      "text": "APAO: Adaptive Prefix-Aware Optimization for Generative Recommendation\n\nAddresses training-inference inconsistency in generative recommenders with prefix-level optimization that aligns training with beam search decoding.\n\n\ud83d\udcdd https://t.co/Fr1b4XrKtT\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbb https://t.co/FNTDYRyn58",
+      "createdAt": "Wed Mar 04 03:55:17 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 0,
+      "likeCount": 1,
+      "conversationId": "2029042976249524294",
+      "author": {
+        "username": "_reachsumit",
+        "name": "Sumit"
+      },
+      "authorId": "129969370"
+    },
+    {
+      "id": "2029042443828822339",
+      "text": "Model Editing for New Document Integration in Generative Information Retrieval\n\nIntroduces a model editing method that efficiently adapts generative retrieval models to new documents via hybrid-label adaptive training.\n\n\ud83d\udcdd https://t.co/JadP67vLsK\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbb https://t.co/oTsiADqpJG",
+      "createdAt": "Wed Mar 04 03:53:11 +0000 2026",
+      "replyCount": 1,
+      "retweetCount": 2,
+      "likeCount": 4,
+      "conversationId": "2029042443828822339",
+      "author": {
+        "username": "_reachsumit",
+        "name": "Sumit"
+      },
+      "authorId": "129969370"
+    },
+    {
+      "id": "2029041979380908510",
+      "text": "OneRanker: Unified Generation and Ranking with One Model in Industrial Advertising Recommendation\n\nTencent deeply integrates generation and ranking in ad recommendation through value-aware multi-task decoupling and coarse-to-fine target awareness.\n\n\ud83d\udcdd https://t.co/i4YNAOieWd",
+      "createdAt": "Wed Mar 04 03:51:20 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 0,
+      "likeCount": 0,
+      "conversationId": "2029041979380908510",
+      "author": {
+        "username": "_reachsumit",
+        "name": "Sumit"
+      },
+      "authorId": "129969370"
+    },
+    {
+      "id": "2029041582603944027",
+      "text": "Reproducing and Comparing Distillation Techniques for Cross-Encoders\n\n@_VictorMorand_ et al. provide a benchmark of cross-encoder training strategies across 9 encoder backbones.\n\n\ud83d\udcdd https://t.co/dkQ8LT44Qb\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbb https://t.co/20qeWVad7C",
+      "createdAt": "Wed Mar 04 03:49:45 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 3,
+      "likeCount": 7,
+      "conversationId": "2029041582603944027",
+      "author": {
+        "username": "_reachsumit",
+        "name": "Sumit"
+      },
+      "authorId": "129969370"
+    },
+    {
+      "id": "2029041106453987718",
+      "text": "RAPO: Expanding Exploration for LLM Agents via Retrieval-Augmented Policy Optimization\n\nIntroduces an Agentic RL framework that uses retrieval of off-policy step-level traces to expand exploration during training.\n\n\ud83d\udcdd https://t.co/PC55UKHRFd",
+      "createdAt": "Wed Mar 04 03:47:52 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 2,
+      "likeCount": 4,
+      "conversationId": "2029041106453987718",
+      "author": {
+        "username": "_reachsumit",
+        "name": "Sumit"
+      },
+      "authorId": "129969370"
+    },
+    {
+      "id": "2029040768602792328",
+      "text": "Proactive Guiding Strategy for Item-side Fairness in Interactive Recommendation\n\nProposes a hierarchical RL framework that progressively guides user preferences toward long-tail items to improve item-side fairness while maintaining user satisfaction.\n\n\ud83d\udcdd https://t.co/4EDQBuvpTV",
+      "createdAt": "Wed Mar 04 03:46:31 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 1,
+      "likeCount": 4,
+      "conversationId": "2029040768602792328",
+      "author": {
+        "username": "_reachsumit",
+        "name": "Sumit"
+      },
+      "authorId": "129969370"
+    },
+    {
+      "id": "2028735663605268529",
+      "text": "DeepResearch-9K: A Challenging Benchmark Dataset of Deep-Research Agent\n\nBaidu presents a 9K question benchmark across three difficulty levels for evaluating deep-research agents, along with an open-source RL training framework\n\n\ud83d\udcddhttps://t.co/2YZucyyKBg\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbbhttps://t.co/fy5uKNQPb1",
+      "createdAt": "Tue Mar 03 07:34:08 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 3,
+      "likeCount": 16,
+      "conversationId": "2028735663605268529",
+      "author": {
+        "username": "_reachsumit",
+        "name": "Sumit"
+      },
+      "authorId": "129969370"
+    },
+    {
+      "id": "2028735188713541771",
+      "text": "Beyond the Grid: Layout-Informed Multi-Vector Retrieval with Parsed Visual Document Representations\n\nAlibaba uses document parsing to create layout-informed multi-vector representations for visual document retrieval.\n\n\ud83d\udcddhttps://t.co/N9BBoh3kta\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbbhttps://t.co/xXrMeYGD8q",
+      "createdAt": "Tue Mar 03 07:32:15 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 3,
+      "likeCount": 23,
+      "conversationId": "2028735188713541771",
+      "author": {
+        "username": "_reachsumit",
+        "name": "Sumit"
+      },
+      "authorId": "129969370"
+    },
+    {
+      "id": "2028734935763480993",
+      "text": "GAM-RAG: Gain-Adaptive Memory for Evolving Retrieval in Retrieval-Augmented Generation\n\nIntroduces a training-free RAG framework that accumulates retrieval experience from recurring queries using gain-adaptive memory updates.\n\n\ud83d\udcdd https://t.co/dlP10LVKy1\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbb https://t.co/i6dXr5vPUd",
+      "createdAt": "Tue Mar 03 07:31:15 +0000 2026",
+      "replyCount": 1,
+      "retweetCount": 2,
+      "likeCount": 13,
+      "conversationId": "2028734935763480993",
+      "author": {
+        "username": "_reachsumit",
+        "name": "Sumit"
+      },
+      "authorId": "129969370"
+    },
+    {
+      "id": "2028734391569260873",
+      "text": "Super Research: Answering Highly Complex Questions with Large Language Models through Super Deep and Super Wide Research\n\nIntroduces benchmark of 300 expert-written questions requiring 100+ retrieval steps and 1,000+ web pages.\n\n\ud83d\udcddhttps://t.co/Iq5sgzbGkN\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbbhttps://t.co/Z7mr2kq9T0",
+      "createdAt": "Tue Mar 03 07:29:05 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 9,
+      "likeCount": 26,
+      "conversationId": "2028734391569260873",
+      "author": {
+        "username": "_reachsumit",
+        "name": "Sumit"
+      },
+      "authorId": "129969370"
+    },
+    {
+      "id": "2028734220244484541",
+      "text": "MC-SEARCH: Evaluating and Enhancing Multimodal Agentic Search with Structured Long Reasoning Chains\n\n@krystal_ning et al. introduce a benchmark for agentic multimodal RAG with long, step-wise annotated reasoning chains.\n\n\ud83d\udcdd https://t.co/8BsQnThrFI\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbb https://t.co/Q7dt35bUU2",
+      "createdAt": "Tue Mar 03 07:28:24 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 0,
+      "likeCount": 1,
+      "conversationId": "2028734220244484541",
+      "author": {
+        "username": "_reachsumit",
+        "name": "Sumit"
+      },
+      "authorId": "129969370"
+    },
+    {
+      "id": "2028733911757644218",
+      "text": "ActMem: Bridging the Gap Between Memory Retrieval and Reasoning in LLM Agents\n\nAlibaba transforms dialogue history into a causal and semantic knowledge graph, enabling LLM agents to reason over past interactions.\n\n\ud83d\udcdd https://t.co/fYEInnZgr7\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbb https://t.co/CP4bfoZ4oE",
+      "createdAt": "Tue Mar 03 07:27:11 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 0,
+      "likeCount": 4,
+      "conversationId": "2028733911757644218",
+      "author": {
+        "username": "_reachsumit",
+        "name": "Sumit"
+      },
+      "authorId": "129969370"
+    },
+    {
+      "id": "2028733306037240286",
+      "text": "MuonRec: Shifting the Optimizer Paradigm Beyond Adam in Scalable Generative Recommendation\n\nIntroduces the Muon optimizer to recommender system training, reducing converged training steps by 32% while improving ranking quality.\n\n\ud83d\udcddhttps://t.co/Nuzei7J7w4\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbbhttps://t.co/CNEcebdeqg",
+      "createdAt": "Tue Mar 03 07:24:46 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 1,
+      "likeCount": 6,
+      "conversationId": "2028733306037240286",
+      "author": {
+        "username": "_reachsumit",
+        "name": "Sumit"
+      },
+      "authorId": "129969370"
+    },
+    {
+      "id": "2028732997768556807",
+      "text": "Stop Treating Collisions Equally: Qualification-Aware Semantic ID Learning for Recommendation at Industrial Scale\n\nKuaishou learns collision-qualified Semantic IDs by selectively repelling harmful token collisions while preserving benign overlaps.\n\n\ud83d\udcdd https://t.co/P0GEYtzJsh",
+      "createdAt": "Tue Mar 03 07:23:33 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 0,
+      "likeCount": 8,
+      "conversationId": "2028732997768556807",
+      "author": {
+        "username": "_reachsumit",
+        "name": "Sumit"
+      },
+      "authorId": "129969370"
+    },
+    {
+      "id": "2028732842054951196",
+      "text": "SODA: Semantic-Oriented Distributional Alignment for Generative Recommendation\n\nUses probability distributions over codebooks as soft representations to enable fine-grained semantic alignment between the tokenizer &amp; recommender\n\n\ud83d\udcddhttps://t.co/fdKc2Ud0ea\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbbhttps://t.co/syNwi4SDa4",
+      "createdAt": "Tue Mar 03 07:22:56 +0000 2026",
+      "replyCount": 1,
+      "retweetCount": 1,
+      "likeCount": 3,
+      "conversationId": "2028732842054951196",
+      "author": {
+        "username": "_reachsumit",
+        "name": "Sumit"
+      },
+      "authorId": "129969370"
+    },
+    {
+      "id": "2028730811340706209",
+      "text": "Beyond the Flat Sequence: Hierarchical and Preference-Aware Generative Recommendations\n\nHuawei presents a generative recommendation framework that models session-based user behavior hierarchically and introduces preference-guided sparse attention.\n\n\ud83d\udcdd https://t.co/2aqI3XHaZy",
+      "createdAt": "Tue Mar 03 07:14:52 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 2,
+      "likeCount": 13,
+      "conversationId": "2028730811340706209",
+      "author": {
+        "username": "_reachsumit",
+        "name": "Sumit"
+      },
+      "authorId": "129969370"
+    },
+    {
+      "id": "2028730659460837863",
+      "text": "TARSE: Test-Time Adaptation via Retrieval of Skills and Experience for Reasoning Agents\n\nIntroduces a retrieval-augmented reasoning framework that separates clinical knowledge into reusable skills and verified experience traces.\n\n\ud83d\udcdd https://t.co/xoMyAz0ubn",
+      "createdAt": "Tue Mar 03 07:14:15 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 0,
+      "likeCount": 2,
+      "conversationId": "2028730659460837863",
+      "author": {
+        "username": "_reachsumit",
+        "name": "Sumit"
+      },
+      "authorId": "129969370"
+    },
+    {
+      "id": "2028730224565952872",
+      "text": "LaSER: Internalizing Explicit Reasoning into Latent Space for Dense Retrieval\n\nAlibaba proposes a self-distillation framework that compresses explicit Chain-of-Thought reasoning into latent tokens for dense retrieval.\n\n\ud83d\udcdd https://t.co/wdyyuh11sG\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbb https://t.co/KWXomiaUks",
+      "createdAt": "Tue Mar 03 07:12:32 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 4,
+      "likeCount": 20,
+      "conversationId": "2028730224565952872",
+      "author": {
+        "username": "_reachsumit",
+        "name": "Sumit"
+      },
+      "authorId": "129969370"
+    },
+    {
+      "id": "2028729806196724199",
+      "text": "CLEAR: Null-Space Projection for Cross-Modal De-Redundancy in Multimodal Recommendation\n\nProposes a plug-and-play null-space projection method that suppresses cross-modal redundancy between visual and textual features, improving multimodal recommenders.\n\n\ud83d\udcddhttps://t.co/xDATGBzvGK",
+      "createdAt": "Tue Mar 03 07:10:52 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 1,
+      "likeCount": 5,
+      "conversationId": "2028729806196724199",
+      "author": {
+        "username": "_reachsumit",
+        "name": "Sumit"
+      },
+      "authorId": "129969370"
+    },
+    {
+      "id": "2028729669181489345",
+      "text": "OmniRet: Efficient and High-Fidelity Omni Modality Retrieval\n\nIntroduces a retrieval model handling composed queries across text, vision, and audio using an attention-based resampler and Attention Sliced Wasserstein Pooling.\n\n\ud83d\udcdd https://t.co/TcR25zoJn8\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbb https://t.co/FwkLgXJqJk",
+      "createdAt": "Tue Mar 03 07:10:19 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 1,
+      "likeCount": 4,
+      "conversationId": "2028729669181489345",
+      "author": {
+        "username": "_reachsumit",
+        "name": "Sumit"
+      },
+      "authorId": "129969370"
+    },
+    {
+      "id": "2028729431767101720",
+      "text": "Scaling Retrieval Augmented Generation with RAG Fusion: Lessons from an Industry Deployment\n\nDell evaluates retrieval fusion techniques and finds that recall gains from multi-query retrieval &amp; RRF are largely neutralized after re-ranking and truncation.\n\n\ud83d\udcddhttps://t.co/wyu5Rs4BnO",
+      "createdAt": "Tue Mar 03 07:09:23 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 0,
+      "likeCount": 1,
+      "conversationId": "2028729431767101720",
+      "author": {
+        "username": "_reachsumit",
+        "name": "Sumit"
+      },
+      "authorId": "129969370"
+    },
+    {
+      "id": "2028317949933879441",
+      "text": "GPU-Native Approximate Nearest Neighbor Search with IVF-RaBitQ: Fast Index Build and Search\n\nPresents a GPU-native ANNS solution combining IVF with RaBitQ quantization, achieving 2.2x higher throughput with 7.7x faster indexing\n\n\ud83d\udcddhttps://t.co/pkLKKjIl4T\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbbhttps://t.co/0zaDkQBMfC",
+      "createdAt": "Mon Mar 02 03:54:18 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 7,
+      "likeCount": 20,
+      "conversationId": "2028317949933879441",
+      "author": {
+        "username": "_reachsumit",
+        "name": "Sumit"
+      },
+      "authorId": "129969370"
+    },
+    {
+      "id": "2028317656282275985",
+      "text": "Truncated Step-Level Sampling with Process Rewards for Retrieval-Augmented Reasoning\n\nCombines truncated step-level sampling with dense LLM-as-judge rewards for training search-augmented LLMs, achieving provably lower variance.\n\n\ud83d\udcddhttps://t.co/XyZYTeHbEy\n\ud83d\udc68\ud83c\udffd\u200d\ud83d\udcbbhttps://t.co/FbSK1txFxU",
+      "createdAt": "Mon Mar 02 03:53:08 +0000 2026",
+      "replyCount": 1,
+      "retweetCount": 5,
+      "likeCount": 21,
+      "conversationId": "2028317656282275985",
+      "author": {
+        "username": "_reachsumit",
+        "name": "Sumit"
+      },
+      "authorId": "129969370"
+    }
+  ]
+}

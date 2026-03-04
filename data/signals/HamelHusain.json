@@ -1,0 +1,10 @@
+{
+  "name": "Hamel Husain",
+  "role": "account",
+  "handle": "HamelHusain",
+  "days": {
+    "2026-03-04": {
+      "source_file": "data/runs/2026-03-04/raw/x/signal_account_HamelHusain.json"
+    }
+  }
+}

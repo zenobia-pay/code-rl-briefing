@@ -1,0 +1,43 @@
+{
+  "paper": "RAPO: Expanding Exploration for LLM Agents via Retrieval-Augmented Policy Optimization",
+  "query": "\"RAPO: Expanding Exploration for LLM Agents via Retrieval-Augmented Policy Optimization\" since:2026-03-03 until:2026-03-05",
+  "results": [
+    {
+      "id": "2029143818411389433",
+      "text": "RAPO: Expanding Exploration for LLM Agents via Retrieval-Augmented Policy Optimization\n\nSiwei Zhang, Yun Xiong, Xi Chen, Zi'an Jia, Renhong Huang, Jiarong Xu, Jiawei Zhang\nhttps://t.co/HC8r4wxKsM [\ud835\ude8c\ud835\ude9c.\ud835\ude70\ud835\ude78] https://t.co/GfWByDTzva",
+      "createdAt": "Wed Mar 04 10:36:00 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 0,
+      "likeCount": 1,
+      "conversationId": "2029143818411389433",
+      "author": {
+        "username": "SciFi",
+        "name": "AI Papers arXiv"
+      },
+      "authorId": "39671474",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HCj3jOwWsAAgZwj.png",
+          "width": 1080,
+          "height": 1350,
+          "previewUrl": "https://pbs.twimg.com/media/HCj3jOwWsAAgZwj.png:small"
+        }
+      ]
+    },
+    {
+      "id": "2029041106453987718",
+      "text": "RAPO: Expanding Exploration for LLM Agents via Retrieval-Augmented Policy Optimization\n\nIntroduces an Agentic RL framework that uses retrieval of off-policy step-level traces to expand exploration during training.\n\n\ud83d\udcdd https://t.co/PC55UKHRFd",
+      "createdAt": "Wed Mar 04 03:47:52 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 2,
+      "likeCount": 4,
+      "conversationId": "2029041106453987718",
+      "author": {
+        "username": "_reachsumit",
+        "name": "Sumit"
+      },
+      "authorId": "129969370"
+    }
+  ]
+}

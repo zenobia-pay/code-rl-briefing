@@ -1,0 +1,43 @@
+{
+  "paper": "QFlowNet: Fast, Diverse, and Efficient Unitary Synthesis with Generative Flow Networks",
+  "query": "\"QFlowNet: Fast, Diverse, and Efficient Unitary Synthesis with Generative Flow Networks\" since:2026-03-03 until:2026-03-05",
+  "results": [
+    {
+      "id": "2029130451600748905",
+      "text": "QFlowNet: Fast, Diverse, and Efficient Unitary Synthesis with Generative Flow Networks\n\nInhoe Koo, Hyunho Cha, Jungwoo Lee\nhttps://t.co/lEMTZpmdAg [\ud835\ude9a\ud835\ude9e\ud835\ude8a\ud835\ude97\ud835\ude9d-\ud835\ude99\ud835\ude91 \ud835\ude8c\ud835\ude9c.\ud835\ude70\ud835\ude78] https://t.co/kVwVAyj2gi",
+      "createdAt": "Wed Mar 04 09:42:53 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 0,
+      "likeCount": 1,
+      "conversationId": "2029130451600748905",
+      "author": {
+        "username": "QuantumPapers",
+        "name": "Quantum Physics arXiv"
+      },
+      "authorId": "136501409",
+      "media": [
+        {
+          "type": "photo",
+          "url": "https://pbs.twimg.com/media/HCjrZJ7XQAAtKL_.png",
+          "width": 1080,
+          "height": 1350,
+          "previewUrl": "https://pbs.twimg.com/media/HCjrZJ7XQAAtKL_.png:small"
+        }
+      ]
+    },
+    {
+      "id": "2029053154994864321",
+      "text": "QFlowNet: Fast, Diverse, and Efficient Unitary Synthesis with Generative Flow Networks\nhttps://t.co/m6uwJxCMkn\nInhoe Koo, Hyunho Cha, Jungwoo Lee.\nhttps://t.co/bBn4zayfSG",
+      "createdAt": "Wed Mar 04 04:35:44 +0000 2026",
+      "replyCount": 0,
+      "retweetCount": 0,
+      "likeCount": 0,
+      "conversationId": "2029053154994864321",
+      "author": {
+        "username": "krxiv_quant_ph",
+        "name": "arXiv bot (quant-ph)"
+      },
+      "authorId": "1828899519272263680"
+    }
+  ]
+}
