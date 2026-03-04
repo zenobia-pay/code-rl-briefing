@@ -161,6 +161,50 @@ def youtube_search(api_key: str, query: str, date: str):
     return {"requestUrl": url, "raw": raw, "videos": items, "transcriptLibrary": "youtube-transcript-api", "transcriptLibraryError": transcript_error}
 
 
+
+def build_youtube_keyword_prompt(topic: str, papers: list[dict], supergrok_topic: dict, signals: dict) -> str:
+    paper_titles = [p.get("title", "") for p in papers[:8]]
+    tweet_texts = []
+    if isinstance(supergrok_topic, dict):
+        for t in (supergrok_topic.get("topicTweets") or [])[:10]:
+            if isinstance(t, dict):
+                tweet_texts.append((t.get("text") or "")[:200])
+    sig_handles = []
+    if isinstance(signals, dict):
+        for x in (signals.get("signalsAccountPass") or [])[:10]:
+            if isinstance(x, dict):
+                h = x.get("handle") or x.get("account")
+                if h: sig_handles.append(h)
+
+    return (
+        "You are selecting YouTube search keywords for a daily intelligence briefing.\n"
+        f"Topic: {topic}\n"
+        "Use this context and output strict JSON only.\n\n"
+        f"Paper titles: {json.dumps(paper_titles)}\n"
+        f"Tweet snippets: {json.dumps(tweet_texts)}\n"
+        f"Signal accounts: {json.dumps(sig_handles)}\n\n"
+        "Return JSON with exactly this schema and nothing else:\n"
+        '{"keywords":["k1","k2","k3","k4"],"rationale":"one short sentence"}\n'
+        "Rules: keywords must be concise (2-6 words), specific, and relevant to likely new videos in last 24h."
+    )
+
+
+def generate_youtube_keywords_via_llm(browseruse_key: str, topic: str, papers: list[dict], supergrok_topic: dict, signals: dict):
+    prompt = build_youtube_keyword_prompt(topic, papers, supergrok_topic, signals)
+    run = browseruse_run(browseruse_key, DEFAULT_PROFILE_ID, prompt, timeout_s=600)
+    parsed = parse_jsonish((run.get("status") or {}).get("output") or "{}")
+    kws = []
+    if isinstance(parsed, dict):
+        kws = [k.strip() for k in (parsed.get("keywords") or []) if isinstance(k, str) and k.strip()]
+    if len(kws) < 3:
+        kws = [
+            topic,
+            "SWE-rebench V2 RL coding agents",
+            "code RL environments human data",
+            "verifiable rewards coding agents",
+        ]
+    return {"prompt": prompt, "raw": run, "parsed": parsed, "keywords": kws[:4]}
+
 def publish_run(repo: Path, date: str):
     src = repo / "data" / "runs" / date
     dst = repo / "public" / "data" / "runs" / date
@@ -243,10 +287,28 @@ def run(repo: Path, topic: str, date: str, browseruse_key: str, exa_key: str | N
     r06 = exa_people(exa_key, q_lines) if exa_key else [{"error": "EXA_API_KEY missing"}]
     save_step(run_dir, "step-06-exa-people", "Queries in prompts/step06_exa_people_queries.txt", "Called Exa API with type=deep category=people using exact query payloads.", "raw.json", r06, r06)
 
-    # Step 07: YouTube search
-    p07 = read_prompt(repo, "step07_youtube_search.txt").format(topic=topic, date=date)
-    r07 = youtube_search(youtube_key, topic, date) if youtube_key else {"error": "YOUTUBE_DATA_API_KEY missing"}
-    save_step(run_dir, "step-07-youtube-search", p07, "Called YouTube Data API search endpoint for same-day topic videos, then attempted transcript fetch via youtube-transcript-api for each videoId; persisted request + response + transcript results.", "raw.json", r07, r07.get("videos", []) if isinstance(r07, dict) else r07)
+    # Step 07: YouTube search (LLM-derived keywords + transcripts)
+    p07_template = read_prompt(repo, "step07_youtube_search.txt").format(topic=topic, date=date)
+    kw_plan = generate_youtube_keywords_via_llm(browseruse_key, topic, raw01["papers"], n02, n04)
+    queries = kw_plan["keywords"]
+
+    runs = []
+    merged = {}
+    for q in queries:
+        r = youtube_search(youtube_key, q, date) if youtube_key else {"error": "YOUTUBE_DATA_API_KEY missing", "query": q}
+        runs.append({"query": q, "result": r})
+        vids = (r.get("videos") or []) if isinstance(r, dict) else []
+        for v in vids:
+            vid = v.get("videoId") or v.get("url") or f"q:{q}:{v.get('title','')}"
+            if vid not in merged:
+                merged[vid] = v | {"matchedQueries": [q]}
+            else:
+                merged[vid].setdefault("matchedQueries", []).append(q)
+
+    p07 = p07_template + "\n\nLLM keyword plan prompt and output are stored in raw.json."
+    r07 = {"keywordPlan": kw_plan, "searchQueries": queries, "runs": runs}
+    n07 = {"keywords": queries, "videos": list(merged.values())}
+    save_step(run_dir, "step-07-youtube-search", p07, "Generated 3-4 YouTube keywords via LLM from topic + today's scraped context, then queried YouTube Data API per keyword and fetched transcripts via youtube-transcript-api.", "raw.json", r07, n07)
 
     # Step 08: synthesis (file-backed)
     one = run_dir / "one-pager.md"

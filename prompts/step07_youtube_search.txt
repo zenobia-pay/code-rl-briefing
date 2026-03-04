@@ -1,4 +1,8 @@
-Use YouTube Data API search for topic: "{topic}".
-Date window: {date} UTC day only.
-Collect recent videos and metadata relevant to the briefing topic.
-Persist request URL/payload and raw response.
+YouTube step objective:
+1) Use an LLM to derive 3-4 keyword queries from:
+   - briefing topic: "{topic}"
+   - today's scraped papers/tweets/signals
+2) Search YouTube Data API for each keyword in date window: {date} UTC day only.
+3) Deduplicate videos across queries.
+4) Fetch transcripts using youtube-transcript-api when available.
+5) Persist keyword prompt/output, queries, raw API responses, and normalized merged videos.
