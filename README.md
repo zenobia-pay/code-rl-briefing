@@ -42,6 +42,8 @@ This pipeline now does, in order (scripted step prompts):
 7. step-07-youtube-search (YouTube Data API)
 8. step-08-synthesis
 
+Step-07 uses `youtube-transcript-api` when available to attach per-video transcripts.
+
 Definition of "run briefing" is stored in `briefing-process.md`.
 Per-step prompts are stored in `prompts/`.
 Per-run artifacts are stored in `data/runs/YYYY-MM-DD/steps/step-XX-*` with prompt + story + raw + normalized outputs.

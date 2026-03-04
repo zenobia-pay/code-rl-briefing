@@ -130,10 +130,25 @@ def youtube_search(api_key: str, query: str, date: str):
         raw = json.loads(urllib.request.urlopen(url, timeout=60).read().decode("utf-8"))
     except Exception as e:
         raw = {"error": str(e), "url": url}
+
+    transcript_error = None
+    try:
+        from youtube_transcript_api import YouTubeTranscriptApi
+    except Exception as e:
+        YouTubeTranscriptApi = None
+        transcript_error = f"youtube-transcript-api unavailable: {e}"
+
     items = []
     for it in raw.get("items", []) if isinstance(raw, dict) else []:
         vid = (((it.get("id") or {}).get("videoId")) or "")
         sn = it.get("snippet") or {}
+        transcript = None
+        if vid and YouTubeTranscriptApi is not None:
+            try:
+                segs = YouTubeTranscriptApi.get_transcript(vid)
+                transcript = " ".join((x.get("text", "") for x in segs))[:4000]
+            except Exception as e:
+                transcript = f"[transcript unavailable: {e}]"
         items.append({
             "videoId": vid,
             "title": sn.get("title", ""),
@@ -141,8 +156,9 @@ def youtube_search(api_key: str, query: str, date: str):
             "publishedAt": sn.get("publishedAt", ""),
             "description": sn.get("description", "")[:400],
             "url": f"https://www.youtube.com/watch?v={vid}" if vid else "",
+            "transcript": transcript,
         })
-    return {"requestUrl": url, "raw": raw, "videos": items}
+    return {"requestUrl": url, "raw": raw, "videos": items, "transcriptLibrary": "youtube-transcript-api", "transcriptLibraryError": transcript_error}
 
 
 def publish_run(repo: Path, date: str):
@@ -230,7 +246,7 @@ def run(repo: Path, topic: str, date: str, browseruse_key: str, exa_key: str | N
     # Step 07: YouTube search
     p07 = read_prompt(repo, "step07_youtube_search.txt").format(topic=topic, date=date)
     r07 = youtube_search(youtube_key, topic, date) if youtube_key else {"error": "YOUTUBE_DATA_API_KEY missing"}
-    save_step(run_dir, "step-07-youtube-search", p07, "Called YouTube Data API search endpoint for same-day topic videos and persisted request + response.", "raw.json", r07, r07.get("videos", []) if isinstance(r07, dict) else r07)
+    save_step(run_dir, "step-07-youtube-search", p07, "Called YouTube Data API search endpoint for same-day topic videos, then attempted transcript fetch via youtube-transcript-api for each videoId; persisted request + response + transcript results.", "raw.json", r07, r07.get("videos", []) if isinstance(r07, dict) else r07)
 
     # Step 08: synthesis (file-backed)
     one = run_dir / "one-pager.md"
