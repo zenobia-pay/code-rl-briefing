@@ -1,0 +1,4 @@
+Use YouTube Data API search for topic: "{topic}".
+Date window: {date} UTC day only.
+Collect recent videos and metadata relevant to the briefing topic.
+Persist request URL/payload and raw response.

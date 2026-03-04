@@ -110,6 +110,41 @@ def exa_people(api_key: str, queries: list[str]):
     return out
 
 
+
+
+def youtube_search(api_key: str, query: str, date: str):
+    start = f"{date}T00:00:00Z"
+    end = f"{date}T23:59:59Z"
+    params = {
+        "part": "snippet",
+        "q": query,
+        "type": "video",
+        "order": "date",
+        "maxResults": 15,
+        "publishedAfter": start,
+        "publishedBefore": end,
+        "key": api_key,
+    }
+    url = "https://www.googleapis.com/youtube/v3/search?" + urllib.parse.urlencode(params)
+    try:
+        raw = json.loads(urllib.request.urlopen(url, timeout=60).read().decode("utf-8"))
+    except Exception as e:
+        raw = {"error": str(e), "url": url}
+    items = []
+    for it in raw.get("items", []) if isinstance(raw, dict) else []:
+        vid = (((it.get("id") or {}).get("videoId")) or "")
+        sn = it.get("snippet") or {}
+        items.append({
+            "videoId": vid,
+            "title": sn.get("title", ""),
+            "channelTitle": sn.get("channelTitle", ""),
+            "publishedAt": sn.get("publishedAt", ""),
+            "description": sn.get("description", "")[:400],
+            "url": f"https://www.youtube.com/watch?v={vid}" if vid else "",
+        })
+    return {"requestUrl": url, "raw": raw, "videos": items}
+
+
 def publish_run(repo: Path, date: str):
     src = repo / "data" / "runs" / date
     dst = repo / "public" / "data" / "runs" / date
@@ -126,7 +161,7 @@ def publish_run(repo: Path, date: str):
     (dst / "raw-index.json").write_text(json.dumps({"date": date, "files": files}, indent=2))
 
 
-def run(repo: Path, topic: str, date: str, browseruse_key: str, exa_key: str | None):
+def run(repo: Path, topic: str, date: str, browseruse_key: str, exa_key: str | None, youtube_key: str | None):
     run_dir = repo / "data" / "runs" / date
     ensure(run_dir)
 
@@ -192,7 +227,12 @@ def run(repo: Path, topic: str, date: str, browseruse_key: str, exa_key: str | N
     r06 = exa_people(exa_key, q_lines) if exa_key else [{"error": "EXA_API_KEY missing"}]
     save_step(run_dir, "step-06-exa-people", "Queries in prompts/step06_exa_people_queries.txt", "Called Exa API with type=deep category=people using exact query payloads.", "raw.json", r06, r06)
 
-    # Step 07: synthesis (file-backed)
+    # Step 07: YouTube search
+    p07 = read_prompt(repo, "step07_youtube_search.txt").format(topic=topic, date=date)
+    r07 = youtube_search(youtube_key, topic, date) if youtube_key else {"error": "YOUTUBE_DATA_API_KEY missing"}
+    save_step(run_dir, "step-07-youtube-search", p07, "Called YouTube Data API search endpoint for same-day topic videos and persisted request + response.", "raw.json", r07, r07.get("videos", []) if isinstance(r07, dict) else r07)
+
+    # Step 08: synthesis (file-backed)
     one = run_dir / "one-pager.md"
     one.write_text(
         f"# One-Pager — {topic} ({date})\n\n"
@@ -200,6 +240,7 @@ def run(repo: Path, topic: str, date: str, browseruse_key: str, exa_key: str | N
         "- Check step-01 for AlphaXiv paper discovery.\n"
         "- Check step-02/03/04/05 for SuperGrok passes.\n"
         "- Check step-06 for Exa deep people payloads and responses.\n"
+        "- Check step-07 for YouTube same-day search artifacts.\n"
     )
 
     # Convenience rollup
@@ -212,6 +253,7 @@ def run(repo: Path, topic: str, date: str, browseruse_key: str, exa_key: str | N
         "signals": n04,
         "history": n05,
         "exa": r06,
+        "youtube": r07,
     }
     (run_dir / "briefing-rollup.json").write_text(json.dumps(rollup, indent=2))
     (run_dir / "run-story.md").write_text(
@@ -223,7 +265,8 @@ def run(repo: Path, topic: str, date: str, browseruse_key: str, exa_key: str | N
         "4. SuperGrok signals account pass (step-04)\n"
         "5. SuperGrok historical updates pass (step-05)\n"
         "6. Exa deep people pass (step-06)\n"
-        "7. File-backed synthesis (step-07)\n"
+        "7. YouTube search pass (step-07)\n"
+        "8. File-backed synthesis (step-08)\n"
     )
 
     publish_run(repo, date)
@@ -236,16 +279,18 @@ def main():
     ap.add_argument("--date", default=dt.date.today().isoformat())
     ap.add_argument("--browseruse-api-key", default=None)
     ap.add_argument("--exa-api-key", default=None)
+    ap.add_argument("--youtube-api-key", default=None)
     args = ap.parse_args()
 
     import os
     bkey = args.browseruse_api_key or os.environ.get("BROWSER_USE_API_KEY")
     ekey = args.exa_api_key or os.environ.get("EXA_API_KEY")
+    ykey = args.youtube_api_key or os.environ.get("YOUTUBE_DATA_API_KEY")
     if not bkey:
         raise SystemExit("Missing BROWSER_USE_API_KEY")
 
     repo = Path(args.repo).resolve()
-    run(repo, args.topic, args.date, bkey, ekey)
+    run(repo, args.topic, args.date, bkey, ekey, ykey)
     print(json.dumps({"ok": True, "date": args.date, "runDir": str(repo / 'data' / 'runs' / args.date)}, indent=2))
 
 

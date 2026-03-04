@@ -39,7 +39,8 @@ This pipeline now does, in order (scripted step prompts):
 4. step-04-supergrok-signals
 5. step-05-supergrok-history-updates
 6. step-06-exa-people (deep, category=people)
-7. step-07-synthesis
+7. step-07-youtube-search (YouTube Data API)
+8. step-08-synthesis
 
 Definition of "run briefing" is stored in `briefing-process.md`.
 Per-step prompts are stored in `prompts/`.

@@ -27,7 +27,11 @@ When Ryan says "do a briefing", run this exact pipeline in order for the request
    - Call Exa API with deep search category=people.
    - Save exact API request payloads + responses.
 
-7. **step-07-synthesis**
+7. **step-07-youtube-search**
+   - Call YouTube Data API search for same-day topic videos.
+   - Save exact API request URL/payload + raw response.
+
+8. **step-08-synthesis**
    - Build one-pager from persisted files only.
 
 ## Required Artifacts Per Step
