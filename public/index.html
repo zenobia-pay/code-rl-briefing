@@ -120,7 +120,8 @@ function sectionMeta(){
     {title:'Per-Paper Discussion Search', desc:'For each paper title, SuperGrok is asked exactly: "what are people saying about this exact paper title?"', match:(p)=>p.includes('/raw/x/paper_people_') || p.endsWith('/paper_people_rollup.json')},
     {title:'Signals Account Daily Pass', desc:'Daily pass over tracked signal accounts to capture what they discussed today.', match:(p)=>p.includes('/raw/x/signal_account_') || p.endsWith('/signals_account_rollup.json')},
     {title:'Historical 1/3/7/14 Update Pass', desc:'Updates retrieved against prior briefing bullets for 1, 3, 7, and 14-day offsets.', match:(p)=>p.includes('/raw/x/history_updates_') || p.endsWith('/history_updates_rollup.json')},
-    {title:'Exa Deep People Pass', desc:'Direct Exa API call using deep search category=people. Exact queries are stored in exa_queries.json.', match:(p)=>p.endsWith('/exa_people_deep.json') || p.endsWith('/exa_queries.json') || p.endsWith('/exa-people-pass.md')},
+    {title:'Exa Deep People Pass', desc:'Direct Exa API call using deep search category=people. Exact queries are stored in exa_queries.json.', match:(p)=>p.endsWith('/exa_people_deep.json') || p.endsWith('/exa_queries.json') || p.endsWith('/exa-people-pass.md') || p.includes('/steps/step-06-exa-people/')},
+    {title:'YouTube Videos + Transcripts Pass', desc:'LLM-generated keyword plan + YouTube Data API per-keyword searches + deduped videos + transcript attempts.', match:(p)=>p.includes('/steps/step-07-youtube-search/') || p.endsWith('/youtube-channel-search.json')},
     {title:'Other Run Artifacts', desc:'Session/task metadata and additional raw artifacts for this run.', match:(p)=>true},
   ];
 }
