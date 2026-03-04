@@ -44,6 +44,14 @@ This pipeline now does, in order (scripted step prompts):
 
 Step-07 uses `youtube-transcript-api` when available to attach per-video transcripts.
 
+### Separate YouTube channel-search workflow
+
+```bash
+python3 scripts/youtube_channel_search.py --query "RL and human data" --min-subs 5000
+```
+
+Outputs ranked channels with stats to a JSON file (supports `--out`).
+
 Definition of "run briefing" is stored in `briefing-process.md`.
 Per-step prompts are stored in `prompts/`.
 Per-run artifacts are stored in `data/runs/YYYY-MM-DD/steps/step-XX-*` with prompt + story + raw + normalized outputs.

@@ -62,13 +62,25 @@ def parse_jsonish(s: str):
     try:
         return json.loads(s)
     except Exception:
+        pass
+    try:
         return json.loads(s.replace("\\'", "'"))
+    except Exception:
+        pass
+    try:
+        import ast
+        v = ast.literal_eval(s)
+        if isinstance(v, (dict, list)):
+            return {"parsedVia":"literal_eval","data":v}
+    except Exception:
+        pass
+    return {"parseError": True, "rawOutput": s[:20000]}
 
 
 def alphaxiv_papers(topic: str, target_date: str):
     # alphaXiv first (explicitly hits alphaxiv.org)
     q = urllib.parse.quote(topic)
-    url = f"https://www.alphaxiv.org/search?q={q}"
+    url = f"https://www.alphaxiv.org/?q={q}"
     html = urllib.request.urlopen(url, timeout=40).read().decode("utf-8", errors="ignore")
     ids = list(dict.fromkeys(re.findall(r"/abs/(\d{4}\.\d{4,5})", html)))[:8]
 

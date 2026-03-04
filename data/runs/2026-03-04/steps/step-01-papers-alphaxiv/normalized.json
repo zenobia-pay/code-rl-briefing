@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Understanding LoRA as Knowledge Memory: An Empirical Analysis",
+    "alphaXivUrl": "https://www.alphaxiv.org/abs/2603.01097",
+    "arxivUrl": "https://arxiv.org/abs/2603.01097",
+    "insight": "Continuous knowledge updating for pre-trained large language models (LLMs) is increasingly necessary yet remains challenging. Although inference-time methods like In-Context Learning (ICL) and Retrieval-Augmented Generat..."
+  },
+  {
+    "title": "Beyond Language Modeling: An Exploration of Multimodal Pretraining",
+    "alphaXivUrl": "https://www.alphaxiv.org/abs/2603.03276",
+    "arxivUrl": "https://arxiv.org/abs/2603.03276",
+    "insight": "The visual world offers a critical axis for advancing foundation models beyond language. Despite growing interest in this direction, the design space for native multimodal models remains opaque. We provide empirical clar..."
+  },
+  {
+    "title": "CUDA Agent: Large-Scale Agentic RL for High-Performance CUDA Kernel Generation",
+    "alphaXivUrl": "https://www.alphaxiv.org/abs/2602.24286",
+    "arxivUrl": "https://arxiv.org/abs/2602.24286",
+    "insight": "GPU kernel optimization is fundamental to modern deep learning but remains a highly specialized task requiring deep hardware expertise. Despite strong performance in general programming, large language models (LLMs) rema..."
+  },
+  {
+    "title": "Utonia: Toward One Encoder for All Point Clouds",
+    "alphaXivUrl": "https://www.alphaxiv.org/abs/2603.03283",
+    "arxivUrl": "https://arxiv.org/abs/2603.03283",
+    "insight": "We dream of a future where point clouds from all domains can come together to shape a single model that benefits them all. Toward this goal, we present Utonia, a first step toward training a single self-supervised point ..."
+  },
+  {
+    "title": "Speculative Speculative Decoding",
+    "alphaXivUrl": "https://www.alphaxiv.org/abs/2603.03251",
+    "arxivUrl": "https://arxiv.org/abs/2603.03251",
+    "insight": "Autoregressive decoding is bottlenecked by its sequential nature. Speculative decoding has become a standard way to accelerate inference by using a fast draft model to predict upcoming tokens from a slower target model, ..."
+  },
+  {
+    "title": "WorldStereo: Bridging Camera-Guided Video Generation and Scene Reconstruction via 3D Geometric Memories",
+    "alphaXivUrl": "https://www.alphaxiv.org/abs/2603.02049",
+    "arxivUrl": "https://arxiv.org/abs/2603.02049",
+    "insight": "Recent advances in foundational Video Diffusion Models (VDMs) have yielded significant progress. Yet, despite the remarkable visual quality of generated videos, reconstructing consistent 3D scenes from these outputs rema..."
+  },
+  {
+    "title": "RubricBench: Aligning Model-Generated Rubrics with Human Standards",
+    "alphaXivUrl": "https://www.alphaxiv.org/abs/2603.01562",
+    "arxivUrl": "https://arxiv.org/abs/2603.01562",
+    "insight": "As Large Language Model (LLM) alignment evolves from simple completions to complex, highly sophisticated generation, Reward Models are increasingly shifting toward rubric-guided evaluation to mitigate surface-level biase..."
+  },
+  {
+    "title": "VGG-T$^3$: Offline Feed-Forward 3D Reconstruction at Scale",
+    "alphaXivUrl": "https://www.alphaxiv.org/abs/2602.23361",
+    "arxivUrl": "https://arxiv.org/abs/2602.23361",
+    "insight": "We present a scalable 3D reconstruction model that addresses a critical limitation in offline feed-forward methods: their computational and memory requirements grow quadratically w.r.t. the number of input images. Our ap..."
+  }
+]
