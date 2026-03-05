@@ -1,199 +1,87 @@
 [
   {
-    "name": "Hamel Husain",
+    "name": "Sergio Paniego",
     "role": "account",
     "links": {
-      "x": "https://x.com/HamelHusain"
+      "x": "https://x.com/SergioPaniego",
+      "post": "https://x.com/SergioPaniego/status/2029218056191488061",
+      "openenv_blog": "https://huggingface.co/blog/openenv-turing"
     }
   },
   {
-    "name": "LangChain",
+    "name": "Scale AI",
     "role": "account",
     "links": {
-      "x": "https://x.com/LangChain"
+      "x": "https://x.com/scale_AI",
+      "post": "https://x.com/scale_AI/status/2029244660905095359",
+      "leaderboard": "https://scale.com/leaderboard"
     }
   },
   {
-    "name": "_reachsumit",
+    "name": "Bing Liu",
     "role": "account",
     "links": {
-      "x": "https://x.com/_reachsumit"
+      "x": "https://x.com/vbingliu",
+      "post": "https://x.com/vbingliu/status/2029251295484559523"
     }
   },
   {
-    "name": "Ruotong Liao",
-    "role": "author",
-    "links": {
-      "paper": "https://arxiv.org/abs/2603.02203"
-    }
-  },
-  {
-    "name": "Siwei Zhang",
-    "role": "author",
-    "links": {
-      "paper": "https://arxiv.org/abs/2603.03078"
-    }
-  },
-  {
-    "name": "Zhenquan Yao",
-    "role": "author",
-    "links": {
-      "paper": "https://arxiv.org/abs/2603.02951"
-    }
-  },
-  {
-    "name": "Shiyang Li",
-    "role": "author",
-    "links": {
-      "paper": "https://arxiv.org/abs/2603.02637"
-    }
-  },
-  {
-    "name": "Sudip Bhujel",
-    "role": "author",
-    "links": {
-      "paper": "https://arxiv.org/abs/2603.03054",
-      "github": "https://github.com/sudip-bhujel/privmedchat"
-    }
-  },
-  {
-    "name": "@SceneinCinema",
+    "name": "CatAccept",
     "role": "account",
     "links": {
-      "x": "https://x.com/SceneinCinema"
+      "x": "https://x.com/CatAccept",
+      "post": "https://x.com/CatAccept/status/2029106697864921112",
+      "paper": "https://arxiv.org/abs/2602.23866"
     }
   },
   {
-    "name": "@ScaryMovie",
+    "name": "inhumanscience",
     "role": "account",
     "links": {
-      "x": "https://x.com/ScaryMovie"
+      "x": "https://x.com/inhumanscience",
+      "post": "https://x.com/inhumanscience/status/2029090022771597634",
+      "paper": "https://arxiv.org/abs/2602.23866"
     }
   },
   {
-    "name": "@Variety",
+    "name": "Tarjei Paule Hage",
+    "role": "author",
+    "links": {
+      "paper": "https://arxiv.org/abs/2603.04124"
+    }
+  },
+  {
+    "name": "Markus J. Buehler",
+    "role": "author",
+    "links": {
+      "paper": "https://arxiv.org/abs/2603.04124",
+      "lab": "https://buehler.mit.edu"
+    }
+  },
+  {
+    "name": "Tri Dao",
+    "role": "author",
+    "links": {
+      "paper": "https://arxiv.org/abs/2603.03251",
+      "website": "https://tridao.me"
+    }
+  },
+  {
+    "name": "N_Taisho",
     "role": "account",
     "links": {
-      "x": "https://x.com/Variety"
+      "x": "https://x.com/N_Taisho",
+      "post": "https://x.com/N_Taisho/status/2029325226446864767",
+      "paper": "https://www.alphaxiv.org/abs/2603.01896"
     }
   },
   {
-    "name": "@FilmUpdates",
+    "name": "HGPU Group",
     "role": "account",
     "links": {
-      "x": "https://x.com/FilmUpdates"
-    }
-  },
-  {
-    "name": "@spideyupdated",
-    "role": "account",
-    "links": {
-      "x": "https://x.com/spideyupdated"
-    }
-  },
-  {
-    "name": "@DiscussingFilm",
-    "role": "account",
-    "links": {
-      "x": "https://x.com/DiscussingFilm"
-    }
-  },
-  {
-    "name": "@sakpo0007_",
-    "role": "account",
-    "links": {
-      "x": "https://x.com/sakpo0007_"
-    }
-  },
-  {
-    "name": "@SJTimes13",
-    "role": "account",
-    "links": {
-      "x": "https://x.com/SJTimes13"
-    }
-  },
-  {
-    "name": "@tophz_",
-    "role": "account",
-    "links": {
-      "x": "https://x.com/tophz_"
-    }
-  },
-  {
-    "name": "@TheDogTrilogy",
-    "role": "account",
-    "links": {
-      "x": "https://x.com/TheDogTrilogy"
-    }
-  },
-  {
-    "name": "Dezhou Shen",
-    "role": "author",
-    "links": {
-      "paper": "https://arxiv.org/abs/2006.13417"
-    }
-  },
-  {
-    "name": "Qin Chao",
-    "role": "author",
-    "links": {
-      "paper": "https://arxiv.org/abs/2304.10311"
-    }
-  },
-  {
-    "name": "Eunsoo Kim",
-    "role": "author",
-    "links": {
-      "paper": "https://arxiv.org/abs/2304.10311"
-    }
-  },
-  {
-    "name": "Boyang Li",
-    "role": "author",
-    "links": {
-      "paper": "https://arxiv.org/abs/2304.10311"
-    }
-  },
-  {
-    "name": "Roberto Balestri",
-    "role": "author",
-    "links": {
-      "paper": "https://arxiv.org/abs/2601.23121"
-    }
-  },
-  {
-    "name": "Pasquale Cascarano",
-    "role": "author",
-    "links": {
-      "paper": "https://arxiv.org/abs/2601.23121"
-    }
-  },
-  {
-    "name": "Mirko Degli Esposti",
-    "role": "author",
-    "links": {
-      "paper": "https://arxiv.org/abs/2601.23121"
-    }
-  },
-  {
-    "name": "Sidan Zhu",
-    "role": "author",
-    "links": {
-      "paper": "https://arxiv.org/abs/2512.04426"
-    }
-  },
-  {
-    "name": "Hongteng Xu",
-    "role": "author",
-    "links": {
-      "paper": "https://arxiv.org/abs/2512.04426"
-    }
-  },
-  {
-    "name": "Dixin Luo",
-    "role": "author",
-    "links": {
-      "paper": "https://arxiv.org/abs/2512.04426"
+      "x": "https://x.com/hgpu",
+      "post": "https://x.com/hgpu/status/2029289191973036193",
+      "paper": "https://www.alphaxiv.org/abs/2602.24286"
     }
   }
 ]

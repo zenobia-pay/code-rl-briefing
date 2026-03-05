@@ -2,9 +2,9 @@
   {
     "id": "2026-03-05",
     "date": "2026-03-05",
-    "title": "Most talked about movies on social media",
-    "source": "Browser Use + SuperGrok + arXiv",
-    "prompt": "What are the most talked about movies on social media?",
+    "title": "Code RL environments + human data",
+    "source": "Browser Use + SuperGrok + alphaXiv/arXiv (last 24h)",
+    "prompt": "What is the latest in code RL environments and human data?",
     "file": "/data/brief-2026-03-05.md"
   },
   {
