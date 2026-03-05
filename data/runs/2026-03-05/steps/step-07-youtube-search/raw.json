@@ -1,0 +1,76 @@
+{
+  "keywordPlan": {
+    "prompt": "You are selecting YouTube search keywords for a daily intelligence briefing.\nTopic: What are the most talked about movies on social media?\nUse this context and output strict JSON only.\n\nPaper titles: [\"Understanding LoRA as Knowledge Memory: An Empirical Analysis\", \"Beyond Language Modeling: An Exploration of Multimodal Pretraining\", \"Speculative Speculative Decoding\", \"Utonia: Toward One Encoder for All Point Clouds\", \"Chain of World: World Model Thinking in Latent Motion\", \"Agentic Code Reasoning\", \"CUDA Agent: Large-Scale Agentic RL for High-Performance CUDA Kernel Generation\", \"Helios: Real Real-Time Long Video Generation Model\"]\nTweet snippets: []\nSignal accounts: []\n\nReturn JSON with exactly this schema and nothing else:\n{\"keywords\":[\"k1\",\"k2\",\"k3\",\"k4\"],\"rationale\":\"one short sentence\"}\nRules: keywords must be concise (2-6 words), specific, and relevant to likely new videos in last 24h.",
+    "raw": {
+      "session": {
+        "id": "02d5c109-b4cc-4817-881f-c082c8e2c93d",
+        "status": "active",
+        "liveUrl": "https://live.browser-use.com?wss=https%3A%2F%2F02d5c109-b4cc-4817-881f-c082c8e2c93d.cdp0.browser-use.com",
+        "startedAt": "2026-03-05T15:37:56.972224Z",
+        "finishedAt": null,
+        "persistMemory": true,
+        "keepAlive": false,
+        "proxyUsedMb": "0",
+        "proxyCost": "0"
+      },
+      "task": {
+        "id": "cdaedb7d-2862-4217-8dcf-e5533c937a02",
+        "sessionId": "02d5c109-b4cc-4817-881f-c082c8e2c93d"
+      },
+      "status": {
+        "id": "cdaedb7d-2862-4217-8dcf-e5533c937a02",
+        "status": "finished",
+        "output": "{\\\"keywords\\\":[\\\"2025 Oscar winners highlights\\\",\\\"Wicked movie social media reaction\\\",\\\"Moana 2 streaming release buzz\\\",\\\"Anora movie awards discussion\\\"],\\\"rationale\\\":\\\"Keywords focus on the immediate aftermath of the 2025 Oscars and major March streaming releases trending on social platforms.\\\"}",
+        "finishedAt": "2026-03-05T15:38:36.659787Z",
+        "isSuccess": true,
+        "cost": "0.012"
+      }
+    },
+    "parsed": {
+      "parseError": true,
+      "rawOutput": "{\\\"keywords\\\":[\\\"2025 Oscar winners highlights\\\",\\\"Wicked movie social media reaction\\\",\\\"Moana 2 streaming release buzz\\\",\\\"Anora movie awards discussion\\\"],\\\"rationale\\\":\\\"Keywords focus on the immediate aftermath of the 2025 Oscars and major March streaming releases trending on social platforms.\\\"}"
+    },
+    "keywords": [
+      "What are the most talked about movies on social media?",
+      "SWE-rebench V2 RL coding agents",
+      "code RL environments human data",
+      "verifiable rewards coding agents"
+    ]
+  },
+  "searchQueries": [
+    "What are the most talked about movies on social media?",
+    "SWE-rebench V2 RL coding agents",
+    "code RL environments human data",
+    "verifiable rewards coding agents"
+  ],
+  "runs": [
+    {
+      "query": "What are the most talked about movies on social media?",
+      "result": {
+        "error": "YOUTUBE_DATA_API_KEY missing",
+        "query": "What are the most talked about movies on social media?"
+      }
+    },
+    {
+      "query": "SWE-rebench V2 RL coding agents",
+      "result": {
+        "error": "YOUTUBE_DATA_API_KEY missing",
+        "query": "SWE-rebench V2 RL coding agents"
+      }
+    },
+    {
+      "query": "code RL environments human data",
+      "result": {
+        "error": "YOUTUBE_DATA_API_KEY missing",
+        "query": "code RL environments human data"
+      }
+    },
+    {
+      "query": "verifiable rewards coding agents",
+      "result": {
+        "error": "YOUTUBE_DATA_API_KEY missing",
+        "query": "verifiable rewards coding agents"
+      }
+    }
+  ]
+}

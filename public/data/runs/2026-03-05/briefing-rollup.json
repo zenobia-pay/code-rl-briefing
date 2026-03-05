@@ -1,0 +1,188 @@
+{
+  "topic": "What are the most talked about movies on social media?",
+  "date": "2026-03-05",
+  "papers": [
+    {
+      "title": "Understanding LoRA as Knowledge Memory: An Empirical Analysis",
+      "alphaXivUrl": "https://www.alphaxiv.org/abs/2603.01097",
+      "arxivUrl": "https://arxiv.org/abs/2603.01097",
+      "insight": "Continuous knowledge updating for pre-trained large language models (LLMs) is increasingly necessary yet remains challenging. Although inference-time methods like In-Context Learning (ICL) and Retrieval-Augmented Generat..."
+    },
+    {
+      "title": "Beyond Language Modeling: An Exploration of Multimodal Pretraining",
+      "alphaXivUrl": "https://www.alphaxiv.org/abs/2603.03276",
+      "arxivUrl": "https://arxiv.org/abs/2603.03276",
+      "insight": "The visual world offers a critical axis for advancing foundation models beyond language. Despite growing interest in this direction, the design space for native multimodal models remains opaque. We provide empirical clar..."
+    },
+    {
+      "title": "Speculative Speculative Decoding",
+      "alphaXivUrl": "https://www.alphaxiv.org/abs/2603.03251",
+      "arxivUrl": "https://arxiv.org/abs/2603.03251",
+      "insight": "Autoregressive decoding is bottlenecked by its sequential nature. Speculative decoding has become a standard way to accelerate inference by using a fast draft model to predict upcoming tokens from a slower target model, ..."
+    },
+    {
+      "title": "Utonia: Toward One Encoder for All Point Clouds",
+      "alphaXivUrl": "https://www.alphaxiv.org/abs/2603.03283",
+      "arxivUrl": "https://arxiv.org/abs/2603.03283",
+      "insight": "We dream of a future where point clouds from all domains can come together to shape a single model that benefits them all. Toward this goal, we present Utonia, a first step toward training a single self-supervised point ..."
+    },
+    {
+      "title": "Chain of World: World Model Thinking in Latent Motion",
+      "alphaXivUrl": "https://www.alphaxiv.org/abs/2603.03195",
+      "arxivUrl": "https://arxiv.org/abs/2603.03195",
+      "insight": "Vision-Language-Action (VLA) models are a promising path toward embodied intelligence, yet they often overlook the predictive and temporal-causal structure underlying visual dynamics. World-model VLAs address this by pre..."
+    },
+    {
+      "title": "Agentic Code Reasoning",
+      "alphaXivUrl": "https://www.alphaxiv.org/abs/2603.01896",
+      "arxivUrl": "https://arxiv.org/abs/2603.01896",
+      "insight": "Can LLM agents explore codebases and reason about code semantics without executing the code? We study this capability, which we call agentic code reasoning, and introduce semi-formal reasoning: a structured prompting met..."
+    },
+    {
+      "title": "CUDA Agent: Large-Scale Agentic RL for High-Performance CUDA Kernel Generation",
+      "alphaXivUrl": "https://www.alphaxiv.org/abs/2602.24286",
+      "arxivUrl": "https://arxiv.org/abs/2602.24286",
+      "insight": "GPU kernel optimization is fundamental to modern deep learning but remains a highly specialized task requiring deep hardware expertise. Despite strong performance in general programming, large language models (LLMs) rema..."
+    },
+    {
+      "title": "Helios: Real Real-Time Long Video Generation Model",
+      "alphaXivUrl": "https://www.alphaxiv.org/abs/2603.04379",
+      "arxivUrl": "https://arxiv.org/abs/2603.04379",
+      "insight": "We introduce Helios, the first 14B video generation model that runs at 19.5 FPS on a single NVIDIA H100 GPU and supports minute-scale generation while matching the quality of a strong baseline. We make breakthroughs alon..."
+    }
+  ],
+  "supergrokTopic": {
+    "parseError": true,
+    "rawOutput": "\\n[\\n  {\\n    \\\"url\\\": \\\"https://x.com/parkersity_9/status/2029228237134454967\\\",\\n    \\\"text\\\": \\\"WHY DO I HAVE TO RENT A MOVIE ON PRIME IF I ALREADY FUCKIN PAY FOR PRIMEEE ??\\\"\\n  },\\n  {\\n    \\\"url\\\": \\\"https://x.com/Gidi_Traffic/status/2029159671458873464\\\",\\n    \\\"text\\\": \\\"What\u2019s The Title Of This Movie? \ud83c\udfa5\\\"\\n  },\\n  {\\n    \\\"url\\\": \\\"https://x.com/de3dsoul/status/2029210261786440071\\\",\\n    \\\"text\\\": \\\"Bee Movie Game (2007)\\\"\\n  },\\n  {\\n    \\\"url\\\": \\\"https://x.com/MSDianAbhiii/status/2029087708828835920\\\",\\n    \\\"text\\\": \\\"The hype for Dhurandhar is crazy, man. They literally had to postpone Toxic's release date to avoid a clash. This is the first time I'm witnessing any South Indian movie being affected by a Bollywood movie's release on the same date.\\\"\\n  },\\n  {\\n    \\\"url\\\": \\\"https://x.com/jennygodswill/status/2029225371955020085\\\",\\n    \\\"text\\\": \\\"Just when I thought I\u2019ve seen an intense plot twist in a Movie\\\\n\\\\nThe Accused said hold my \ud83c\udf7a \ud83d\ude2b\ud83d\ude2b\\\"\\n  }\\n]\\n"
+  },
+  "paperDiscussion": [
+    {
+      "parseError": true,
+      "rawOutput": "[\n  {\n    \\\"url\\\": \\\"https://x.com/griffintaur/status/2029270705116979444\\\",\n    \\\"text\\\": \\\"\ud83d\ude80 Interestingresearch: Understanding LoRA as Knowledge Memory: An Empirical Analysis\\\\nRead more: https://www.alphaxiv.org/abs/2603.01097\\\\n#LLM #ReinforcementLearning #MLResearch\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/FMackenzie7/status/2029173583809827223\\\",\n    \\\"text\\\": \\\"Understanding LoRA as Knowledge Memory: An Empirical Analysis\\\\n\ud83d\ude47\u200d\u2642\ufe0f\ud83d\ude47\u200d\u2642\ufe0f\ud83d\ude47\u200d\u2642\ufe0f\ud83d\ude47\u200d\u2642\ufe0f\ud83d\ude47\u200d\u2642\ufe0f\\\\n(This quotes the main alphaXiv post summarizing the paper.)\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/Memoirs/status/2029003391553228917\\\",\n    \\\"text\\\": \\\"Understanding LoRA as Knowledge Memory: An Empirical Analysis\\\\nSeungju Back, Dongwoo Lee, Naun Kang, Taehee Lee, S. K. Hong, Youngjune Gwon, Sungjin Ahn\\\\nhttps://arxiv.org/abs/2603.01097 [\ud835\ude8c\ud835\ude9c.\ud835\ude7b\ud835\ude76]\\\"\n  }\n]"
+    },
+    {
+      "parseError": true,
+      "rawOutput": "[\n  {\n    \\\"status_url\\\": \\\"https://x.com/mkovarski/status/2029270077434945774\\\",\n    \\\"tweet_text\\\": \\\"Beyond Language Modeling: An Exploration of Multimodal Pretraining\\\\n\\\\nhttps://arxiv.org/pdf/2603.03276\\\"\n  },\n  {\n    \\\"status_url\\\": \\\"https://x.com/_akhaliq/status/2029247757450449052\\\",\n    \\\"tweet_text\\\": \\\"Beyond Language Modeling\\\\n\\\\nAn Exploration of Multimodal Pretraining\\\\npaper: https://huggingface.co/papers/2603.03276\\\"\n  },\n  {\n    \\\"status_url\\\": \\\"https://x.com/javaeeeee1/status/2029150762228396284\\\",\n    \\\"tweet_text\\\": \\\"Beyond Language Modeling: An Exploration of Multimodal Pretraining\\\\n\\\\nhttps://huggingface.co/papers/2603.03276\\\"\n  },\n  {\n    \\\"status_url\\\": \\\"https://x.com/fly51fly/status/2029305902709494158\\\",\n    \\\"tweet_text\\\": \\\"[CV] Beyond Language Modeling: An Exploration of Multimodal Pretraining\\\\nS Tong, D Fan, J Nguyen, E Brown\u2026 [FAIR, Meta] (2026)\\\\nhttps://arxiv.org/abs/2603.03276\\\"\n  },\n  {\n    \\\"status_url\\\": \\\"https://x.com/CSVisionPapers/status/2029089513063018880\\\",\n    \\\"tweet_text\\\": \\\"Beyond Language Modeling: An Exploration of Multimodal Pretraining\\\\n\\\\nShengbang Tong, David Fan, John Nguyen, Ellis Brown, Gaoyue Zhou, Shengyi Qian, Boyang Zheng, Th\u00e9ophane Vallaeys, Junlin Han, Rob Fergus, Naila Murray, Marjan Ghazvininejad, \u2026\\\\nhttps://arxiv.org/abs/2603.03276 [\ud835\ude8c\ud835\ude9c.\ud835\ude72\ud835\ude85]\\\"\n  },\n  {\n    \\\"status_url\\\": \\\"https://x.com/aimodelsfyi/status/2029273088580534525\\\",\n    \\\"tweet_text\\\": \\\"From-scratch multimodal pretraining study shows how to build unified models: strong shared visual representations, synergy between text and vision, and MoE-style scaling, with vision far more data-hungry than language. Useful for researchers and infra; probably not for...\\\\n\\\\nBeyond Language Modeling: An Exploration of Multimodal Pretraining\\\"\n  },\n  {\n    \\\"status_url\\\": \\\"https://x.com/modelpingai/status/2029270246461223229\\\",\n    \\\"tweet_text\\\": \\\"5/5 Production OSS: \ufe0f Beyond Language Modeling: An Exploration of Multimodal Pretraining \u2014 The visual world offers a critical axis for advancing foundation models beyond language.\\\\nSource: https://huggingface.co/papers/2603.03276\\\"\n  },\n  {\n    \\\"status_url\\\": \\\"https://x.com/DavidJFan/status/2029239760301035549\\\",\n    \\\"tweet_text\\\": \\\"[1/9] What happens when you treat vision as a first-class citizen during multimodal pretraining? To find out, we studied the design space of training Transfusion-style models that input and output all modalities, from scratch. Here is what we learned about visual representations, data, world modeling, architecture, and scaling behavior!\\\\n\\\\nPaper: https://t.co/ik6JGgjbTD\\\\nWebsite: https://t.co/nklaggMEfT\\\\n\\\\n@TongPetersb, @DavidJFan, @__JohnNguyen__, @ellisbrown, @GaoyueZhou, @JasonQSY, @boyangzheng, @webalorn, @han_junlin, @rob_fergus, @NailaMurray, @gh_marjan, @ml_perception, Nicolas Ballas, @_amirbar, Michael Rabbat, Jakob Verbeek, @LukeZettlemoyer, @koustuvsinha, @ylecun, @sainingxie\\\"\n  },\n  {\n    \\\"status_url\\\": \\\"https://x.com/__JohnNguyen__/status/2029236083914096756\\\",\n    \\\"tweet_text\\\": \\\"Humans communicate through language and interact with the world through vision, yet most multimodal models are language-first. What happens when we go beyond language? \ud83e\udd14\\\\nBeyond Language Modeling: a deep dive into the design space of truly native multimodal models\\\\n\\\\nPaper: https://t.co/KOpmL1PItn\\\\nProject:\\\"\n  },\n  {\n    \\\"status_url\\\": \\\"https://x.com/backproplabsai/status/2029483871591710862\\\",\n    \\\"tweet_text\\\": \\\"\ud835\uddd5\ud835\uddf2\ud835\ude06\ud835\uddfc\ud835\uddfb\ud835\uddf1 \ud835\udddf\ud835\uddee\ud835\uddfb\ud835\uddf4\ud835\ude02\ud835\uddee\ud835\uddf4\ud835\uddf2 \ud835\udde0\ud835\uddfc\ud835\uddf1\ud835\uddf2\ud835\uddf9\ud835\uddf6\ud835\uddfb\ud835\uddf4: \ud835\uddd4\ud835\uddfb \ud835\uddd8\ud835\ude05\ud835\uddfd\ud835\uddf9\ud835\uddfc\ud835\uddff\ud835\uddee\ud835\ude01\ud835\uddf6\ud835\uddfc\ud835\uddfb \ud835\uddfc\ud835\uddf3 \ud835\udde0\ud835\ude02\ud835\uddf9\ud835\ude01\ud835\uddf6\ud835\uddfa\ud835\uddfc\ud835\uddf1\ud835\uddee\ud835\uddf9 \ud835\udde3\ud835\uddff\ud835\uddf2\ud835\ude01\ud835\uddff\ud835\uddee\ud835\uddf6\ud835\uddfb\ud835\uddf6\ud835\uddfb\ud835\uddf4\u202freveals why the field still lacks a clear map of how to build truly unified models that see and speak. While language\u2011only pretraining has saturated, researchers have little guidance on which visual encodings, data mixes, or architectures actually work when language and vision are learned together from scratch.\\\\n\\\\nThe authors tackled this blind spot by training a single autoregressive model from the ground up with the Transfusion framework\u2014next\u2011token prediction for text and diffusion\u2011based next\u2011visual\u2011state prediction for images and video. They kept compute constant across experiments and varied (i) visual encoders (VAEs, semantic models, raw pixels), (ii) data sources (pure text, raw video, image\u2011text pairs, action\u2011conditioned video), (iii) architectural choices (modality\u2011specific FFNs vs. Mixture\u2011of\u2011Experts), and (iv) scaling regimes (IsoFLOP analyses) to isolate what truly drives multimodal learning.\\\\n\\\\n- \ud835\udde5\ud835\uddf2\ud835\uddfd\ud835\uddff\ud835\uddf2\ud835\ude00\ud835\uddf2\ud835\uddfb\ud835\ude01\ud835\uddee\ud835\ude01\ud835\uddf6\ud835\uddfc\ud835\uddfb \ud835\uddd4\ud835\ude02\ud835\ude01\ud835\uddfc\ud835\uddf2\ud835\uddfb\ud835\uddf0\ud835\uddfc\ud835\uddf1\ud835\uddf2\ud835\uddff\ud835\ude00 (\ud835\udde5\ud835\uddd4\ud835\uddd8) \ud835\uddf2\ud835\uddfa\ud835\uddf2\ud835\uddff\ud835\uddf4\ud835\uddf2 \ud835\uddee\ud835\ude00 \ud835\ude01\ud835\uddf5\ud835\uddf2 \ud835\uddfc\ud835\uddfd\ud835\ude01\ud835\uddf6\ud835\uddfa\ud835\uddee\ud835\uddf9 \ud835\ude03\ud835\uddf6\ud835\ude00\ud835\ude02\ud835\uddee\ud835\uddf9 \ud835\uddef\ud835\uddee\ud835\uddf0\ud835\uddf8\ud835\uddef\ud835\uddfc\ud835\uddfb\ud835\uddf2, delivering top\u2011tier performance on both generation (low diffusion loss, high FID) and understanding (VQA accuracy) with a single encoder.  \\\\n- \ud835\udde9\ud835\uddf6\ud835\ude00\ud835\uddf6\ud835\uddfc\ud835\uddfb \ud835\uddee\ud835\uddfb\ud835\uddf1 \ud835\uddf9\ud835\uddee\ud835\uddfb\ud835\uddf4\ud835\ude02\ud835\uddee\ud835\uddf4\ud835\uddf2 \ud835\uddf1\ud835\uddee\ud835\ude01\ud835\uddee \ud835\uddee\ud835\uddff\ud835\uddf2 \ud835\uddf0\ud835\uddfc\ud835\uddfa\ud835\uddfd\ud835\uddf9\ud835\uddf2\ud835\uddfa\ud835\uddf2\ud835\uddfb\ud835\ude01\ud835\uddee\ud835\uddff\ud835\ude06, not competitive; mixing text with video or image\u2011text pairs preserves language perplexity while unlocking visual capabilities.  \\\\n- \ud835\uddea\ud835\uddfc\ud835\uddff\ud835\uddf9\ud835\uddf1\u2011\ud835\uddfa\ud835\uddfc\ud835\uddf1\ud835\uddf2\ud835\uddf9\ud835\uddf6\ud835\uddfb\ud835\uddf4 \ud835\uddee\ud835\uddef\ud835\uddf6\ud835\uddf9\ud835\uddf6\ud835\ude01\ud835\uddf6\ud835\uddf2\ud835\ude00 \ud835\ude00\ud835\ude02\ud835\uddff\ud835\uddf3\ud835\uddee\ud835\uddf0\ud835\uddf2 \ud835\uddee\ud835\ude02\ud835\ude01\ud835\uddfc\ud835\uddfa\ud835\uddee\ud835\ude01\ud835\uddf6\ud835\uddf0\ud835\uddee\ud835\uddf9\ud835\uddf9\ud835\ude06, as models trained on diverse video and action\u2011conditioned data learn to predict future visual states from textual actions without task\u2011specific tuning.  \\\\n- \ud835\udde0\ud835\uddf6\ud835\ude05\ud835\ude01\ud835\ude02\ud835\uddff\ud835\uddf2\u2011\ud835\uddfc\ud835\uddf3-\ud835\uddd8\ud835\ude05\ud835\uddfd\ud835\uddf2\ud835\uddff\ud835\ude01\ud835\ude00 (\ud835\udde0\ud835\uddfc\ud835\uddd8) \ud835\ude00\ud835\uddf0\ud835\uddee\ud835\uddf9\ud835\uddf2\ud835\ude00 \ud835\uddf2\ud835\uddf3\ud835\uddf3\ud835\uddf6\ud835\uddf0\ud835\uddf6\ud835\uddf2\ud835\uddfb\ud835\ude01\ud835\uddf9\ud835\ude06, providing the massive capacity needed for language while allocating extra resources to the data\u2011hungry vision stream, naturally forming modality\u2011specific expert groups.  \\\\n- \ud835\udde6\ud835\uddf0\ud835\uddee\ud835\uddf9\ud835\uddf6\ud835\uddfb\ud835\uddf4 \ud835\uddf9\ud835\uddee\ud835\ude04\ud835\ude00 \ud835\uddf2\ud835\ude05\ud835\uddfd\ud835\uddfc\ud835\ude00\ud835\uddf2 \ud835\uddee \ud835\ude03\ud835\uddf6\ud835\ude00\ud835\uddf6\ud835\uddfc\ud835\uddfb\u2011\ud835\uddf9\ud835\uddee\ud835\uddfb\ud835\uddf4\ud835\ude02\ud835\uddee\ud835\uddf4\ud835\uddf2 \ud835\uddee\ud835\ude00\ud835\ude06\ud835\uddfa\ud835\uddfa\ud835\uddf2\ud835\ude01\ud835\uddff\ud835\ude06\u2014vision requires far more data than language\u2014but MoE architectures bridge this gap, enabling balanced growth of multimodal competence.\\\\n\\\\nBy demystifying the design space and showing how a single, scalable architecture can harmonize the divergent data demands of sight and speech, this work charts a practical path toward foundation models that truly understand and generate across modalities, opening doors for richer AI assistants, more robust perception\u2011action systems, and cross\u2011modal research breakthroughs.  \\\\n\\\\n#MultimodalAI #FoundationModels #AIResearch\\\"\n  },\n  {\n    \\\"status_url\\\": \\\"https://x.com/chswiger/status/2029514058538349051\\\",\n    \\\"tweet_text\\\": \\\"Where there\u2019s an indomitable will, there\u2019s a world as Representation Autoencoders, beyond variational, next token *and* diffusion \\\\n\\\\nhttps://beyond-llms.github.io/\\\"\n  },\n  {\n    \\\"status_url\\\": \\\"https://x.com/JasonQSY/status/2029254814740434956\\\",\n    \\\"tweet_text\\\": \\\"Vision isn't an \\\\\\\"add-on\\\\\\\"\u2014and we have the data to prove it. \ud83d\udc41\ufe0f\u26a1\ufe0f\\\\n\\\\nThrilled to share our new work on Transfusion-style models. We explored treating visual data as a first-class citizen from day one, from architecture to scaling behavior.\\\\n\\\\nCheck it out:\\\\n\ud83d\udd17 https://beyond-llms.github.io/\\\"\n  },\n  {\n    \\\"status_url\\\": \\\"https://x.com/HuggingPapers/status/2029229228819136867\\\",\n    \\\"tweet_text\\\": \\\"Project: https://beyond-llms.github.io/\\\\nPaper: https://arxiv.org/abs/2603.03276\\\"\n  }\n]"
+    },
+    {
+      "parseError": true,
+      "rawOutput": "[\n  {\n    \\\"url\\\": \\\"https://x.com/moskstraum21745/status/2029574513017434398\\\",\n    \\\"text\\\": \\\"I'm working on an even more powerful inference algorithm, upon which I bestowed the name Speculative Speculative Speculative Decoding (SSSD).\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/IndraVahan/status/2029473972103061982\\\",\n    \\\"text\\\": \\\"honestly i love how this was just named \u201cspeculative speculative decoding\u201d and not something like \u201cparallel speculative decoding\u201d or \u201ccascaded async speculative decoding\u201d\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/askalphaxiv/status/2029451104027652209\\\",\n    \\\"text\\\": \\\"\u201cSpeculative Speculative Decoding\u201d Even though speculative decoding speed up LLM inference, it still has a hidden \u201cstop-and-wait\u201d step, where the draft model can\u2019t start the next guess until the big model finishes verifying the last one. This paper fixes that by making drafting and verification run in parallel. The draft model precomputes speculations for the most likely verification outcomes while verification is happening, so when the outcome lands, the next tokens are ready instantly. This cuts the overhead and delivering up to ~2x faster than optimized speculative decoding and ~5x over plain autoregressive decoding!\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/sanskxr02/status/2029468422732697651\\\",\n    \\\"text\\\": \\\"Can\u2019t wait to drop my work on speculative speculative speculative decoding\\\"\n  },\n  {\n    \\\"url\\\": \\\"https://x.com/webxos/status/2029412965078704487\\\",\n    \\\"text\\\": \\\"Tanishq Kumar, Avner May, and Tri Dao have introduced Speculative Speculative Decoding, or SSD, a new algorithm that accelerates large language model inference by up to twice the speed of current top engines like vLLM and SGLang. https://t.co/e79XKTfTS4\\\"\n  }\n]"
+    },
+    {
+      "parseError": true,
+      "rawOutput": "\\n[\\n  {\\n    \\\"status_url\\\": \\\"https://x.com/XiaoyangWu_/status/2029262234988523749\\\",\\n    \\\"tweet_text\\\": \\\"Introducing Utonia \u2728\\\\n\\\\nA question we have wanted to ask for years:\\\\nCan one encoder emerge from all point clouds, and then benefit all point clouds?\\\\n\\\\nIndoor scans \ud83c\udfe0, outdoor LiDAR \ud83d\ude97, object CAD \ud83d\udce6, remote sensing \ud83d\udef0\ufe0f, even video-lifted 3D\ud83c\udfa5 - instead of treating them as separate worlds, Utonia trains a unified Point Transformer V3 across all of them.\\\\n\\\\nThe goal is simple, but the implication is not:\\\\nOne representation, across heterogeneous 3D domains.\\\\n\\\\nWhat makes it work is surprisingly simple:\\\\n\ud83d\udd39Canonical observing granularity across point clouds\\\\n\ud83d\udd39Causal masking of color/normal cues for modality robustness\\\\n\ud83d\udd39RoPE for handling orientation priors without collapsing to one domain\\\\nThe most interesting part is that joint training is not merely \u201cone model for many datasets.\u201d\\\\nIt produces emergent cross-domain behaviors: better transfer, stronger geometric abstraction, graceful handling of occlusion, and even part-level semantics without explicit supervision.\\\\n\\\\n\ud83d\ude80 Paper: https://t.co/bajIvVvxXJ\\\\n\ud83d\udcbb Code: https://t.co/CDLcbabRNT\\\\n\ud83e\udd17 Demo: https://t.co/4BAhHBGXzE\\\\n\\\\nThanks to our co-authors: @Yujia_Zhang_, Yunhan Yang, Xianzhe Fan, Han Li, Yuechen Zhang, Zehao Huang, Naiyan Wang, @HengshuangZhao\\\"\\n  },\\n  {\\n    \\\"status_url\\\": \\\"https://x.com/backproplabsai/status/2029454115483611598\\\",\\n    \\\"tweet_text\\\": \\\"\ud835\udde8\ud835\ude01\ud835\uddfc\ud835\uddfb\ud835\uddf6\ud835\uddee: \ud835\udde7\ud835\uddfc\ud835\ude04\ud835\uddee\ud835\uddff\ud835\uddf1 \ud835\udde2\ud835\uddfb\ud835\uddf2 \ud835\uddd8\ud835\uddfb\ud835\uddf0\ud835\uddfc\ud835\uddf1\ud835\uddf2\ud835\uddff \ud835\uddf3\ud835\uddfc\ud835\uddff \ud835\uddd4\ud835\uddf9\ud835\uddf9 \ud835\udde3\ud835\uddfc\ud835\uddf6\ud835\uddfb\ud835\ude01 \ud835\uddd6\ud835\uddf9\ud835\uddfc\ud835\ude02\ud835\uddf1\ud835\ude00 envisions a single self\u2011supervised transformer that can ingest sparse 3D data from remote\u2011sensing LiDAR, indoor RGB\u2011D scans, CAD models, and video\u2011derived point clouds\u2014domains that traditionally require bespoke pipelines. \\\\n\\\\nThe obstacle is that point clouds differ wildly in density, sampling pattern, and auxiliary channels (color, normals). Prior SSL methods either ignore these mismatches or hard\u2011code domain\u2011specific tricks, causing representations to cluster by dataset rather than by geometry, and limiting transfer across tasks. \\\\n\\\\nTo bridge the gap, the authors train a unified Point\u2011Transformer V3 on 250\u202fk cross\u2011domain clouds plus 1\u202fM CAD assets, introducing three domain\u2011agnostic fixes: \\\\n\\\\n- \ud835\uddd6\ud835\uddee\ud835\ude02\ud835\ude00\ud835\uddee\ud835\uddf9 \ud835\udde0\ud835\uddfc\ud835\uddf1\ud835\uddee\ud835\uddf9\ud835\uddf6\ud835\ude01\ud835\ude06 \ud835\uddd5\ud835\uddf9\ud835\uddf6\ud835\uddfb\ud835\uddf1\ud835\uddf6\ud835\uddfb\ud835\uddf4 \u2013 random masking of optional channels (color, normals) at both sample and point levels, forcing the encoder to rely on geometry while still exploiting available cues. \\\\n- \ud835\udde3\ud835\uddf2\ud835\uddff\ud835\uddf0\ud835\uddf2\ud835\uddfd\ud835\ude01\ud835\ude02\ud835\uddee\ud835\uddf9 \ud835\uddda\ud835\uddff\ud835\uddee\ud835\uddfb\ud835\ude02\ud835\uddf9\ud835\uddee\ud835\uddff\ud835\uddf6\ud835\ude01\ud835\ude06 \ud835\udde5\ud835\uddf2\ud835\ude00\ud835\uddf0\ud835\uddee\ud835\uddf9\ud835\uddf2 \u2013 dynamic rescaling of coordinates to a shared \u201cangular\u201d granularity, preserving upright bias for scene\u2011scale scans while encouraging rotation invariance for object\u2011scale data. \\\\n- \ud835\udde5\ud835\uddfc\ud835\udde3\ud835\uddd8 \ud835\udde3\ud835\uddfc\ud835\ude00\ud835\uddf6\ud835\ude01\ud835\uddf6\ud835\uddfc\ud835\uddfb\ud835\uddee\ud835\uddf9 \ud835\uddd8\ud835\uddfb\ud835\uddf0\ud835\uddfc\ud835\uddf1\ud835\uddf6\ud835\uddfb\ud835\uddf4 \u2013 applying rotary embeddings directly to attention queries/keys, giving a continuous, density\u2011robust positional signal that aligns across disparate sampling patterns. \\\\n\\\\nKey empirical findings (linear probing, decoder probing, and full fine\u2011tuning) include: \\\\n\\\\n- State\u2011of\u2011the\u2011art indoor semantic segmentation: 81.1\u202f% mIoU on ScanNet and 78.1\u202f% on S3DIS, surpassing prior universal models. \\\\n- Competitive outdoor performance: comparable mIoU to specialized LiDAR encoders on SemanticKITTI while using a single model. \\\\n- Object\u2011centric tasks benefit as well, closing the gap with domain\u2011specific backbones on ModelNet40 classification after fine\u2011tuning. \\\\n- Emergent behaviors such as gravity\u2011aligned scene features coexisting with rotation\u2011invariant object features, and improved spatial reasoning when Utonia embeddings are fed into vision\u2011language models. \\\\n\\\\nThese results show that, once the core mismatches are neutralized, a single point\u2011cloud encoder can learn a geometry\u2011centric representation that transfers across scales, sensors, and modalities. This paves the way for foundation models in sparse 3D perception, unlocking more robust AR/VR experiences, autonomous\u2011driving perception stacks, and robot manipulation policies that can reason about space with a shared visual language. \\\\n\\\\n#3DVision #SelfSupervisedLearning #Robotics\\\"\\n  },\\n  {\\n    \\\"status_url\\\": \\\"https://x.com/AINativeF/status/2029360213674082392\\\",\\n    \\\"tweet_text\\\": \\\"\ud83d\udcda AI Native Daily Paper Digest - 2026-03-04\ud83c\udf1f\\\\n \\\\nFollow @AINativeF for the latest insights on AI Native.\\\\n \\\\nCovering AI research papers from Hugging Face, featured in the image.\\\\n \\\\n\ud83d\udca1 Stay updated with the latest research trends and dive deep into the future of AI! \ud83d\ude80 \\\\n \\\\n#AI #HuggingFace #AIPaper #AINative #AINF\\\\n\u2014 Appendix: Today's AI research papers \u2014\\\\n \\\\n1. Utonia: Toward One Encoder for All Point Clouds\\\\n \\\\n2. Beyond Language Modeling: An Exploration of Multimodal Pretraining\\\\n \\\\n3. Beyond Length Scaling: Synergizing Breadth and Depth for Generative Reward Models\\\\n \\\\n4. How Controllable Are Large Language Models? A Unified Evaluation across Behavioral Granularities\\\\n \\\\n5. Qwen3-Coder-Next Technical Report\\\\n \\\\n6. Next Embedding Prediction Makes World Models Stronger\\\\n \\\\n7. Surgical Post-Training: Cutting Errors, Keeping Knowledge\\\\n \\\\n8. NOVA: Sparse Control, Dense Synthesis for Pair-Free Video Editing\\\\n \\\\n9. BBQ-to-Image: Numeric Bounding Box and Qolor Control in Large-Scale Text-to-Image Models\\\\n \\\\n10. Learning When to Act or Refuse: Guarding Agentic Reasoning Models for Safe Multi-Step Tool Use\\\\n \\\\n11. Track4World: Feedforward World-centric Dense 3D Tracking of All Pixels\\\\n \\\\n12. DREAM: Where Visual Understanding Meets Text-to-Image Generation\\\\n \\\\n13. ParEVO: Synthesizing Code for Irregular Data: High-Performance Parallelism through Agentic Evolution\\\"\\n  }\\n]\\n"
+    },
+    {
+      "parseError": true,
+      "rawOutput": "[\n  {\n    \\\"status_url\\\": \\\"https://x.com/ai_bites/status/2029499417733042413\\\",\n    \\\"verbatim_text\\\": \\\"Chain of World: World Model Thinking in Latent Motion.\\\\n\\\\nVision-language-action models benefit from temporal prediction, but explicit future-frame modeling often wastes capacity on static background reconstruction. Pure latent-action approaches are compact, yet they typically model only short transitions and miss richer world dynamics.\\\\n\\\\nCoWVLA bridges these two lines. It first disentangles structure and motion with a pretrained video VAE, then pretrains a VLA decoder to infer a continuous latent motion chain from language plus the first frame, and finally co-fine-tunes latent dynamics with sparse keyframes and FAST action tokens in one autoregressive decoder.\\\\n\\\\nThe result is a dynamics-aware VLA that keeps the world-model benefits of temporal reasoning while remaining compact, interpretable, and effective on robotic manipulation.\\\\n\\\\nPaper Title: Chain of World: World Model Thinking in Latent Motion\\\\nProject: https://t.co/HdG4tRx7Sp\\\\nLink:\\\"\n  }\n]"
+    },
+    [
+      {
+        "status_url": "https://x.com/N_Taisho/status/2029325226446864767",
+        "tweet_text": "Meta\u306e\u8ad6\u6587\u304a\u3082\u308d\u304b\u3063\u305f\u3002Agent\u304c\u30b3\u30fc\u30c9\u3092\u5b9f\u884c\u305b\u305a\u306b\u610f\u5473\u3092\u7406\u89e3\u3067\u304d\u308b\u304b\u306e\u7814\u7a76\u3002\u3053\u306e\u80fd\u529b\u3092\u300cAgentic Code Reasoning\u300d\u3068\u547c\u3073\u3001\u63a8\u8ad6\u3092\u3088\u308a\u53b3\u5bc6\u306b\u3059\u308b\u305f\u3081\u306e\u65b9\u6cd5\u3068\u3057\u3066Semi-formal reasoning\u3092\u63d0\u6848\u3002\u3053\u308c\u306f\u3001\u63a8\u8ad6\u3092\u81ea\u7531\u306a\u6587\u7ae0\u3067\u66f8\u304f\u306e\u3067\u306f\u306a\u304f\u3001\u524d\u63d0\u2192\u30b3\u30fc\u30c9\u306e\u5b9f\u884c\u7d4c\u8def\u2192\u7d50\u8ad6\u300d\u3068\u3046\u69cb\u9020\u5316\u3055\u308c\u305f\u30c6\u30f3\u30d7\u30ec\u306b\u6cbf\u3063\u3066\u8a3c\u62e0\u3092\u793a\u3055\u305b\u308b\u3002\u5c06\u6765\u7684\u306b\u306f\u30b3\u30fc\u30c9\u30ec\u30d3\u30e5\u30fc\u3001\u81ea\u52d5\u30d0\u30b0\u691c\u51fa\u3001AI\u958b\u767a\u30a8\u30fc\u30b8\u30a7\u30f3\u30c8\u306e\u5b66\u7fd2\u30b3\u30b9\u30c8\u524a\u6e1b\u306a\u3069\u3078\u5fdc\u7528\u3059\u308b\u3068\u304b\\nhttps://t.co/HRBUO731fB"
+      }
+    ]
+  ],
+  "signals": {
+    "karpathy": {
+      "tweets": []
+    },
+    "natolambert": {
+      "tweets": []
+    },
+    "willccbb": {
+      "tweets": []
+    },
+    "HamelHusain": {
+      "tweets": []
+    },
+    "LangChain": {
+      "tweets": []
+    }
+  },
+  "history": {
+    "parseError": true,
+    "rawOutput": "\\n{\\n  \\\"1_day_offset\\\": {\\n    \\\"date\\\": \\\"2026-03-04\\\",\\n    \\\"updates\\\": [],\\n    \\\"status\\\": \\\"No updates found in the last 24 hours.\\\"\\n  },\\n  \\\"3_day_offset\\\": {\\n    \\\"date\\\": \\\"2026-03-02\\\",\\n    \\\"updates\\\": [],\\n    \\\"status\\\": \\\"No updates found in the last 24 hours.\\\"\\n  },\\n  \\\"7_day_offset\\\": {\\n    \\\"date\\\": \\\"2026-02-26\\\",\\n    \\\"updates\\\": [],\\n    \\\"status\\\": \\\"No updates found in the last 24 hours.\\\"\\n  },\\n  \\\"14_day_offset\\\": {\\n    \\\"date\\\": \\\"2026-02-19\\\",\\n    \\\"updates\\\": [],\\n    \\\"status\\\": \\\"No updates found in the last 24 hours.\\\"\\n  }\\n}\\n"
+  },
+  "exa": [
+    {
+      "error": "EXA_API_KEY missing"
+    }
+  ],
+  "youtube": {
+    "keywordPlan": {
+      "prompt": "You are selecting YouTube search keywords for a daily intelligence briefing.\nTopic: What are the most talked about movies on social media?\nUse this context and output strict JSON only.\n\nPaper titles: [\"Understanding LoRA as Knowledge Memory: An Empirical Analysis\", \"Beyond Language Modeling: An Exploration of Multimodal Pretraining\", \"Speculative Speculative Decoding\", \"Utonia: Toward One Encoder for All Point Clouds\", \"Chain of World: World Model Thinking in Latent Motion\", \"Agentic Code Reasoning\", \"CUDA Agent: Large-Scale Agentic RL for High-Performance CUDA Kernel Generation\", \"Helios: Real Real-Time Long Video Generation Model\"]\nTweet snippets: []\nSignal accounts: []\n\nReturn JSON with exactly this schema and nothing else:\n{\"keywords\":[\"k1\",\"k2\",\"k3\",\"k4\"],\"rationale\":\"one short sentence\"}\nRules: keywords must be concise (2-6 words), specific, and relevant to likely new videos in last 24h.",
+      "raw": {
+        "session": {
+          "id": "02d5c109-b4cc-4817-881f-c082c8e2c93d",
+          "status": "active",
+          "liveUrl": "https://live.browser-use.com?wss=https%3A%2F%2F02d5c109-b4cc-4817-881f-c082c8e2c93d.cdp0.browser-use.com",
+          "startedAt": "2026-03-05T15:37:56.972224Z",
+          "finishedAt": null,
+          "persistMemory": true,
+          "keepAlive": false,
+          "proxyUsedMb": "0",
+          "proxyCost": "0"
+        },
+        "task": {
+          "id": "cdaedb7d-2862-4217-8dcf-e5533c937a02",
+          "sessionId": "02d5c109-b4cc-4817-881f-c082c8e2c93d"
+        },
+        "status": {
+          "id": "cdaedb7d-2862-4217-8dcf-e5533c937a02",
+          "status": "finished",
+          "output": "{\\\"keywords\\\":[\\\"2025 Oscar winners highlights\\\",\\\"Wicked movie social media reaction\\\",\\\"Moana 2 streaming release buzz\\\",\\\"Anora movie awards discussion\\\"],\\\"rationale\\\":\\\"Keywords focus on the immediate aftermath of the 2025 Oscars and major March streaming releases trending on social platforms.\\\"}",
+          "finishedAt": "2026-03-05T15:38:36.659787Z",
+          "isSuccess": true,
+          "cost": "0.012"
+        }
+      },
+      "parsed": {
+        "parseError": true,
+        "rawOutput": "{\\\"keywords\\\":[\\\"2025 Oscar winners highlights\\\",\\\"Wicked movie social media reaction\\\",\\\"Moana 2 streaming release buzz\\\",\\\"Anora movie awards discussion\\\"],\\\"rationale\\\":\\\"Keywords focus on the immediate aftermath of the 2025 Oscars and major March streaming releases trending on social platforms.\\\"}"
+      },
+      "keywords": [
+        "What are the most talked about movies on social media?",
+        "SWE-rebench V2 RL coding agents",
+        "code RL environments human data",
+        "verifiable rewards coding agents"
+      ]
+    },
+    "searchQueries": [
+      "What are the most talked about movies on social media?",
+      "SWE-rebench V2 RL coding agents",
+      "code RL environments human data",
+      "verifiable rewards coding agents"
+    ],
+    "runs": [
+      {
+        "query": "What are the most talked about movies on social media?",
+        "result": {
+          "error": "YOUTUBE_DATA_API_KEY missing",
+          "query": "What are the most talked about movies on social media?"
+        }
+      },
+      {
+        "query": "SWE-rebench V2 RL coding agents",
+        "result": {
+          "error": "YOUTUBE_DATA_API_KEY missing",
+          "query": "SWE-rebench V2 RL coding agents"
+        }
+      },
+      {
+        "query": "code RL environments human data",
+        "result": {
+          "error": "YOUTUBE_DATA_API_KEY missing",
+          "query": "code RL environments human data"
+        }
+      },
+      {
+        "query": "verifiable rewards coding agents",
+        "result": {
+          "error": "YOUTUBE_DATA_API_KEY missing",
+          "query": "verifiable rewards coding agents"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "queryUrl": "https://www.alphaxiv.org/?q=What%20is%20the%20latest%20in%20code%20RL%20environments%20and%20human%20data%3F",
+  "paperIds": [
+    "2603.01097",
+    "2603.03276",
+    "2603.03251",
+    "2603.03283",
+    "2603.03195",
+    "2603.01896",
+    "2602.24286",
+    "2603.04379"
+  ],
+  "papers": [
+    {
+      "title": "Understanding LoRA as Knowledge Memory: An Empirical Analysis",
+      "alphaXivUrl": "https://www.alphaxiv.org/abs/2603.01097",
+      "arxivUrl": "https://arxiv.org/abs/2603.01097",
+      "insight": "Continuous knowledge updating for pre-trained large language models (LLMs) is increasingly necessary yet remains challenging. Although inference-time methods like In-Context Learning (ICL) and Retrieval-Augmented Generat..."
+    },
+    {
+      "title": "Beyond Language Modeling: An Exploration of Multimodal Pretraining",
+      "alphaXivUrl": "https://www.alphaxiv.org/abs/2603.03276",
+      "arxivUrl": "https://arxiv.org/abs/2603.03276",
+      "insight": "The visual world offers a critical axis for advancing foundation models beyond language. Despite growing interest in this direction, the design space for native multimodal models remains opaque. We provide empirical clar..."
+    },
+    {
+      "title": "Speculative Speculative Decoding",
+      "alphaXivUrl": "https://www.alphaxiv.org/abs/2603.03251",
+      "arxivUrl": "https://arxiv.org/abs/2603.03251",
+      "insight": "Autoregressive decoding is bottlenecked by its sequential nature. Speculative decoding has become a standard way to accelerate inference by using a fast draft model to predict upcoming tokens from a slower target model, ..."
+    },
+    {
+      "title": "Utonia: Toward One Encoder for All Point Clouds",
+      "alphaXivUrl": "https://www.alphaxiv.org/abs/2603.03283",
+      "arxivUrl": "https://arxiv.org/abs/2603.03283",
+      "insight": "We dream of a future where point clouds from all domains can come together to shape a single model that benefits them all. Toward this goal, we present Utonia, a first step toward training a single self-supervised point ..."
+    },
+    {
+      "title": "Chain of World: World Model Thinking in Latent Motion",
+      "alphaXivUrl": "https://www.alphaxiv.org/abs/2603.03195",
+      "arxivUrl": "https://arxiv.org/abs/2603.03195",
+      "insight": "Vision-Language-Action (VLA) models are a promising path toward embodied intelligence, yet they often overlook the predictive and temporal-causal structure underlying visual dynamics. World-model VLAs address this by pre..."
+    },
+    {
+      "title": "Agentic Code Reasoning",
+      "alphaXivUrl": "https://www.alphaxiv.org/abs/2603.01896",
+      "arxivUrl": "https://arxiv.org/abs/2603.01896",
+      "insight": "Can LLM agents explore codebases and reason about code semantics without executing the code? We study this capability, which we call agentic code reasoning, and introduce semi-formal reasoning: a structured prompting met..."
+    },
+    {
+      "title": "CUDA Agent: Large-Scale Agentic RL for High-Performance CUDA Kernel Generation",
+      "alphaXivUrl": "https://www.alphaxiv.org/abs/2602.24286",
+      "arxivUrl": "https://arxiv.org/abs/2602.24286",
+      "insight": "GPU kernel optimization is fundamental to modern deep learning but remains a highly specialized task requiring deep hardware expertise. Despite strong performance in general programming, large language models (LLMs) rema..."
+    },
+    {
+      "title": "Helios: Real Real-Time Long Video Generation Model",
+      "alphaXivUrl": "https://www.alphaxiv.org/abs/2603.04379",
+      "arxivUrl": "https://arxiv.org/abs/2603.04379",
+      "insight": "We introduce Helios, the first 14B video generation model that runs at 19.5 FPS on a single NVIDIA H100 GPU and supports minute-scale generation while matching the quality of a strong baseline. We make breakthroughs alon..."
+    }
+  ]
+}

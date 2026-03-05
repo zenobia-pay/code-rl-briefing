@@ -1,0 +1,4 @@
+{
+  "parseError": true,
+  "rawOutput": "\\n{\\n  \\\"url\\\": \\\"https://x.com/SergioPaniego/status/2029218056191488061\\\",\\n  \\\"text\\\": \\\"TRL now lets you define RL environments as a simple Python class to connect to OpenEnv \ud83e\udd17\\\\n\\\\nwith environment_factory, just define a class with:\\\\n\u2192 reset()\\\\n\u2192 tool methods with docstrings (they become the model's tool descriptions)\\\\n\\\\nthat's it.\\\\n\\\\nworks with any environment: simulators, games, web browsing...\\\\n\\\\nhere's how we used it to train a model to drive in CARLA:\\\"\\n}\\n"
+}

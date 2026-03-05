@@ -1,0 +1,61 @@
+[
+  {
+    "id": "2006.13417",
+    "title": "Movie Box office Prediction via Joint Actor Representations and Social Media Sentiment",
+    "summary": "In recent years, driven by the Asian film industry, such as China and India, the global box office has maintained a steady growth trend. Previous studies have rarely used long-term, full-sample film data in analysis, lack of research on actors' social networks. Existing film box office prediction algorithms only use film meta-data, lack of using social network characteristics and the model is less interpretable. I propose a FC-GRU-CNN binary classification model in of box office prediction task, combining five characteristics, including the film meta-data, Sina Weibo text sentiment, actors' social network measurement, all pairs shortest path and actors' art contribution. Exploiting long-term memory ability of GRU layer in long sequences and the mapping ability of CNN layer in retrieving all pairs shortest path matrix features, proposed model is 14% higher in accuracy than the current best C-LSTM model.",
+    "authors": [
+      "Dezhou Shen"
+    ],
+    "arxiv": "https://arxiv.org/abs/2006.13417",
+    "alphaxiv": "https://www.alphaxiv.org/abs/2006.13417"
+  },
+  {
+    "id": "2304.10311",
+    "title": "Movie Box Office Prediction With Self-Supervised and Visually Grounded Pretraining",
+    "summary": "Investments in movie production are associated with a high level of risk as movie revenues have long-tailed and bimodal distributions. Accurate prediction of box-office revenue may mitigate the uncertainty and encourage investment. However, learning effective representations for actors, directors, and user-generated content-related keywords remains a challenging open problem. In this work, we investigate the effects of self-supervised pretraining and propose visual grounding of content keywords in objects from movie posters as a pertaining objective. Experiments on a large dataset of 35,794 movies demonstrate significant benefits of self-supervised training and visual grounding. In particular, visual grounding pretraining substantially improves learning on movies with content keywords and achieves 14.5% relative performance gains compared to a finetuned BERT model with identical architecture.",
+    "authors": [
+      "Qin Chao",
+      "Eunsoo Kim",
+      "Boyang Li"
+    ],
+    "arxiv": "https://arxiv.org/abs/2304.10311",
+    "alphaxiv": "https://www.alphaxiv.org/abs/2304.10311"
+  },
+  {
+    "id": "2509.15277",
+    "title": "Copycat vs. Original: Multi-modal Pretraining and Variable Importance in Box-office Prediction",
+    "summary": "The movie industry is associated with an elevated level of risk, which necessitates the use of automated tools to predict box-office revenue and facilitate human decision-making. In this study, we build a sophisticated multimodal neural network that predicts box offices by grounding crowdsourced descriptive keywords of each movie in the visual information of the movie posters, thereby enhancing the learned keyword representations, resulting in a substantial reduction of 14.5% in box-office prediction error. The advanced revenue prediction model enables the analysis of the commercial viability of \"copycat movies,\" or movies with substantial similarity to successful movies released recently. We do so by computing the influence of copycat features in box-office prediction. We find a positive relationship between copycat status and movie revenue. However, this effect diminishes when the number of similar movies and the similarity of their content increase. Overall, our work develops sophisticated deep learning tools for studying the movie industry and provides valuable business insight.",
+    "authors": [
+      "Qin Chao",
+      "Eunsoo Kim",
+      "Boyang Li"
+    ],
+    "arxiv": "https://arxiv.org/abs/2509.15277",
+    "alphaxiv": "https://www.alphaxiv.org/abs/2509.15277"
+  },
+  {
+    "id": "2601.23121",
+    "title": "An Automatic Deep Learning Approach for Trailer Generation through Large Language Models",
+    "summary": "Trailers are short promotional videos designed to provide audiences with a glimpse of a movie. The process of creating a trailer typically involves selecting key scenes, dialogues and action sequences from the main content and editing them together in a way that effectively conveys the tone, theme and overall appeal of the movie. This often includes adding music, sound effects, visual effects and text overlays to enhance the impact of the trailer. In this paper, we present a framework exploiting a comprehensive multimodal strategy for automated trailer production. Also, a Large Language Model (LLM) is adopted across various stages of the trailer creation. First, it selects main key visual sequences that are relevant to the movie's core narrative. Then, it extracts the most appealing quotes from the movie, aligning them with the trailer's narrative. Additionally, the LLM assists in creating music backgrounds and voiceovers to enrich the audience's engagement, thus contributing to make a trailer not just a summary of the movie's content but a narrative experience in itself. Results show that our framework generates trailers that are more visually appealing to viewers compared to those produced by previous state-of-the-art competitors.",
+    "authors": [
+      "Roberto Balestri",
+      "Pasquale Cascarano",
+      "Mirko Degli Esposti",
+      "Guglielmo Pescatore"
+    ],
+    "arxiv": "https://arxiv.org/abs/2601.23121",
+    "alphaxiv": "https://www.alphaxiv.org/abs/2601.23121"
+  },
+  {
+    "id": "2512.04426",
+    "title": "Self-Paced and Self-Corrective Masked Prediction for Movie Trailer Generation",
+    "summary": "As a challenging video editing task, movie trailer generation involves selecting and reorganizing movie shots to create engaging trailers. Currently, most existing automatic trailer generation methods employ a \"selection-then-ranking\" paradigm (i.e., first selecting key shots and then ranking them), which suffers from inevitable error propagation and limits the quality of the generated trailers. Beyond this paradigm, we propose a new self-paced and self-corrective masked prediction method called SSMP, which achieves state-of-the-art results in automatic trailer generation via bi-directional contextual modeling and progressive self-correction. In particular, SSMP trains a Transformer encoder that takes the movie shot sequences as prompts and generates corresponding trailer shot sequences accordingly. The model is trained via masked prediction, reconstructing each trailer shot sequence from its randomly masked counterpart. The mask ratio is self-paced, allowing the task difficulty to adapt to the model and thereby improving model performance. When generating a movie trailer, the model fills the shot positions with high confidence at each step and re-masks the remaining positions for the next prediction, forming a progressive self-correction mechanism that is analogous to how human editors work. Both quantitative results and user studies demonstrate the superiority of SSMP in comparison to existing automatic movie trailer generation methods. Demo is available at: https://github.com/Dixin-Lab/SSMP.",
+    "authors": [
+      "Sidan Zhu",
+      "Hongteng Xu",
+      "Dixin Luo"
+    ],
+    "arxiv": "https://arxiv.org/abs/2512.04426",
+    "alphaxiv": "https://www.alphaxiv.org/abs/2512.04426"
+  }
+]

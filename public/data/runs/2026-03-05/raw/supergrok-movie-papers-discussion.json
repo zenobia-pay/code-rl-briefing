@@ -1,0 +1,8 @@
+{
+  "id": "dd579cf7-1946-4d0a-a6aa-db0d026bca5c",
+  "status": "finished",
+  "output": "[\n  {\n    \\\"paper\\\": \\\"Movie Box office Prediction via Joint Actor Representations and Social Media Sentiment\\\",\n    \\\"mentions\\\": []\n  },\n  {\n    \\\"paper\\\": \\\"Movie Box Office Prediction With Self-Supervised and Visually Grounded Pretraining\\\",\n    \\\"mentions\\\": []\n  },\n  {\n    \\\"paper\\\": \\\"Copycat vs. Original: Multi-modal Pretraining and Variable Importance in Box-office Prediction\\\",\n    \\\"mentions\\\": []\n  },\n  {\n    \\\"paper\\\": \\\"An Automatic Deep Learning Approach for Trailer Generation through Large Language Models\\\",\n    \\\"mentions\\\": []\n  },\n  {\n    \\\"paper\\\": \\\"Self-Paced and Self-Corrective Masked Prediction for Movie Trailer Generation\\\",\n    \\\"mentions\\\": []\n  }\n]\n\nAttachments:\n\nresults.json:\n[\\n  {\\n    \\\"paper\\\": \\\"Movie Box office Prediction via Joint Actor Representations and Social Media Sentiment\\\",\\n    \\\"mentions\\\": []\\n  },\\n  {\\n    \\\"paper\\\": \\\"Movie Box Office Prediction With Self-Supervised and Visually Grounded Pretraining\\\",\\n    \\\"mentions\\\": []\\n  },\\n  {\\n    \\\"paper\\\": \\\"Copycat vs. Original: Multi-modal Pretraining and Variable Importance in Box-office Prediction\\\",\\n    \\\"mentions\\\": []\\n  },\\n  {\\n    \\\"paper\\\": \\\"An Automatic Deep Learning Approach for Trailer Generation through Large Language Models\\\",\\n    \\\"mentions\\\": []\\n  },\\n  {\\n    \\\"paper\\\": \\\"Self-Paced and Self-Corrective Masked Prediction for Movie Trailer Generation\\\",\\n    \\\"mentions\\\": []\\n  }\\n]",
+  "finishedAt": "2026-03-05T15:40:18.343808Z",
+  "isSuccess": true,
+  "cost": "0.126"
+}

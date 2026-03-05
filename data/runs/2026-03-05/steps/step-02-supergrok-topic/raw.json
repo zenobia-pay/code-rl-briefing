@@ -1,0 +1,25 @@
+{
+  "session": {
+    "id": "57401a17-f726-4481-b91d-265cdb367a68",
+    "status": "active",
+    "liveUrl": "https://live.browser-use.com?wss=https%3A%2F%2F57401a17-f726-4481-b91d-265cdb367a68.cdp0.browser-use.com",
+    "startedAt": "2026-03-05T15:30:03.956120Z",
+    "finishedAt": null,
+    "persistMemory": true,
+    "keepAlive": false,
+    "proxyUsedMb": "0",
+    "proxyCost": "0"
+  },
+  "task": {
+    "id": "979218cc-eef7-44a6-baff-3ee2d53d7fcf",
+    "sessionId": "57401a17-f726-4481-b91d-265cdb367a68"
+  },
+  "status": {
+    "id": "979218cc-eef7-44a6-baff-3ee2d53d7fcf",
+    "status": "finished",
+    "output": "```json\\n{\\n  \\\"url\\\": \\\"https://x.com/SergioPaniego/status/2029218056191488061\\\",\\n  \\\"text\\\": \\\"TRL now lets you define RL environments as a simple Python class to connect to OpenEnv \ud83e\udd17\\\\n\\\\nwith environment_factory, just define a class with:\\\\n\u2192 reset()\\\\n\u2192 tool methods with docstrings (they become the model's tool descriptions)\\\\n\\\\nthat's it.\\\\n\\\\nworks with any environment: simulators, games, web browsing...\\\\n\\\\nhere's how we used it to train a model to drive in CARLA:\\\"\\n}\\n```",
+    "finishedAt": "2026-03-05T15:33:03.608761Z",
+    "isSuccess": true,
+    "cost": "0.108"
+  }
+}

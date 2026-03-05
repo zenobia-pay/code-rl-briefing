@@ -1,0 +1,25 @@
+{
+  "session": {
+    "id": "3c296f25-c1b4-485d-ba24-e3c256b3d3c2",
+    "status": "active",
+    "liveUrl": "https://live.browser-use.com?wss=https%3A%2F%2F3c296f25-c1b4-485d-ba24-e3c256b3d3c2.cdp1.browser-use.com",
+    "startedAt": "2026-03-05T15:36:04.976113Z",
+    "finishedAt": null,
+    "persistMemory": true,
+    "keepAlive": false,
+    "proxyUsedMb": "0",
+    "proxyCost": "0"
+  },
+  "task": {
+    "id": "0536cdb2-ea73-4c3c-82d9-5d929a0136b8",
+    "sessionId": "3c296f25-c1b4-485d-ba24-e3c256b3d3c2"
+  },
+  "status": {
+    "id": "0536cdb2-ea73-4c3c-82d9-5d929a0136b8",
+    "status": "finished",
+    "output": "```json\\n{\\n  \\\"1_day_offset\\\": {\\n    \\\"date\\\": \\\"2026-03-04\\\",\\n    \\\"updates\\\": [],\\n    \\\"status\\\": \\\"No updates found in the last 24 hours.\\\"\\n  },\\n  \\\"3_day_offset\\\": {\\n    \\\"date\\\": \\\"2026-03-02\\\",\\n    \\\"updates\\\": [],\\n    \\\"status\\\": \\\"No updates found in the last 24 hours.\\\"\\n  },\\n  \\\"7_day_offset\\\": {\\n    \\\"date\\\": \\\"2026-02-26\\\",\\n    \\\"updates\\\": [],\\n    \\\"status\\\": \\\"No updates found in the last 24 hours.\\\"\\n  },\\n  \\\"14_day_offset\\\": {\\n    \\\"date\\\": \\\"2026-02-19\\\",\\n    \\\"updates\\\": [],\\n    \\\"status\\\": \\\"No updates found in the last 24 hours.\\\"\\n  }\\n}\\n```",
+    "finishedAt": "2026-03-05T15:37:45.177491Z",
+    "isSuccess": true,
+    "cost": "0.066"
+  }
+}
