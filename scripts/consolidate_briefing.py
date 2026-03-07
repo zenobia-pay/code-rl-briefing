@@ -221,7 +221,11 @@ def consolidate(repo: Path, date: str, topic: str) -> dict:
             for i, x in enumerate(selected)
         ],
     }
-    (repo / "public" / "data" / f"brief-{date}.trace.json").write_text(json.dumps(trace, indent=2))
+    trace_path = (repo / "public" / "data" / f"brief-{date}.trace.json")
+    if not trace_path.parent.exists():
+        trace_path = (repo / "public" / f"brief-{date}.trace.json")
+    trace_path.parent.mkdir(parents=True, exist_ok=True)
+    trace_path.write_text(json.dumps(trace, indent=2))
 
     lines = [
         f"Code RL briefing ({date})",
@@ -246,6 +250,9 @@ def consolidate(repo: Path, date: str, topic: str) -> dict:
 
     final_md = "\n".join(lines) + "\n"
     out_md = repo / "public" / "data" / f"brief-{date}.md"
+    if not out_md.parent.exists():
+        out_md = repo / "public" / f"brief-{date}.md"
+    out_md.parent.mkdir(parents=True, exist_ok=True)
     out_md.write_text(final_md)
 
     return {
@@ -255,7 +262,7 @@ def consolidate(repo: Path, date: str, topic: str) -> dict:
         "rejected": len(rejected),
         "out": str(out_md),
         "selection": str(cons_dir / "selection.json"),
-        "trace": str(repo / "public" / "data" / f"brief-{date}.trace.json"),
+        "trace": str(trace_path),
     }
 
 

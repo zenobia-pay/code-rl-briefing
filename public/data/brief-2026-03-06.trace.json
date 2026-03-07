@@ -1,13 +1,5 @@
 {
   "date": "2026-03-06",
   "topic": "What is the latest in code RL environments and human data?",
-  "items": [
-    {
-      "rank": 1,
-      "url": "https://x.com/AhmedZRashad/status/2030151350173270419",
-      "source_step": "step-02-supergrok-topic",
-      "source_file": "/Users/ryanprendergast/.openclaw/workspace/code-rl-briefing/data/runs/2026-03-06/steps/step-02-supergrok-topic/normalized.json",
-      "score": 39
-    }
-  ]
+  "items": []
 }
