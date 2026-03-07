@@ -338,7 +338,16 @@ def run(repo: Path, topic: str, date: str, browseruse_key: str, exa_key: str | N
     n07 = {"keywords": queries, "videos": list(merged.values())}
     save_step(run_dir, "step-07-youtube-search", p07, "Generated 3-4 YouTube keywords via LLM from topic + today's scraped context, then queried YouTube Data API per keyword and fetched transcripts via youtube-transcript-api.", "raw.json", r07, n07)
 
-    # Step 08: synthesis (file-backed)
+    # Step 08: consolidation (selection + rejection logs + trace)
+    import subprocess
+    subprocess.check_call([
+        "python3",
+        str(repo / "scripts" / "consolidate_briefing.py"),
+        "--repo", str(repo),
+        "--date", date,
+        "--topic", topic,
+    ])
+
     one = run_dir / "one-pager.md"
     one.write_text(
         f"# One-Pager — {topic} ({date})\n\n"
@@ -347,6 +356,7 @@ def run(repo: Path, topic: str, date: str, browseruse_key: str, exa_key: str | N
         "- Check step-02/03/04/05 for SuperGrok passes.\n"
         "- Check step-06 for Exa deep people payloads and responses.\n"
         "- Check step-07 for YouTube same-day search artifacts.\n"
+        "- Check consolidation/selection.json for ranked picks and consolidation/rejections.json for drops.\n"
     )
 
     # Convenience rollup
@@ -372,7 +382,7 @@ def run(repo: Path, topic: str, date: str, browseruse_key: str, exa_key: str | N
         "5. SuperGrok historical updates pass (step-05)\n"
         "6. Exa deep people pass (step-06)\n"
         "7. YouTube search pass (step-07)\n"
-        "8. File-backed synthesis (step-08)\n"
+        "8. Consolidation selector (step-08): ranked picks, rejected items, briefing trace\n"
     )
 
     publish_run(repo, date)
