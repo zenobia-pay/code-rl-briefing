@@ -1,17 +1,72 @@
 {
   "date": "2026-03-06",
   "topic": "What is the latest in code RL environments and human data?",
-  "selected_count": 1,
+  "selected_count": 5,
   "selected": [
     {
-      "source_step": "step-08-consolidation",
-      "source_file": "synthetic-fallback",
-      "url": "https://x.com/search?q=What%20is%20the%20latest%20in%20code%20RL%20environments%20and%20human%20data?",
-      "text": "Fallback signal: no high-confidence tweet extraction available for 2026-03-06; preserving non-empty consolidation artifact.",
+      "source_step": "step-02-supergrok-topic",
+      "source_file": "/Users/ryanprendergast/.openclaw/workspace/code-rl-briefing/data/runs/2026-03-06/steps/step-02-supergrok-topic/normalized.json",
+      "url": "https://x.com/AhmedZRashad/status/2030151350173270419",
+      "text": "9/ Problem was always that the questions weren't targeted enough and not difficult enough. So here's what we built. Perle's RL Environment Data product. Deep, expert-generated training sets across domains most vendors won't touch. Not \"medical.\" 22 subspecialties. Not \"legal.\" 14 subspecialties. Not \"Arabic.\" Every major dialect, deeper than any specialist in the space.",
       "author": "",
-      "score": 1,
+      "score": 42,
       "reasons": [
-        "synthetic_fallback_nonempty_selection"
+        "topic_overlap=1",
+        "claim_hits=4",
+        "has_numbers",
+        "longer_context"
+      ]
+    },
+    {
+      "source_step": "step-02-supergrok-topic",
+      "source_file": "/Users/ryanprendergast/.openclaw/workspace/code-rl-briefing/data/runs/2026-03-06/steps/step-02-supergrok-topic/normalized.json",
+      "url": "https://x.com/lotusfracture/status/2030078011609874448",
+      "text": "ok what is the idea itself???\\ \\ we give any model a code env to navigate the real world instead of doing stupid things like training dedicated models\\ \\ embodiment is just another probability distribution to be imparted via RL\\ \\ pre-training + RL is all you need !!!!!",
+      "author": "",
+      "score": 30,
+      "reasons": [
+        "topic_overlap=1",
+        "claim_hits=3",
+        "longer_context"
+      ]
+    },
+    {
+      "source_step": "step-02-supergrok-topic",
+      "source_file": "/Users/ryanprendergast/.openclaw/workspace/code-rl-briefing/data/runs/2026-03-06/steps/step-02-supergrok-topic/normalized.json",
+      "url": "https://x.com/iAmHenryMascot/status/2030200278012604566",
+      "text": "\u201c Together, these observations suggest that during iterative RL optimization, a language-model agent can spontaneously produce hazardous, unauthorized behaviors at the tool-calling and code-execution layer, violating the assumed execution\u201d",
+      "author": "",
+      "score": 24,
+      "reasons": [
+        "topic_overlap=1",
+        "claim_hits=2",
+        "longer_context"
+      ]
+    },
+    {
+      "source_step": "step-03-supergrok-paper-discussion",
+      "source_file": "/Users/ryanprendergast/.openclaw/workspace/code-rl-briefing/data/runs/2026-03-06/steps/step-03-supergrok-paper-discussion/normalized.json",
+      "url": "https://x.com/QingQ77/status/2030244066995101790",
+      "text": "SSD \u4e00\u4e2a\u5b9e\u73b0 Speculative Speculative Decoding \u7684 LLM \u9ad8\u6027\u80fd\u63a8\u7406\u5f15\u64ce\\ \\ \u2192 \u628a\u4f20\u7edf speculative decoding \u7684\u4e32\u884c drafting/verification \u6539\u6210\u5728\u4e0d\u540c\u786c\u4ef6\u4e0a\u5e76\u884c\u6267\u884c\u3002\\ \u2192 README \u5f3a\u8c03 SSD \u662f\u7cbe\u786e\u63a8\u7406\u52a0\u901f\u7b97\u6cd5\uff0c\u800c\u4e0d\u662f\u5355\u7eaf\u727a\u7272\u6b63\u786e\u6027\u7684\u8fd1\u4f3c\u6280\u5de7\u3002\\ \u2192 \u9879\u76ee\u9664\u4e86 SSD \u5916\u8fd8\u63d0\u4f9b\u4f18\u5316\u8fc7\u7684\u666e\u901a speculative decoding \u548c autoregressive baseline\u3002\\ \u2192 \u76ee\u524d\u516c\u5f00\u652f\u6301\u7684\u4e3b\u8981\u6a21\u578b\u5bb6\u65cf\u662f Qwen3 \u548c Llama3\u3002\\ \u2192 \u96c6\u6210\u4e86 Tensor Parallelism\u3001PagedAttention\u3001CUDA Graphs\u3001torch compile \u548c prefix caching\u3002\\ \u2192 \u53ef\u4ee5\u8dd1 benchmark\uff0c\u4e5f\u652f\u6301\u4ea4\u4e92\u5f0f chat\uff0c\u5e76\u80fd\u4e0e SGLang \u548c vLLM \u505a\u5bf9\u7167\u3002\\ \u2192 \u66f4\u9002\u5408\u6709\u591a\u5361 GPU \u73af\u5883\u3001\u8981\u505a\u63a8\u7406\u7cfb\u7edf\u5b9e\u9a8c\u6216\u8bba\u6587\u590d\u73b0\u7684\u4eba\uff0c\u800c\u4e0d\u662f\u8f7b\u91cf\u7ea7\u65b0\u624b\u9879\u76ee\u3002",
+      "author": "",
+      "score": 22,
+      "reasons": [
+        "claim_hits=2",
+        "has_numbers",
+        "longer_context"
+      ]
+    },
+    {
+      "source_step": "step-03-supergrok-paper-discussion",
+      "source_file": "/Users/ryanprendergast/.openclaw/workspace/code-rl-briefing/data/runs/2026-03-06/steps/step-03-supergrok-paper-discussion/normalized.json",
+      "url": "https://x.com/chanmuzi22/status/2030180714793058779",
+      "text": "\ud83d\udccc 2026.03.07 (\ud1a0) \uc5c5\ub370\uc774\ud2b8 (4\uac74)\\ \\ \u2022 [Microsoft] Proact-VL: A Proactive VideoLLM for Real-Time AI Companions\\ \u2022 [Ai2] Introducing Olmo Hybrid: Combining transformers and linear RNNs\\ \u2022 [Meta] Beyond Language Modeling: Multimodal Pretraining\\ \uc678 1\uac74\\ \\ \ud83d\udc49 https://chanmuzi.github.io/NLP-Paper-News/",
+      "author": "",
+      "score": 18,
+      "reasons": [
+        "claim_hits=1",
+        "has_numbers",
+        "longer_context"
       ]
     }
   ],

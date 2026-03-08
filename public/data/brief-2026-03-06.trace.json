@@ -4,10 +4,38 @@
   "items": [
     {
       "rank": 1,
-      "url": "https://x.com/search?q=What%20is%20the%20latest%20in%20code%20RL%20environments%20and%20human%20data?",
-      "source_step": "step-08-consolidation",
-      "source_file": "synthetic-fallback",
-      "score": 1
+      "url": "https://x.com/AhmedZRashad/status/2030151350173270419",
+      "source_step": "step-02-supergrok-topic",
+      "source_file": "/Users/ryanprendergast/.openclaw/workspace/code-rl-briefing/data/runs/2026-03-06/steps/step-02-supergrok-topic/normalized.json",
+      "score": 42
+    },
+    {
+      "rank": 2,
+      "url": "https://x.com/lotusfracture/status/2030078011609874448",
+      "source_step": "step-02-supergrok-topic",
+      "source_file": "/Users/ryanprendergast/.openclaw/workspace/code-rl-briefing/data/runs/2026-03-06/steps/step-02-supergrok-topic/normalized.json",
+      "score": 30
+    },
+    {
+      "rank": 3,
+      "url": "https://x.com/iAmHenryMascot/status/2030200278012604566",
+      "source_step": "step-02-supergrok-topic",
+      "source_file": "/Users/ryanprendergast/.openclaw/workspace/code-rl-briefing/data/runs/2026-03-06/steps/step-02-supergrok-topic/normalized.json",
+      "score": 24
+    },
+    {
+      "rank": 4,
+      "url": "https://x.com/QingQ77/status/2030244066995101790",
+      "source_step": "step-03-supergrok-paper-discussion",
+      "source_file": "/Users/ryanprendergast/.openclaw/workspace/code-rl-briefing/data/runs/2026-03-06/steps/step-03-supergrok-paper-discussion/normalized.json",
+      "score": 22
+    },
+    {
+      "rank": 5,
+      "url": "https://x.com/chanmuzi22/status/2030180714793058779",
+      "source_step": "step-03-supergrok-paper-discussion",
+      "source_file": "/Users/ryanprendergast/.openclaw/workspace/code-rl-briefing/data/runs/2026-03-06/steps/step-03-supergrok-paper-discussion/normalized.json",
+      "score": 18
     }
   ]
 }

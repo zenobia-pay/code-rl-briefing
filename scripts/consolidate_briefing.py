@@ -148,13 +148,22 @@ def _extract_from_obj(obj: Any, source_step: str, source_file: str) -> list[Cand
             continue
         for k, v in d.items():
             if isinstance(v, str) and (k in {"output", "rawOutput", "text", "content"} or "x.com/" in v):
-                for parsed in _parse_jsonish_text(v):
+                vu = v.replace('\\n', '\n').replace('\\"', '"')
+                for parsed in _parse_jsonish_text(vu):
                     for dd in _iter_dict_like(parsed):
                         if isinstance(dd, dict):
                             c = _candidate_from_dict(dd, source_step, source_file)
                             if c:
                                 out.append(c)
-                for m in re.finditer(r'https://x.com/[^\s"\\]+/status/\d+', v):
+
+                # Regex fallback for partially malformed JSON blocks containing url/text pairs
+                for m in re.finditer(r'"url"\s*:\s*"(https://x.com/[^"\\]+/status/\d+)"[\s\S]{0,800}?"text"\s*:\s*"([\s\S]{20,600}?)"', vu):
+                    txt = m.group(2)
+                    txt = txt.replace('\\n', ' ').replace('\\"', '"')
+                    txt = re.sub(r"\s+", " ", txt).strip()
+                    out.append(Candidate(source_step, source_file, m.group(1), txt, ""))
+
+                for m in re.finditer(r'https://x.com/[^\s"\\]+/status/\d+', vu):
                     out.append(Candidate(source_step, source_file, m.group(0), "", ""))
 
     return out

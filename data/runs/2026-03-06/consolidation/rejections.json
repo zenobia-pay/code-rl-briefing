@@ -1,1 +1,118 @@
-[]
+[
+  {
+    "source_step": "step-02-supergrok-topic",
+    "source_file": "/Users/ryanprendergast/.openclaw/workspace/code-rl-briefing/data/runs/2026-03-06/steps/step-02-supergrok-topic/normalized.json",
+    "url": "https://x.com/buckeyevn/status/2030118247551619285",
+    "text": "The RL training story explains a lot. It's why Codex is so good at autonomous end-to-end work but can feel rigid when you want to steer. Claude Code is the opposite: faster feedback loops, more interactive. Right now interactive wins because most people still need to steer, but Codex's training approach pays off more as agents go fully autonomous.",
+    "author": "",
+    "score": 24,
+    "reasons": [
+      "topic_overlap=1",
+      "claim_hits=2",
+      "longer_context"
+    ],
+    "rejected_reason": "hard_fluff_filter:\\bso good\\b"
+  },
+  {
+    "source_step": "step-02-supergrok-topic",
+    "source_file": "/Users/ryanprendergast/.openclaw/workspace/code-rl-briefing/data/runs/2026-03-06/steps/step-02-supergrok-topic/normalized.json",
+    "url": "https://x.com/PaulMaddison121/status/2030463139125318083",
+    "text": "Andrei is right. Models can already write most kinds of code, but RLHF and people one shot lots of code agents meaning we start optimising for assumed outputs in cde rather than correct ones, people need to start using detailed prompts even with coding agents",
+    "author": "",
+    "score": 12,
+    "reasons": [
+      "topic_overlap=1",
+      "longer_context"
+    ],
+    "rejected_reason": "low_signal_or_empty_text"
+  },
+  {
+    "source_step": "step-03-supergrok-paper-discussion",
+    "source_file": "/Users/ryanprendergast/.openclaw/workspace/code-rl-briefing/data/runs/2026-03-06/steps/step-03-supergrok-paper-discussion/normalized.json",
+    "url": "https://x.com/burny_tech/status/2030253498890121284",
+    "text": "Beyond Language Modeling: An Exploration of Multimodal Pretraining https://beyond-llms.github.io/",
+    "author": "",
+    "score": 2,
+    "reasons": [],
+    "rejected_reason": "low_signal_or_empty_text"
+  },
+  {
+    "source_step": "step-03-supergrok-paper-discussion",
+    "source_file": "/Users/ryanprendergast/.openclaw/workspace/code-rl-briefing/data/runs/2026-03-06/steps/step-03-supergrok-paper-discussion/normalized.json",
+    "url": "https://x.com/burny_tech/status/2030253458457047067",
+    "text": "Beyond Language Modeling: An Exploration of Multimodal Pretraining\\ \\ \\\\",
+    "author": "",
+    "score": 0,
+    "reasons": [],
+    "rejected_reason": "low_signal_or_empty_text"
+  },
+  {
+    "source_step": "step-03-supergrok-paper-discussion",
+    "source_file": "/Users/ryanprendergast/.openclaw/workspace/code-rl-briefing/data/runs/2026-03-06/steps/step-03-supergrok-paper-discussion/normalized.json",
+    "url": "https://x.com/chanmuzi22/status/2030180993135518162",
+    "text": "[3/4] [Meta] Beyond Language Modeling\\ \\ text, images, video\ub97c scratch\ubd80\ud130 \ud568\uaed8 \ud559\uc2b5\ud558\ub294 unified multimodal pretraining\uc744 \ud0d0\uc0c9\ud558\uba70, vision\uc740 scaling\uc5d0 \ub354 \ub9ce\uc740 \ub370\uc774\ud130\uac00 \ud544\uc694\ud558\ub2e4\uace0 \ud569\ub2c8\ub2e4.\\ \\ https://arxiv.org/abs/2603.03276",
+    "author": "",
+    "score": 12,
+    "reasons": [
+      "has_numbers",
+      "longer_context"
+    ],
+    "rejected_reason": "low_signal_or_empty_text"
+  },
+  {
+    "source_step": "step-03-supergrok-paper-discussion",
+    "source_file": "/Users/ryanprendergast/.openclaw/workspace/code-rl-briefing/data/runs/2026-03-06/steps/step-03-supergrok-paper-discussion/normalized.json",
+    "url": "https://x.com/AIGuideHQ/status/2030262962246623340",
+    "text": "",
+    "author": "",
+    "score": 0,
+    "reasons": [],
+    "rejected_reason": "low_signal_or_empty_text"
+  },
+  {
+    "source_step": "step-03-supergrok-paper-discussion",
+    "source_file": "/Users/ryanprendergast/.openclaw/workspace/code-rl-briefing/data/runs/2026-03-06/steps/step-03-supergrok-paper-discussion/normalized.json",
+    "url": "https://x.com/fly51fly/status/2030394582064824593",
+    "text": "[LG] Speculative Speculative Decoding\\ T Kumar, T Dao, A May [ Stanford University & Princeton University & Together AI] (2026)\\ https://arxiv.org/abs/2603.03251",
+    "author": "",
+    "score": 12,
+    "reasons": [
+      "has_numbers",
+      "longer_context"
+    ],
+    "rejected_reason": "low_signal_or_empty_text"
+  },
+  {
+    "source_step": "step-03-supergrok-paper-discussion",
+    "source_file": "/Users/ryanprendergast/.openclaw/workspace/code-rl-briefing/data/runs/2026-03-06/steps/step-03-supergrok-paper-discussion/normalized.json",
+    "url": "https://x.com/griffintaur/status/2030271782213828853",
+    "text": "\ud83d\ude80 Interestingresearch: Speculative Speculative Decoding\\ \\ Read more: https://www.alphaxiv.org/abs/2603.03251\\ \\ #LLM #ReinforcementLearning #MLResearch",
+    "author": "",
+    "score": 12,
+    "reasons": [
+      "has_numbers",
+      "longer_context"
+    ],
+    "rejected_reason": "low_signal_or_empty_text"
+  },
+  {
+    "source_step": "step-03-supergrok-paper-discussion",
+    "source_file": "/Users/ryanprendergast/.openclaw/workspace/code-rl-briefing/data/runs/2026-03-06/steps/step-03-supergrok-paper-discussion/normalized.json",
+    "url": "https://x.com/yesnoerror/status/2030388604439076882",
+    "text": "",
+    "author": "",
+    "score": 0,
+    "reasons": [],
+    "rejected_reason": "low_signal_or_empty_text"
+  },
+  {
+    "source_step": "step-03-supergrok-paper-discussion",
+    "source_file": "/Users/ryanprendergast/.openclaw/workspace/code-rl-briefing/data/runs/2026-03-06/steps/step-03-supergrok-paper-discussion/normalized.json",
+    "url": "https://x.com/fly51fly/status/2030038387630166257",
+    "text": "",
+    "author": "",
+    "score": 0,
+    "reasons": [],
+    "rejected_reason": "low_signal_or_empty_text"
+  }
+]
