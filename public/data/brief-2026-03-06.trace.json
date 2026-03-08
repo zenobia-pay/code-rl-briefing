@@ -1,5 +1,13 @@
 {
   "date": "2026-03-06",
   "topic": "What is the latest in code RL environments and human data?",
-  "items": []
+  "items": [
+    {
+      "rank": 1,
+      "url": "https://x.com/search?q=What%20is%20the%20latest%20in%20code%20RL%20environments%20and%20human%20data?",
+      "source_step": "step-08-consolidation",
+      "source_file": "synthetic-fallback",
+      "score": 1
+    }
+  ]
 }
