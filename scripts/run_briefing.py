@@ -95,16 +95,21 @@ def browseruse_req(api_key: str, method: str, path: str, payload=None):
     raise last_err
 
 
-def browseruse_run(api_key: str, profile_id: str, task_prompt: str, timeout_s: int = 1200):
+def browseruse_run(api_key: str, profile_id: str, task_prompt: str, timeout_s: int = 1800):
     session = browseruse_req(api_key, "POST", "/sessions", {"profileId": profile_id, "persistMemory": True, "keepAlive": False})
     task = browseruse_req(api_key, "POST", "/tasks", {"task": task_prompt, "sessionId": session["id"]})
     tid = task["id"]
     start = time.time()
     status = None
+    last_log = 0.0
     while time.time() - start < timeout_s:
         status = browseruse_req(api_key, "GET", f"/tasks/{tid}/status")
         if status.get("status") in ("finished", "failed", "stopped"):
             break
+        # periodic heartbeat so long runs aren't silent
+        if time.time() - last_log >= 60:
+            print(f"[browser-use] task {tid} status={status.get('status')} elapsed={int(time.time()-start)}s", flush=True)
+            last_log = time.time()
         time.sleep(12)
     return {"session": session, "task": task, "status": status}
 
@@ -118,7 +123,29 @@ def ensure_list_of_dicts(items, fallback_item: dict, min_items: int = 1):
     return out
 
 
-def safe_browseruse_run(browseruse_key: str | None, prompt: str, timeout_s: int = 1200, fallback_note: str = ""):
+def _has_real_browser_result(run_obj: dict) -> bool:
+    st = (run_obj or {}).get("status") or {}
+    if st.get("status") != "finished":
+        return False
+    out = st.get("output")
+    if not isinstance(out, str) or len(out.strip()) < 10:
+        return False
+    parsed = parse_jsonish(out)
+    if isinstance(parsed, dict) and parsed.get("parseError"):
+        return False
+    if isinstance(parsed, dict) and parsed.get("error") and len(parsed.keys()) <= 2:
+        return False
+    return True
+
+
+def safe_browseruse_run(
+    browseruse_key: str | None,
+    prompt: str,
+    timeout_s: int = 1800,
+    fallback_note: str = "",
+    require_real_result: bool = True,
+    max_attempts: int = 4,
+):
     if not browseruse_key:
         return {
             "session": None,
@@ -132,21 +159,48 @@ def safe_browseruse_run(browseruse_key: str | None, prompt: str, timeout_s: int 
             },
             "error": "Missing BROWSER_USE_API_KEY",
         }
-    try:
-        return browseruse_run(browseruse_key, DEFAULT_PROFILE_ID, prompt, timeout_s=timeout_s)
-    except Exception as e:
-        return {
-            "session": None,
-            "task": None,
-            "status": {
-                "status": "fallback",
-                "output": json.dumps({
-                    "note": fallback_note or "browser-use run failed",
-                    "error": str(e),
-                }),
-            },
-            "error": str(e),
+
+    last_run = None
+    attempt_errors = []
+    for attempt in range(1, max_attempts + 1):
+        try:
+            print(f"[browser-use] attempt {attempt}/{max_attempts}", flush=True)
+            run_obj = browseruse_run(browseruse_key, DEFAULT_PROFILE_ID, prompt, timeout_s=timeout_s)
+            last_run = run_obj
+            if not require_real_result or _has_real_browser_result(run_obj):
+                run_obj["retryMeta"] = {"attempt": attempt, "maxAttempts": max_attempts, "realResult": True}
+                return run_obj
+            reason = "non-real result (empty/parse error/fallback-like output)"
+            attempt_errors.append(reason)
+            print(f"[browser-use] retrying: {reason}", flush=True)
+        except Exception as e:
+            attempt_errors.append(str(e))
+            print(f"[browser-use] attempt {attempt} failed: {e}", flush=True)
+
+        if attempt < max_attempts:
+            time.sleep(min(8 * attempt, 30))
+
+    if last_run is not None:
+        last_run["retryMeta"] = {
+            "attempt": max_attempts,
+            "maxAttempts": max_attempts,
+            "realResult": _has_real_browser_result(last_run),
+            "attemptErrors": attempt_errors,
         }
+        return last_run
+
+    return {
+        "session": None,
+        "task": None,
+        "status": {
+            "status": "fallback",
+            "output": json.dumps({
+                "note": fallback_note or "browser-use run failed",
+                "error": attempt_errors[-1] if attempt_errors else "unknown browser-use failure",
+            }),
+        },
+        "error": attempt_errors[-1] if attempt_errors else "unknown browser-use failure",
+    }
 
 
 def _status_is_ok(raw: dict) -> bool:
@@ -268,7 +322,7 @@ def fallback_people_via_supergrok(browseruse_key: str, topic: str):
         "Find 10 people/accounts to track for this topic and return strict JSON array with fields: "
         "name, handle, why_relevant, url. Topic: " + topic
     )
-    r = safe_browseruse_run(browseruse_key, prompt, timeout_s=900, fallback_note="step-06 people fallback")
+    r = safe_browseruse_run(browseruse_key, prompt, timeout_s=1800, fallback_note="step-06 people fallback")
     parsed = parse_jsonish((r.get("status") or {}).get("output") or "{}")
     data = parsed.get("data") if isinstance(parsed, dict) and isinstance(parsed.get("data"), list) else parsed
     if not isinstance(data, list):
@@ -371,7 +425,7 @@ def build_youtube_keyword_prompt(topic: str, papers: list[dict], supergrok_topic
 
 def generate_youtube_keywords_via_llm(browseruse_key: str, topic: str, papers: list[dict], supergrok_topic: dict, signals: dict):
     prompt = build_youtube_keyword_prompt(topic, papers, supergrok_topic, signals)
-    run = safe_browseruse_run(browseruse_key, prompt, timeout_s=600, fallback_note="youtube keyword generation fallback")
+    run = safe_browseruse_run(browseruse_key, prompt, timeout_s=1200, fallback_note="youtube keyword generation fallback")
     parsed = parse_jsonish((run.get("status") or {}).get("output") or "{}")
     kws = []
     if isinstance(parsed, dict):
@@ -559,7 +613,7 @@ def run(repo: Path, topic: str, date: str, browseruse_key: str | None, exa_key: 
             f"Find 10 relevant YouTube videos from {date} about: {topic}. "
             "Return strict JSON array with fields: title,url,channel,publishedAt,why_relevant."
         )
-        fb_raw = safe_browseruse_run(browseruse_key, fb_prompt, timeout_s=900, fallback_note="youtube fallback search failed")
+        fb_raw = safe_browseruse_run(browseruse_key, fb_prompt, timeout_s=1800, fallback_note="youtube fallback search failed")
         fb_norm = parse_jsonish((fb_raw.get("status") or {}).get("output") or "{}")
         fb_list = fb_norm.get("data") if isinstance(fb_norm, dict) and isinstance(fb_norm.get("data"), list) else fb_norm
         if not isinstance(fb_list, list):
