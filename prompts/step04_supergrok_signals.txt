@@ -2,5 +2,5 @@ Open X SuperGrok.
 Time window requirement: focus on posts from the last ~24 hours.
 For these saved signal accounts: {handles_csv}
 Ask SuperGrok EXACTLY THIS:
-"What are these twitter accounts saying about code RL environments and human data the past day or so?"
+"What are these twitter accounts saying about {topic} the past day or so?"
 Return strict JSON array where each item includes: handle, tweet_url, text, author.

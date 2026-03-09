@@ -1,5 +1,5 @@
 Open https://x.com then open SuperGrok.
 Time window requirement: focus on posts from the last ~24 hours.
 Ask SuperGrok EXACTLY THIS:
-"Find me specific tweets on the topic of code RL environments and human data. What are people talking about in the past day or so? Find me the exact tweets."
+"Find me specific tweets on the topic of {topic}. What are people talking about in the past day or so? Find me the exact tweets."
 Return strict JSON array with tweet_url, text, and author only.
