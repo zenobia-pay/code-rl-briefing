@@ -10,7 +10,7 @@
       "query": "What is the latest in code RL environments and human data?",
       "windowDays": 1,
       "result": {
-        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=What+is+the+latest+in+code+RL+environments+and+human+data%3F&type=video&order=date&maxResults=25&publishedAfter=2026-03-03T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
+        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=What+is+the+latest+in+code+RL+environments+and+human+data%3F&type=video&order=date&maxResults=25&publishedAfter=2026-03-03T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIza[REDACTED]",
         "raw": {
           "kind": "youtube#searchListResponse",
           "etag": "v01Awlt9VYzVsPJBXE4ZuKvaH0I",
@@ -28,7 +28,7 @@
       "query": "SWE-rebench V2 RL coding agents",
       "windowDays": 1,
       "result": {
-        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=SWE-rebench+V2+RL+coding+agents&type=video&order=date&maxResults=25&publishedAfter=2026-03-03T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
+        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=SWE-rebench+V2+RL+coding+agents&type=video&order=date&maxResults=25&publishedAfter=2026-03-03T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIza[REDACTED]",
         "raw": {
           "kind": "youtube#searchListResponse",
           "etag": "UBAOiXjvY0CZ7Ub9tJDO9bUtsU8",
@@ -46,7 +46,7 @@
       "query": "code RL environments human data",
       "windowDays": 1,
       "result": {
-        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=code+RL+environments+human+data&type=video&order=date&maxResults=25&publishedAfter=2026-03-03T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
+        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=code+RL+environments+human+data&type=video&order=date&maxResults=25&publishedAfter=2026-03-03T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIza[REDACTED]",
         "raw": {
           "kind": "youtube#searchListResponse",
           "etag": "v01Awlt9VYzVsPJBXE4ZuKvaH0I",
@@ -64,7 +64,7 @@
       "query": "verifiable rewards coding agents",
       "windowDays": 1,
       "result": {
-        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=verifiable+rewards+coding+agents&type=video&order=date&maxResults=25&publishedAfter=2026-03-03T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
+        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=verifiable+rewards+coding+agents&type=video&order=date&maxResults=25&publishedAfter=2026-03-03T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIza[REDACTED]",
         "raw": {
           "kind": "youtube#searchListResponse",
           "etag": "1X-Qc20Oh-68TXl5svY0X50O3Lg",
@@ -82,7 +82,7 @@
       "query": "What is the latest in code RL environments and human data?",
       "windowDays": 7,
       "result": {
-        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=What+is+the+latest+in+code+RL+environments+and+human+data%3F&type=video&order=date&maxResults=25&publishedAfter=2026-02-25T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
+        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=What+is+the+latest+in+code+RL+environments+and+human+data%3F&type=video&order=date&maxResults=25&publishedAfter=2026-02-25T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIza[REDACTED]",
         "raw": {
           "kind": "youtube#searchListResponse",
           "etag": "w5ll8htiJCxOdkz4FFqJi_P2vCg",
@@ -100,7 +100,7 @@
       "query": "SWE-rebench V2 RL coding agents",
       "windowDays": 7,
       "result": {
-        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=SWE-rebench+V2+RL+coding+agents&type=video&order=date&maxResults=25&publishedAfter=2026-02-25T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
+        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=SWE-rebench+V2+RL+coding+agents&type=video&order=date&maxResults=25&publishedAfter=2026-02-25T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIza[REDACTED]",
         "raw": {
           "kind": "youtube#searchListResponse",
           "etag": "UBAOiXjvY0CZ7Ub9tJDO9bUtsU8",
@@ -118,7 +118,7 @@
       "query": "code RL environments human data",
       "windowDays": 7,
       "result": {
-        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=code+RL+environments+human+data&type=video&order=date&maxResults=25&publishedAfter=2026-02-25T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
+        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=code+RL+environments+human+data&type=video&order=date&maxResults=25&publishedAfter=2026-02-25T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIza[REDACTED]",
         "raw": {
           "kind": "youtube#searchListResponse",
           "etag": "let0-rXGmZ5qRwO0kSnIR6hVw_M",
@@ -136,7 +136,7 @@
       "query": "verifiable rewards coding agents",
       "windowDays": 7,
       "result": {
-        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=verifiable+rewards+coding+agents&type=video&order=date&maxResults=25&publishedAfter=2026-02-25T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
+        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=verifiable+rewards+coding+agents&type=video&order=date&maxResults=25&publishedAfter=2026-02-25T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIza[REDACTED]",
         "raw": {
           "kind": "youtube#searchListResponse",
           "etag": "Lap3dr_fCDmO12YTbv-5Bu_G-F0",
@@ -154,7 +154,7 @@
       "query": "coding agents RL",
       "windowDays": 30,
       "result": {
-        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=coding+agents+RL&type=video&order=date&maxResults=25&publishedAfter=2026-02-02T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
+        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=coding+agents+RL&type=video&order=date&maxResults=25&publishedAfter=2026-02-02T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIza[REDACTED]",
         "raw": {
           "kind": "youtube#searchListResponse",
           "etag": "wzG3h-mJDtF4href9VUv5Kzwr84",
@@ -966,7 +966,7 @@
       "query": "SWE-bench agents",
       "windowDays": 30,
       "result": {
-        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=SWE-bench+agents&type=video&order=date&maxResults=25&publishedAfter=2026-02-02T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
+        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=SWE-bench+agents&type=video&order=date&maxResults=25&publishedAfter=2026-02-02T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIza[REDACTED]",
         "raw": {
           "kind": "youtube#searchListResponse",
           "etag": "vZCv-4CzSd8yvAIz3xGAHGZ5UwA",
@@ -1646,7 +1646,7 @@
       "query": "RLHF coding agents",
       "windowDays": 30,
       "result": {
-        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=RLHF+coding+agents&type=video&order=date&maxResults=25&publishedAfter=2026-02-02T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
+        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=RLHF+coding+agents&type=video&order=date&maxResults=25&publishedAfter=2026-02-02T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIza[REDACTED]",
         "raw": {
           "kind": "youtube#searchListResponse",
           "etag": "GK18zYtKIu4kLOY2O38pADg1DC0",
@@ -1798,7 +1798,7 @@
       "query": "agentic coding benchmark",
       "windowDays": 30,
       "result": {
-        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=agentic+coding+benchmark&type=video&order=date&maxResults=25&publishedAfter=2026-02-02T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIzaSyCK-_bg8uJSAH1X6esmrDVboapitJ48j3w",
+        "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=agentic+coding+benchmark&type=video&order=date&maxResults=25&publishedAfter=2026-02-02T23%3A59%3A59Z&publishedBefore=2026-03-04T23%3A59%3A59Z&key=AIza[REDACTED]",
         "raw": {
           "kind": "youtube#searchListResponse",
           "etag": "HHqtDJu7RrFvxHWu0MQxUrkulQY",
